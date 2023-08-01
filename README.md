@@ -26,13 +26,12 @@
 
 
 
-# Apresentação das funcionalidades definidas pelas regras de negócio do tema.
+[Apresentação das funcionalidades definidas pelas regras de negócio do tema.](https://github.com/cesar-augusto-costa/projeto_integrador_FRONT_END_proz_turma11_grupo2/blob/main/markedown/regras_negocio.md)
 
 [Visualize o projeto](https://cesar-augusto-costa.github.io/projeto_integrador_FRONT_END_proz_turma11_grupo2/)
 
 
-- **Equipe:**
-- ## Componentes do grupo
+- ## **Equipe:**
 
   [Cesar Augusto da Costa](https://github.com/cesar-augusto-costa)
 
