@@ -33,16 +33,12 @@
 
 
 - ## **Equipe:**
-
-  [Cesar Augusto da Costa](https://github.com/cesar-augusto-costa)
-
-* [Cesar Augusto da Costa](https://github.com/cesar-augusto-costa)
-
+- 
 ##### EQUIPE:
 
 | Perfil | Nome | Github | Linkedin |
-|----------------  | ----- | --------- |----------------- |
-| <img width="100" alt="" src="img/perfil_equipe/perfil_cesar.jpg"> | `Cesar Augusto da Costa` | [![Github Badge](https://img.shields.io/badge/-Github-000?style=flat-square&logo=Github&logoColor=white&link=https://github.com/cesar-augusto-costa)](https://github.com/cesar-augusto-costa) | Linkedin         |
+| ---------------- | ----- | --------- | --------- |
+| <img width="100" alt="Foto de Perfil do Cesar" src="img/perfil_equipe/perfil_cesar.jpg"> | `Cesar Augusto da Costa` | [![Github Badge](https://img.shields.io/badge/-Github-000?style=flat-square&logo=Github&logoColor=white)](https://github.com/cesar-augusto-costa) | [![Github Badge](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/cesar-augusto-costa/) |
 
 * Como Contribuir
 
