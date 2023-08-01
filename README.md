@@ -22,9 +22,9 @@
 
   PetProz 
   
-- **Tema do Projeto:**
+- **Tema do Projeto:** 🐶 PetShop 🐱
 
-  :dog: Adoção de Gatos e Cachorros.
+  Adoção de Gatos e Cachorros.
   
   Venda de produtos para Pets.
   
@@ -43,16 +43,12 @@ Dessa forma, ele faz a ponte entre quem precisa e a ajuda especializada.
 Você pode conferir como o site está ficando em [Site do PetProz](https://cesar-augusto-costa.github.io/projeto_integrador_FRONT_END_proz_turma11_grupo2/)
 
 - ## **Equipe:**
-- 
 ##### EQUIPE:
 
-| Perfil | Nome | Função | Github | Linkedin |
+| *Perfil* | Nome | Função | Github | Linkedin |
 | ---------------- | ----- | --------- | --------- | --------- |
-| <img width="100" alt="Foto de Perfil do Cesar" src="./img/perfil_equipe/perfil_cesar.jpg"> | `Cesar Augusto da Costa` | PO <br> UX/UI <br> Front-End <br> QA | [![Github Badge](https://img.shields.io/badge/-Github-000?style=flat-square&logo=Github&logoColor=white)](https://github.com/cesar-augusto-costa) | [![Github Badge](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/cesar-augusto-costa/) |
-
-| Perfil | Nome | Função | Github | Linkedin |
-| ---------------- | ----- | --------- | --------- | --------- |
-| <img width="100" alt="Foto de Perfil do Cesar" src="img/perfil_equipe/perfill_Adriano.jpeg"> | `Adriano Olivastro dos Santos` | PO <br> UX/UI <br> Front-End <br> QA | [![Github Badge](https://img.shields.io/badge/-Github-000?style=flat-square&logo=Github&logoColor=white)](https://github.com/olivastroaos) | [![Github Badge](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/adriano-olivastro-95841561/) |
+| <img width="100" alt="Foto de Perfil do Cesar" src="./img/perfil_equipe/perfil_cesar.jpg"> | `Cesar Augusto da Costa` | PO <br> UX/UI <br> Front-End <br> QA | <a href="https://github.com/cesar-augusto-costa"> <img height="30" alt="GitHub do Cesar" src="https://img.shields.io/badge/-Github-000?style=flat-square&logo=Github&logoColor=white"></a> | [![Github Badge](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/cesar-augusto-costa/) |
+| <img width="100" alt="Foto de Perfil do Cesar" src="img/perfil_equipe/perfill_Adriano.jpeg"> | `Adriano Olivastro dos Santos` | PO <br> UX/UI <br> Front-End <br> QA | <a href="https://github.com/olivastroaos"> <img height="30" alt="GitHub do Cesar" src="https://img.shields.io/badge/-Github-000?style=flat-square&logo=Github&logoColor=white"></a> | [![Github Badge](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/adriano-olivastro-95841561/) |
 
 * Como Contribuir
 
