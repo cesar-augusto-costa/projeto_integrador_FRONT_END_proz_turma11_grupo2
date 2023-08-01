@@ -42,6 +42,6 @@
 
 | Perfil | Nome | Github | Linkedin |
 |----------------  | ----- | --------- |----------------- |
-| Foto             | Cesar Augusto da Costa | [![Github Badge](https://img.shields.io/badge/-Github-000?style=flat-square&logo=Github&logoColor=white&link=https://github.com/cesar-augusto-costa)](https://github.com/cesar-augusto-costa) | Linkedin         |
+| Foto             | `Cesar Augusto da Costa` | [![Github Badge](https://img.shields.io/badge/-Github-000?style=flat-square&logo=Github&logoColor=white&link=https://github.com/cesar-augusto-costa)](https://github.com/cesar-augusto-costa) | Linkedin         |
 
 [Como Contribuir Comunidade](markedown/como_contribuir_comunidade.md)
