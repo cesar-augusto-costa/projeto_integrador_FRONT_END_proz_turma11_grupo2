@@ -20,3 +20,7 @@ git commit -m   | Envia a mensagem que foi adiciona ao executar o script
 git clean -d -f | Limpa todas as incosistências locais para o commit ser limpo
 git pull        | Baixa ultima versão do repositório
 git push        | Envia as modificações para o repositório master
+
+
+        #   DEV = True Modo desenvolvimento
+        #   DEV = False Modo deploy
