@@ -53,9 +53,26 @@ git push
 git log
 ```
 
-* **Caso queira ter uma experiência melhor com o Git, adicione a extensão: `GitLens`**
+### OBSERVAÇÃO SOBRE CONFLITO
 
-----
+**Caso de conflito, por esquecer de atualizar o repoitório local.**
+```
+git pull
+```
+
+**Caso de conflito por alterar algo no mesmo lugar.**
+```
+git pull
+```
+**Que o VS Code vai deixar escolher as opções para resolver, depois é só commitar.**
+```
+git commit -m "Resolvi conflito de _ " -m "Minha descrição"
+```
+  
+---
+* **Caso queira ter uma experiência melhor com o Git, adicione a extensão: `GitLens`**
+---
+
 * ### Principais Comandos e seu Funcionamento:
 
 Comando         | Descrição
