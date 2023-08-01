@@ -31,9 +31,17 @@
 [Visualize o projeto](https://cesar-augusto-costa.github.io/projeto_integrador_FRONT_END_proz_turma11_grupo2/)
 
 
+
 - ## **Equipe:**
 
   [Cesar Augusto da Costa](https://github.com/cesar-augusto-costa)
 
 * [Cesar Augusto da Costa](https://github.com/cesar-augusto-costa)
+
+##### EQUIPE:
+
+| Perfil | Nome | Github | Linkedin |
+|----------------  | ----- | --------- |----------------- |
+| Foto             | Cesar Augusto da Costa | [![Github Badge](https://img.shields.io/badge/-Github-000?style=flat-square&logo=Github&logoColor=white&link=https://github.com/cesar-augusto-costa)](https://github.com/cesar-augusto-costa) | Linkedin         |
+
 
