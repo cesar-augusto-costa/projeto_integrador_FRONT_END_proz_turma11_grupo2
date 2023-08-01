@@ -1,6 +1,6 @@
 ## Como Contribuir com esse projeto (Comunidade)
 
-Se você quiser contribuir com este projeto, siga as etapas abaixo:
+  - Siga as etapas abaixo:
 
 1. Faça um fork deste repositório.
 2. Crie uma nova branch com a sua contribuição: `git checkout -b minha-contribuicao`
