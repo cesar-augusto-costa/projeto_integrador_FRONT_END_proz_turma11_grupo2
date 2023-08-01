@@ -1,3 +1,5 @@
+![Green Retro Vintage Oak Tree Logo (Capa para Facebook) (1640 × 200 px)](img/markedown/capa_face.png)
+
 # Projeto Integrador Front-End <br> Portal Tech - Proz Educação
 ## Curso de Introdução à Programação Web <br> Turma 11 - Grupo 2 - Professor: Rand
 ### Repositório com os arquivos criados durante o projeto final de conclusão do Curso.
@@ -38,10 +40,12 @@
 
 | Perfil | Nome | Função | Github | Linkedin |
 | ---------------- | ----- | --------- | --------- | --------- |
-| <img width="100" alt="Foto de Perfil do Cesar" src="img/perfil_equipe/perfil_cesar.jpg"> | `Cesar Augusto da Costa` | UX/UI <br> Front-End | [![Github Badge](https://img.shields.io/badge/-Github-000?style=flat-square&logo=Github&logoColor=white)](https://github.com/cesar-augusto-costa) | [![Github Badge](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/cesar-augusto-costa/) |
+| <img width="100" alt="Foto de Perfil do Cesar" src="img/perfil_equipe/perfil_cesar.jpg"> | `Cesar Augusto da Costa` | PO <br> UX/UI <br> Front-End <br> QA | [![Github Badge](https://img.shields.io/badge/-Github-000?style=flat-square&logo=Github&logoColor=white)](https://github.com/cesar-augusto-costa) | [![Github Badge](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/cesar-augusto-costa/) |
 
 * Como Contribuir
 
 [Equipe](markedown/como_contribuir_equipe.md)
 
 [Comunidade](markedown/como_contribuir_comunidade.md)
+
+![Green Retro Vintage Oak Tree Logo (Capa para Facebook) (1640 × 200 px)](img/markedown/capa_face.png)

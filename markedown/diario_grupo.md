@@ -1,4 +1,3 @@
-![Green Retro Vintage Oak Tree Logo (Capa para Facebook) (1640 × 200 px)](https://github.com/Devs-Proz/Projeto-Integrador-Proz-Green-Oak/assets/91226847/6ae48191-47d5-4cfc-8858-4cc8ff5c03e4)
 
 # DIÁRIO DO GRUPO 3 DO PROJETO INTEGRADOR 
 
@@ -96,6 +95,4 @@ Essas alterações contribuem para o progresso do projeto Green Oak, que está a
 ⏰ Prazo de envio: O prazo para envio dos projetos é até o meio-dia de amanhã. Basta enviar o link do repositório do GitHub.
 
 🗓️ Próxima sprint: Foi anunciado que a próxima sprint será no dia 18/07. Todos devem se preparar para dar continuidade ao desenvolvimento dos projetos.
-
-![Green Retro Vintage Oak Tree Logo (Capa para Facebook) (1640 × 200 px)](https://github.com/Devs-Proz/Projeto-Integrador-Proz-Green-Oak/assets/91226847/6ae48191-47d5-4cfc-8858-4cc8ff5c03e4)
 
