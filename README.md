@@ -48,11 +48,11 @@ Você pode conferir como o site está ficando em [Site do PetProz](https://cesar
 
 | Perfil | Nome | Função | Github | Linkedin |
 | ---------------- | ----- | --------- | --------- | --------- |
-| <img width="100" alt="Foto de Perfil do Cesar" src="./img/perfil_equipe/perfill_Adriano.jpeg"> | `Cesar Augusto da Costa` | PO <br> UX/UI <br> Front-End <br> QA | [![Github Badge](https://img.shields.io/badge/-Github-000?style=flat-square&logo=Github&logoColor=white)](https://github.com/olivastroaos) | [![Github Badge](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/cesar-augusto-costa/) |
+| <img width="100" alt="Foto de Perfil do Cesar" src="./img/perfil_equipe/perfil_cesar.jpg"> | `Cesar Augusto da Costa` | PO <br> UX/UI <br> Front-End <br> QA | [![Github Badge](https://img.shields.io/badge/-Github-000?style=flat-square&logo=Github&logoColor=white)](https://github.com/cesar-augusto-costa) | [![Github Badge](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/cesar-augusto-costa/) |
 
 | Perfil | Nome | Função | Github | Linkedin |
 | ---------------- | ----- | --------- | --------- | --------- |
-| <img width="100" alt="Foto de Perfil do Cesar" src="img/perfil_equipe/perfil_cesar.jpg"> | `Adriano Olivastro dos Santos` | PO <br> UX/UI <br> Front-End <br> QA | [![Github Badge](https://img.shields.io/badge/-Github-000?style=flat-square&logo=Github&logoColor=white)](https://github.com/cesar-augusto-costa) | [![Github Badge](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/adriano-olivastro-95841561/) |
+| <img width="100" alt="Foto de Perfil do Cesar" src="img/perfil_equipe/perfill_Adriano.jpeg"> | `Adriano Olivastro dos Santos` | PO <br> UX/UI <br> Front-End <br> QA | [![Github Badge](https://img.shields.io/badge/-Github-000?style=flat-square&logo=Github&logoColor=white)](https://github.com/olivastroaos) | [![Github Badge](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/adriano-olivastro-95841561/) |
 
 * Como Contribuir
 
