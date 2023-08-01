@@ -1,6 +1,6 @@
 # Projeto Integrador Front-End <br> Portal Tech - Proz Educação
 ## Curso de Introdução à Programação Web <br> Turma 11 - Grupo 2 - Professor: Rand
-### Repositório com os arquivos criados durante o projeto final de conclusão do Curso de Introdução a Programação Front-End da Proz.
+### Repositório com os arquivos criados durante o projeto final de conclusão do Curso.
 
 ---
 
