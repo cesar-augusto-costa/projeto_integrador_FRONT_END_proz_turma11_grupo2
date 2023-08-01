@@ -24,8 +24,3 @@ Assim temos 2 principais serviços:
     * [Scrip SQL](https://github.com/viniciusdmorais/Projeto-Integrador/blob/Dev/assets/sql/create.sql)
 
 
-
-## Equipe
-
-Keiler Trindade [![Github Badge](https://img.shields.io/badge/-Github-000?style=flat-square&logo=Github&logoColor=white&link=https://github.com/cesar-augusto-costa)](https://github.com/cesar-augusto-costa)
-
