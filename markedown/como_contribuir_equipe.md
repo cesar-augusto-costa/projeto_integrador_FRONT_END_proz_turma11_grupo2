@@ -2,8 +2,6 @@
 
 Se você quiser contribuir para este projeto, siga as etapas abaixo:
 
-[Title](como_contribuir_comunidade.md)
-
 1. Faça um clone deste repositório.
 **Faça o clone do projeto**
 ```
