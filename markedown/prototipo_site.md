@@ -1,26 +1,8 @@
-## Objetivos
-
-O objetivo do projeto é combater a escassez de materiais de apoio ao público em geral, 
-que precise de ajuda psicológica ou que queira saber mais sobre o tema, e ainda ajudar ao próximo.
-Dessa forma, ele faz a ponte entre quem precisa e a ajuda especializada. 
-
-## Desenvolvimento
-
-### Tecnologias utilizadas
-
-<div style="display: inline_block"><br>
-  <img align="center" alt="icone-HTML" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original.svg">
-  <img align="center" alt="icone-CSS" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original.svg">
-  <img align="center" alt="icone-Js" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-plain.svg">
-</div>
 
 ### Protótipo inicial 
 
 Você pode conferir o protótipo inicial em [Raízes da Cura](https://mentesa.my.canva.site/)
 
-### Link de testes (projeto em construção)
-
-Você pode conferir como o site está ficando em [Site Raízes da Cura](https://mirraelly.github.io/Grupo3/)
 
 #### Início
 
@@ -79,13 +61,3 @@ Opções de contato com os autores do projeto e políticas de uso e privacidade.
 * Local: entidade representando os locais de atendimento parceiros da plataforma;
 * Profissional: entidade representando os profissionais parceiros da plataforma.
 
-## Agradecimentos
-
-* Proz Tecnologia;
-* Portal Tech;
-* AWS;
-* Meta;
-* Professor [LuthGom](https://github.com/LuthGom);
-* À cada membro do projeto pela dedicação;
-* https://visualhunt.com/
-* https://www.canva.com/

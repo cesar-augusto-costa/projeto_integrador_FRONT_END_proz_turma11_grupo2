@@ -29,10 +29,3 @@ Este é um projeto de um petshop desenvolvido como parte do curso [Proz]. O pets
 
 ![Petshop_PROZ - contato](https://github.com/MatheusTorquete/proz-grupo4/assets/94683422/1db802f6-e7cd-4be1-87a5-ba0c5c982c44)
 
-
-## Tecnologias Utilizadas
-
-- HTML
-- CSS (Finalizado Parte 1 - Estilização)
--- CSS (Em construção Flexibilidade)
-- JavaScript (em construção)
