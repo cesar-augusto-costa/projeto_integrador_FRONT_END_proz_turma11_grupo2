@@ -35,3 +35,10 @@
 [Visualize o projeto](https://cesar-augusto-costa.github.io/projeto_integrador_FRONT_END_proz_turma11_grupo2/)
 
 
+- **Equipe:**
+- ## Componentes do grupo
+
+  [Cesar Augusto da Costa](https://github.com/cesar-augusto-costa)
+
+* [Cesar Augusto da Costa](https://github.com/cesar-augusto-costa)
+
