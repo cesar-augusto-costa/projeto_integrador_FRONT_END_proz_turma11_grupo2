@@ -20,9 +20,9 @@
 
 - **Nome do Site:**
 
-  PetProz 
+  Pet Shop Caramelo 
   
-- **Tema do Projeto:** 🐶 PetShop 🐱
+- **Tema do Projeto:** 🐶 Pet Shop 🐱
 
   Adoção de Gatos e Cachorros.
   
@@ -40,7 +40,7 @@ Dessa forma, ele faz a ponte entre quem precisa e a ajuda especializada.
 
 ### Link de testes (projeto em construção)
 
-Você pode conferir como o site está ficando em [Site do PetProz](https://cesar-augusto-costa.github.io/projeto_integrador_FRONT_END_proz_turma11_grupo2/)
+Você pode conferir como o site está ficando em [Site do Pet Shop Caramelo](https://cesar-augusto-costa.github.io/projeto_integrador_FRONT_END_proz_turma11_grupo2/)
 
 - ## **Equipe:**
 ##### EQUIPE:
