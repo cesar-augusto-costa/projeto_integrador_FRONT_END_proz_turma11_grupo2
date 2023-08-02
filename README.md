@@ -8,7 +8,7 @@
 
 ## **Tecnologias Utilizadas:**
 
-<div style="display: inline_block"><br>
+<div style="display: inline_block">
   <img align="center" alt="icone-HTML" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original.svg">
   <img align="center" alt="icone-CSS" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original.svg">
   <img align="center" alt="icone-Js" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-plain.svg">
@@ -40,7 +40,7 @@ Você pode conferir como o site está ficando em [Site do Pet Shop Caramelo](htt
 | Perfil | Nome | Função | Github | Linkedin |
 | ---------------- | ----- | --------- | --------- | --------- |
 | <img width="100" alt="Foto de Perfil do Cesar" src="img/perfil_equipe/perfill_Adriano.jpeg"> | `Adriano Olivastro dos Santos` | Scrum Master <br> UX/UI <br> Front-End <br> QA | <a href="https://github.com/olivastroaos"> <img height="30" alt="GitHub do Cesar" src="https://img.shields.io/badge/-Github-000?style=flat-square&logo=Github&logoColor=white"></a> | [![Github Badge](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/adriano-olivastro-95841561/) |
-| <img width="100" alt="Foto de Perfil do Cesar" src="./img/perfil_equipe/perfil_cesar.jpg"> | `Cesar Augusto da Costa` | UX/UI <br> Front-End <br> DBA <br> QA | <a href="https://github.com/cesar-augusto-costa"> <img height="30" alt="GitHub do Cesar" src="https://img.shields.io/badge/-Github-000?style=flat-square&logo=Github&logoColor=white"></a> | [![Github Badge](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/cesar-augusto-costa/) |
+| <img width="100" alt="Foto de Perfil do Cesar" src="./img/perfil_equipe/perfil_cesar.jpg"> | `Cesar Augusto da Costa` | UX/UI <br> Dev Full Stack <br> DS/BI <br> DBA <br> QA | <a href="https://github.com/cesar-augusto-costa"> <img height="30" alt="GitHub do Cesar" src="https://img.shields.io/badge/-Github-000?style=flat-square&logo=Github&logoColor=white"></a> | [![Github Badge](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/cesar-augusto-costa/) |
 | <img width="100" alt="Foto de Perfil da Dayane" src="img/perfil_equipe/perfil_dayane.jpg"> | `Dayane Cristina Santos` | PO <br> Front-End  | <a href="https://github.com/olivastroaos"> <img height="30" alt="GitHub do Cesar" src="https://img.shields.io/badge/-Github-000?style=flat-square&logo=Github&logoColor=white"></a> | [![Github Badge](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https:https://www.linkedin.com/in/dayane-cristin) |
 | <img width="100" alt="Foto de Perfil do Eliane" src="img/perfil_equipe/perfil_eliane.jpeg"> | `Eliane Lima da Silva` | PO <br> UX/UI <br> Front-End <br> QA | <a href="https://github.com/elimadasilva"> <img height="30" alt="GitHub de Eliane" src="https://img.shields.io/badge/-Github-000?style=flat-square&logo=Github&logoColor=white"></a> | [![Github Badge](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/eliane-lima-programador/) |
 
