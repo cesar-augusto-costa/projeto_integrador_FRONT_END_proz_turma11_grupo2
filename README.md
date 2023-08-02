@@ -9,9 +9,15 @@
 ## **Tecnologias Utilizadas:**
 
 <div style="display: inline_block">
-  <img align="center" alt="icone-HTML" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original.svg">
-  <img align="center" alt="icone-CSS" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original.svg">
-  <img align="center" alt="icone-Js" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-plain.svg">
+  <img align="center" alt="icone-GIT" height="30" src="https://github.com/devicons/devicon/blob/master/icons/git/git-original.svg">
+  <img align="center" alt="icone-GIT-HUB" height="30" src="https://github.com/devicons/devicon/blob/master/icons/github/github-original.svg">
+  <img align="center" alt="icone-VS-CODE" height="30" src="https://github.com/devicons/devicon/blob/master/icons/vscode/vscode-original.svg">
+  <img align="center" alt="icone-HTML" height="30" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original.svg">
+  <img align="center" alt="icone-CSS" height="30" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original.svg">
+  <img align="center" alt="icone-JS" height="30" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-plain.svg">
+  <img align="center" alt="icone-Python" height="30" src="https://github.com/devicons/devicon/blob/master/icons/python/python-original.svg">
+  <img align="center" alt="icone-SQL" height="30" src="https://github.com/devicons/devicon/blob/master/icons/postgresql/postgresql-original.svg">
+  
 </div>
 
 ---
@@ -60,7 +66,7 @@ Você pode conferir como o site está ficando em [Site do Pet Shop Caramelo](htt
 * Portal Tech;
 * AWS;
 * Meta;
-* Professor [Rand](https://github.com/LuthGom);
+* Professor [Rand](https://github.com/RandMelville);
 * À cada membro do projeto pela dedicação;
 
 ![Green Retro Vintage Oak Tree Logo (Capa para Facebook) (1640 × 200 px)](img/markedown/capa_face.png)
