@@ -76,19 +76,29 @@ Você pode conferir como o site está ficando em [Site do Pet Shop Caramelo](htt
 * À cada membro do projeto pela dedicação;
 
 ## Variáveis CSS (Custom Properties):
+
 :root: Define as variáveis CSS que serão utilizadas ao longo do código.
 
 ## Reset CSS:
+
 *: Aplica algumas configurações padrão para todos os elementos da página, removendo margens, preenchimentos, bordas e listas, além de definir a caixa do modelo como border-box (o que permite que o preenchimento e a borda sejam considerados no cálculo do tamanho total do elemento).
 
 ## Estilização geral:
+
 img: Define a propriedade max-width para as imagens, garantindo que elas não ultrapassem a largura máxima de seu contêiner.
+
 a: Remove o sublinhado padrão de links.
+
 html: Define o tamanho da fonte base para 62.5% (equivalente a 10px, o que facilita o uso de unidades rem).
+
 ## Estilização do cabeçalho (header):
+
 .header: Define o estilo do cabeçalho da página, incluindo cores de fundo e texto.
+
 form: Define estilos para formulários na página.
+
 ## Responsividade (media queries):
+
 @media: Aplica estilos específicos para diferentes tamanhos de tela, tornando o site responsivo.
 
 ![Green Retro Vintage Oak Tree Logo (Capa para Facebook) (1640 × 200 px)](img/markedown/capa_face.png)
