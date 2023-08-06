@@ -1,0 +1,36 @@
+body{
+    background-color: gainsboro;
+}
+
+.head{
+    pedding: 15px;
+}
+
+.links{
+    display: inline;
+    margin-left: 500px;
+}
+
+.links a{
+    margin-left: 10px;
+    text-decoration: nome;
+    font-weight: bold;
+    color: black;
+}
+
+.links a:hover{
+    color:orange;
+    border-top: 5px solid orange;
+    border-bottom: 5px solid orange;
+}
+
+.span-1{
+    font-weight: bold;
+    font-size: x-large;
+    color:blueviolet;
+}
+
+.dog{
+    padding: 20px;
+    font-size: 30px;
+}
