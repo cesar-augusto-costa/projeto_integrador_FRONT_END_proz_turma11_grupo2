@@ -17,7 +17,6 @@
   <img align="center" alt="icone-JS" height="30" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-plain.svg">
   <img align="center" alt="icone-Python" height="30" src="https://github.com/devicons/devicon/blob/master/icons/python/python-original.svg">
   <img align="center" alt="icone-SQL" height="30" src="https://github.com/devicons/devicon/blob/master/icons/postgresql/postgresql-original.svg">
-  
 </div>
 
 ---
@@ -41,7 +40,11 @@ Dessa forma, esse projeto faz a ponte entre as ONGs e a adoção fazendo divulga
 
 Você pode conferir como o site está ficando em [Site do Pet Shop Caramelo](https://cesar-augusto-costa.github.io/projeto_integrador_FRONT_END_proz_turma11_grupo2/)
 
-## **EQUIPE:**
+## **EQUIPE: Go Devs**
+
+<div>
+  <img src="img/logos/logo_go_devs.jpg" alt="Logo da Equipe Go Devs" width="130">
+</div>
 
 | Perfil | Nome | Função | Github | Linkedin |
 | ---------------- | ----- | --------- | --------- | --------- |
