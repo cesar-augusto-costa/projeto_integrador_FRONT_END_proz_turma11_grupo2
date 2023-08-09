@@ -9,10 +9,14 @@
     color: black;
 }
 
+a.activated{
+    color:blueviolet;
+}
+
 .links a:hover{
-    color:orange;
-    border-top: 5px solid orange;
-    border-bottom: 5px solid orange;
+    color:blueviolet;
+    border-top: 5px solid blueviolet;
+    border-bottom: 5px solid blueviolet;
 }
 
 .login a{
