@@ -1,3 +1,5 @@
+@import url(_reset_patterns.css);
+
 .head{
     padding: 15px;
 }
@@ -31,7 +33,7 @@ a.activated{
     color:blueviolet;
 }
 
-.dog{
+.dog i{
     padding: 20px;
     font-size: 30px;
 }
