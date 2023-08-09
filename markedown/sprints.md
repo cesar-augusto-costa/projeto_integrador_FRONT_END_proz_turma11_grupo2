@@ -10,9 +10,9 @@ Espera-se que o aluno consiga executar as seguites atividades:
 * Uso do Discord para comunicação da equipe  
 ### Ao final da sprint:
 * O projeto deve apresentar as 5 telas relacionadas ao tema do projeto
-* O projeto deve apresentar os as funcionalidades definidas pelas regras de negócio do tema proposto. 
+* O projeto deve apresentar as funcionalidades definidas pelas regras de negócio do tema proposto. 
 
-## Sprint II - Telas
+## Sprint II - HTML
 Espera-se que o aluno consiga executar as seguites atividades: 
 ### Desenvolvimento 
 * Uso apropriado das tags HTML para organização do conteúdo do site; 
@@ -29,7 +29,7 @@ Espera-se que o aluno consiga executar as seguites atividades:
     - Seções e artigos; 
     - Footer.  
 
-## Sprint III - Telas
+## Sprint III - CSS
 Espera-se que o aluno consiga executar as seguites atividades: 
 ### Desenvolvimento 
  * Estilização das 5 telas criadas anterioremente em HTML; 
@@ -41,7 +41,7 @@ Espera-se que o aluno consiga executar as seguites atividades:
 ### Ao final da sprint:
  * O projeto deve apresentar um design intuitivo, claro e objetivo, pensado na experiência do usuário 
 
-## Sprint IV - Telas
+## Sprint IV - JS
 Espera-se que o aluno consiga executar as seguites atividades: 
 ### Desenvolvimento 
  * Manipulação da DOM via JS; 
@@ -54,20 +54,17 @@ Espera-se que o aluno consiga executar as seguites atividades:
  * O site deve ter pelo menos uma página com conteúdo renderizado de forma dinâmica com JavaScript;
  * O site deve ter pelo menos dois formulários com validações. 
 
-## Sprint V - Telas
+## Sprint V - SQL
 Espera-se que o aluno consiga executar as seguites atividades: 
 ### Desenvolvimento 
  * Modelar o DER (diagrama Entidade Relacionamento) de uma parte do sistema com 4 entidades no mínimo; 
  * Criar as tabelas na 3FN em um banco de dados com informações de teste;
  * Realizar consultas simples, se possível, juntando tabelas.
 ### Organização 
- * Uso de recursos de apresentação slides, demonstração de uso do app, etc;
+ * Uso de recursos de apresentação: slides, demonstração de uso do app, etc;
  * Uso do Git;
  * Uso do SQL; 
  * Uso do Discord para comunicação da equipe. 
 ### Ao final da sprint:
  * Construir a apresentação do pitch pela equipe;
  * Submeter o projeto para avaliação final. 
-
-## :handshake: Membros
-* <a href="https://github.com/cesar-augusto-costa">Cesar Augusto da Costa</a>
