@@ -1,0 +1,30 @@
+main {
+    font-family: 'Lato', sans-serif;
+}
+
+h2 {
+    margin-top: 0px;
+}
+
+.depoimento {
+    background: #f7f7f7;
+    border: 1px solid #e7e7e7;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 4px;
+}
+
+.post {
+    background: #f7f7f7;
+    border: 1px solid #e7e7e7;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 4px;
+}
+
+
+.grid {
+display: grid;
+grid-template-columns: 1fr 1fr;
+gap: 10px;
+}

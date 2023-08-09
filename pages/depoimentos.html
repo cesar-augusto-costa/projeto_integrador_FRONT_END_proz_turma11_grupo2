@@ -8,6 +8,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="../css/home.css">
+    <link rel="stylesheet" href="../css/depoimentos.css">
     <script src="https://kit.fontawesome.com/7e753c5662.js" crossorigin="anonymous"></script>
 </head>
 
@@ -17,64 +18,86 @@
             <span class="span-1 dog"><i class="fa-solid fa-dog"></i></span>
             <a href=""><i class="house-door-fill"></i></a>
             <section class="links">
-                <a href="">Adoção</a>
-                <a href="">Produtos</a>
-                <a href="">Noticias</a>
-                <a href="">Contato</a>
-                <a href="">Clube Pet Caramelo</a>
-                <a href=""><span class="span-2 search"></span><i class="fa-solid fa-magnifying-glass"></i></span>Pesquisa</a>
-                <a href=""><span class="span-2 search"></span><i class="fa-solid fa-right-to-bracket"></i>Login</a>
+                <nav>
+                <a href="adocao.html">Adoção</a>
+                <a href="produtos.html">Produtos</a>
+                <a href="depoimentos.html">Noticias</a>
+                <a href="contato.html">Contato</a>
+                <a href="clubepetcaramelo.html">Clube Pet Caramelo</a>
+                <a href="login.html"><span class="span-2 search"></span><i class="fa-solid fa-user"></i>Login</a>
+            </nav>
+        </section>
+        <section>            
+            <div id="divBusca"><i class="fa-solid fa-magnifying-glass"></i>
+            <input type="text" id="txtBusca" placeholder="Buscar..."/>
+            </div>
         </section>
     </header>
 
     <main>
-        <section>
+        <section>            
         <h1>Adoções de Sucesso!</h1>
-            <div>
-                <img src="/img/depoimentos/adoção1.jpeg" alt="" width="150">
-                <p>Esse é o Téo, adotado por uma família e demonstrando sua alegria!</p>
-            </div>        
-            <div>
-                <img src="/img/depoimentos/adoção2.webp" alt="" width="150">
-                <p>Tonico, sem "Auu..lavras" para expressar a gratidão!</p>
-            </div>
-            <div>
-                <img src="/img/depoimentos/adoção6.jpeg" alt="" width="150">
-                <p>Amarelinho também foi adotado!</p>
-            </div>
-            <div>
-                <img src="/img/depoimentos/adoção8.jpg" alt="" width="150">
-                <p>Quem disse que irmãos não podem ser diferentes? Manu e Cleo foram adotadas e vivem como uma família.</p>
+            <div class="grid">
+                <div class="depoimento">
+                    <img src="/img/depoimentos/adoção1.jpeg" alt="" width="150">
+                    <p>Esse é o Téo, adotado por uma família e demonstrando sua alegria!</p>
+                </div>
+                <div class="depoimento">
+                    <img src="/img/depoimentos/adoção2.webp" alt="" width="150">
+                    <p>Tonico, sem "Auu..lavras" para expressar a gratidão!</p>
+                </div>
+                <div class="depoimento">
+                    <img src="/img/depoimentos/adoção6.jpeg" alt="" width="150">
+                    <p>Amarelinho também foi adotado!</p>
+                </div>
+                <div class="depoimento">
+                    <img src="/img/depoimentos/adoção8.jpg" alt="" width="150">
+                    <p>Quem disse que irmãos não podem ser diferentes? Manu e Cleo foram adotadas e vivem como uma família.</p>
+                </div>
             </div>
         </section>
         
         <section>
         <h1>Posts Recentes</h1>       
-            <div>
-                <h2>A importância do lar temporário para cães e gatos</h2>
-                <img src="/img/depoimentos/lartemporario.jpg" alt="Lar Temporário" width="150">
-                <p>Texto em Construção...</p>
-            </div>
-            <div>
-                <h2>Conheça 9 alimentos tóxicos para os cães</h2>
-                <img src="/img/depoimentos/alimentostoxicos.jpg" alt="9 alimentos toxicos para os cães" width="150">
-                <p>Texto em Construção...</p>
-            </div>
-            <div>
-                <h2>Dia do Protetor Animal</h2>
-                <img src="/img/depoimentos/diadeproteçãoanimal.jpeg" alt="Dia de Proteção do Animal" width="150">
-                <p>Texto em Construção...</p>
-            </div>
-            <div>
-                <h2>Cães também ficam gripados?</h2>
-                <img src="../img/depoimentos/cão gripado.jpg" alt="Cães também ficam gripados" width="150">
-                <p>Texto em Construção...</p>
-            </div>
-        </section>
+            <div class="Grid">
+                <div class="post">
+                    <h2>A importância do lar temporário para cães e gatos</h2>
+                    <img src="/img/depoimentos/lartemporario.jpg" alt="Lar Temporário" width="150">
+                    <p>Texto em Construção...</p>
+                </div>
+                <div class="post">
+                    <h2>Conheça 9 alimentos tóxicos para os cães</h2>
+                    <img src="/img/depoimentos/alimentostoxicos.jpg" alt="9 alimentos toxicos para os cães" width="150">
+                    <p>Texto em Construção...</p>
+                </div>
+                <div class="post">
+                    <h2>Dia do Protetor Animal</h2>
+                    <img src="/img/depoimentos/diadeproteçãoanimal.jpeg" alt="Dia de Proteção do Animal" width="150">
+                    <p>Texto em Construção...</p>
+                </div>
+                <div class="post">
+                    <h2>Cães também ficam gripados?</h2>
+                    <img src="../img/depoimentos/cão gripado.jpg" alt="Cães também ficam gripados" width="150">
+                    <p>Texto em Construção...</p>
+                </div>
+                </div>       
+            </section>
     </main>
 
     <footer>
-        <h1>Em construção</h1>
+        <div class ="col">
+            <a href="">Meios de Pagamento</a><br>
+            <a href=""><i class="fa-brands fa-pix" style="color: #151e2d;"></i></a>
+            <a href=""><i class="fa-brands fa-cc-visa" style="color: #151e2d;"></i></a>
+            <a href=""><i class="fa-brands fa-cc-mastercard" style="color: #151e2d;"></i></a>
+            <a href=""><i class="fa-solid fa-barcode" style="color: #151e2d;"></i></a>
+        </div>
+        <div class ="col">
+            <a href="">Redes Sociais</a><br>
+            <a href=""><i class="fa-brands fa-instagram" style="color: #4180ec;"></i></a>
+            <a href=""><i class="fa-brands fa-facebook" style="color: #4180ec;"></i></a>
+            <a href=""><i class="fa-brands fa-whatsapp" style="color: #41ec5d;"></i></a>
+            <a href=""><i class="fa-solid fa-shield-dog" style="color: #151e2d;"></i></a>
     </footer>
 </body>
 </html>
