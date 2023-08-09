@@ -40,7 +40,7 @@ body {
 .content::before {
     content: "";
     position: absolute;
-    background-color: #58af9b;
+    background-color: blueviolet;
     width: 40%;
     height: 100%;
     border-top-left-radius: 15px;
@@ -58,7 +58,7 @@ body {
     color: #fff;
 }
 .title-second {
-    color: #58af9b;
+    color: blueviolet;
 }
 .description {
     font-size: 14px;
@@ -89,18 +89,18 @@ body {
 }
 .btn-primary:hover {
     background-color: #fff;
-    color: #58af9b;
+    color: blueviolet;
 }
 .btn-second {
     color: #fff;
-    background-color: #58af9b;
-    border: 1px solid #58af9b;
+    background-color: blueviolet;
+    border: 1px solid blueviolet;
     transition: background-color .5s;
 }
 .btn-second:hover {
     background-color: transparent;
-    border: 1px solid #58af9b;
-    color: #58af9b;
+    border: 1px solid blueviolet;
+    color: blueviolet;
 }
 
 /* first-content
@@ -141,9 +141,9 @@ body {
 }
 
 .link-social-media:hover .item-social-media {
-    background-color: #58af9b;
+    background-color: blueviolet;
     color: #fff;
-    border-color: #58af9b;
+    border-color: blueviolet;
 }
 
 .list-social-media {
