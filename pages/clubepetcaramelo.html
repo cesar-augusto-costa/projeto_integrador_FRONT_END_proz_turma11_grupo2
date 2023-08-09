@@ -11,37 +11,41 @@
         integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
         crossorigin="anonymous"></script>
         <link rel="stylesheet" href="../css/home.css">
+        <link rel="stylesheet" href="../css/header.css">
         <link rel="stylesheet" href="../css/clube.css">
         <link rel="stylesheet" href="shttps://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <script src="https://kit.fontawesome.com/7e753c5662.js" crossorigin="anonymous"></script>
   
 </head>
 
-<body>
-  <header class="bg-light head">
-    <section class="menu">
-      <span class="span-1 dog">
-        <a href="../index.html">
-          <i class="fa-solid fa-dog"></i>
-        </a>
-      </span>
-      <a href=""><i class="house-door-fill"></i></a>
-      <section class="links">
-        <nav>
-          <a href="adocao.html">Adoção</a>
-          <a href="produtos.html">Produtos</a>
-          <a href="depoimentos.html">Noticias</a>
-          <a href="contato.html">Contato</a>
-          <a href="clubepetcaramelo.html">Clube Pet Caramelo</a>
-          <a href="login.html"><span class="span-2 search"></span><i class="fa-solid fa-user"></i>Login</a>
-        </nav>
-      </section>
-      <section>
-        <div id="divBusca"><i class="fa-solid fa-magnifying-glass"></i>
-          <input type="text" id="txtBusca" placeholder="Buscar..." />
+    <header class="bg-light head">
+        <div class="row">
+        <div class="col-1">
+            <span class="span-1 dog"><a href="../index.html"><i class="fa-solid fa-dog"></i></a></span>
+            <a href="../index.html"><i class="bi bi-house-door-fill"></i></a>
         </div>
-      </section>
-  </header>
+        <div class="col-6 links">
+            <nav>
+            <a href="adocao.html">Adoção</a>
+            <a href="produtos.html">Produtos</a>
+            <a href="depoimentos.html">Noticias</a>
+            <a href="contato.html">Contato</a>
+            <a href="clubepetcaramelo.html">Clube Pet Caramelo</a>
+            </nav>
+        </div>
+
+        <div class="col-3" id="divBusca">
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <input type="text" id="txtBusca" placeholder="Buscar..." />
+        </div>
+
+        <div class="col-2 login">
+            <a href="pages/login.html">
+            <span class="span-2 search"></span>
+            <i class="fa-solid fa-user"></i>Login</a>
+        </div>
+        </div>
+    </header>
   <main>
     <section class="container">
       <h1 class="h1-planos">Conheça nossos planos</h1>

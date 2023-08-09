@@ -29,6 +29,7 @@
       crossorigin="anonymous"
     ></script>
     <link rel="stylesheet" href="css/home.css" />
+    <link rel="stylesheet" href="css/header.css" />
     <script
       src="https://kit.fontawesome.com/7e753c5662.js"
       crossorigin="anonymous"
@@ -38,7 +39,7 @@
   <boby>
     <header class="bg-light head">
       <div class="row">
-        <div class="col-2">
+        <div class="col-1">
           <span class="span-1 dog"><i class="fa-solid fa-dog"></i></span>
           <a href=""><i class="bi bi-house-door-fill"></i></a>
         </div>
@@ -49,18 +50,19 @@
             <a href="pages/depoimentos.html">Noticias</a>
             <a href="pages/contato.html">Contato</a>
             <a href="pages/clubepetcaramelo.html">Clube Pet Caramelo</a>
-            <a href="pages/login.html">
-              <span class="span-2 search"></span>
-              <i class="fa-solid fa-user"></i>Login</a>
           </nav>
         </div>
 
-        <div class="col-4" id="divBusca">
+        <div class="col-3" id="divBusca">
           <i class="fa-solid fa-magnifying-glass"></i>
           <input type="text" id="txtBusca" placeholder="Buscar..." />
         </div>
 
-        
+        <div class="col-2 login">
+          <a href="pages/login.html">
+            <span class="span-2 search"></span>
+            <i class="fa-solid fa-user"></i>Login</a>
+        </div>
       </div>
     </header>
 
@@ -140,49 +142,51 @@
 
         <h3>
           <p>Avaliações de Produtos</p>
+          <img width="20%" src="img/home/avaliacoes/promoca3.jpg" />
+          <div>
+            <p>ótima cama, meu cachorro adorou</p>
+          </div>
+          <div class="StarHolder">
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+          </div>
         </h3>
 
         <h3>
           <p>Depoimento</p>
+          <img width="20%" src="img/home/depoimento/foto1.png" />
+          <div>
+            <p>Foi a melhor escolhar que eu fiz adotar eles</p>
+          </div>
+          <div class="StarHolder">
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+          </div>
         </h3>
 
         <h3>
           <p>Parceiros/Ongs</p>
           <section>
             <a href="https://amparanimal.org.br/">
-              <img
-                width="10%"
-                src="img/adocao/logo_ong/ampara_animal.png"
-                alt="ONG Ampara Animal"
-              />
+              <img width="10%" src="img/adocao/logo_ong/ampara_animal.png" alt="ONG Ampara Animal"/>
             </a>
             <a href="https://www.caosemdono.com.br/">
-              <img
-                width="8%"
-                src="img/adocao/logo_ong/cao_sem_dono.png"
-                alt=""
-              />
+              <img width="8%" src="img/adocao/logo_ong/cao_sem_dono.png" alt="" />
             </a>
             <a href="https://www.focinhosdeluz.com/">
-              <img
-                width="5%"
-                src="img/adocao/logo_ong/focinho_de_luz.png"
-                alt="ONG Cão Sem Dono"
-              />
+              <img width="5%" src="img/adocao/logo_ong/focinho_de_luz.png" alt="ONG Cão Sem Dono"/>
             </a>
             <a href="https://www.suipa.org.br/">
-              <img
-                width="5%"
-                src="img/adocao/logo_ong/suipa_.png"
-                alt="ONG Suipa"
-              />
+              <img width="5%" src="img/adocao/logo_ong/suipa_.png" alt="ONG Suipa"/>
             </a>
             <a href="https://www.ongviralataedez.com/">
-              <img
-                width="5%"
-                src="img/adocao/logo_ong/vira_lata.png"
-                alt="ONG Vira Lata"
-              />
+              <img width="5%" src="img/adocao/logo_ong/vira_lata.png" alt="ONG Vira Lata"/>
             </a>
           </section>
         </h3>
@@ -190,34 +194,22 @@
     </main>
 
     <footer>
+      <div class="row">
       <div class="col">
         <a href="">Meios de Pagamento</a><br />
         <a href=""><i class="fa-brands fa-pix" style="color: #151e2d"></i></a>
-        <a href=""
-          ><i class="fa-brands fa-cc-visa" style="color: #151e2d"></i
-        ></a>
-        <a href=""
-          ><i class="fa-brands fa-cc-mastercard" style="color: #151e2d"></i
-        ></a>
-        <a href=""
-          ><i class="fa-solid fa-barcode" style="color: #151e2d"></i
-        ></a>
+        <a href=""><i class="fa-brands fa-cc-visa" style="color: #151e2d"></i></a>
+        <a href=""><i class="fa-brands fa-cc-mastercard" style="color: #151e2d"></i></a>
+        <a href=""><i class="fa-solid fa-barcode" style="color: #151e2d"></i></a>
       </div>
       <div class="col">
-        <a href="pages/contato.html">Redes Sociais</a><br />
-        <a href=""
-          ><i class="fa-brands fa-instagram" style="color: #4180ec"></i
-        ></a>
-        <a href=""
-          ><i class="fa-brands fa-facebook" style="color: #4180ec"></i
-        ></a>
-        <a href=""
-          ><i class="fa-brands fa-whatsapp" style="color: #41ec5d"></i
-        ></a>
-        <a href=""
-          ><i class="fa-solid fa-shield-dog" style="color: #151e2d"></i
-        ></a>
+        <a href="pages/contato.html">Redes Sociais</a><br/>
+        <a href=""><i class="fa-brands fa-instagram" style="color: #4180ec"></i></a>
+        <a href=""><i class="fa-brands fa-facebook" style="color: #4180ec"></i></a>
+        <a href=""><i class="fa-brands fa-whatsapp" style="color: #41ec5d"></i></a>
+        <a href=""><i class="fa-solid fa-shield-dog" style="color: #151e2d"></i></a>
       </div>
+    </div>
     </footer>
   </boby>
 </html>

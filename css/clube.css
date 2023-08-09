@@ -69,62 +69,6 @@
 
 /* ---------------------------- */
 
-.head{
-  display: grid;
-  padding: 15px;
-  justify-content: center;
-}
-
-.links{
-  display: inline;
-  margin-left: 500px;
-}
-
-.links a{
-  margin-left: 10px;
-  text-decoration: nome;
-  font-weight: bold;
-  color: black;
-}
-
-.links a:hover{
-  color:orange;
-  border-top: 5px solid orange;
-  border-bottom: 5px solid orange;
-}
-
-.span-1{
-  font-weight: bold;
-  font-size: x-large;
-  color:blueviolet;
-}
-
-.dog{
-  padding: 20px;
-  font-size: 30px;
-}
-
-#divBusca{
-  background-color:blueviolet;
-  border:solid 1px;
-  border-radius:15px;
-  width:300px;
-}
-
-#txtBusca{
-  float:left;
-  background-color:transparent;
-  padding-left:5px;
-  font-size:18px;
-  border:none;
-  height:32px;
-  width:260px;
-}
-
-.span-1 {
-  font-size: 2rem;
-}
-/* --------------------- */
 .footer-container {
   display: flex;
   justify-content: center;

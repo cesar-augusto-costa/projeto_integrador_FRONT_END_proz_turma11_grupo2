@@ -1,0 +1,61 @@
+.head{
+    padding: 15px;
+}
+
+.links a{
+    margin-left: 10px;
+    text-decoration: nome;
+    font-weight: bold;
+    color: black;
+}
+
+.links a:hover{
+    color:orange;
+    border-top: 5px solid orange;
+    border-bottom: 5px solid orange;
+}
+
+.login a{
+    margin-left: 10px;
+    text-decoration: nome;
+    font-weight: bold;
+    color: black;
+}
+
+.span-1{
+    font-weight: bold;
+    color:blueviolet;
+}
+
+.dog{
+    padding: 20px;
+    font-size: 30px;
+}
+
+.dog a{
+    color:blueviolet;
+}
+
+#divBusca{
+    background-color:blueviolet;
+    border:solid 1px;
+    border-radius:10px;
+    width:300px;
+    padding: 5px;
+    height: 32px;
+}
+
+#divBusca > i {
+    float: right;
+    margin: 8px 5px 5px 5px;
+}
+
+#txtBusca{
+    float:left;
+    background-color:transparent;
+    padding-left:5px;
+    font-size:18px;
+    border:none;
+    height:32px;
+    width:250px;
+}

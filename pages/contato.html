@@ -12,6 +12,7 @@
         integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
         crossorigin="anonymous"></script>
     <link rel="stylesheet" href="../css/home.css">
+    <link rel="stylesheet" href="../css/header.css">
     <script src="https://kit.fontawesome.com/7e753c5662.js" crossorigin="anonymous"></script>
 </head>
 
@@ -19,29 +20,32 @@
 
     <!-- header -->
     <header class="bg-light head">
-        <section>
-            <span class="span-1 dog">
-                <a href="../index.html">
-                    <i class="fa-solid fa-dog"></i>
-                </a>
-            </span>
-            <a href=""><i class="bi bi-house-door-fill"></i></a>
-            <section class="links">
-                <nav>
-                    <a href="adocao.html">Adoção</a>
-                    <a href="produtos.html">Produtos</a>
-                    <a href="depoimentos.html">Noticias</a>
-                    <a href="contato.html">Contato</a>
-                    <a href="clubepetcaramelo.html">Clube Pet Caramelo</a>
-                    <a href="login.html"><span class="span-2 search"></span><i class="fa-solid fa-user"></i>Login</a>
-                </nav>
-            </section>
-        </section>
-        <section>
-            <div id="divBusca"><i class="fa-solid fa-magnifying-glass"></i>
-                <input type="text" id="txtBusca" placeholder="Buscar..." />
-            </div>
-        </section>
+        <div class="row">
+        <div class="col-1">
+            <span class="span-1 dog"><a href="../index.html"><i class="fa-solid fa-dog"></i></a></span>
+            <a href="../index.html"><i class="bi bi-house-door-fill"></i></a>
+        </div>
+        <div class="col-6 links">
+            <nav>
+            <a href="adocao.html">Adoção</a>
+            <a href="produtos.html">Produtos</a>
+            <a href="depoimentos.html">Noticias</a>
+            <a href="contato.html">Contato</a>
+            <a href="clubepetcaramelo.html">Clube Pet Caramelo</a>
+            </nav>
+        </div>
+
+        <div class="col-3" id="divBusca">
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <input type="text" id="txtBusca" placeholder="Buscar..." />
+        </div>
+
+        <div class="col-2 login">
+            <a href="pages/login.html">
+            <span class="span-2 search"></span>
+            <i class="fa-solid fa-user"></i>Login</a>
+        </div>
+        </div>
     </header>
     <!-- fim /header -->
     <style>
