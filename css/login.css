@@ -321,14 +321,17 @@ input:-webkit-autofill{
     25% {
         left: 5%;
         width: 50%;
+        border-radius: 0;
     }
     50% {
         left: 25%;
         width: 60%;
+        border-radius: 0;
     }
     75% {
         left: 45%;
         width: 50%;
+        border-radius: 0;
     }
     to {
         left: 60%;
@@ -344,14 +347,17 @@ input:-webkit-autofill{
     25% {
         left: 45%;
         width: 50%;
+        border-radius: 0;
     }
     50% {
         left: 25%;
         width: 60%;
+        border-radius: 0;
     }
     75% {
         left: 5%;
         width: 50%;
+        border-radius: 0;
     }
     to {
         left: 0;
