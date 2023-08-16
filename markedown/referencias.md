@@ -1,6 +1,21 @@
-## Referências
+# Referências
+
+## Pesquisa
+* Google
+* Youtube
+* Instagran
+* Pinterest
+* ChatGPT
+* [Canva](https://www.canva.com/)
+
+## Sobre o negócio
+* Psicologia das Cores
+* Board Visual
+* Livro da Marca
+
+## Criação do Layout
+* https://www.petz.com.br/
 * https://visualhunt.com/
-* https://www.canva.com/
 
 ## Referências Para Criação do Site
 * https://www.devmedia.com.br/html-meta-tags-entendendo-o-uso-de-meta-tags/30328
