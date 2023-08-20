@@ -1,5 +1,7 @@
 main {
     font-family: 'Lato', sans-serif;
+    padding: 20px;
+    margin: 0 auto; 
 }
 
 h2 {
@@ -7,24 +9,40 @@ h2 {
 }
 
 .depoimento {
-    background: #f7f7f7;
+    background: rgb(170, 167, 167);
     border: 1px solid #e7e7e7;
     margin: 10px;
     padding: 10px;
-    border-radius: 4px;
+    border-radius: 10px;
+    text-decoration: none;
 }
 
 .post {
-    background: #f7f7f7;
+    background: rgb(170, 167, 167);
     border: 1px solid #e7e7e7;
     margin: 10px;
     padding: 10px;
-    border-radius: 4px;
+    border-radius: 10px;
 }
 
 
-.grid {
-display: grid;
-grid-template-columns: 1fr 1fr;
-gap: 10px;
+.grid-depoimento {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 10px;
+}
+
+.grid-post {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 10px;
+}
+
+.img {
+    border-radius: 10px;
+}
+
+a {
+    text-decoration: none;
+    color: black;
 }
