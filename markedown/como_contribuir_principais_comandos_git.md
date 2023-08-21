@@ -22,14 +22,26 @@ git remote -v                                 |
 git remote add origin CAMINHO-GITHUB          |        
 git init                                      | Inicializar um repositório na pasta atual
 git status	                                  | Mostrar os arquivos e pastas que estão na área de staging
+git restore ARQUIVO                           | Restaura o arquivo modificado, descartando toda a alteração.
 git add .                                     | Adiciona todos os arquivo a partir do local no qual o script foi executado
 git add *                                     | Adiciona todos os arquivo a partir do local no qual o script foi executado
 git add -A                                    | Adiciona todos os arquivos atuais (novos, atualizados e deletados)
 git add -all                                  | Adiciona todos os arquivos atuais (novos, atualizados e deletados)
-git add nome_do_arquivo.ext                   | Adiciona o arquivo especificado à “area de staging” 
-git commit -m “MENSAGEM”                      | Realizar um commit com uma mensagem que o identifique
+git add nome_do_arquivo.ext                   | Adiciona o arquivo especificado à “area de staging”
+git reset ARQUIVO                             | Remove os arquivos da área de staged
+git restore --staged ARQUIVO                  | Remove os arquivos da área de staged
+git rm --cached ARQUIVO                       |
 git clean -d -f                               | Limpa todas as incosistências locais para o commit ser limpo
+git commit -m “MENSAGEM”                      | Realizar um commit com uma mensagem que o identifique
+git commit -m “MENSAGEM” -m "DETALHE"         | Realizar um commit com uma mensagem e um detalhe que o identifique
+git commit --amend -m "nova mensagem"         | Altera a mensagem do commit alterior
+git reset --soft HASH_COMMIT                  | Remove o commit e adiciona as alterações na área de staged
+git reset --mixed HASH_COMMIT                 | Remove o commit e adiciona as alterações na área de untracked
+git reset HASH_COMMIT                         | Remove o commit e adiciona as alterações na área de untracked
+git reset --hard HASH_COMMIT                  | Remove o commit e exclui totalmente tudo que foi feito nesse commit
+git branch -M main                            | Renomeia a branch principal
+git push -u origin main                       | Envia as alterações do repositório local para o remoto na primeira vez
 git pull                                      | Baixa ultima versão do repositório
-git push                                      | Envia as modificações para o repositório master
+git push                                      | Envia as modificações para o repositório remoto
 git log	                                      | Mostra os últimos commits do repositório atual
-git restore                                   | **FALTA FAZER**
+git reflog                                    | Mostra o histórico de todos os commits e seus status
