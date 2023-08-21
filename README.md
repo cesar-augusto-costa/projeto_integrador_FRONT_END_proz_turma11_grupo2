@@ -82,7 +82,7 @@ Você pode conferir como o site está ficando em [Site do Pet Shop Caramelo](htt
 
 * [Guia para a Comunidade](markedown/como_contribuir_comunidade.md)
 
-## Saiba Mais
+## 🔍 Saiba Mais
 
 * [Sobre Todas as Sprints](markedown/sprints.md)
 
