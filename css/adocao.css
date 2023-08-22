@@ -1,0 +1,115 @@
+
+*{
+    font-family: 'Lato', sans-serif;
+}
+
+.principal{
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    }
+
+.subtitulo{
+    margin-top: 50px;
+    margin-bottom: 30px;
+}
+
+.produtos{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding-inline-start: 50px;
+    
+    border-left: 5px;
+    border-left: solid;
+    border-color: blueviolet;
+    
+
+}
+.div-produtos{
+    position:relative;
+ }
+
+.div-produtos:hover{
+    top:-2px;
+    box-shadow:0 2px 2px blueviolet;
+       
+} 
+
+.paragrafo-produtos{
+
+    text-align: center;
+    line-height: 150%;
+    font-size: 15px;
+    color:black;
+    margin-top: 20px;
+
+}
+
+.paragrafo-produtos:hover{
+    color: blueviolet;
+
+}
+
+.preco-produto{
+    text-align: center;
+    line-height: 150%;
+    font-size: 15px;
+    color:blueviolet;
+    font-weight: bold;
+    
+}
+.figuras-como-adotar{
+
+    display: inline-grid;
+    grid-template-columns: 180px 180px 180px 180px;
+}
+
+.titulo-como-adotar{
+    display: inline-grid;
+    grid-template-columns: 180px 180px 180px 180px;
+}
+
+.paragrafo-como-adotar{
+    display: inline-grid;
+    grid-template-columns: 150px 150px 150px 150px;
+    gap: 30px;
+    text-align: justify;
+    line-height: 150%;
+ 
+}
+
+.figuras-como-adotar{
+    color: blueviolet;
+}
+
+.sugestao-caes-gatos{
+    display: flex;
+    justify-content: space-evenly;
+
+}
+
+.img-pets {
+    height: 150px;
+    object-fit: cover;
+    width: 150px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+#figuras-ongs{
+    display: flex;
+    justify-content:center;
+}
+
+.imagem-ongs{
+
+    height: 40px;
+    width: 40px;
+    object-fit: cover;
+    padding: 5px;
+   
+   
+
+}

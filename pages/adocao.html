@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <link href="../img/adocao/fontawesome/css/all.css" rel="stylesheet">
     <title>Adoção</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
@@ -11,6 +12,8 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
         crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="../css/_reset_patterns.css">
+    <link rel="stylesheet" href="../css/adocao.css">
     <link rel="stylesheet" href="../css/home.css">
     <link rel="stylesheet" href="../css/header.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -21,225 +24,312 @@
     <!-- header -->
     <header class="bg-light head">
         <div class="row">
-        <div class="col-1">
-            <span class="span-1 dog"><a href="../index.html"><i class="fa-solid fa-dog"></i></a></span>
-            <a href="../index.html"><i class="bi bi-house-door-fill"></i></a>
-        </div>
-        <div class="col-6 links">
-            <nav>
-            <a href="adocao.html" class="activated">Adoção</a>
-            <a href="produtos.html">Produtos</a>
-            <a href="depoimentos.html">Noticias</a>
-            <a href="contato.html">Contato</a>
-            <a href="clubepetcaramelo.html">Clube Pet Caramelo</a>
-            </nav>
-        </div>
+            <div class="col-1">
+                <span class="span-1 dog"><a href="../index.html"><i class="fa-solid fa-dog"></i></a></span>
+                <a href="../index.html"><i class="bi bi-house-door-fill"></i></a>
+            </div>
+            <div class="col-6 links">
+                <nav>
+                    <a href="adocao.html" class="activated">Adoção</a>
+                    <a href="produtos.html">Produtos</a>
+                    <a href="depoimentos.html">Noticias</a>
+                    <a href="contato.html">Contato</a>
+                    <a href="clubepetcaramelo.html">Clube Pet Caramelo</a>
+                </nav>
+            </div>
 
-        <div class="col-3" id="divBusca">
-            <i class="fa-solid fa-magnifying-glass"></i>
-            <input type="text" id="txtBusca" placeholder="Buscar..." />
-        </div>
+            <div class="col-3" id="divBusca">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <input type="text" id="txtBusca" placeholder="Buscar..." />
+            </div>
 
-        <div class="col-2 login">
-            <a href="login.html">
-            <span class="span-2 search"></span>
-            <i class="fa-solid fa-user"></i>Login</a>
-        </div>
+            <div class="col-2 login">
+                <a href="login.html">
+                    <span class="span-2 search"></span>
+                    <i class="fa-solid fa-user"></i>Login</a>
+            </div>
         </div>
     </header>
     <!-- fim /header -->
     <main>
         <h1>Adoção</h1>
-        <section><!--Primeira seção: quiz-->
-            <h2>Encontre Seu Pet metade</h2>
-            <p>Responda o Quiz e descubra o tipo pets que combine com você</p>
-            <img width="30%" src="../img/adocao/cat_dog_quiz.jpg" alt=" Gato olhando para o cachorro">
-            <section><!--Primeira sub section: perguntas-->
+        <section class="principal">
+            <section>
+                <section><!--Primeira seção: quiz-->
+                    <h2>Encontre Seu Pet metade</h2>
+                    <p>Responda o Quiz e descubra o tipo pets que combine com você</p>
+                    <img width="30%" src="../img/adocao/cat_dog_quiz.jpg" alt=" Gato olhando para o cachorro">
+                    <section><!--Primeira sub section: perguntas-->
 
-                <div><!--primeira pergunta-->
-                    <h4>Que palavra define você:</h4>
-                    <form>
-                        <input type="radio" name="tipo_de_pessoa" value="cachorro" /> Brincalhão <br>
-                        <input type="radio" name="tipo_de_pessoa" value="gato" /> Independente<br>
-                        <input type="radio" name="tipo_de_pessoa" value="gato" /> Curioso<br>
-                        <input type="radio" name="tipo_de_pessoa" value="cachorro" /> Alegre<br>
-                    </form>
-                </div>
+                        <div><!--primeira pergunta-->
+                            <h4>Que palavra define você:</h4>
+                            <form>
+                                <input type="radio" name="tipo_de_pessoa" value="cachorro" /> Brincalhão <br>
+                                <input type="radio" name="tipo_de_pessoa" value="gato" /> Independente<br>
+                                <input type="radio" name="tipo_de_pessoa" value="gato" /> Curioso<br>
+                                <input type="radio" name="tipo_de_pessoa" value="cachorro" /> Alegre<br>
+                            </form>
+                        </div>
 
-                <div><!--segunda pergunta-->
-                    <h4>Quanto tempo livre você tem por dia?:</h4>
-                    <form>
-                        <input type="radio" name="tempo_livre" value="cachorro" /> Bastante tempo livre<br>
-                        <input type="radio" name="tempo_livre" value="gato" /> Só alguns dias livres<br>
-                        <input type="radio" name="tempo_livre" value="gato" /> Pouco tempo livre<br>
-                        <input type="radio" name="tempo_livre" value="gato" /> Nunca tenho tempo<br>
-                    </form>
-                </div>
+                        <div><!--segunda pergunta-->
+                            <h4>Quanto tempo livre você tem por dia?:</h4>
+                            <form>
+                                <input type="radio" name="tempo_livre" value="cachorro" /> Bastante tempo livre<br>
+                                <input type="radio" name="tempo_livre" value="gato" /> Só alguns dias livres<br>
+                                <input type="radio" name="tempo_livre" value="gato" /> Pouco tempo livre<br>
+                                <input type="radio" name="tempo_livre" value="gato" /> Nunca tenho tempo<br>
+                            </form>
+                        </div>
 
-                <div><!--terceira pergunta-->
-                    <h4>Você quer que seu animal seja:</h4>
-                    <form>
-                        <input type="radio" name="personalidade_pet" value="cachorro" /> Sociável e companheiro<br>
-                        <input type="radio" name="personalidade_pet" value="cachorro" /> Dócil e carinhoso<br>
-                        <input type="radio" name="personalidade_pet" value="gato" /> Fácil de cuidar<br>
-                        <input type="radio" name="personalidade_pet" value="gato" /> Prático e tranquilo<br>
-                    </form>
-                </div>
+                        <div><!--terceira pergunta-->
+                            <h4>Você quer que seu animal seja:</h4>
+                            <form>
+                                <input type="radio" name="personalidade_pet" value="cachorro" /> Sociável e
+                                companheiro<br>
+                                <input type="radio" name="personalidade_pet" value="cachorro" /> Dócil e carinhoso<br>
+                                <input type="radio" name="personalidade_pet" value="gato" /> Fácil de cuidar<br>
+                                <input type="radio" name="personalidade_pet" value="gato" /> Prático e tranquilo<br>
+                            </form>
+                        </div>
 
-                <div><!--quarta pergunta-->
-                    <h4>O que você espera do seu pet:</h4>
-                    <form>
-                        <input type="radio" name="cuidados" value="cachorro" /> Proteção e companheirismo<br>
-                        <input type="radio" name="cuidados" value="gato" /> Ter cuidados simples e evitar bagunça<br>
-                        <input type="radio" name="cuidadost" value="gato" /> Uma experiência nova para a vida<br>
-                        <input type="radio" name="cuidados" value="cachorro" /> Deixar a casa mais alegre<br>
-                    </form>
-                </div>
+                        <div><!--quarta pergunta-->
+                            <h4>O que você espera do seu pet:</h4>
+                            <form>
+                                <input type="radio" name="cuidados" value="cachorro" /> Proteção e companheirismo<br>
+                                <input type="radio" name="cuidados" value="gato" /> Ter cuidados simples e evitar
+                                bagunça<br>
+                                <input type="radio" name="cuidadost" value="gato" /> Uma experiência nova para a
+                                vida<br>
+                                <input type="radio" name="cuidados" value="cachorro" /> Deixar a casa mais alegre<br>
+                            </form>
+                        </div>
 
-                <div><!--quinta pergunta-->
-                    <h4>Para ter um pet você seria capaz de:</h4>
-                    <form>
-                        <input type="radio" name="cuidados" value="cachorro" /> Passear ao ar livre diariamente<br>
-                        <input type="radio" name="cuidados" value="gato" /> colocar poteção nas janelas<br>
-                        <input type="radio" name="cuidadost" value="gato" /> Apenas alimentá-lo diariamente<br>
-                        <input type="radio" name="cuidados" value="cachorro" /> Lidar com o barulho sem problemas<br>
-                    </form>
-                </div>
+                        <div><!--quinta pergunta-->
+                            <h4>Para ter um pet você seria capaz de:</h4>
+                            <form>
+                                <input type="radio" name="cuidados" value="cachorro" /> Passear ao ar livre
+                                diariamente<br>
+                                <input type="radio" name="cuidados" value="gato" /> colocar poteção nas janelas<br>
+                                <input type="radio" name="cuidadost" value="gato" /> Apenas alimentá-lo diariamente<br>
+                                <input type="radio" name="cuidados" value="cachorro" /> Lidar com o barulho sem
+                                problemas<br>
+                            </form>
+                        </div>
+                    </section>
+                    <section><!--Segunda sub section: resultado quiz-->
+                        <div>
+                            <h4>Gatos</h4>
+                            <p>Independentes, os gatos se adaptam bem à rotina dos donos que passam boa parte do tempo
+                                fora
+                                de
+                                casa. No geral, se viram bem quando estão sozinhos, mas são curiosos e exigem alguns
+                                cuidados.
+                                Raramente tomam banho, curtem passeios solitários quando moram em casas e, em
+                                apartamentos,
+                                costumam saltar em janelas e varandas, o que exige certa proteção. Além disso, é bom
+                                investir em
+                                brinquedos, que evitam desgastes nos móveis</p>
+                            <img width="20%" src="../img/adocao/gatos/cat_quiz.jpg" alt="Gato deitado">
+                        </div>
+
+                        <div>
+                            <h4>Cães</h4>
+                            <p>O animal de estimação que combina com sua rotina e personalidade precisa ser dócil,
+                                inteligente e
+                                carinhoso. Como você tem tempo livre para cuidar, passear e ensinar seu pet, cachorros
+                                são
+                                as
+                                opções que mais se adaptam a sua vida, já que são animais sociáveis (com pessoas e
+                                outros
+                                tipos
+                                de animais), extremamente dependentes, ativos e gostam de brincar. A personalidade pode
+                                variar
+                                de uma raça para outra, mas no geral, ficam deprimidos quando passam muito tempo
+                                sozinhos.
+                                Vale lembrar que, antes de escolher seu amigo, cães necessitam de alimentação diária,
+                                passeios,
+                                horas de dedicação, banhos frequentes, vacinas e visitas ao veterinário.
+                            </p>
+                            <img width="15%" src="../img/adocao/dog/dog_quiz.jpg" alt="Cachorro na grama">
+                        </div>
+
+
+                        </div>
+
+                    </section>
+                    <section><!--Terceira sub section: opções de pets-->
+                        <h2 class="subtitulo">Hora de conhecer seu amigo!</h2>
+                        <p>Agora que você sabe qual pet mais combina com você, dê uma olhada nos nosso amiguinhos que
+                            estão
+                            aguardando um lar.</p>
+                        <div class="sugestao-caes-gatos"><!--gatos-->
+                            <a href="https://amparanimal.org.br/quero-adotar-um-gato/"><img class="img-pets"
+                                    src="../img/adocao/gatos/peto_amparanimal.png"
+                                    alt="Gato de pelo escuro para adoção"></a>
+                            <a href="https://amparanimal.org.br/quero-adotar-um-gato/"><img class="img-pets"
+                                    src="../img/adocao/gatos/matheus_amparanimal.png" alt="Gato siamês para adoção"></a>
+                            <a href="http://www.focinhosdeluz.com/fotos/galeria-de-fotos-bem-exemplificada"><img
+                                    class="img-pets" src="../img/adocao/gatos/filhotes_focinhodeluz.png"
+                                    alt="filhotes de gato para adoção"></a>
+                            <a href="http://www.focinhosdeluz.com/fotos/galeria-de-fotos-bem-exemplificada"><img
+                                    class="img-pets" src="../img/adocao/gatos/gato_focinhodeluz.png"
+                                    alt="Gato para adoção"></a>
+
+                        </div>
+
+                        <div class="sugestao-caes-gatos"><!--cães-->
+
+                            <a href="https://www.ongviralataedez.com/adote"><img class="img-pets"
+                                    src="../img/adocao/dog/dog_viralataedez.png"
+                                    alt="Cachorro de pelo escuro para adoção"></a>
+                            <a href="https://amparanimal.org.br/quero-adotar-um-cachorro/"><img class="img-pets"
+                                    src="../img/adocao/dog/jason_amparanimal.png"
+                                    alt="Cachorro de pelo claro para adoção"></a>
+                            <a href="https://www.caosemdono.com.br/caes-americanopolis"><img class="img-pets"
+                                    src="../img/adocao/dog/cadu_caosemdono.png"
+                                    alt="filhote de cachorro para adoção"></a>
+                            <a href="http://www.focinhosdeluz.com/fotos/galeria-de-fotos-bem-exemplificada"><img
+                                    class="img-pets" src="../img/adocao/dog/dog_focinhodeluz.png"
+                                    alt="filhote de cachorro para adoção"></a>
+                        </div>
+
+                    </section>
+
+                </section>
+                <section><!--Segunda subseção: como adotar-->
+
+                    <h2 class="subtitulo">Entenda como funciona</h2>
+                    <section class="como-adotar">
+                        <div class="figuras-como-adotar"><!--encontre seu pet-->
+                            <span><i class="fa-solid fa-paw"></i><i class="fa-solid fa-magnifying-glass fa-3x"></i>
+                            </span>
+
+                            <span><i class="fa-solid fa-clipboard-list fa-4x"></i></span>
+
+                            <span><i class="fa-solid fa-clipboard-check fa-4x"></i></i></span>
+
+                            <span><i class="fa-solid fa-dog fa-1g"></i><i class="fa-regular fa-heart fa-3x"></i><i
+                                    class="fa-solid fa-cat fa-1g"></i></span>
+                        </div>
+                        <div class="titulo-como-adotar">
+                            <h3>Encontre seu pet</h3>
+                            <h3>Formulário</h3>
+                            <h3>Avaliação</h3>
+                            <h3>Adoção</h3>
+                        </div>
+                        <div class="paragrafo-como-adotar">
+
+                            <p class="paragrafo-como-adotar">Dê uma olhada nos sites das nossas ONGs parceiras, no
+                                espaço dedicado a adoção, para criar a conexão perfeita com cão e/ou gato que busca um
+                                novo lar. Confira a lista de ONGs<a href="#ongs">aqui</a>.</p>
+
+                            <p class="paragrafo-como-adotar">Depois que você escolher o seu pet, basta preencher o
+                                formulário que é disponibilizado no
+                                site da ONG e a mesma entrará em contato com você.</p>
+
+                            <p class="paragrafo-como-adotar">A ONG parceira irá fazer a análise do cadastro e perfil do
+                                adotante vs pet escolhido.
+                                Preenchendo os requisitos, você recebe a aprovação e a ONG entrará em contato com você
+                                pelo telefone
+                                cadastrado.
+                            </p>
+
+                            <p class="paragrafo-como-adotar">Com tudo certo, você já pode ir busca seu novo amigo na ONG
+                                no dia e horário agendado.
+                            </p>
+
+                        </div>
+                    </section>
+                </section>
+
             </section>
-            <section><!--Segunda sub section: resultado quiz-->
-                <div>
-                    <h4>Gatos</h4>
-                    <p>Independentes, os gatos se adaptam bem à rotina dos donos que passam boa parte do tempo fora de
-                        casa. No geral, se viram bem quando estão sozinhos, mas são curiosos e exigem alguns cuidados.
-                        Raramente tomam banho, curtem passeios solitários quando moram em casas e, em apartamentos,
-                        costumam saltar em janelas e varandas, o que exige certa proteção. Além disso, é bom investir em
-                        brinquedos, que evitam desgastes nos móveis</p>
-                    <img width="20%" src="../img/adocao/gatos/cat_quiz.jpg" alt="Gato deitado">
+            <!--segunda seção:propaganda da página produtos-->
+
+            <aside class="produtos">
+
+                <h4 style="color: blueviolet;">Encontre os melhores produtos para seu pet</h4>
+
+                <div class="div-produtos">
+                    <a href="produtos.html"><img src="../img/produtos/gato/petisco/bifitos.png"
+                            alt="Snack Kelcat Bifitos para Gatos Adultos e Filhotes Sabor Carne 30g">
+                        <p class="paragrafo-produtos">Snack Kelcat Bifitos para Gatos Adultos e Filhotes Sabor Carne
+                            30g<br><span class="preco-produto">R$5,52</span></p>
+                    </a>
                 </div>
 
-                <div>
-                    <h4>Cães</h4>
-                    <p>O animal de estimação que combina com sua rotina e personalidade precisa ser dócil, inteligente e
-                        carinhoso. Como você tem tempo livre para cuidar, passear e ensinar seu pet, cachorros são as
-                        opções que mais se adaptam a sua vida, já que são animais sociáveis (com pessoas e outros tipos
-                        de animais), extremamente dependentes, ativos e gostam de brincar. A personalidade pode variar
-                        de uma raça para outra, mas no geral, ficam deprimidos quando passam muito tempo sozinhos.
-                        Vale lembrar que, antes de escolher seu amigo, cães necessitam de alimentação diária, passeios,
-                        horas de dedicação, banhos frequentes, vacinas e visitas ao veterinário.
-                    </p>
-                    <img width="15%" src="../img/adocao/dog/dog_quiz.jpg" alt="Cachorro na grama">
+                <div class="div-produtos">
+                    <a href="produtos.html"><img src="../img/produtos/cachorro/racao/racao_cao_adulto_porte_grande.PNG"
+                            alt="">
+                        <p class="paragrafo-produtos">Ração Golden Special para Cães Adultos Frango e Carne 15
+                            kg<br><span class="preco-produto">R$169,90</span></p>
+                    </a>
+                </div>
+                <div class="div-produtos">
+                    <a href="produtos.html"><img src="../img/produtos/cachorro/brinquedos/bolinha_interativa.PNG"
+                            alt="Brinquedo Interativo Pet Games Petball para Cães">
+                        <p class="paragrafo-produtos">Brinquedo Interativo Pet Games Petball para Cães<br><span
+                                class="preco-produto">R$37,99</span></p>
+                    </a>
+                </div>
+                <div class="div-produtos">
+                    <a href="produtos.html"><img src="../img/produtos/gato/racao/racao_gato_adulto.png"
+                            alt="Ração GranPlus Choice para Gatos Adultos Sabor Frango e Carne 10,1kg">
+                        <p class="paragrafo-produtos">Ração GranPlus Choice para Gatos Adultos Sabor Frango e Carne
+                            10,1kg<br><span class="preco-produto">R$147,99</span></p>
+                    </a>
+                </div>
+                <div class="div-produtos">
+                    <a href="produtos.html"><img src="../img/produtos/cachorro/petisco/petisco_cao_adulto.png" alt="">
+                        <p class="paragrafo-produtos">Bifinho KelDog Mini para Cães Adultos Sabor Carne 500g<br><span
+                                class="preco-produto">R$25,41</span></p>
+                    </a>
                 </div>
 
-
+                <div class="div-produtos">
+                    <a href="produtos.html"><img src="../img/produtos/gato/brinquedos/ratinho.png"
+                            alt="Brinquedo Chalesco Ratinhos para Gatos">
+                        <p class="paragrafo-produtos">Brinquedo Chalesco Ratinhos para Gatos<br><span
+                                class="preco-produto">R$16,99</span></p>
+                    </a>
                 </div>
-
-            </section>
-            <section><!--Terceira sub section: opções de pets-->
-                <p>Agora que você sabe qual pet mais combina com você, dê uma olhada nos nosso amiguinhos que estão aguardando um lar.</p>
-                <div><!--gatos-->
-                    <a href="https://amparanimal.org.br/quero-adotar-um-gato/"><img width="10%"
-                            src="../img/adocao/gatos/peto_amparanimal.png" alt="Gato de pelo escuro para adoção"></a>
-                    <a href="https://amparanimal.org.br/quero-adotar-um-gato/"><img width="10%"
-                            src="../img/adocao/gatos/matheus_amparanimal.png" alt="Gato siamês para adoção"></a>
-                    <a href="http://www.focinhosdeluz.com/fotos/galeria-de-fotos-bem-exemplificada"><img width="10%"
-                            src="../img/adocao/gatos/filhotes_focinhodeluz.png" alt="filhotes de gato para adoção"></a>
-                    <a href="http://www.focinhosdeluz.com/fotos/galeria-de-fotos-bem-exemplificada"><img width="10%"
-                            src="../img/adocao/gatos/gato_focinhodeluz.png" alt="Gato para adoção"></a>
-
-                </div>
-                <div><!--cães-->
-
-                    <a href="https://www.ongviralataedez.com/adote"><img width="10%"
-                            src="../img/adocao/dog/dog_viralataedez.png" alt="Cachorro de pelo escuro para adoção"></a>
-                    <a href="https://amparanimal.org.br/quero-adotar-um-cachorro/"><img width="10%"
-                            src="../img/adocao/dog/jason_amparanimal.png" alt="Cachorro de pelo claro para adoção"></a>
-                    <a href="https://www.caosemdono.com.br/caes-americanopolis"><img width="10%"
-                            src="../img/adocao/dog/cadu_caosemdono.png" alt="filhote de cachorro para adoção"></a>
-                    <a href="http://www.focinhosdeluz.com/fotos/galeria-de-fotos-bem-exemplificada"><img width="10%"
-                            src="../img/adocao/dog/dog_focinhodeluz.png" alt="filhote de cachorro para adoção"></a>
-                </div>
-
-            </section>
-
-        </section>
-        <section><!--Segunda seção: como adotar-->
-
-            <h2>Entenda como funciona</h2>
-            <div><!--encontre seu pet-->
-                <span style="color: rgb(19, 47, 99)"><i class="fa-solid fa-paw"></i><i
-                        class="fa-solid fa-magnifying-glass fa-3x"></i> </span>
-                <h3>Encontre seu pet</h3>
-                <p>Dê uma olhada nos sites das nossas ONGs parceiras, no espaço dedicado a adoção, para criar a conexão
-                    perfeita com cão e/ou gato que busca um novo lar. Confira a lista de ONGs <a href="#ongs">aqui</a>.</p>
-            </div>
-            <div><!--formulario-->
-                <span style="color: rgb(19, 47, 99)"><i class="fa-solid fa-clipboard-list fa-4x"></i></span>
-                <h3>Formulário</h3>
-                <p>Depois que você escolher o seu pet, basta preencher o formulário que é disponibilizado no site da ONG
-                    e a mesma entrará em contato com você.</p>
-            </div>
-            <div><!--avaliação-->
-                <span style="color: rgb(19, 47, 99)"><i class="fa-solid fa-clipboard-check fa-4x"></i></i></span>
-                <h3>Avaliação</h3>
-                <p>A ONG parceira irá fazer a análise do cadastro e perfil do adotante vs pet escolhido. Preenchendo os
-                    requisitos, você recebe a aprovação e a ONG entrará em contato com você pelo telefone cadastrado.
-                </p>
-            </div>
-            <div><!--adoção-->
-                <span style="color: rgb(19, 47, 99)"><i class="fa-solid fa-dog fa-1g"></i><i
-                        class="fa-regular fa-heart fa-3x"></i><i class="fa-solid fa-cat fa-1g"></i></span>
-                <h3>Adoção</h3>
-                <p>Com tudo certo, você já pode ir busca seu novo amigo na ONG no dia e horário agendado.</p>
-            </div>
-        </section>
-        <section><!--Terceira seção: Link ongs-->
-            <h2>Conheça as nossas ONGs parceiras<a name="ongs"></a></h2>
-            <a href="https://amparanimal.org.br/"><img width="10%" src="../img/adocao/logo_ong/ampara_animal.png"
-                    alt="ONG Ampara Animal"></a>
-            <a href="https://www.caosemdono.com.br/"><img width="8%" src="../img/adocao/logo_ong/cao_sem_dono.png"
-                    alt=""></a>
-            <a href="https://www.focinhosdeluz.com/"><img width="5%" src="../img/adocao/logo_ong/focinho_de_luz.png"
-                    alt="ONG Cão Sem Dono"></a>
-            <a href="https://www.suipa.org.br/"><img width="5%" src="../img/adocao/logo_ong/suipa_.png"
-                    alt="ONG Suipa"></a>
-            <a href="https://www.ongviralataedez.com/"><img width="5%" src="../img/adocao/logo_ong/vira_lata.png"
-                    alt="ONG Vira Lata"></a>
-        </section>
-        <section><!--Quarta seção:propaganda da página produtos-->
-            <aside>
-
-            <h4>Encontre os melhores produtos para seu pet</h4>
-            <a href="produtos.html"><img width="15%" src="../img/produtos/cachorro/racao/racao_cao_adulto_porte_grande.PNG" alt="" ></a>
-            <p>Ração Golden Special para Cães Adultos Frango e Carne 15 kg</p>
-            <a href="produtos.html"><img width="15%" src="../img/produtos/cachorro/racao/racao_cao_adulto_porte_pequeno.PNG" alt="" ></a>
-            <p>Ração Golden Formula Cães Adultos Raças Pequenas Carne e Arroz Mini Bits 15 kg</p>
-            <a href="produtos.html"><img width="15%" src="../img/produtos/cachorro/racao/racao_cao_filhote_porte_grande.PNG" alt="" ></a>
-            <p>Ração Golden Mega para Cães Filhotes Raças Grandes Frango e Arroz 15 kg</p>
-            <a href="produtos.html"><img width="15%" src="../img/produtos/cachorro/racao/racao_cao_filhote_porte_pequeno.PNG" alt="" ></a>
-            <p>Ração Golden Fórmula Cães Filhotes Raças Pequenas Frango e Arroz 10,1kg</p>
 
             </aside>
 
+        </section>
+        <section><!--Terceira subseção: Link ongs-->
+            <h2 class="subtitulo">Conheça as nossas ONGs parceiras</h2>
+            <div id="figuras-ongs">
+                <a href="https://amparanimal.org.br/"><img class="imagem-ongs" src="../img/adocao/logo_ong/ampara_animal.png"
+                        alt="ONG Ampara Animal"></a>
+                <a href="https://www.caosemdono.com.br/"><img class="imagem-ongs" src="../img/adocao/logo_ong/cao_sem_dono.png"
+                        alt=""></a>
+                <a href="https://www.focinhosdeluz.com/"><img class="imagem-ongs" src="../img/adocao/logo_ong/focinho_de_luz.png"
+                        alt="ONG Cão Sem Dono"></a>
+                <a href="https://www.suipa.org.br/"><img class="imagem-ongs"  src="../img/adocao/logo_ong/suipa_.png"
+                        alt="ONG Suipa"></a>
+                <a href="https://www.ongviralataedez.com/"><img class="imagem-ongs" src="../img/adocao/logo_ong/vira_lata.png"
+                        alt="ONG Vira Lata"></a>
+            </div>
         </section>
     </main>
     <!-- footer -->
     <footer>
         <div class="row">
-        <div class="col">
-        <a href="">Meios de Pagamento</a><br />
-        <a href=""><i class="fa-brands fa-pix" style="color: #151e2d"></i></a>
-        <a href=""><i class="fa-brands fa-cc-visa" style="color: #151e2d"></i></a>
-        <a href=""><i class="fa-brands fa-cc-mastercard" style="color: #151e2d"></i></a>
-        <a href=""><i class="fa-solid fa-barcode" style="color: #151e2d"></i></a>
+            <div class="col">
+                <a href="">Meios de Pagamento</a><br />
+                <a href=""><i class="fa-brands fa-pix" style="color: #151e2d"></i></a>
+                <a href=""><i class="fa-brands fa-cc-visa" style="color: #151e2d"></i></a>
+                <a href=""><i class="fa-brands fa-cc-mastercard" style="color: #151e2d"></i></a>
+                <a href=""><i class="fa-solid fa-barcode" style="color: #151e2d"></i></a>
+            </div>
+            <div class="col">
+                <a href="contato.html">Redes Sociais</a><br />
+                <a href=""><i class="fa-brands fa-instagram" style="color: #4180ec"></i></a>
+                <a href=""><i class="fa-brands fa-facebook" style="color: #4180ec"></i></a>
+                <a href=""><i class="fa-brands fa-whatsapp" style="color: #41ec5d"></i></a>
+                <a href=""><i class="fa-solid fa-shield-dog" style="color: #151e2d"></i></a>
+            </div>
         </div>
-        <div class="col">
-        <a href="contato.html">Redes Sociais</a><br/>
-        <a href=""><i class="fa-brands fa-instagram" style="color: #4180ec"></i></a>
-        <a href=""><i class="fa-brands fa-facebook" style="color: #4180ec"></i></a>
-        <a href=""><i class="fa-brands fa-whatsapp" style="color: #41ec5d"></i></a>
-        <a href=""><i class="fa-solid fa-shield-dog" style="color: #151e2d"></i></a>
-        </div>
-    </div>
     </footer>
     <!-- fim /footer -->
 
