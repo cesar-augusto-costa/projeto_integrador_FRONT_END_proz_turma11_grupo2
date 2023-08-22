@@ -43,5 +43,25 @@ git branch -M main                            | Renomeia a branch principal
 git push -u origin main                       | Envia as alterações do repositório local para o remoto na primeira vez
 git pull                                      | Baixa ultima versão do repositório
 git push                                      | Envia as modificações para o repositório remoto
+git push origin main                          |
 git log	                                      | Mostra os últimos commits do repositório atual
 git reflog                                    | Mostra o histórico de todos os commits e seus status
+git branch                                    | Lista as branch's do repositório
+git branch -v                                 | Lista o último commit de cada branch
+git branch -b NOVA_BRANCH                     | Cria uma branch chamada "NOVA_BRANCH" e entra nela
+git branch -d NOME_BRANCH                     | Exclui a branch "NOME_BRANCH"
+git checkout NOME_BRANCH                      | Entra na branch "NOME_BRANCH"
+git merge BRANCH_NAO_PRINCIPAL                | Uni a branch que esta com a BRANCH_NAO_PRINCIPAL
+git pull = git fetch + git merge              |
+git fetch origin main                         |              
+git diff branch_main origin/main             |
+git stash                                      | Arquiva a modificação 
+git stash list                                | Lista as modificações arquivadas
+git stash pop                                 | Exclui a última modificação da pilha arquivada
+git stash apply                               |
+
+
+## Saiba Mais
+
+* Convenção de branch
+* Convenção de commits
