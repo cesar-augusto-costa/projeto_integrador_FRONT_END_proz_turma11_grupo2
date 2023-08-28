@@ -1,36 +1,40 @@
 @import url(_reset_patterns.css);
 
-.head{
-    padding: 15px;
+.links nav {
+    margin-top: 25px;
 }
 
 .links a{
     margin-left: 10px;
     text-decoration: nome;
     font-weight: bold;
-    color: black;
+    color: #421913;
 }
 
 a.activated{
-    color:blueviolet;
+    color:#421913;
 }
 
 .links a:hover{
-    color:blueviolet;
-    border-top: 5px solid blueviolet;
-    border-bottom: 5px solid blueviolet;
+    color: orange;
+    border-top: 5px solid orange;
+    border-bottom: 5px solid orange;
+}
+
+.login {
+    margin-top: 25px;
 }
 
 .login a{
     margin-left: 10px;
     text-decoration: nome;
     font-weight: bold;
-    color: black;
+    color: #421913;
 }
 
 .span-1{
     font-weight: bold;
-    color:blueviolet;
+    color:#421913;
 }
 
 .dog i{
@@ -39,16 +43,17 @@ a.activated{
 }
 
 .dog a{
-    color:blueviolet;
+    color:#421913;
 }
 
 #divBusca{
-    background-color:blueviolet;
+    background-color:white;
     border:solid 1px;
     border-radius:10px;
     width:300px;
     padding: 5px;
     height: 32px;
+    margin-top: 18px;
 }
 
 #divBusca > i {

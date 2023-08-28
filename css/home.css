@@ -35,3 +35,8 @@ h3{
 .StarHolder i{
     color: yellow;
 }
+
+.logo img{
+    height: auto;
+    width: 100%;
+}
