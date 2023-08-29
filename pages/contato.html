@@ -1,147 +1,218 @@
-<!DOCTYPE html>
-<html lang="pt-br">
+    <!DOCTYPE html>                         
+    <html lang="pt-br">
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
-        crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="../css/home.css">
-    <link rel="stylesheet" href="../css/header.css">
-    <script src="https://kit.fontawesome.com/7e753c5662.js" crossorigin="anonymous"></script>
-</head>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Home</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+            integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+            crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="../css/home.css">
+        <link rel="stylesheet" href="../css/header.css">
+        <link rel="stylesheet" href="../css/contato.css">
+        <script src="https://kit.fontawesome.com/7e753c5662.js" crossorigin="anonymous"></script>
+        <script src="../js/contato.js"  defer></script>
+    </head>
 
-<body>
+    <body>
 
-    <!-- header -->
-    <header class="bg-light head">
-        <div class="row">
-            <div class="col-1 logo">
-                <a href="../index.html"><img src="../img/logos/petshop_caramelo.png"></a>
-            </div>
-        <div class="col-6 links">
-            <nav>
-            <a href="adocao.html">Adoção</a>
-            <a href="produtos.html">Produtos</a>
-            <a href="depoimentos.html">Noticias</a>
-            <a href="contato.html" class="activated">Contato</a>
-            <a href="clubepetcaramelo.html">Clube Pet Caramelo</a>
-            </nav>
-        </div>
-
-        <div class="col-3" id="divBusca">
-            <i class="fa-solid fa-magnifying-glass"></i>
-            <input type="text" id="txtBusca" placeholder="Buscar..." />
-        </div>
-
-        <div class="col-2 login">
-            <a href="login.html">
-            <span class="span-2 search"></span>
-            <i class="fa-solid fa-user"></i>Login</a>
-        </div>
-        </div>
-    </header>
-    <!-- fim /header -->
-    <!-- <style>
-        #carocel {
-            background-color: rgb(87, 192, 226);
-            color: black;
-            padding: 10px;
-            text-align: center;
-        }
-
-        #whats {
-            background-color: rgb(52, 231, 36);
-            color: green;
-            padding: 50px;
-            text-align: center;
-        }
-
-        #endereço,
-        #contato {
-            background-color: rgb(50, 134, 162);
-            color: rgb(25, 19, 139);
-            padding: 40px;
-            text-align: center;
-        }
-    </style> -->
-    <section class="image-slider">
-        <input type="radio" class="slide-controller" name="slide" id="slide1" checked>
-        <input type="radio" class="slide-controller" name="slide" id="slide2">
-        <input type="radio" class="slide-controller" name="slide" id="slide3">
-        
-        <div class="slide-show">
-        <ul class="slider">
-            <li>
-            <label for="slide1"></label>
-            <img src="../img/home/foto1.jpg" alt="Slide 1">
-            </li>
-            <li>
-            <label for="slide2"></label>
-            <img src="../img/home/foto2.jpg" alt="Slide 2">
-            </li>
-            <li>
-            <label for="slide3"></label>
-            <img src="../img/home/foto3.jpg" alt="Slide 3">
-            </li>
-            <li>
-            <label for="slide4"></label>
-            <img src="../img/home/foto4.jpg" alt="Slide 4">
-            </li>
-        </ul>
-        </div>
-    </section>
-            <a
-                href="https://www.google.com/search?rlz=1C1SQJL_pt-BRBR1013BR1013&q=Disque+Den%C3%BAncia+maus-tratos+animais&uds=H4sIAAAAAAAA_-Py42JzySwuLE0VkklJzSvNS85MVMhNLC1WKClKLMkvVkjMy8xNzCw2YCpSgahTcEnNO7wLrk4XVR0AwH0RUVAAAAA&sa=X&ved=2ahUKEwjYgNOq68aAAxX1pJUCHXQgBRMQxKsJegQICRAB&ictx=0&biw=767&bih=744&dpr=1.25">
-                <div id="whats">
-                    <h1>disque denúncia</h1>
-                </div>
-            </a>
-            <div id="policia">
-                <h1>policia Ambiental</h1>
-                
-                <a href="https://www.policiamilitar.sp.gov.br/unidades/ambiental/contato.html">
-                    <img src="img/contato/img_7925.jpg" />
-                    <button> fale conosco </button></a>
-            </div>
-        </section>
-        <section id=endereço>
-            <div>
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1829.1184117685518!2d-46.61497196113101!3d-23.523983135405956!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce58ea93e9eb0b%3A0x25fa2d7df191e57f!2sR.%20Dr.%20Miguel%20Paulo%20Capalbo%20-%20Pari%2C%20S%C3%A3o%20Paulo%20-%20SP%2C%2003035-040!5e0!3m2!1spt-BR!2sbr!4v1692745881276!5m2!1spt-BR!2sbr" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-                <h2>estamos Pet Caramelo S/A <br>- CNPJ 18.328.118/0013-42 <br>- Endereço: Rua Dr. Miguel Paulo Capalbo,
-                    135
-                    - Pari <br> - São Paulo - SP <br>CEP: 03035-040</h2>
-                <a href="https://wa.me/5551997663963?text=pet+Caramelo">
-                    <h3>Nossa Central de ajudar</h3><i class="fa-brands fa-whatsapp" style="color: #41ec5d;"></i>
-                </a>
-            </div>
-            <div>
-                <!--espaço do mapa-->
-            </div>
-        </section>
-        <footer>
+        <!-- header -->
+        <header class="bg-light head">
             <div class="row">
-            <div class="col">
-            <a href="">Meios de Pagamento</a><br />
-            <a href=""><i class="fa-brands fa-pix" style="color: #151e2d"></i></a>
-            <a href=""><i class="fa-brands fa-cc-visa" style="color: #151e2d"></i></a>
-            <a href=""><i class="fa-brands fa-cc-mastercard" style="color: #151e2d"></i></a>
-            <a href=""><i class="fa-solid fa-barcode" style="color: #151e2d"></i></a>
+                <div class="col-1 logo">
+                    <a href="../index.html"><img src="../img/logos/petshop_caramelo.png"></a>
+                </div>
+            <div class="col-6 links">
+                <nav>
+                <a href="adocao.html">Adoção</a>
+                <a href="produtos.html">Produtos</a>
+                <a href="depoimentos.html">Noticias</a>
+                <a href="contato.html" class="activated">Contato</a>
+                <a href="clubepetcaramelo.html">Clube Pet Caramelo</a>
+                </nav>
             </div>
-            <div class="col">
-            <a href="contato.html">Redes Sociais</a><br/>
-            <a href=""><i class="fa-brands fa-instagram" style="color: #4180ec"></i></a>
-            <a href=""><i class="fa-brands fa-facebook" style="color: #4180ec"></i></a>
-            <a href=""><i class="fa-brands fa-whatsapp" style="color: #41ec5d"></i></a>
-            <a href=""><i class="fa-solid fa-shield-dog" style="color: #151e2d"></i></a>
+
+            <div class="col-3" id="divBusca">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <input type="text" id="txtBusca" placeholder="Buscar..." />
             </div>
-        </div>
-        </footer>
+
+            <div class="col-2 login">
+                <a href="login.html">
+                <span class="span-2 search"></span>
+                <i class="fa-solid fa-user"></i>Login</a>
+            </div>
+            </div>
+        </header>
+        <!-- fim /header -->
+        <main>
+        <section class="container-slide"><!--quiz-->
+            <button id="botao-voltar"><img src="../img/adocao/imagem_quiz/seta_quiz.png"
+                    alt="seta"></i></button><!--botao-de-voltar-->
+            <section class="paginas-slide">
+
+                <div class=" primeiro-slide slide on"><!--primeiro slide-->
+                    <span id="titulo-slide">Encontre Seu Pet metade!</span>
+                    <p id="paragrafo-slide">Responda o Quiz e descubra o pet que mais combina com você.</p>
+
+                </div>
+
+                <div class="slide"><!--segundo slide-->
+                    <h4>Que palavra define você:</h4>
+                    <form>
+                        <input type="radio" name="tipo_de_pessoa" value="cachorro" /> Brincalhão <br>
+                        <input type="radio" name="tipo_de_pessoa" value="gato" /> Independente<br>
+                        <input type="radio" name="tipo_de_pessoa" value="gato" /> Curioso<br>
+                        <input type="radio" name="tipo_de_pessoa" value="cachorro" /> Alegre<br>
+                    </form>
+                </div>
+
+                <div class="slide"><!--terceiro slide-->
+                    <h4>Quanto tempo livre você tem por dia?:</h4>
+                    <form>
+                        <input type="radio" name="tempo_livre" value="cachorro" /> Bastante tempo livre<br>
+                        <input type="radio" name="tempo_livre" value="gato" /> Só alguns dias livres<br>
+                        <input type="radio" name="tempo_livre" value="gato" /> Pouco tempo livre<br>
+                        <input type="radio" name="tempo_livre" value="gato" /> Nunca tenho tempo<br>
+                    </form>
+                </div>
+
+                <div class="slide"><!--quarto slide-->
+                    <h4>Você quer que seu animal seja:</h4>
+                    <form>
+                        <input type="radio" name="personalidade_pet" value="cachorro" /> Sociável e
+                        companheiro<br>
+                        <input type="radio" name="personalidade_pet" value="cachorro" /> Dócil e
+                        carinhoso<br>
+                        <input type="radio" name="personalidade_pet" value="gato" /> Fácil de cuidar<br>
+                        <input type="radio" name="personalidade_pet" value="gato" /> Prático e tranquilo<br>
+                    </form>
+                </div>
+
+                <div class="slide"><!--quinto slide-->
+                    <h4>O que você espera do seu pet:</h4>
+                    <form>
+                        <input type="radio" name="cuidados" value="cachorro" /> Proteção e
+                        companheirismo<br>
+                        <input type="radio" name="cuidados" value="gato" /> Ter cuidados simples e evitar
+                        bagunça<br>
+                        <input type="radio" name="cuidadost" value="gato" /> Uma experiência nova para a
+                        vida<br>
+                        <input type="radio" name="cuidados" value="cachorro" /> Deixar a casa mais
+                        alegre<br>
+                    </form>
+                </div>
+
+                <div class="slide"><!--sexto slide-->
+                    <h4>Para ter um pet você seria capaz de:</h4>
+                    <form>
+                        <input type="radio" name="cuidados" value="cachorro" /> Passear ao ar livre
+                        diariamente<br>
+                        <input type="radio" name="cuidados" value="gato" /> colocar poteção nas janelas<br>
+                        <input type="radio" name="cuidadost" value="gato" /> Apenas alimentá-lo
+                        diariamente<br>
+                        <input type="radio" name="cuidados" value="cachorro" /> Lidar com o barulho sem
+                        problemas<br>
+                    </form>
+                </div>
+                <div class="slide"><!--setimo slide-->
+                    <h4>Gatos</h4>
+                    <p>Independentes, os gatos se adaptam bem à rotina dos donos que passam boa parte do
+                        tempo
+                        fora
+                        de
+                        casa. No geral, se viram bem quando estão sozinhos, mas são curiosos e exigem alguns
+                        cuidados.
+                        Raramente tomam banho, curtem passeios solitários quando moram em casas e, em
+                        apartamentos,
+                        costumam saltar em janelas e varandas, o que exige certa proteção. Além disso, é bom
+                        investir em
+                        brinquedos, que evitam desgastes nos móveis</p>
+                    <img width="20%" src="../img/adocao/imagem_quiz/cat_quiz.jpg" alt="Gato deitado">
+                </div>
+
+                <div class="slide"><!--oitavo slide-->
+                    <h4>Cães</h4>
+                    <p>O animal de estimação que combina com sua rotina e personalidade precisa ser dócil,
+                        inteligente e
+                        carinhoso. Como você tem tempo livre para cuidar, passear e ensinar seu pet,
+                        cachorros
+                        são
+                        as
+                        opções que mais se adaptam a sua vida, já que são animais sociáveis (com pessoas e
+                        outros
+                        tipos
+                        de animais), extremamente dependentes, ativos e gostam de brincar. A personalidade
+                        pode
+                        variar
+                        de uma raça para outra, mas no geral, ficam deprimidos quando passam muito tempo
+                        sozinhos.
+                        Vale lembrar que, antes de escolher seu amigo, cães necessitam de alimentação
+                        diária,
+                        passeios,
+                        horas de dedicação, banhos frequentes, vacinas e visitas ao veterinário.
+                    </p>
+                    <img width="20%" src="../img/adocao/imagem_quiz/dog_quiz.jpg" alt="Cachorro na grama">
+                </div>
+
+            </section>
+            <button id="botao-avancar"><img src="../img/adocao/imagem_quiz/seta_quiz.png"
+                    alt="seta"></button><!--botao-de-avançar-->
+
+        </section>
+        
+        </section>
+                <a
+                    href="https://www.google.com/search?rlz=1C1SQJL_pt-BRBR1013BR1013&q=Disque+Den%C3%BAncia+maus-tratos+animais&uds=H4sIAAAAAAAA_-Py42JzySwuLE0VkklJzSvNS85MVMhNLC1WKClKLMkvVkjMy8xNzCw2YCpSgahTcEnNO7wLrk4XVR0AwH0RUVAAAAA&sa=X&ved=2ahUKEwjYgNOq68aAAxX1pJUCHXQgBRMQxKsJegQICRAB&ictx=0&biw=767&bih=744&dpr=1.25">
+                    <div id="whats">
+                        <h1>disque denúncia</h1>
+                    </div>
+                </a>
+                <div id="policia">
+                    <h1>policia Ambiental</h1>
+                    
+                    <a href="https://www.policiamilitar.sp.gov.br/unidades/ambiental/contato.html">
+                        <img src="img/contato/img_7925.jpg" />
+                        <button> <h2>fale conosco</h2>  </button></a>
+                </div>
+            </section>
+            <section id=endereço>
+                <div>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1829.1184117685518!2d-46.61497196113101!3d-23.523983135405956!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce58ea93e9eb0b%3A0x25fa2d7df191e57f!2sR.%20Dr.%20Miguel%20Paulo%20Capalbo%20-%20Pari%2C%20S%C3%A3o%20Paulo%20-%20SP%2C%2003035-040!5e0!3m2!1spt-BR!2sbr!4v1692745881276!5m2!1spt-BR!2sbr" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    <h2>estamos Pet Caramelo S/A <br>- CNPJ 18.328.118/0013-42 <br>- Endereço: Rua Dr. Miguel Paulo Capalbo,
+                        135
+                        - Pari <br> - São Paulo - SP <br>CEP: 03035-040</h2>
+                    <a href="https://wa.me/5551997663963?text=pet+Caramelo">
+                        <h3>Nossa Central de ajudar</h3><i class="fa-brands fa-whatsapp" style="color: #41ec5d;"></i>
+                    </a>
+                </div>
+                <div>   
+                    <!--espaço do mapa-->
+                </div>
+            </section>
+        </main>
+    <footer>
+                <div class="row">
+                <div class="col">
+                <a href="">Meios de Pagamento</a><br />
+                <a href=""><i class="fa-brands fa-pix" style="color: #151e2d"></i></a>
+                <a href=""><i class="fa-brands fa-cc-visa" style="color: #151e2d"></i></a>
+                <a href=""><i class="fa-brands fa-cc-mastercard" style="color: #151e2d"></i></a>
+                <a href=""><i class="fa-solid fa-barcode" style="color: #151e2d"></i></a>
+                </div>
+                <div class="col">
+                <a href="contato.html">Redes Sociais</a><br/>
+                <a href=""><i class="fa-brands fa-instagram" style="color: #4180ec"></i></a>
+                <a href=""><i class="fa-brands fa-facebook" style="color: #4180ec"></i></a>
+                <a href=""><i class="fa-brands fa-whatsapp" style="color: #41ec5d"></i></a>
+                <a href=""><i class="fa-solid fa-shield-dog" style="color: #151e2d"></i></a>
+                </div>
+            </div>
+    </footer>
 
 
-</body>
+    </body>
