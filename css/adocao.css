@@ -1,237 +1,221 @@
-
-*{
+* {
     font-family: 'Lato', sans-serif;
 }
-.subtitulo{
+
+#titulo {
+    padding-top: 20px;
+}
+
+.subtitulo {
     margin-top: 50px;
     margin-bottom: 30px;
 }
 
-
-#titulo{
-    padding-top: 20px;
-}
-
 /*divisao lado esquerdo e direito do site*/
-.lado-direito-esquerdo{
+.lado-direito-esquerdo {
     display: flex;
-    
 }
 
 /*formatação quiz*/
-.container-slide{
-    display: flex;
-    width: 100%;
-    min-height: 50vh;
+.container-slide {
     align-items: center;
-    justify-content: center;
+    display: flex;
     gap: 1rem;
-    }
-
-.paginas-slide{
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content:center;
-    width: 700px;
-    
+    justify-content: center;
+    min-height: 50vh;
+    width: 100%;
 }
 
-.primeiro-slide{
+.paginas-slide {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    width: 700px;
+
+}
+
+.primeiro-slide {
     background-image: url(../img/adocao/h1/fundo_h_um.jpg);
     background-size: cover;
-    height: 300px;
     color: white;
+    height: 300px;
+
 }
 
-
-#titulo-slide{
+#titulo-slide {
     display: flex;
-    justify-content: left;
     font-size: 40px;
     font-family: 'Lato', sans-serif;
+    font-weight: bold justify-content: left;
     padding-left: 10px;
     padding-top: 20px;
-    font-weight:bold
 
 }
 
-#paragrafo-slide{
+#paragrafo-slide {
     display: flex;
-    justify-content: left;
     font-size: 20px;
     font-family: 'Lato', sans-serif;
+    justify-content: left;
     padding-left: 10px;
     padding-top: 10px;
-    width: 300px;
     text-align: justify;
-    
+    width: 300px;
 
 }
 
-.slide{
-    opacity: 0;
-    transition: opacity .2s;
-    position: absolute;
-    width: 100%;
-    padding-bottom: 30px;
+.slide {
     border-radius: 10px;
-
-
-
+    opacity: 0;
+    padding-bottom: 30px;
+    position: absolute;
+    transition: opacity .2s;
+    width: 100%;
 }
 
-.on{
+.on {
     opacity: 1;
 }
 
-#botao-voltar, #botao-avancar{
-    width: 20px;
-    height: 20px;
-    border: none;
+#botao-voltar,
+#botao-avancar {
     background-color: transparent;
+    border: none;
     cursor: pointer;
-    
+    height: 20px;
+    width: 20px;
+
 }
 
-#botao-voltar img, #botao-avancar img{
-    width: 100%;
+#botao-voltar img,
+#botao-avancar img {
     height: 100%;
-    
+    width: 100%;
 
 }
 
-#botao-avancar{
+#botao-avancar {
     transform: rotate(180deg);
 }
+
 /*fim formatação quiz*/
 
 /*inicio formatação prdutos*/
-.produtos{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+.produtos {
     align-items: center;
-    padding-inline-start: 20px;
-    
     border-left: 5px;
     border-left: solid;
     border-color: rgb(170, 167, 167);
-    
-
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-inline-start: 20px;
 }
-.div-produtos{
-    position:relative;
+
+.div-produtos {
+    position: relative;
 }
 
-.div-produtos:hover{
-    top:-2px;
-    box-shadow:0 2px 2px blueviolet;
-} 
+.div-produtos:hover {
+    box-shadow: 0 2px 2px blueviolet;
+    top: -2px;
+}
 
-.paragrafo-produtos{
-
-    text-align: center;
-    line-height: 150%;
+.paragrafo-produtos {
+    color: black;
     font-size: 15px;
-    color:black;
+    line-height: 150%;
     margin-top: 20px;
+    text-align: center;
 }
 
-.paragrafo-produtos:hover{
+.paragrafo-produtos:hover {
     color: blueviolet;
 
 }
 
-.preco-produto{
-    text-align: center;
-    line-height: 150%;
+.preco-produto {
+    color: var(--colors-background);
     font-size: 15px;
-    color: var(--colors-background);;
     font-weight: bold;
+    line-height: 150%;
+    text-align: center;
 }
-.imagem-produtos{
+
+.imagem-produtos {
+    object-fit: cover;
+    padding: 5px;
     height: 100px;
     width: 100px;
+}
+
+.imagem-produtos-racao {
     object-fit: cover;
     padding: 5px;
-   
-
-}
-.imagem-produtos-racao{
     height: 200px;
-    object-fit: cover;
-    padding: 5px;
-   
+}
 
-}
-.patinha{
-    color:white;
-    display: flex;
-    align-items:baseline;
-}
-.opcao-de-pet{
-    
+/*fim formatação produtos*/
+/*inicio formatação opção de pets*/
+
+.opcao-de-pet {
+
     background-image: url(../img/adocao/dog/background.jpg);
     background-size: 450px;
     border-radius: 10px;
     margin: 20px;
     padding: 30px;
-    
-  
 }
 
-.nomes-pets{
-    color: white;
-    font-size: 16px;
-}
-
-.figuras-como-adotar{
-
-    display: inline-grid;
-    grid-template-columns: 180px 180px 180px 180px;
-}
-
-.titulo-como-adotar{
-    display: inline-grid;
-    grid-template-columns: 180px 180px 180px 180px;
-}
-
-.paragrafo-como-adotar{
-    display: inline-grid;
-    grid-template-columns: 150px 150px 150px 150px;
-    gap: 30px;
-    text-align: justify;
-    line-height: 150%;
-}
-
-.figuras-como-adotar{
-    color: blueviolet;
-}
-
-.sugestao-caes-gatos{
+.sugestao-caes-gatos {
     display: flex;
     justify-content: space-evenly;
 }
 
 .img-pets {
+    border-radius: 50%;
     height: 150px;
+    margin-bottom: 10px;
     object-fit: cover;
     width: 150px;
-    border-radius: 50%;
-    margin-bottom: 10px;
-    
 }
 
-#figuras-ongs{
+/*fim formatação opção de pets*/
+/*inicio formatação como adotar*/
+
+.figuras-como-adotar {
+    color: blueviolet;
+    display: inline-grid;
+    grid-template-columns: 180px 180px 180px 180px;
+}
+
+.titulo-como-adotar {
+    display: inline-grid;
+    grid-template-columns: 180px 180px 180px 180px;
+}
+
+.paragrafo-como-adotar {
+    display: inline-grid;
+    gap: 30px;
+    grid-template-columns: 150px 150px 150px 150px;
+    line-height: 150%;
+    text-align: justify;
+
+}
+
+/* inicio formatação ongs*/
+#figuras-ongs {
     display: flex;
-    justify-content:center;
+    justify-content: center;
 }
 
-.imagem-ongs{
+.imagem-ongs {
 
     height: 40px;
-    width: 40px;
     object-fit: cover;
     padding: 5px;
+    width: 40px;
 }
+
+/*fim formatação ongs*/
