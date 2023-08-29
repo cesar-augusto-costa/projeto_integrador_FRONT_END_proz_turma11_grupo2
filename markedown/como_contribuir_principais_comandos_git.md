@@ -17,6 +17,7 @@ git config --global credential.helper store   |
 git clone CAMINHO-GITHUB                      | Clona somente a branch principal com a pasta raiz do github
 git clone CAMINHO-GITHUB .                    | Clona somente a branch principal sem a pasta raiz do github
 git clone CAMINHO-GITHUB nova-pasta           | Clona somente a branch principal sem a pasta raiz do github na nova-pasta
+git clone -b develop CAMINHO-GITHUB           |
 git clone URL --branch feature --single-branch|
 git remote -v                                 |
 git remote add origin CAMINHO-GITHUB          |        

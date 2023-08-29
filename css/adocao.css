@@ -116,18 +116,21 @@
     
     border-left: 5px;
     border-left: solid;
+<<<<<<< HEAD
     border-color: rgb(170, 167, 167);
     
 
+=======
+    border-color: blueviolet;
+>>>>>>> 770b7f1103054f51d8d11b506dde5500e8b4e667
 }
 .div-produtos{
     position:relative;
- }
+}
 
 .div-produtos:hover{
     top:-2px;
     box-shadow:0 2px 2px blueviolet;
-       
 } 
 
 .paragrafo-produtos{
@@ -137,7 +140,6 @@
     font-size: 15px;
     color:black;
     margin-top: 20px;
-
 }
 
 .paragrafo-produtos:hover{
@@ -151,7 +153,6 @@
     font-size: 15px;
     color: var(--colors-background);;
     font-weight: bold;
-    
 }
 .imagem-produtos{
     height: 100px;
@@ -206,7 +207,6 @@
     gap: 30px;
     text-align: justify;
     line-height: 150%;
- 
 }
 
 .figuras-como-adotar{
@@ -216,7 +216,6 @@
 .sugestao-caes-gatos{
     display: flex;
     justify-content: space-evenly;
-
 }
 
 .img-pets {
@@ -239,7 +238,4 @@
     width: 40px;
     object-fit: cover;
     padding: 5px;
-   
-   
-
 }

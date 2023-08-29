@@ -21,10 +21,9 @@
     <!-- header -->
     <header class="bg-light head">
         <div class="row">
-        <div class="col-1">
-            <span class="span-1 dog"><a href="../index.html"><i class="fa-solid fa-dog"></i></a></span>
-            <a href="../index.html"><i class="bi bi-house-door-fill"></i></a>
-        </div>
+            <div class="col-1 logo">
+                <a href="../index.html"><img src="../img/logos/petshop_caramelo.png"></a>
+            </div>
         <div class="col-6 links">
             <nav>
             <a href="adocao.html">Adoção</a>
@@ -48,7 +47,7 @@
         </div>
     </header>
     <!-- fim /header -->
-    <style>
+    <!-- <style>
         #carocel {
             background-color: rgb(87, 192, 226);
             color: black;
@@ -70,32 +69,33 @@
             padding: 40px;
             text-align: center;
         }
-    </style>
-    <section Id="carocel">
-        <input type="radio" class="slide-controller" name="slide" checked />
-        <input type="radio" class="slide-controller" name="slide" />
-        <input type="radio" class="slide-controller" name="slide" />
-        <input type="radio" class="slide-controller" name="slide" />
+    </style> -->
+    <section class="image-slider">
+        <input type="radio" class="slide-controller" name="slide" id="slide1" checked>
+        <input type="radio" class="slide-controller" name="slide" id="slide2">
+        <input type="radio" class="slide-controller" name="slide" id="slide3">
+        
         <div class="slide-show">
-            <ul class="slider">
-                <li>
-                    <input type="radio" id="slide1" name="slide" checked>
-                    <label for="slide1"></label>
-                    <img src="../img/home/foto1.jpg" />
-                </li>
-                <li>
-                    <input type="radio" id="slide2" name="slide">
-                    <label for="slide2"></label>
-                    <img src="../img/home/foto2.jpg" />
-                </li>
-                <li>
-                    <input type="radio" id="slide3" name="slide">
-                    <label for="slide3"></label>
-                    <img src="../img/home/foto3.jpg" />
-                </li>
-            </ul>
+        <ul class="slider">
+            <li>
+            <label for="slide1"></label>
+            <img src="../img/home/foto1.jpg" alt="Slide 1">
+            </li>
+            <li>
+            <label for="slide2"></label>
+            <img src="../img/home/foto2.jpg" alt="Slide 2">
+            </li>
+            <li>
+            <label for="slide3"></label>
+            <img src="../img/home/foto3.jpg" alt="Slide 3">
+            </li>
+            <li>
+            <label for="slide4"></label>
+            <img src="../img/home/foto4.jpg" alt="Slide 4">
+            </li>
+        </ul>
         </div>
-        <section contato>
+    </section>
             <a
                 href="https://www.google.com/search?rlz=1C1SQJL_pt-BRBR1013BR1013&q=Disque+Den%C3%BAncia+maus-tratos+animais&uds=H4sIAAAAAAAA_-Py42JzySwuLE0VkklJzSvNS85MVMhNLC1WKClKLMkvVkjMy8xNzCw2YCpSgahTcEnNO7wLrk4XVR0AwH0RUVAAAAA&sa=X&ved=2ahUKEwjYgNOq68aAAxX1pJUCHXQgBRMQxKsJegQICRAB&ictx=0&biw=767&bih=744&dpr=1.25">
                 <div id="whats">
@@ -112,6 +112,7 @@
         </section>
         <section id=endereço>
             <div>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1829.1184117685518!2d-46.61497196113101!3d-23.523983135405956!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce58ea93e9eb0b%3A0x25fa2d7df191e57f!2sR.%20Dr.%20Miguel%20Paulo%20Capalbo%20-%20Pari%2C%20S%C3%A3o%20Paulo%20-%20SP%2C%2003035-040!5e0!3m2!1spt-BR!2sbr!4v1692745881276!5m2!1spt-BR!2sbr" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                 <h2>estamos Pet Caramelo S/A <br>- CNPJ 18.328.118/0013-42 <br>- Endereço: Rua Dr. Miguel Paulo Capalbo,
                     135
                     - Pari <br> - São Paulo - SP <br>CEP: 03035-040</h2>
