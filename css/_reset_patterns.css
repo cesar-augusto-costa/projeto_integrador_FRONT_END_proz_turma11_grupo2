@@ -32,9 +32,12 @@
     list-style: none;
     text-decoration: none;
     font: inherit;
-    font-size: 1.6rem;
     font-family: "Lato", sans-serif;
 	vertical-align: baseline;
+}
+
+html {
+	font-size: 1.6rem;
 }
 
 article, aside, details, figcaption, figure, 
