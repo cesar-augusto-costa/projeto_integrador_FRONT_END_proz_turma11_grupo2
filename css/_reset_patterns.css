@@ -36,8 +36,11 @@
 	vertical-align: baseline;
 }
 
+/* font-size: 1.6rem;
+font-size: 62.5% = 10px
+*/
 html {
-	font-size: 1.6rem;
+	font-size: 62.5%;
 }
 
 article, aside, details, figcaption, figure, 
