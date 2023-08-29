@@ -2,28 +2,121 @@
 *{
     font-family: 'Lato', sans-serif;
 }
-
-.principal{
-    display: flex;
-    justify-content: space-between;
-    padding: 20px;
-    }
-
 .subtitulo{
     margin-top: 50px;
     margin-bottom: 30px;
 }
 
+
+#titulo{
+    padding-top: 20px;
+}
+
+/*divisao lado esquerdo e direito do site*/
+.lado-direito-esquerdo{
+    display: flex;
+    
+}
+
+/*formatação quiz*/
+.container-slide{
+    display: flex;
+    width: 100%;
+    min-height: 50vh;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    }
+
+.paginas-slide{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content:center;
+    width: 700px;
+    
+}
+
+.primeiro-slide{
+    background-image: url(../img/adocao/h1/fundo_h_um.jpg);
+    background-size: cover;
+    height: 300px;
+    color: white;
+}
+
+
+#titulo-slide{
+    display: flex;
+    justify-content: left;
+    font-size: 40px;
+    font-family: 'Lato', sans-serif;
+    padding-left: 10px;
+    padding-top: 20px;
+    font-weight:bold
+
+}
+
+#paragrafo-slide{
+    display: flex;
+    justify-content: left;
+    font-size: 20px;
+    font-family: 'Lato', sans-serif;
+    padding-left: 10px;
+    padding-top: 10px;
+    width: 300px;
+    text-align: justify;
+    
+
+}
+
+.slide{
+    opacity: 0;
+    transition: opacity .2s;
+    position: absolute;
+    width: 100%;
+    padding-bottom: 30px;
+    border-radius: 10px;
+
+
+
+}
+
+.on{
+    opacity: 1;
+}
+
+#botao-voltar, #botao-avancar{
+    width: 20px;
+    height: 20px;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    
+}
+
+#botao-voltar img, #botao-avancar img{
+    width: 100%;
+    height: 100%;
+    
+
+}
+
+#botao-avancar{
+    transform: rotate(180deg);
+}
+/*fim formatação quiz*/
+
+/*inicio formatação prdutos*/
 .produtos{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    padding-inline-start: 50px;
+    padding-inline-start: 20px;
     
     border-left: 5px;
     border-left: solid;
-    border-color: blueviolet;
+    border-color: rgb(170, 167, 167);
     
 
 }
@@ -56,10 +149,46 @@
     text-align: center;
     line-height: 150%;
     font-size: 15px;
-    color:blueviolet;
+    color: var(--colors-background);;
     font-weight: bold;
     
 }
+.imagem-produtos{
+    height: 100px;
+    width: 100px;
+    object-fit: cover;
+    padding: 5px;
+   
+
+}
+.imagem-produtos-racao{
+    height: 200px;
+    object-fit: cover;
+    padding: 5px;
+   
+
+}
+.patinha{
+    color:white;
+    display: flex;
+    align-items:baseline;
+}
+.opcao-de-pet{
+    
+    background-image: url(../img/adocao/dog/background.jpg);
+    background-size: 450px;
+    border-radius: 10px;
+    margin: 20px;
+    padding: 30px;
+    
+  
+}
+
+.nomes-pets{
+    color: white;
+    font-size: 16px;
+}
+
 .figuras-como-adotar{
 
     display: inline-grid;
@@ -96,6 +225,7 @@
     width: 150px;
     border-radius: 50%;
     margin-bottom: 10px;
+    
 }
 
 #figuras-ongs{
