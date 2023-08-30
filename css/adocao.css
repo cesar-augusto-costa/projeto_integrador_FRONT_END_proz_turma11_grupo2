@@ -47,7 +47,8 @@
     display: flex;
     font-size: 40px;
     font-family: 'Lato', sans-serif;
-    font-weight: bold justify-content: left;
+    font-weight: bold;
+    justify-content: left;
     padding-left: 10px;
     padding-top: 20px;
 }
@@ -71,6 +72,7 @@
     position: absolute;
     transition: opacity .2s;
     width: 100%;
+    
 }
 
 .on {
@@ -160,8 +162,8 @@
 
 .opcao-de-pet {
 
-    background-image: url(../img/adocao/dog/background.jpg);
-    background-size: 450px;
+    background-image: url(../img/adocao/Pata\ 9.png);
+    background-size: 650px;
     border-radius: 10px;
     margin: 20px;
     padding: 30px;
