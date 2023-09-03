@@ -2,221 +2,285 @@
     font-family: 'Lato', sans-serif;
 }
 
-#titulo {
-    padding-top: 20px;
-}
+header {   
 
-.subtitulo {
-    margin-top: 50px;
-    margin-bottom: 30px;
-}
+    position: sticky;   
 
-/*divisao lado esquerdo e direito do site*/
-.lado-direito-esquerdo {
-    display: flex;
-}
-
-/*formatação quiz*/
-.container-slide {
-    align-items: center;
-    display: flex;
-    gap: 1rem;
-    justify-content: center;
-    min-height: 50vh;
-    width: 100%;
-}
-
-.paginas-slide {
-    align-items: center;
-    display: flex;
-    justify-content: center;
-    position: relative;
-    width: 700px;
+    top: 0; 
 
 }
 
-.primeiro-slide {
-    background-image: url(../img/adocao/h1/fundo_h_um.jpg);
-    background-size: cover;
-    color: white;
-    height: 300px;
+    #titulo {
+        padding-top: 20px;
+        margin-bottom: 30px;
+    }
 
-}
+    .subtitulo {
+        margin-top: 50px;
+        margin-bottom: 10px;
+    }
 
-#titulo-slide {
-    display: flex;
-    font-size: 40px;
-    font-family: 'Lato', sans-serif;
-    font-weight: bold;
-    justify-content: left;
-    padding-left: 10px;
-    padding-top: 20px;
-}
+    /*divisao lado esquerdo e direito do site*/
+    .lado-direito-esquerdo {
+        display: flex;
+    }
 
-#paragrafo-slide {
-    display: flex;
-    font-size: 20px;
-    font-family: 'Lato', sans-serif;
-    justify-content: left;
-    padding-left: 10px;
-    padding-top: 10px;
-    text-align: justify;
-    width: 300px;
+    /*formatação quiz*/
+    .container-slide {
+        align-items: center;
+        display: flex;
+        gap: 1rem;
+        justify-content: center;
+        min-height: 50vh;
+        width: 100%;
+    }
 
-}
+    .paginas-slide {
+        align-items: center;
+        display: flex;
+        justify-content: center;
+        position: relative;
+        width: 700px;
 
-.slide {
-    border-radius: 10px;
-    opacity: 0;
-    padding-bottom: 30px;
-    position: absolute;
-    transition: opacity .2s;
-    width: 100%;
+    }
+
+    .primeiro-slide {
+        background-image: url(../img/adocao/h1/fundo_h_um.jpg);
+        background-size: cover;
+        color: white;
+        height: 300px;
+        border-style: solid;
+        border-color: orange;
+        border-radius: 10px;
+
+    }
+
+    #titulo-slide {
+        display: flex;
+        font-size: 40px;
+        font-family: 'Lato', sans-serif;
+        font-weight: bold;
+        justify-content: left;
+        padding-left: 10px;
+        padding-top: 20px;
+    }
+
+    #paragrafo-slide {
+        display: flex;
+        font-size: 20px;
+        font-family: 'Lato', sans-serif;
+        justify-content: left;
+        padding-left: 10px;
+        padding-top: 10px;
+        text-align: justify;
+        width: 300px;
+
+    }
+
+    .slide {
+        border-radius: 10px;
+        opacity: 0;
+        padding-bottom: 30px;
+        position: absolute;
+        transition: opacity .2s;
+        width: 100%;
+
+    }
+
+    .on {
+        opacity: 1;
+    }
+
+    .proximos-slides {
+        background: orange;
+        height: 300px;
+        padding-top: 20px;
+    }
+
+    .formulario {
+        font-size: 20px;
+        padding: 30px 0 0 150px;
+        text-align: left;
+    }
+
+    .slide-resultado {
+        display: flex;
+    }
+
+    .paragrafo-resultado {
+        padding: 20px 10px 20px 50px;
+        text-align: justify;
+        text-indent: 25px;
+    }
+
+    #img-slide-gato {
+        object-fit: cover;
+        height: 250px;
+        width: 250px;
+        margin-right: 20px;
+
+    }
+
+    #img-slide-dog {
+        object-fit: cover;
+        height: 250px;
+        width: 500px;
+        margin-right: 20px;
+
+    }
+
+    #botao-voltar,
+    #botao-avancar {
+        background-color: transparent;
+        border: none;
+        cursor: pointer;
+        height: 20px;
+        width: 20px;
+
+    }
+
+    #botao-voltar img,
+    #botao-avancar img {
+        height: 100%;
+        width: 100%;
+
+    }
+
+    #botao-avancar {
+        transform: rotate(180deg);
+    }
+
+    /*fim formatação quiz*/
+
+    /*inicio formatação prdutos*/
+    .produtos {
+        align-items: center;
+        border-left: 5px;
+        border-left: solid;
+        border-color: orange;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding-inline-start: 20px;
+    }
+
+    .div-produtos {
+        position: relative;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+
+    .div-produtos:hover {
+        box-shadow: 0 2px 2px orange;
+       
+        transform: scale(1.1);
+        color: orange;
+    }
+
+    .paragrafo-produtos {
+        color: black;
+        font-size: 15px;
+        line-height: 150%;
+        margin-top: 20px;
+        text-align: center;
+    }
+
     
-}
 
-.on {
-    opacity: 1;
-}
+    .preco-produto {
+        color: var(--colors-background);
+        font-size: 15px;
+        font-weight: bold;
+        line-height: 150%;
+        text-align: center;
+    }
 
-#botao-voltar,
-#botao-avancar {
-    background-color: transparent;
-    border: none;
-    cursor: pointer;
-    height: 20px;
-    width: 20px;
+    .imagem-produtos {
+        object-fit: cover;
+        padding: 5px;
+        height: 100px;
+        width: 100px;
+    }
 
-}
+    .imagem-produtos-racao {
+        object-fit: cover;
+        padding: 5px;
+        height: 200px;
+    }
 
-#botao-voltar img,
-#botao-avancar img {
-    height: 100%;
-    width: 100%;
+    /*fim formatação produtos*/
+    /*inicio formatação opção de pets*/
 
-}
+    .opcao-de-pet {
 
-#botao-avancar {
-    transform: rotate(180deg);
-}
+        background-image: url(../img/adocao/background/imagens-de-patinha.png);
+        background-size: 200px;
+        background-blend-mode:luminosity;
+        border-radius: 10px;
+        margin: 20px;
+        padding: 20px;
+    }
 
-/*fim formatação quiz*/
+    .sugestao-caes-gatos {
+        display: flex;
+        justify-content: space-evenly;
+    }
 
-/*inicio formatação prdutos*/
-.produtos {
-    align-items: center;
-    border-left: 5px;
-    border-left: solid;
-    border-color: rgb(170, 167, 167);
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    padding-inline-start: 20px;
-}
+    .img-pets {
+        border-radius: 50%;
+        height: 150px;
+        margin-bottom: 10px;
+        object-fit: cover;
+        width: 150px;
+        padding: 10px;
+        transition: 200ms linear;
+    }
 
-.div-produtos {
-    position: relative;
-}
+    .img-pets:hover{
+        transform: scale(1.6);
+    }
 
-.div-produtos:hover {
-    box-shadow: 0 2px 2px blueviolet;
-    top: -2px;
-}
+    /*fim formatação opção de pets*/
+    /*inicio formatação como adotar*/
 
-.paragrafo-produtos {
-    color: black;
-    font-size: 15px;
-    line-height: 150%;
-    margin-top: 20px;
-    text-align: center;
-}
+    .figuras-como-adotar {
+        padding-top: 20px;
+        color: orange;
+        display: inline-grid;
+        grid-template-columns: 180px 180px 180px 180px;
+    }
 
-.paragrafo-produtos:hover {
-    color: blueviolet;
+    .titulo-como-adotar {
+        display: inline-grid;
+        grid-template-columns: 180px 180px 180px 180px;
+    }
 
-}
+    .div-como-adotar {
+        display: inline-grid;
+        gap: 30px;
+        grid-template-columns: 150px 150px 150px 150px;
+        line-height: 150%;
+        text-align: justify;
+    }
 
-.preco-produto {
-    color: var(--colors-background);
-    font-size: 15px;
-    font-weight: bold;
-    line-height: 150%;
-    text-align: center;
-}
+    .paragrafo-como-adotar{
+        border-style: solid;
+        border-color: orange;
+        border-radius: 10px;
+        padding: 20px 10px 10px 10px;
+        background: orange;
+        color: var(--cor-texto);
+        text-align:inherit;
+        text-indent: 5px;
+        margin-top: 20p;
+    }
 
-.imagem-produtos {
-    object-fit: cover;
-    padding: 5px;
-    height: 100px;
-    width: 100px;
-}
+    /* inicio formatação ongs*/
+    .imagem-ongs{
+        width: 120px;
+        margin-top: 20px;
+        margin-bottom: 30px;
+     
+    }
 
-.imagem-produtos-racao {
-    object-fit: cover;
-    padding: 5px;
-    height: 200px;
-}
-
-/*fim formatação produtos*/
-/*inicio formatação opção de pets*/
-
-.opcao-de-pet {
-
-    background-image: url(../img/adocao/Pata\ 9.png);
-    background-size: 650px;
-    border-radius: 10px;
-    margin: 20px;
-    padding: 30px;
-}
-
-.sugestao-caes-gatos {
-    display: flex;
-    justify-content: space-evenly;
-}
-
-.img-pets {
-    border-radius: 50%;
-    height: 150px;
-    margin-bottom: 10px;
-    object-fit: cover;
-    width: 150px;
-}
-
-/*fim formatação opção de pets*/
-/*inicio formatação como adotar*/
-
-.figuras-como-adotar {
-    color: blueviolet;
-    display: inline-grid;
-    grid-template-columns: 180px 180px 180px 180px;
-}
-
-.titulo-como-adotar {
-    display: inline-grid;
-    grid-template-columns: 180px 180px 180px 180px;
-}
-
-.paragrafo-como-adotar {
-    display: inline-grid;
-    gap: 30px;
-    grid-template-columns: 150px 150px 150px 150px;
-    line-height: 150%;
-    text-align: justify;
-
-}
-
-/* inicio formatação ongs*/
-#figuras-ongs {
-    display: flex;
-    justify-content: center;
-}
-
-.imagem-ongs {
-
-    height: 40px;
-    object-fit: cover;
-    padding: 5px;
-    width: 40px;
-}
-
-/*fim formatação ongs*/
+    /*fim formatação ongs*/
