@@ -226,14 +226,14 @@ header {
         justify-content: space-evenly;
     }
 
-    .img-pets {
+    .img-pets { 
         border-radius: 50%;
         height: 150px;
         margin-bottom: 10px;
         object-fit: cover;
         width: 150px;
         padding: 10px;
-        transition: 200ms linear;
+        transition: 200ms linear; 
     }
 
     .img-pets:hover{
