@@ -1,31 +1,27 @@
 main {
     font-family: 'Lato', sans-serif;
     padding: 20px;
-    margin: 0 auto; 
+    margin: 0 auto;   
+}
+
+h1 {
+    font-size: 36px;
+    font-weight: bold;
 }
 
 h2 {
-    margin-top: 0px;
+    font-size: 18px;
+    font-weight: bold;
 }
 
 a {
     text-decoration: none;
-    color: black;
+    color: #4b4848;
 }
 
-.text-post {
-    font-size: 40px;
+p {
+    color: #4b4848;
 }
-
-/*section {
-    width: 320px;
-}
-
-@media (max-width: 320px) {
-    section {
-        width: 320px;
-    }
-} */
 
 .depoimento {
     background: orange;
@@ -41,9 +37,9 @@ a {
     border: 2px solid #e7e7e7;
     margin: 10px;
     padding: 10px;
+    padding-top: 20px;
     border-radius: 10px;
 }
-
 
 .grid-depoimento {
     display: grid;
