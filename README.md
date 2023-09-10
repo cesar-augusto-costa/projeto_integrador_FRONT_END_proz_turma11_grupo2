@@ -3,7 +3,7 @@
 # Projeto Integrador Front-End <br> Portal Tech - Proz Educação <br> Idealizado Pela Parceria da AWS e Meta
 
 <div align="center">
-  <img src="img/logos/logo_realizacao.png" alt="Logo dos realizadores do curso" width="100%">
+  <img src="img/logos/logo_realizacao.png" alt="Logo dos realizadores do curso" width="60%">
 </div>
 
 ## Curso de Introdução à Programação Web <br> Turma 11 - Grupo 2 - Professor: Rand
@@ -15,8 +15,6 @@
 
 <div style="display: inline_block">
   <img align="center" alt="icone-GIT" height="60" src="https://github.com/devicons/devicon/blob/master/icons/git/git-original.svg">
-  &nbsp;&nbsp;
-  <img align="center" alt="icone-GIT-HUB" height="60" src="https://github.com/devicons/devicon/blob/master/icons/github/github-original.svg">
   &nbsp;&nbsp;
   <img align="center" alt="icone-VS-CODE" height="60" src="https://github.com/devicons/devicon/blob/master/icons/vscode/vscode-original.svg">
   &nbsp;&nbsp;
@@ -35,7 +33,9 @@
 
 ---
 
-## **Nome do Site:** 🐶 Pet Shop Caramelo 🐱
+## **TEMA** <br><br>🐶 Pet Shop 🐱 Venda de produtos para Pets, apoiando ONGs.
+
+<img src="img/logos/petshop_caramelo.png" alt="Logo do PetShop Caramelo" width="200">
 
 ---
 
@@ -87,6 +87,8 @@ Você pode conferir como o site está ficando em [Site do Pet Shop Caramelo](htt
 * [Sobre Todas as Sprints](markedown/sprints.md)
 
 * [Instruções de Entrega](markedown/instrucoes_entrega.md)
+
+* [Gravações das Reuniões - Google Meet](https://drive.google.com/drive/folders/1NJ1B6CZoZrHYEP1nKoETHuNuyV90dqg5?usp=sharing)
 
 * [Referências](markedown/referencias.md)
 
