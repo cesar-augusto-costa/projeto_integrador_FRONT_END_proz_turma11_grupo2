@@ -8,9 +8,28 @@ h2 {
     margin-top: 0px;
 }
 
+a {
+    text-decoration: none;
+    color: black;
+}
+
+.text-post {
+    font-size: 40px;
+}
+
+/*section {
+    width: 320px;
+}
+
+@media (max-width: 320px) {
+    section {
+        width: 320px;
+    }
+} */
+
 .depoimento {
     background: orange;
-    border: 1px solid #e7e7e7;
+    border: 2px solid #e7e7e7;
     margin: 10px;
     padding: 10px;
     border-radius: 10px;
@@ -19,7 +38,7 @@ h2 {
 
 .post {
     background: orange;
-    border: 1px solid #e7e7e7;
+    border: 2px solid #e7e7e7;
     margin: 10px;
     padding: 10px;
     border-radius: 10px;
@@ -40,9 +59,15 @@ h2 {
 
 .img {
     border-radius: 10px;
+    height: 200px;
+    margin-bottom: 10px;
+    object-fit: cover;
+    width: 200px;
+    padding: 10px;
+    transition: 200ms linear; 
 }
 
-a {
-    text-decoration: none;
-    color: black;
+.img:hover{
+    transform: scale(1.2);
 }
+
