@@ -1,7 +1,6 @@
 /* font-family: 'Lato', sans-serif; */
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap');
 
-
 * {
     margin: 0;
     padding: 0;
@@ -11,6 +10,8 @@
 body {
     font-family: 'Lato', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     line-height: 1.6;
+    background-color: gainsboro;
+    text-align: center;
 }
 
 .container {
@@ -23,26 +24,6 @@ body {
     content: "";
     display: table;
     clear: both;
-}
-
-/* Header */
-.head {
-    background-color: #f8f8f8;
-    padding: 10px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.logo img {
-    max-width: 100%;
-    height: auto;
-}
-
-.links nav a {
-    margin-right: 20px;
-    text-decoration: none;
-    color: #333;
 }
 
 /* Main Section */
