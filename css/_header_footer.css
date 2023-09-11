@@ -144,11 +144,10 @@ header a.logo strong {
     padding: 4rem 0;
     text-align: center;
 }
-  
 .footer p {
     color: var(--cor-white);
 } 
-  
+
 .footer strong {
     color: var(--cor-font-extra);
 }

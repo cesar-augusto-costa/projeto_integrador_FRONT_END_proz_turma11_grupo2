@@ -37,3 +37,57 @@ h3 {
     height: auto;
     width: 100%;
 }
+
+#slider-imagens {
+    margin-top: 100px;
+}
+
+.slide {
+    background-size: cover;
+    background-position: center;
+    min-height: 500px;
+}
+
+.slide.slide-01 {
+    background-image: url('../img/home/foto1.jpg');
+}
+
+.slide.slide-02 {
+    background-image: url('../img/home/foto2.jpg');
+}
+
+.slide.slide-03 {
+    background-image: url('../img/home/foto3.jpg');
+}
+
+#slider-imagens {
+    margin-top: 100px;
+}
+
+.marcas img {
+    max-width: 50px;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    margin: auto;
+}
+
+/* .slidepromocao {
+    background-size: cover;
+    background-position: center;
+    min-height: 500px;
+}
+
+.slide.slidepromocao-01 {
+    background-image: url('../img/home/promocoes/promocao1.jpg');
+}
+
+.slide.slidepromocao-02 {
+    background-image: url('../img/home/promocoes/promocao2.jpg');
+}
+
+.slide.slidepromocao-03 {
+    background-image: url('../img/home/promocoes/promocao3.jpg');
+} */
