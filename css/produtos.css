@@ -14,18 +14,6 @@ body {
     text-align: center;
 }
 
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
-}
-
-.row::after {
-    content: "";
-    display: table;
-    clear: both;
-}
-
 /* Main Section */
 .main-section {
     padding: 20px;
@@ -145,7 +133,6 @@ body {
 
 /* Footer */
 footer {
-    background-color: #f8f8f8;
     padding: 20px 0;
     text-align: center;
 }

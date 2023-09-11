@@ -19,12 +19,11 @@ body {
     font-family:'Open Sans' , Arial, Helvetica, sans-serif;
 }
 
-.container {
+.container.login {
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background-color: #ecf0f1;
 }
 
 .content {
@@ -211,6 +210,7 @@ input:-webkit-autofill{
     color: #34495e;
     font-size: 14px;
     margin: 15px 0;
+    padding-top: 15px;
 }
 
 .password::first-letter {

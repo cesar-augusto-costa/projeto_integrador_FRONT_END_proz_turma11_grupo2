@@ -1,5 +1,5 @@
 @import url(_reset_patterns.css);
-/* @import url(_header_footer.css); */
+@import url(_header_footer.css);
 
 body {
   background-color: white;
@@ -85,5 +85,3 @@ body {
 .button:focus {
   background-color: orangered;
 }
-
-/* ---------------------------- */
