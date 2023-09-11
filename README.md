@@ -55,6 +55,18 @@ Dessa forma, esse projeto faz a ponte entre as ONGs e a adoção fazendo divulga
 * Adotar cachorro ou gato
 * Comprar produtos para estes pets
 
+### SEO
+* Pet Shop Caramelo
+* Pet Shop
+* Produtos para Pet
+* Produtos para Cachorro
+* Produtos para Gato
+* Adotar Pet
+* Adotar Cachorro
+* Adotar Gato
+
+<br>
+
 ### [SITE](https://cesar-augusto-costa.github.io/projeto_integrador_FRONT_END_proz_turma11_grupo2/) (projeto em construção)
 
 <br>
