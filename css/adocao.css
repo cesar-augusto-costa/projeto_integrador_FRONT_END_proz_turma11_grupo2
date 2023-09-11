@@ -4,7 +4,8 @@ html {
 
 }
 
-h1 {
+
+#h1 {
     font-size: 36px;
     display: flex;
     justify-content: center;
@@ -32,7 +33,13 @@ p {
 
 .principal-e-aside {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
+    
+}
+
+.principal{
+    display: inline-block;
+    width: 1000px;
 }
 
 /*formatação quiz*/
@@ -41,7 +48,7 @@ p {
     display: flex;
     gap: 1rem;
     justify-content: center;
-    min-height: 50vh;
+    min-height: 100vh;
     width: 100%;
 }
 
@@ -50,7 +57,7 @@ p {
     display: flex;
     justify-content: center;
     position: relative;
-    width: 700px;
+    width: 100%;
 
 }
 
@@ -278,7 +285,9 @@ p {
     justify-content: center;
     border: 1px solid #ddd;
     padding-bottom: 16px;
-    width: 500px;
+    width: 200px;
+   
+    
 
 }
 
@@ -296,7 +305,7 @@ p {
     flex-direction: column;
     justify-content: center;
     position: relative;
-    width: 80%;
+    
 
 }
 
