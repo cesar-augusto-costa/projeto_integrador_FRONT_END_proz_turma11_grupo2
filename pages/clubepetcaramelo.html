@@ -12,32 +12,43 @@
   <link rel="stylesheet" href="shttps://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <script src="https://kit.fontawesome.com/7e753c5662.js" crossorigin="anonymous"></script>
 
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="../css/home.css">
+  <link rel="stylesheet" href="../css/header.css">
+  <link rel="stylesheet" href="../css/clube.css">
+  <link rel="stylesheet" href="shttps://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="https://kit.fontawesome.com/7e753c5662.js" crossorigin="anonymous"></script>
+
 </head>
 
 <body>
-  <header class="bg-light head">
-    <section class="menu">
-      <span class="span-1 dog">
-        <a href="../index.html">
-          <i class="fa-solid fa-dog"></i>
-        </a>
-      </span>
-      <a href=""><i class="house-door-fill"></i></a>
-      <section class="links">
+  <header class="head">
+    <div class="row">
+      <div class="col-1 logo">
+        <a href="../index.html"><img src="../img/logos/petshop_caramelo.png"></a>
+      </div>
+      <div class="col-6 links">
         <nav>
           <a href="adocao.html">Adoção</a>
           <a href="produtos.html">Produtos</a>
           <a href="depoimentos.html">Noticias</a>
           <a href="contato.html">Contato</a>
-          <a href="clubepetcaramelo.html">Clube Pet Caramelo</a>
-          <a href="login.html"><span class="span-2 search"></span><i class="fa-solid fa-user"></i>Login</a>
+          <a href="clubepetcaramelo.html" class="activated">Clube Pet Caramelo</a>
         </nav>
-      </section>
-      <section>
-        <div id="divBusca"><i class="fa-solid fa-magnifying-glass"></i>
-          <input type="text" id="txtBusca" placeholder="Buscar..." />
-        </div>
-      </section>
+      </div>
+
+      <div class="col-3" id="divBusca">
+        <i class="fa-solid fa-magnifying-glass"></i>
+        <input type="text" id="txtBusca" placeholder="Buscar..." />
+      </div>
+
+      <div class="col-2 login">
+        <a href="login.html">
+          <span class="span-2 search"></span>
+          <i class="fa-solid fa-user"></i>Login</a>
+      </div>
+    </div>
   </header>
   <main>
     <section class="container">
@@ -45,15 +56,17 @@
       <div class="planos-container">
         <div>
           <div class="planos">
+            <img class="icon-svg" src="../img/clube/Bronze Medal.svg" alt="Medalha de Bronze">
             <h1>PLANO BRONZE</h1>
-            <p class="planos-preco">R$ 39,99 </p>
+            <p class="planos-preco">R$ 59,99 </p>
             <ul class="ul-planos">
               <li>Taxa de Adesão Grátis</li>
               <li>Concorra a Prêmios</li>
-              <li>Taxa de Adesão Grátis</li>
+              <li>Exames Sorológicos</li>
               <li>Telemedicina Veterinário 24H</li>
               <li>Consultas Urgentes,Emergenciais e Clinica</li>
               <li>Castração</li>
+              <li>Auxílio funeral</li>
               <li>Procedimentos</li>
             </ul>
           </div>
@@ -61,15 +74,19 @@
         </div>
         <div>
           <div class="planos">
+            <img class="icon-svg" src="../img/clube/Silver Medal.svg" alt="Medalha de Prata">
             <h1 class="h1-planos">PLANO PRATA</h1>
-            <p class="planos-preco">R$ 79,99 </p>
+            <p class="planos-preco">R$ 99,99 </p>
             <ul class="ul-planos">
               <li>Taxa de Adesão Grátis</li>
               <li>CHIP Grátis</li>
               <li>Telemedicina Veterinário 24H</li>
+              <li>Exames Sorológicos</li>
               <li>Consultas Urgentes,Emergenciais e Clinica</li>
               <li>Castração</li>
               <li>Procedimentos - 30 de cooparticipação</li>
+              <li>Auxílio funeral</li>
+              <li>Consultas Odontológicas</li>
               <li>Cirurgias - 30% de cooparticipação</li>
             </ul>
           </div>
@@ -77,17 +94,21 @@
         </div>
         <div>
           <div class="planos">
+            <img class="icon-svg" src="../img/clube/Gold Medal.svg" alt="Medalha de Ouro">
             <h1 class="h1-planos">PLANO OURO</h1>
-            <p class="planos-preco">R$ 119,99 </p>
+            <p class="planos-preco">R$ 139,99 </p>
             <ul class="ul-planos">
               <li>Taxa de Adesão Grátis</li>
               <li>CHIP Grátis</li>
               <li>Telemedicina Veterinário 24H</li>
+              <li>Exames Sorológicos</li>
               <li>Consultas Urgentes,Emergenciais e Clinica</li>
               <li>Castração</li>
               <li>Procedimentos</li>
               <li>Exames laboratorias de Baixa Complexidade</li>
               <li>Vacinas Antirrábica e Polivante</li>
+              <li>Auxílio funeral</li>
+              <li>Consultas Odontológicas</li>
               <li>Cirurgias - 60% de cooparticipação</li>
             </ul>
           </div>
@@ -98,23 +119,22 @@
   </main>
 
   <footer>
-    <div class="footer-container">
+    <div class="row-footer">
       <div class="col">
-        <a href="">Meios de Pagamento</a><br>
-        <a href=""><i class="fa-brands fa-pix" style="color: #151e2d;"></i></a>
-        <a href=""><i class="fa-brands fa-cc-visa" style="color: #151e2d;"></i></a>
-        <a href=""><i class="fa-brands fa-cc-mastercard" style="color: #151e2d;"></i></a>
-        <a href=""><i class="fa-solid fa-barcode" style="color: #151e2d;"></i></a>
+        <a href="">Meios de Pagamento</a><br />
+        <a href=""><i class="fa-brands fa-pix" style="color: #151e2d"></i></a>
+        <a href=""><i class="fa-brands fa-cc-visa" style="color: #151e2d"></i></a>
+        <a href=""><i class="fa-brands fa-cc-mastercard" style="color: #151e2d"></i></a>
+        <a href=""><i class="fa-solid fa-barcode" style="color: #151e2d"></i></a>
       </div>
       <div class="col">
-        <a href="">Redes Sociais</a><br>
-        <a href=""><i class="fa-brands fa-instagram" style="color: #4180ec;"></i></a>
-        <a href=""><i class="fa-brands fa-facebook" style="color: #4180ec;"></i></a>
-        <a href=""><i class="fa-brands fa-whatsapp" style="color: #41ec5d;"></i></a>
-        <a href=""><i class="fa-solid fa-shield-dog" style="color: #151e2d;"></i></a>
+        <a href="contato.html">Redes Sociais</a><br />
+        <a href=""><i class="fa-brands fa-instagram" style="color: #4180ec"></i></a>
+        <a href=""><i class="fa-brands fa-facebook" style="color: #4180ec"></i></a>
+        <a href=""><i class="fa-brands fa-whatsapp" style="color: #41ec5d"></i></a>
+        <a href=""><i class="fa-solid fa-shield-dog" style="color: #151e2d"></i></a>
       </div>
     </div>
-
   </footer>
 </body>
 

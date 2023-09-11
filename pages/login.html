@@ -12,6 +12,7 @@
         integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
         crossorigin="anonymous"></script>
     <link rel="stylesheet" href="../css/home.css">
+    <link rel="stylesheet" href="../css/header.css">
     <link rel="stylesheet" href="../css/login.css">
     <link rel="stylesheet" href="shttps://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="https://kit.fontawesome.com/11458786e3.js" crossorigin="anonymous"></script>
@@ -19,30 +20,32 @@
 
 <body>
     <!-- header -->
-    <header class="bg-light head">
-        <section>
-            <span class="span-1 dog">
-                <a href="../index.html">
-                    <i class="fa-solid fa-dog"></i>
-                </a>
-            </span>
-            <a href=""><i class="bi bi-house-door-fill"></i></a>
-            <section class="links">
-                <nav>
-                    <a href="adocao.html">Adoção</a>
-                    <a href="produtos.html">Produtos</a>
-                    <a href="depoimentos.html">Noticias</a>
-                    <a href="contato.html">Contato</a>
-                    <a href="clubepetcaramelo.html">Clube Pet Caramelo</a>
-                    <a href="login.html"><span class="span-2 search"></span><i class="fa-solid fa-user"></i>Login</a>
-                </nav>
-            </section>
-        </section>
-        <section>
-            <div id="divBusca"><i class="fa-solid fa-magnifying-glass"></i>
-                <input type="text" id="txtBusca" placeholder="Buscar..." />
+    <header class="head">
+        <div class="row">
+            <div class="col-1 logo">
+                <a href="../index.html"><img src="../img/logos/petshop_caramelo.png"></a>
             </div>
-        </section>
+        <div class="col-6 links">
+            <nav>
+            <a href="adocao.html">Adoção</a>
+            <a href="produtos.html">Produtos</a>
+            <a href="depoimentos.html">Noticias</a>
+            <a href="contato.html">Contato</a>
+            <a href="clubepetcaramelo.html">Clube Pet Caramelo</a>
+            </nav>
+        </div>
+
+        <div class="col-3" id="divBusca">
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <input type="text" id="txtBusca" placeholder="Buscar..." />
+        </div>
+
+        <div class="col-2 login">
+            <a href="login.html" class="activated">
+            <span class="span-2 search"></span>
+            <i class="fa-solid fa-user"></i>Login</a>
+        </div>
+        </div>
     </header>
     <!-- fim /header -->
 
@@ -158,24 +161,26 @@
 
     <!-- footer -->
     <footer>
+        <div class="row">
         <div class="col">
-            <a href="">Meios de Pagamento</a><br>
-            <a href=""><i class="fa-brands fa-pix" style="color: #151e2d;"></i></a>
-            <a href=""><i class="fa-brands fa-cc-visa" style="color: #151e2d;"></i></a>
-            <a href=""><i class="fa-brands fa-cc-mastercard" style="color: #151e2d;"></i></a>
-            <a href=""><i class="fa-solid fa-barcode" style="color: #151e2d;"></i></a>
+        <a href="">Meios de Pagamento</a><br />
+        <a href=""><i class="fa-brands fa-pix" style="color: #151e2d"></i></a>
+        <a href=""><i class="fa-brands fa-cc-visa" style="color: #151e2d"></i></a>
+        <a href=""><i class="fa-brands fa-cc-mastercard" style="color: #151e2d"></i></a>
+        <a href=""><i class="fa-solid fa-barcode" style="color: #151e2d"></i></a>
         </div>
         <div class="col">
-            <a href="">Redes Sociais</a><br>
-            <a href=""><i class="fa-brands fa-instagram" style="color: #4180ec;"></i></a>
-            <a href=""><i class="fa-brands fa-facebook" style="color: #4180ec;"></i></a>
-            <a href=""><i class="fa-brands fa-whatsapp" style="color: #41ec5d;"></i></a>
-            <a href=""><i class="fa-solid fa-shield-dog" style="color: #151e2d;"></i></a>
+        <a href="contato.html">Redes Sociais</a><br/>
+        <a href=""><i class="fa-brands fa-instagram" style="color: #4180ec"></i></a>
+        <a href=""><i class="fa-brands fa-facebook" style="color: #4180ec"></i></a>
+        <a href=""><i class="fa-brands fa-whatsapp" style="color: #41ec5d"></i></a>
+        <a href=""><i class="fa-solid fa-shield-dog" style="color: #151e2d"></i></a>
         </div>
+    </div>
     </footer>
     <!-- fim /footer -->
 
-    <script src="../js/app.js"></script>
+    <script src="../js/login.js"></script>
 </body>
 
 </html>

@@ -1,0 +1,75 @@
+.head {
+    background-color: #facaa3;
+    text-align: center;
+}
+
+.links nav {
+    margin-top: 25px;
+}
+
+.links a {
+    margin-left: 10px;
+    text-decoration: none;
+    font-weight: bold;
+    color: #421913;
+}
+
+a.activated {
+    color: rgb(255, 98, 0);
+}
+
+.links a:hover {
+    color: rgb(255, 98, 0);
+    border-top: 5px solid rgb(255, 98, 0);
+    border-bottom: 5px solid rgb(255, 98, 0);
+}
+
+.login {
+    margin-top: 25px;
+}
+
+.login a {
+    margin-left: 10px;
+    text-decoration: none;
+    font-weight: bold;
+    color: #421913;
+}
+
+.span-1 {
+    font-weight: bold;
+    color: #421913;
+}
+
+.dog i {
+    padding: 20px;
+    font-size: 30px;
+}
+
+.dog a {
+    color: #421913;
+}
+
+#divBusca {
+    background-color: white;
+    border: solid 1px;
+    border-radius: 10px;
+    width: 300px;
+    padding: 5px;
+    height: 32px;
+    margin-top: 18px;
+}
+
+#divBusca > i {
+    float: right;
+    margin: 8px 5px 5px 5px;
+}
+
+#txtBusca {
+    float: left;
+    background-color: transparent;
+    padding-left: 5px;
+    font-size: 18px;
+    border: none;
+    height: 32px;
+    width: 250px;
+}

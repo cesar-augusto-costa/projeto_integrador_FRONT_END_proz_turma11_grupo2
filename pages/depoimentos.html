@@ -8,100 +8,148 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="../css/home.css">
+    <link rel="stylesheet" href="../css/header.css">
     <link rel="stylesheet" href="../css/depoimentos.css">
     <script src="https://kit.fontawesome.com/7e753c5662.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
-    <header class="bg-light head">
-        <section>
-            <span class="span-1 dog">
-                <a href="../index.html">
-                    <i class="fa-solid fa-dog"></i>
-                </a>
-            </span>
-            <a href=""><i class="house-door-fill"></i></a>
-            <section class="links">
-                <nav>
-                <a href="adocao.html">Adoção</a>
-                <a href="produtos.html">Produtos</a>
-                <a href="depoimentos.html">Noticias</a>
-                <a href="contato.html">Contato</a>
-                <a href="clubepetcaramelo.html">Clube Pet Caramelo</a>
-                <a href="login.html"><span class="span-2 search"></span><i class="fa-solid fa-user"></i>Login</a>
-            </nav>
-        </section>
-        <section>            
-            <div id="divBusca"><i class="fa-solid fa-magnifying-glass"></i>
-            <input type="text" id="txtBusca" placeholder="Buscar..."/>
+    <header class="head">
+        <div class="row">
+            <div class="col-1 logo">
+                <a href="../index.html"><img src="../img/logos/petshop_caramelo.png"></a>
             </div>
-        </section>
+        <div class="col-6 links">
+            <nav>
+            <a href="adocao.html">Adoção</a>
+            <a href="produtos.html">Produtos</a>
+            <a href="depoimentos.html" class="activated">Noticias</a>
+            <a href="contato.html">Contato</a>
+            <a href="clubepetcaramelo.html">Clube Pet Caramelo</a>
+            </nav>
+        </div>
+
+        <div class="col-3" id="divBusca">
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <input type="text" id="txtBusca" placeholder="Buscar..." />
+        </div>
+
+        <div class="col-2 login">
+            <a href="login.html">
+            <span class="span-2 search"></span>
+            <i class="fa-solid fa-user"></i>Login</a>
+        </div>
+        </div>
     </header>
 
     <main>
         <section>            
         <h1>Adoções de Sucesso!</h1>
-            <div class="grid">
+            <div class="grid-depoimento">
                 <div class="depoimento">
-                    <img src="/img/depoimentos/adoção1.jpeg" alt="" width="150">
+                    <br>
+                    <img src="../img/depoimentos/adoção1.jpeg" alt="cão branco e marrom no colo da sua nova dona" class="img">
+                    <br>
+                    <br>
                     <p>Esse é o Téo, adotado por uma família e demonstrando sua alegria!</p>
                 </div>
-                <div class="depoimento">
-                    <img src="/img/depoimentos/adoção2.webp" alt="" width="150">
+                <div class="depoimento"> 
+                    <br>
+                    <img src="../img/depoimentos/adoção2.webp" alt="cão caramelo no colo da sua nova dona"class="img">
+                    <br>
+                    <br>
                     <p>Tonico, sem "Auu..lavras" para expressar a gratidão!</p>
                 </div>
                 <div class="depoimento">
-                    <img src="/img/depoimentos/adoção6.jpeg" alt="" width="150">
-                    <p>Amarelinho também foi adotado!</p>
+                    <br>
+                    <img src="../img/depoimentos/adoção6.jpeg" alt="gato amarelo no colo da sua nova dona" class="img">
+                    <br>
+                    <br>
+                    <p>Amarelinho também foi adotado! Depois de alguns meses na tentativa, finalmente encontramos uma dona.</p>
                 </div>
                 <div class="depoimento">
-                    <img src="/img/depoimentos/adoção8.jpg" alt="" width="150">
+                    <br>
+                    <img src="../img/depoimentos/adoção8.jpg" alt="um gato cinza e um gato amarelo no colo da sua nova dona" class="img">
+                    <br>
+                    <br>
                     <p>Quem disse que irmãos não podem ser diferentes? Manu e Cleo foram adotadas e vivem como uma família.</p>
+                </div>
+                <div class="depoimento">
+                    <br>
+                    <img src="../img/depoimentos/adoção11.jpg" alt="cão idoso caramelo com sua nova dona" class="img">
+                    <br>
+                    <br>
+                    <p>Finalmente foi adotada aos 14 anos! Senhorinha, como foi carinhosamente chamada pela dona, demonstra gratidão em cada olhar.</p>
+                </div>
+                <div class="depoimento">
+                    <br>
+                    <img src="../img/depoimentos/adoção7.jpeg" alt="gato amarelo no colo da sua nova dona" class="img">
+                    <br>
+                    <br>
+                    <p>A tranquilidade de Cacau em sua nova casa. Adotada recentemente e curtindo a nova vida.</p>
                 </div>
             </div>
         </section>
         
         <section>
+            <hr>
+            <br>
         <h1>Posts Recentes</h1>       
-            <div class="Grid">
+            <div class="grid-post">
                 <div class="post">
                     <h2>A importância do lar temporário para cães e gatos</h2>
-                    <img src="/img/depoimentos/lartemporario.jpg" alt="Lar Temporário" width="150">
-                    <p>Texto em Construção...</p>
+                    <br>
+                    <img src="..///img/depoimentos/lartemporario.jpg" alt="Lar Temporário" class="img">
+                    <br>
+                    <br>              
+                    <a href="https://amparanimal.org.br/2023/04/24/a-importancia-do-lar-temporario-para-caes-e-gatos/" target="_blank">O lar temporário é quando uma pessoa, um protetor ou uma organização acolhe provisoriamente um cão ou um gato, que não tem um tutor...</a>              
                 </div>
                 <div class="post">
-                    <h2>Conheça 9 alimentos tóxicos para os cães</h2>
-                    <img src="/img/depoimentos/alimentostoxicos.jpg" alt="9 alimentos toxicos para os cães" width="150">
-                    <p>Texto em Construção...</p>
-                </div>
+                    <h2>Conheça 10 alimentos tóxicos para os cães</h2>
+                    <br>
+                    <img src="../img/depoimentos/alimentostoxicos.jpg" alt="10 alimentos toxicos para os cães" class="img">
+                    <br>
+                    <br>
+                    <a href="https://exame.com/pop/ama-cachorros-conheca-10-alimentos-considerados-toxicos-para-os-pets/" target="_blank">Muitos alimentos devem ser mantidos fora do alcance dos cães para evitar graves problemas de saúde e risco de morte...</a>
+                    </div>
                 <div class="post">
-                    <h2>Dia do Protetor Animal</h2>
-                    <img src="/img/depoimentos/diadeproteçãoanimal.jpeg" alt="Dia de Proteção do Animal" width="150">
-                    <p>Texto em Construção...</p>
+                    <h2>28 de Abril, dia do Protetor Animal</h2>
+                    <br>
+                    <img src="../img/depoimentos/diadeproteçãoanimal.jpeg" alt="Dia de Proteção do Animal" class="img">
+                    <br>
+                    <br>
+                    <a href="https://www.agazeta.com.br/revista-ag/vida/saiba-mais-sobre-o-dia-do-protetor-animal-0319" target="_blank">A partir de agora, no dia 14 de fevereiro, será comemorado o Dia do Protetor Animal. O Projeto de Lei...</a>
                 </div>
                 <div class="post">
                     <h2>Cães também ficam gripados?</h2>
-                    <img src="../img/depoimentos/cão gripado.jpg" alt="Cães também ficam gripados" width="150">
-                    <p>Texto em Construção...</p>
+                    <br>
+                    <img src="../img/depoimentos/cão gripado.jpg" alt="Cães também ficam gripados" class="img">
+                    <br>
+                    <br>
+                    <a href="https://amparanimal.org.br/2023/04/23/caes-tambem-ficam-gripados/" target="_blank">O inverno traz temperaturas mais frias, tempo mais seco e locais mais fechados, com menos circulação de ar...</a>
                 </div>
                 </div>       
             </section>
+            <hr>
     </main>
 
     <footer>
-        <div class ="col">
-            <a href="">Meios de Pagamento</a><br>
-            <a href=""><i class="fa-brands fa-pix" style="color: #151e2d;"></i></a>
-            <a href=""><i class="fa-brands fa-cc-visa" style="color: #151e2d;"></i></a>
-            <a href=""><i class="fa-brands fa-cc-mastercard" style="color: #151e2d;"></i></a>
-            <a href=""><i class="fa-solid fa-barcode" style="color: #151e2d;"></i></a>
+        <div class="row">
+        <div class="col">
+        <a href="">Meios de Pagamento</a><br />
+        <a href=""><i class="fa-brands fa-pix" style="color: #151e2d"></i></a>
+        <a href=""><i class="fa-brands fa-cc-visa" style="color: #151e2d"></i></a>
+        <a href=""><i class="fa-brands fa-cc-mastercard" style="color: #151e2d"></i></a>
+        <a href=""><i class="fa-solid fa-barcode" style="color: #151e2d"></i></a>
         </div>
-        <div class ="col">
-            <a href="">Redes Sociais</a><br>
-            <a href=""><i class="fa-brands fa-instagram" style="color: #4180ec;"></i></a>
-            <a href=""><i class="fa-brands fa-facebook" style="color: #4180ec;"></i></a>
-            <a href=""><i class="fa-brands fa-whatsapp" style="color: #41ec5d;"></i></a>
-            <a href=""><i class="fa-solid fa-shield-dog" style="color: #151e2d;"></i></a>
+        <div class="col">
+        <a href="contato.html">Redes Sociais</a><br/>
+        <a href=""><i class="fa-brands fa-instagram" style="color: #4180ec"></i></a>
+        <a href=""><i class="fa-brands fa-facebook" style="color: #4180ec"></i></a>
+        <a href=""><i class="fa-brands fa-whatsapp" style="color: #41ec5d"></i></a>
+        <a href=""><i class="fa-solid fa-shield-dog" style="color: #151e2d"></i></a>
+        </div>
+    </div>
     </footer>
 </body>
 </html>

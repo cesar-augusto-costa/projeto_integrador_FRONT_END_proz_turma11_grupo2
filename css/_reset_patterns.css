@@ -7,7 +7,7 @@
 -------------------------------------------*/
 :root {
     --cor-font-extra: #ff7f00;
-    --cor-principal: #593493;
+    --cor-principal: blueviolet;
     --cor-principal-secundaria: #c6aeed;
     --cor-h: #2e2c2c;
     --cor-texto: #4b4848;
@@ -32,9 +32,15 @@
     list-style: none;
     text-decoration: none;
     font: inherit;
-    font-size: 1.6rem;
-    font-family: "Poppins", sans-serif;
+    font-family: "Lato", sans-serif;
 	vertical-align: baseline;
+}
+
+/* font-size: 1.6rem;
+font-size: 62.5% = 10px
+*/
+html {
+	font-size: 62.5%;
 }
 
 article, aside, details, figcaption, figure, 
@@ -67,7 +73,7 @@ html {
 }
 
 h1, h2, h3, h4, h5 {
-    font-family: "Poppins", sans-serif;
+    font-family: "Lato", sans-serif;
     font-weight: 600;
     line-height: 125%;
     letter-spacing: -1px;
