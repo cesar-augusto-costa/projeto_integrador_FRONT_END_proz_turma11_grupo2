@@ -29,7 +29,48 @@
     height: 300px;
 
 }
+.segundo-slide {
+    background-image: url(../img/contato/cão01.jpg);
+    background-size: cover;
+    color: white;
+    height: 300px;
 
+}
+.terceiro-slide {
+    background-image: url(../img/contato/cão02.jfif);
+    background-size: cover;
+    color: white;
+    height: 300px;
+
+}
+.quarto-slide {
+    background-image: url(../img/contato/coelho01.jpg);
+    background-size: cover;
+    color: white;
+    height: 300px;
+
+}
+.quinto-slide {
+    background-image: url(../img/contato/gato01.webp);
+    background-size: cover;
+    color: white;
+    height: 300px;
+
+}
+.sexto-slide {
+    background-image: url(../img/contato/gato02.jpg);
+    background-size: cover;
+    color: white;
+    height: 300px;
+
+}
+.setimo-slide {
+    background-image: url(../img/contato/img_7925.jpg);
+    background-size: cover;
+    color: white;
+    height: 300px;
+
+}
 #titulo-slide {
     display: flex;
     font-size: 40px;

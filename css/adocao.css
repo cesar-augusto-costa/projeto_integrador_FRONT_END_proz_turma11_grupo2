@@ -453,10 +453,96 @@ p {
 
     }
 
+<<<<<<< HEAD
     .item-3,
     .item-6,
     .item-9,
     .item-12 {
+=======
+    .paragrafo-produtos {
+        color: black;
+        font-size: 15px;
+        line-height: 150%;
+        margin-top: 20px;
+        text-align: center;
+    }
+
+    
+
+    .preco-produto {
+        color: var(--colors-background);
+        font-size: 15px;
+        font-weight: bold;
+        line-height: 150%;
+        text-align: center;
+    }
+
+    .imagem-produtos {
+        object-fit: cover;
+        padding: 5px;
+        height: 100px;
+        width: 100px;
+    }
+
+    .imagem-produtos-racao {
+        object-fit: cover;
+        padding: 5px;
+        height: 200px;
+    }
+
+    /*fim formatação produtos*/
+    /*inicio formatação opção de pets*/
+
+    .opcao-de-pet {
+
+        background-image: url(../img/adocao/background/imagens-de-patinha.png);
+        background-size: 200px;
+        background-blend-mode:luminosity;
+        border-radius: 10px;
+        margin: 20px;
+        padding: 20px;
+    }
+
+    .sugestao-caes-gatos {
+        display: flex;
+        justify-content: space-evenly;
+    }
+
+    .img-pets { 
+        border-radius: 50%;
+        height: 150px;
+        margin-bottom: 10px;
+        object-fit: cover;
+        width: 150px;
+        padding: 10px;
+        transition: 200ms linear; 
+    }
+
+    .img-pets:hover{
+        transform: scale(1.6);
+    }
+
+    /*fim formatação opção de pets*/
+    /*inicio formatação como adotar*/
+
+    .figuras-como-adotar {
+        padding-top: 20px;
+        color: orange;
+        display: inline-grid;
+        grid-template-columns: 180px 180px 180px 180px;
+    }
+
+    .titulo-como-adotar {
+        display: inline-grid;
+        grid-template-columns: 180px 180px 180px 180px;
+    }
+
+    .div-como-adotar {
+        display: inline-grid;
+        gap: 30px;
+        grid-template-columns: 150px 150px 150px 150px;
+        line-height: 150%;
+>>>>>>> 3722234a0681cd9f19ced54d59a99ce1f28957ea
         text-align: justify;
         text-indent: 1.25rem;
         word-wrap: break-word;
