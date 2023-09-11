@@ -1,6 +1,10 @@
 @import url(_reset_patterns.css);
 /* @import url(_header_footer.css); */
 
+body {
+  background-color: gainsboro;
+}
+
 .container {
   background: gainsboro;
   display: flex;
@@ -19,6 +23,12 @@
   gap: 30px;
 }
 
+.icon-svg {
+  margin-top: 1rem;
+  width: 80px;
+  height: 80px;
+}
+
 .planos h1 {
   font-family: "Poppins", sans-serif;
   font-size: 2.2rem;
@@ -34,7 +44,7 @@
 }
 .planos-preco {
   font-size: 4rem;
-  color: var(--cor-principal);
+  color: orange;
   padding: 1rem;
 }
 
@@ -44,18 +54,23 @@
   flex-direction: column;
   gap: 5px;
   padding: 1rem;
+  font-weight: bold;
+}
+
+.ul-planos li {
+  font-size: 10px;
 }
 
 .ul-planos li::before {
   content: "🟊";
-  color: var(--cor-principal);
+  color: orange;
 }
 
 .button {
   color: aliceblue;
   padding: 1rem 2rem;
-  background: var(--cor-principal);
-  border: 2px var(--cor-principal);
+  background: orange;
+  border: 2px orange;
   border-radius: 5px;
   display: flex;
   margin-top: 3rem;
@@ -67,6 +82,10 @@
   outline: 2px solid var(--cor-texto);
 }
 
+.button:focus {
+  background-color: orangered;
+}
+
 /* ---------------------------- */
 
 .footer-container {
@@ -75,19 +94,33 @@
   gap: 30px;
 }
 
-.col{
+.row-footer{
+  height: 80px;
+  background-color: white;
+  display: flex;
 } 
 
-.footer {
+.col {
+  margin-top: 2rem;
+}
+.col a {
+  font-size: 1.5rem;
+  color: black;
+}
+
+.col a:hover {
+  color: blue;
+}
+/* .footer {
   background-color: var(--cor-principal);
   padding: 4rem 0;
   text-align: center;
-}
+} */
 
-.footer p {
+/* .footer p {
   color: var(--cor-white);
 } 
 
 .footer strong {
   color: var(--cor-font-extra);
-}
+} */
