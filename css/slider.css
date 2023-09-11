@@ -26,8 +26,9 @@
 }
 
 .on {
-  opacity: 1;
+  opacity: 1 !important;
 }
+
 #botao-voltar,
 #botao-avancar {
   background-color: transparent;

@@ -7,6 +7,12 @@ body {
 
 h3 {
     padding: 20px 0;
+    text-align: left;
+}
+
+.content {
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 .slide-controller:checked ~ .slide-show .slider {
@@ -66,14 +72,29 @@ h3 {
     margin-top: 100px;
 }
 
-.marcas img {
-    max-width: 50px;
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    right: 0;
-    left: 0;
-    margin: auto;
+#promocoes {
+    margin-top: 100px;
+}
+/* 
+#depoimentos .content {
+    background-image: url(../img/adocao/background/imagens-de-patinha.png);
+    background-repeat: repeat;
+    background-size: 200px;
+} */
+
+#produtos-recomendados .produtos a img {
+    width: 350px;
+    height: auto;
+}
+
+#marcas-trabalhadas .img-pets {
+    width: 70%;
+    padding: 15px 25px;
+}
+
+#marcas-trabalhadas .marca {
+    float: left;
+    width: 350px;
 }
 
 /* .slidepromocao {

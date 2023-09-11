@@ -22,7 +22,7 @@ function mostrarSlider(){
 function avancarSlide(){
     esconderSlider();
     if(correnteSlide == slide.length -1){
-        correnteSlide == 0;
+        correnteSlide = 0;
     }else{
         correnteSlide++;
     }

@@ -1,0 +1,27 @@
+#botao-voltar-promocao,
+#botao-avancar-promocao {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  height: 20px;
+  width: 20px;
+}
+
+#botao-voltar-promocao img,
+#botao-avancar-promocao img {
+  height: 100%;
+  width: 100%;
+}
+
+#botao-avancar-promocao {
+  transform: rotate(180deg);
+}
+
+.slide-promocao {
+  border-radius: 10px;
+  opacity: 0;
+  padding-bottom: 30px;
+  position: absolute;
+  transition: opacity 0.2s;
+  width: 100%;
+}
