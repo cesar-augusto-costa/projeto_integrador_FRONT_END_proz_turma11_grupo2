@@ -33,6 +33,7 @@ body {
   font-family: "Poppins", sans-serif;
   font-size: 2.2rem;
   padding: 1rem;
+  
 }
 
 .planos {
@@ -40,8 +41,8 @@ body {
   height: 450px;
   background: white;
   border-radius: 5px;
-
 }
+
 .planos-preco {
   font-size: 4rem;
   color: orange;
