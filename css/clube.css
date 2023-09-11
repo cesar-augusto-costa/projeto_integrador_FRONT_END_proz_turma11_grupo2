@@ -2,11 +2,11 @@
 /* @import url(_header_footer.css); */
 
 body {
-  background-color: gainsboro;
+  background-color: white;
 }
 
-.container {
-  background: gainsboro;
+.container.planos{
+  background: white;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -87,40 +87,3 @@ body {
 }
 
 /* ---------------------------- */
-
-.footer-container {
-  display: flex;
-  justify-content: center;
-  gap: 30px;
-}
-
-.row-footer{
-  height: 80px;
-  background-color: white;
-  display: flex;
-} 
-
-.col {
-  margin-top: 2rem;
-}
-.col a {
-  font-size: 1.5rem;
-  color: black;
-}
-
-.col a:hover {
-  color: blue;
-}
-/* .footer {
-  background-color: var(--cor-principal);
-  padding: 4rem 0;
-  text-align: center;
-} */
-
-/* .footer p {
-  color: var(--cor-white);
-} 
-
-.footer strong {
-  color: var(--cor-font-extra);
-} */
