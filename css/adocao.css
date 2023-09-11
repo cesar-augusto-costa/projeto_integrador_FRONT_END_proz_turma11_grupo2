@@ -1,33 +1,33 @@
 html {
-    font-size: 62, 5%;
+  
     font-family: 'Lato', sans-serif;
 
 }
 
 h1 {
-    font-size: 2.625rem;
+    font-size: 36px;
     display: flex;
     justify-content: center;
-    padding: 1.25rem;
+    padding: 20px;
 
 }
 
 h2 {
-    font-size: 2.125rem;
+    font-size: 34px;
     text-align: center;
-    margin: 1.25rem 0rem 1.875rem 0rem;
+    margin: 20px 0px 30px 0px;
 }
 
 h3 {
-    font-size: 1.8125rem;
+    font-size: 29px;
 }
 
 h4 {
-    font-size: 1.5rem;
+    font-size: 24px;
 }
 
 p {
-    font-size: 1.2rem;
+    font-size: 19.2px;
 }
 
 .principal-e-aside {
@@ -132,7 +132,7 @@ p {
 
 #img-slide-dog {
     object-fit: cover;
-    height: 250px;
+    height: 200px;
     width: 500px;
     margin-right: 20px;
 
@@ -248,7 +248,7 @@ p {
     font-size: 14px;
     line-height: 25px;
     width: 150x;
-    height: 25rem;
+    height: 250px;
 
 }
 
