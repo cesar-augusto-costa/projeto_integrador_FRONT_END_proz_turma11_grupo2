@@ -57,6 +57,10 @@ body {
   font-weight: bold;
 }
 
+.ul-planos li {
+  font-size: 10px;
+}
+
 .ul-planos li::before {
   content: "🟊";
   color: orange;
