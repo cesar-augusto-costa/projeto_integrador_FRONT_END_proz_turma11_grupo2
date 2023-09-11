@@ -112,6 +112,7 @@ p {
 
 .slide-resultado {
     display: flex;
+    justify-content: start;
 }
 
 .paragrafo-resultado {
