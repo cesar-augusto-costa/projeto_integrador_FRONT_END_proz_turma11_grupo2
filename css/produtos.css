@@ -54,8 +54,7 @@ body {
 }
 
 .product-image {
-    max-width: 100%;
-    height: auto;
+    width: 200px;
 }
 
 .product-price-container {
@@ -109,6 +108,10 @@ body {
     text-align: left;
     padding: 10px;
     background-color: #f8f8f8;
+}
+
+td.product-identification {
+    width: 200px;
 }
 
 .cart-total-container {
