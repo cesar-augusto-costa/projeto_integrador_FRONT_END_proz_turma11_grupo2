@@ -30,7 +30,6 @@ body {
     background-color: #fff;
     border-radius: 15px;
     width: 960px; /*960px ou 60% ou 80%*/
-    height: 60%;
     justify-content: space-between;
     align-items: center;
     position: relative;
