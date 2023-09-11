@@ -79,7 +79,7 @@ body {
 }
 
 .button:focus {
-  color: blue;
+  background-color: orangered;
 }
 
 /* ---------------------------- */
