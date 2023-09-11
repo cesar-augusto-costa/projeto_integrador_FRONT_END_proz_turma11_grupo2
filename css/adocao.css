@@ -1,286 +1,641 @@
-* {
+html {
+    font-size: 62, 5%;
     font-family: 'Lato', sans-serif;
-}
-
-header {   
-
-    position: sticky;   
-
-    top: 0; 
 
 }
 
-    #titulo {
-        padding-top: 20px;
-        margin-bottom: 30px;
-    }
+h1 {
+    font-size: 2.625rem;
+    display: flex;
+    justify-content: center;
+}
 
-    .subtitulo {
-        margin-top: 50px;
-        margin-bottom: 10px;
-    }
+h2 {
+    font-size: 2.125rem;
+    text-align: center;
+    margin: 1.25rem 0rem 1.875rem 0rem;
+}
 
-    /*divisao lado esquerdo e direito do site*/
-    .lado-direito-esquerdo {
-        display: flex;
-    }
+h3 {
+    font-size: 1.8125rem;
+}
 
-    /*formatação quiz*/
-    .container-slide {
-        align-items: center;
-        display: flex;
-        gap: 1rem;
-        justify-content: center;
-        min-height: 50vh;
-        width: 100%;
-    }
+h4 {
+    font-size: 1rem;
+}
 
-    .paginas-slide {
-        align-items: center;
-        display: flex;
-        justify-content: center;
-        position: relative;
-        width: 700px;
+p {
+    font-size: 1.125rem;
+}
 
-    }
+.principal-e-aside {
+    display: flex;
 
-    .primeiro-slide {
-        background-image: url(../img/adocao/h1/fundo_h_um.jpg);
-        background-size: cover;
-        color: white;
-        height: 300px;
-        border-style: solid;
-        border-color: orange;
-        border-radius: 10px;
 
-    }
 
-    #titulo-slide {
-        display: flex;
-        font-size: 40px;
+}
+
+/*formatação quiz*/
+.container-slide {
+    align-items: center;
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    min-height: 50vh;
+    width: 100%;
+}
+
+.paginas-slide {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    width: 700px;
+
+}
+
+.primeiro-slide {
+    background-image: url(../img/adocao/h1/fundo_h_um.jpg);
+    background-size: cover;
+    color: white;
+    height: 300px;
+    border-radius: 10px;
+
+}
+
+#titulo-slide {
+    display: flex;
+    font-size: 40px;
+    font-family: 'Lato', sans-serif;
+    font-weight: bold;
+    justify-content: left;
+    padding-left: 10px;
+    padding-top: 20px;
+}
+
+#paragrafo-slide {
+    display: flex;
+    font-size: 20px;
+    font-family: 'Lato', sans-serif;
+    justify-content: left;
+    padding-left: 10px;
+    padding-top: 10px;
+    text-align: justify;
+    width: 300px;
+
+}
+
+.slide {
+    border-radius: 10px;
+    opacity: 0;
+    padding-bottom: 30px;
+    position: absolute;
+    transition: opacity .2s;
+    width: 100%;
+
+}
+
+.on {
+    opacity: 1;
+}
+
+.proximos-slides {
+    background: orange;
+    height: 300px;
+    padding-top: 20px;
+}
+
+.formulario {
+    font-size: 20px;
+    padding: 30px 0 0 150px;
+    text-align: left;
+}
+
+.slide-resultado {
+    display: flex;
+}
+
+.paragrafo-resultado {
+    padding: 20px 10px 20px 50px;
+    text-align: justify;
+    text-indent: 25px;
+    word-wrap: break-word;
+}
+
+#img-slide-gato {
+    object-fit: cover;
+    height: 250px;
+    width: 250px;
+    margin-right: 20px;
+
+}
+
+#img-slide-dog {
+    object-fit: cover;
+    height: 250px;
+    width: 500px;
+    margin-right: 20px;
+
+}
+
+#botao-voltar,
+#botao-avancar {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    height: 20px;
+    width: 20px;
+
+}
+
+#botao-voltar img,
+#botao-avancar img {
+    height: 100%;
+    width: 100%;
+
+}
+
+#botao-avancar {
+    transform: rotate(180deg);
+}
+
+/*fim formatação quiz*/
+
+/*inicio estilização  seção opções de pets*/
+#opcao-pet{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+
+#adocao-opcao-pet {
+
+    background-image: url(adocao/background/imagens-de-patinha.png);
+    background-size: 12.5rem;
+    width: 100%;
+    height: 31.25rem;
+    background-blend-mode: luminosity;
+    border-radius: 0.625rem;
+    margin: 1.25rem;
+    padding: 1.25rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.sugestao-opcao-pet {
+    display: flex;
+    justify-content: space-evenly;
+}
+.img-pets {
+    border-radius: 50%;
+    height: 9.375rem;
+    margin-bottom: 0.625rem;
+    object-fit: cover;
+    width: 9.375rem;
+    padding: 0.625rem;
+    transition: 200ms linear;
+}
+
+.img-pets:hover {
+    transform: scale(1.6);
+}
+/*fim estilização  seção opções de pets*/
+/*inicio estilização seção como adotar*/
+
+
+#como-adotar {
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#como-adotar-sub-section {
+    display: grid;
+    grid-template-rows: 5.25rem 3.5rem 18.25rem;
+    grid-template-columns: 12.5rem 12.5rem 12.5rem 12.5rem;
+    justify-items: center;
+    width: max-content;
+    gap: 1.625rem;
+
+
+}
+
+.item {
+    display: grid;
+    justify-content: center;
+
+
+}
+
+.item-4 {
+    grid-row: 1;
+    grid-column: 2;
+}
+
+.item-5 {
+    grid-row: 2;
+    grid-column: 2;
+}
+
+.item-7 {
+    grid-row: 1;
+    grid-column: 3;
+}
+
+.item-8 {
+    grid-row: 2;
+    grid-column: 3;
+}
+
+.item-10 {
+    grid-row: 1;
+    grid-column: 4;
+}
+
+.item-11 {
+    grid-row: 2;
+    grid-column: 4;
+}
+
+.como-adotar-img {
+    width: 30%;
+    color: orange;
+
+}
+
+.item-3,
+.item-6,
+.item-9,
+.item-12 {
+    text-align: justify;
+    text-indent: 1.25rem;
+    word-wrap: break-word;
+    background-color: orange;
+    border-radius: 0.9375rem;
+    padding: 0.9375rem;
+}
+/*fim estilização seção como adotar*/
+
+/* inicio estilização seção ongs*/
+.div-ongs{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 1.25rem 0rem 1.875rem 0rem;
+}
+.imagem-ongs {
+    
+    object-fit: cover;
+    width: 80%;
+  }
+  /*fim estilização seção ongs*/
+  /*inicio estilização propaganda prdutos*/
+
+  #produtos{
+    display: flex;
+    flex-direction: column;
+   justify-content: center;
+    width: 80%;
+   border-left: solid;
+   border-color: orange;
+   background-color: aquamarine;
+   padding-left: 1rem;
+   margin-left: 5 rem;
+    
+  }
+
+  #secao-produtos{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    background-color: brown;
+    margin-left: 0.625rem;
+  }
+
+  .div-produtos{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: blueviolet;
+    width: 100%;
+
+  }
+  .imagem-produtos{
+    width: 60%;
+  }
+  /*fim estilização propaganda prdutos*/
+
+
+@media screen and (max-width: 768px) {
+    html {
+        font-size: 62, 5%;
         font-family: 'Lato', sans-serif;
-        font-weight: bold;
-        justify-content: left;
-        padding-left: 10px;
-        padding-top: 20px;
+    
     }
-
-    #paragrafo-slide {
+    
+    h1 {
+        font-size: 2.625rem;
         display: flex;
-        font-size: 20px;
-        font-family: 'Lato', sans-serif;
-        justify-content: left;
-        padding-left: 10px;
-        padding-top: 10px;
-        text-align: justify;
-        width: 300px;
-
+        justify-content: center;
     }
-
-    .slide {
-        border-radius: 10px;
-        opacity: 0;
-        padding-bottom: 30px;
-        position: absolute;
-        transition: opacity .2s;
-        width: 100%;
-
+    
+    h2 {
+        font-size: 2.125rem;
+        text-align: center;
     }
-
-    .on {
-        opacity: 1;
+    
+    h3 {
+        font-size: 1.8125rem;
     }
-
-    .proximos-slides {
-        background: orange;
-        height: 300px;
-        padding-top: 20px;
+    
+    h4 {
+        font-size: 1.625rem;
     }
-
-    .formulario {
-        font-size: 20px;
-        padding: 30px 0 0 150px;
-        text-align: left;
+    
+    p {
+        font-size: 1.125rem;
     }
-
-    .slide-resultado {
-        display: flex;
-    }
-
-    .paragrafo-resultado {
-        padding: 20px 10px 20px 50px;
-        text-align: justify;
-        text-indent: 25px;
-    }
-
-    #img-slide-gato {
-        object-fit: cover;
-        height: 250px;
-        width: 250px;
-        margin-right: 20px;
-
-    }
-
-    #img-slide-dog {
-        object-fit: cover;
-        height: 250px;
-        width: 500px;
-        margin-right: 20px;
-
-    }
-
-    #botao-voltar,
-    #botao-avancar {
-        background-color: transparent;
-        border: none;
-        cursor: pointer;
-        height: 20px;
-        width: 20px;
-
-    }
-
-    #botao-voltar img,
-    #botao-avancar img {
-        height: 100%;
-        width: 100%;
-
-    }
-
-    #botao-avancar {
-        transform: rotate(180deg);
-    }
-
-    /*fim formatação quiz*/
-
-    /*inicio formatação prdutos*/
-    .produtos {
-        align-items: center;
-        border-left: 5px;
-        border-left: solid;
-        border-color: orange;
+    .principal-e-aside {
         display: flex;
         flex-direction: column;
-        justify-content: space-between;
-        padding-inline-start: 20px;
+
+    }
+/*inicio estilização seção como adotar*/
+    #como-adotar-sub-section {
+        display: grid;
+        grid-template-rows: 5.25rem 3.5rem 18.25rem 5.25rem 3.5rem 18.25rem;
+        grid-template-columns: 12.5rem 12.5rem;
+        justify-items: center;
+        width: max-content;
+        gap: 1.625rem;
+
+
     }
 
-    .div-produtos {
-        position: relative;
-        margin-top: 20px;
-        margin-bottom: 20px;
+    .item {
+        display: grid;
+        justify-content: center;
+
+
     }
 
-    .div-produtos:hover {
-        box-shadow: 0 2px 2px orange;
-       
-        transform: scale(1.1);
+    .item-1 {
+        grid-row: 1;
+        grid-column: 1;
+    }
+
+    .item-2 {
+        grid-row: 2;
+        grid-column: 1;
+    }
+
+    .item-3 {
+        grid-row: 3;
+        grid-column: 1;
+    }
+
+
+    .item-4 {
+        grid-row: 1;
+        grid-column: 2;
+    }
+
+    .item-5 {
+        grid-row: 2;
+        grid-column: 2;
+    }
+
+    .item-6 {
+        grid-row: 3;
+        grid-column: 2;
+    }
+
+    .item-7 {
+        grid-row: 4;
+        grid-column: 1;
+    }
+
+    .item-8 {
+        grid-row: 5;
+        grid-column: 1;
+    }
+
+    .item-9 {
+        grid-row: 6;
+        grid-column: 1;
+    }
+
+
+    .item-10 {
+        grid-row: 4;
+        grid-column: 2;
+    }
+
+    .item-11 {
+        grid-row: 5;
+        grid-column: 2;
+    }
+
+    .item-12 {
+        grid-row: 6;
+        grid-column: 2;
+    }
+
+
+    .como-adotar-img {
+        width: 30%;
         color: orange;
+
     }
 
-    .paragrafo-produtos {
-        color: black;
-        font-size: 15px;
-        line-height: 150%;
-        margin-top: 20px;
-        text-align: center;
-    }
-
-    
-
-    .preco-produto {
-        color: var(--colors-background);
-        font-size: 15px;
-        font-weight: bold;
-        line-height: 150%;
-        text-align: center;
-    }
-
-    .imagem-produtos {
-        object-fit: cover;
-        padding: 5px;
-        height: 100px;
-        width: 100px;
-    }
-
-    .imagem-produtos-racao {
-        object-fit: cover;
-        padding: 5px;
-        height: 200px;
-    }
-
-    /*fim formatação produtos*/
-    /*inicio formatação opção de pets*/
-
-    .opcao-de-pet {
-
-        background-image: url(../img/adocao/background/imagens-de-patinha.png);
-        background-size: 200px;
-        background-blend-mode:luminosity;
-        border-radius: 10px;
-        margin: 20px;
-        padding: 20px;
-    }
-
-    .sugestao-caes-gatos {
-        display: flex;
-        justify-content: space-evenly;
-    }
-
-    .img-pets {
-        border-radius: 50%;
-        height: 150px;
-        margin-bottom: 10px;
-        object-fit: cover;
-        width: 150px;
-        padding: 10px;
-        transition: 200ms linear;
-    }
-
-    .img-pets:hover{
-        transform: scale(1.6);
-    }
-
-    /*fim formatação opção de pets*/
-    /*inicio formatação como adotar*/
-
-    .figuras-como-adotar {
-        padding-top: 20px;
-        color: orange;
-        display: inline-grid;
-        grid-template-columns: 180px 180px 180px 180px;
-    }
-
-    .titulo-como-adotar {
-        display: inline-grid;
-        grid-template-columns: 180px 180px 180px 180px;
-    }
-
-    .div-como-adotar {
-        display: inline-grid;
-        gap: 30px;
-        grid-template-columns: 150px 150px 150px 150px;
-        line-height: 150%;
+    .item-3,
+    .item-6,
+    .item-9,
+    .item-12 {
         text-align: justify;
+        text-indent: 1.25rem;
+        word-wrap: break-word;
+        background-color: orange;
+        border-radius: 0.9375rem;
+        padding: 0.9375rem;
+    }
+    /*fim estilização seção como adotar*/
+}
+
+@media screen and (max-width: 480px) {
+    html {
+        font-size: 62, 5%;
+        font-family: 'Lato', sans-serif;
+    
+    }
+    
+    h1 {
+        font-size: 2.625rem;
+        display: flex;
+        justify-content: center;
+    }
+    
+    h2 {
+        font-size: 1.5rem;
+    }
+    
+    h3 {
+        font-size: 1.3rem;
+    }
+    
+    h4 {
+        font-size: 1.2rem;
+       }
+    
+    p {
+        font-size: 1.125rem;
+    }
+    /*inicio estilização  seção opções de pets*/
+#opcao-pet{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    
+}
+
+#adocao-opcao-pet {
+
+    background-image: url(adocao/background/imagens-de-patinha.png);
+    background-size: 12.5rem;
+    width: 100%;
+    height: 800px;
+    background-blend-mode: luminosity;
+    border-radius: 0.625rem;
+    margin: 1.25rem;
+    padding: 1.25rem;
+    display: flex;
+    flex-direction:row;
+    justify-content: space-evenly;
+}
+
+.sugestao-opcao-pet {
+    display: flex;
+    flex-direction: column;
+    
+}
+.img-pets {
+    border-radius: 50%;
+    height: 9.375rem;
+    margin-bottom: 0.625rem;
+    object-fit: cover;
+    width: 9.375rem;
+    padding: 0.625rem;
+    transition: 200ms linear;
+}
+
+.img-pets:hover {
+    transform: scale(1.6);
+}
+/*fim estilização  seção opções de pets*/
+/*inicio estilização seção como adotar*/
+    #como-adotar-sub-section {
+        display: grid;
+        grid-template-rows: 4.25rem 2.5rem 18.25rem 4.25rem 2.5rem 18.25rem 4.25rem 2.5rem 18.25rem 4.25rem 2.5rem 18.25rem;
+        grid-template-columns: 12.5rem;
+        justify-items: center;
+        width: max-content;
+        gap: 1.625rem;
+
+
     }
 
-    .paragrafo-como-adotar{
-        border-style: solid;
-        border-color: orange;
-        border-radius: 10px;
-        padding: 20px 10px 10px 10px;
-        background: orange;
-        color: var(--cor-texto);
-        text-align:inherit;
-        text-indent: 5px;
-        margin-top: 20p;
+    .item {
+        display: grid;
+        justify-content: center;
+
+
     }
 
-    /* inicio formatação ongs*/
-    .imagem-ongs{
-        width: 120px;
-        margin-top: 20px;
-        margin-bottom: 30px;
-     
+    .item-1 {
+        grid-row: 1;
+        grid-column: 1;
     }
 
-    /*fim formatação ongs*/
+    .item-2 {
+        grid-row: 2;
+        grid-column: 1;
+    }
+
+    .item-3 {
+        grid-row: 3;
+        grid-column: 1;
+    }
+
+
+    .item-4 {
+        grid-row: 4;
+        grid-column: 1;
+    }
+
+    .item-5 {
+        grid-row: 5;
+        grid-column: 1;
+    }
+
+    .item-6 {
+        grid-row: 6;
+        grid-column: 1;
+    }
+
+    .item-7 {
+        grid-row: 7;
+        grid-column: 1;
+    }
+
+    .item-8 {
+        grid-row: 8;
+        grid-column: 1;
+    }
+
+    .item-9 {
+        grid-row: 9;
+        grid-column: 1;
+    }
+
+
+    .item-10 {
+        grid-row: 10;
+        grid-column: 1;
+    }
+
+    .item-11 {
+        grid-row: 11;
+        grid-column: 1;
+    }
+
+    .item-12 {
+        grid-row: 12;
+        grid-column: 1;
+    }
+
+
+    .como-adotar-img {
+        width: 30%;
+        color: orange;
+
+    }
+
+    .item-3,
+    .item-6,
+    .item-9,
+    .item-12 {
+        text-align: justify;
+        text-indent: 1.25rem;
+        word-wrap: break-word;
+        background-color: orange;
+        border-radius: 0.9375rem;
+        padding: 0.9375rem;
+    }
+/*fim estilização seção como adotar*/
+}

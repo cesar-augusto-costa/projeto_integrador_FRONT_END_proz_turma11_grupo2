@@ -46,7 +46,7 @@ botaoAvancar.addEventListener('click', avancarSlide);
 botaoVoltar.addEventListener('click', voltarSlide);
 
 //Esse código javascript procura todos os links e adiciona o parâmetro target="_blank". Ele faz com que o link seja aberto em outra aba.
-var links = document.getElementsByTagName('a');
+var links = document.getElementsByClassName("ancora")
     for (var i=0, len=links.length; i < len; i ++) {
         links[i].target = '_blank';
     }
