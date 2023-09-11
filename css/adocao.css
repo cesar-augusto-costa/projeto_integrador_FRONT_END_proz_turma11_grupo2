@@ -78,9 +78,10 @@ p {
     font-size: 20px;
     font-family: 'Lato', sans-serif;
     justify-content: left;
+    padding-left: 10px;
     padding-top: 10px;
     text-align: justify;
-   
+    width: 300px;
 
 }
 
@@ -106,25 +107,19 @@ p {
 
 .formulario {
     font-size: 20px;
-    padding: 10px 0 0 50px;
+    padding: 30px 0 0 150px;
     text-align: left;
 }
 
 .slide-resultado {
     display: flex;
-    justify-content: start;
-}
-
-.titulo-slide-resultado{
-    font-size: 24px;
-    padding: 5px;
 }
 
 .paragrafo-resultado {
-    padding: 5px 10px 5px 10px;
+    padding: 20px 10px 20px 50px;
     text-align: justify;
-    text-indent: 10px;
-    font-size: 20px;
+    text-indent: 25px;
+    word-wrap: break-word;
 }
 
 #img-slide-gato {
@@ -138,7 +133,7 @@ p {
 #img-slide-dog {
     object-fit: cover;
     height: 200px;
-    width: 500px;
+    width: 400px;
     margin-right: 20px;
 
 }
