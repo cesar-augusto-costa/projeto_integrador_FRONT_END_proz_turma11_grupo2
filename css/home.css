@@ -1,3 +1,5 @@
+@import url(_reset_patterns.css);
+
 body {
     background-color: white;
     text-align: center;
@@ -5,6 +7,12 @@ body {
 
 h3 {
     padding: 20px 0;
+    text-align: left;
+}
+
+.content {
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 .slide-controller:checked ~ .slide-show .slider {
@@ -36,4 +44,49 @@ h3 {
 .logo img {
     height: auto;
     width: 100%;
+}
+
+#slider-imagens {
+    margin-top: 100px;
+}
+
+.slide {
+    background-size: cover;
+    background-position: center;
+    min-height: 500px;
+}
+
+.slide.slide-01 {
+    background-image: url('../img/home/foto1.jpg');
+}
+
+.slide.slide-02 {
+    background-image: url('../img/home/foto2.jpg');
+}
+
+.slide.slide-03 {
+    background-image: url('../img/home/foto3.jpg');
+}
+
+#slider-imagens {
+    margin-top: 100px;
+}
+
+#promocoes {
+    margin-top: 100px;
+}
+
+#produtos-recomendados .produtos a img {
+    width: 350px;
+    height: auto;
+}
+
+#marcas-trabalhadas .img-pets {
+    width: 70%;
+    padding: 15px 25px;
+}
+
+#marcas-trabalhadas .marca {
+    float: left;
+    width: 350px;
 }

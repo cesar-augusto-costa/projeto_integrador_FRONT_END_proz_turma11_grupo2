@@ -19,19 +19,17 @@ body {
     font-family:'Open Sans' , Arial, Helvetica, sans-serif;
 }
 
-.container {
+.container.login {
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background-color: #ecf0f1;
 }
 
 .content {
     background-color: #fff;
     border-radius: 15px;
     width: 960px; /*960px ou 60% ou 80%*/
-    height: 60%;
     justify-content: space-between;
     align-items: center;
     position: relative;
@@ -40,7 +38,7 @@ body {
 .content::before {
     content: "";
     position: absolute;
-    background-color: blueviolet;
+    background-color: rgb(255, 98, 0);
     width: 40%;
     height: 100%;
     border-top-left-radius: 15px;
@@ -58,7 +56,7 @@ body {
     color: #fff;
 }
 .title-second {
-    color: blueviolet;
+    color: rgb(255, 98, 0);
 }
 .description {
     font-size: 14px;
@@ -89,18 +87,18 @@ body {
 }
 .btn-primary:hover {
     background-color: #fff;
-    color: blueviolet;
+    color: rgb(255, 98, 0);
 }
 .btn-second {
     color: #fff;
-    background-color: blueviolet;
-    border: 1px solid blueviolet;
+    background-color: rgb(255, 98, 0);
+    border: 1px solid rgb(255, 98, 0);
     transition: background-color .5s;
 }
 .btn-second:hover {
     background-color: transparent;
-    border: 1px solid blueviolet;
-    color: blueviolet;
+    border: 1px solid rgb(255, 98, 0);
+    color: rgb(255, 98, 0);
 }
 
 /* first-content
@@ -125,6 +123,14 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    border: 1px solid rgb(255, 98, 0);
+    padding: 29px 0;
+    -webkit-border-top-right-radius: 12px;
+    -webkit-border-bottom-right-radius: 12px;
+    -moz-border-radius-topright: 12px;
+    -moz-border-radius-bottomright: 12px;
+    border-top-right-radius: 12px;
+    border-bottom-right-radius: 12px;
 }
 
 .social-media {
@@ -141,9 +147,9 @@ body {
 }
 
 .link-social-media:hover .item-social-media {
-    background-color: blueviolet;
+    background-color: rgb(255, 98, 0);
     color: #fff;
-    border-color: blueviolet;
+    border-color: rgb(255, 98, 0);
 }
 
 .list-social-media {
@@ -211,6 +217,7 @@ input:-webkit-autofill{
     color: #34495e;
     font-size: 14px;
     margin: 15px 0;
+    padding-top: 15px;
 }
 
 .password::first-letter {

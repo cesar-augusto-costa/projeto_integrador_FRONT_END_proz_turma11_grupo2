@@ -1,0 +1,49 @@
+/*formatação quiz*/
+.container-slide {
+  align-items: center;
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  min-height: 50vh;
+  width: 100%;
+}
+
+.paginas-slide {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  width: 100%;
+}
+
+.slide {
+  border-radius: 10px;
+  opacity: 0;
+  padding-bottom: 30px;
+  position: absolute;
+  transition: opacity 0.2s;
+  width: 100%;
+}
+
+.on {
+  opacity: 1 !important;
+}
+
+#botao-voltar,
+#botao-avancar {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  height: 20px;
+  width: 20px;
+}
+
+#botao-voltar img,
+#botao-avancar img {
+  height: 100%;
+  width: 100%;
+}
+
+#botao-avancar {
+  transform: rotate(180deg);
+}

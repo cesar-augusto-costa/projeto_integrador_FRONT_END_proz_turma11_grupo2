@@ -1,0 +1,53 @@
+footer {
+    background-color: #facaa3;
+    padding: 1.5rem 0;
+    text-align: center;
+}
+
+footer h4 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+
+ul.payment-methods,
+ul.social-media {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+ul.payment-methods li,
+ul.social-media li {
+    margin-bottom: 10px;
+}
+
+ul.payment-methods a,
+ul.social-media a {
+    color: #421913;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    transition: color 0.3s ease, text-decoration 0.3s ease;
+}
+
+ul.payment-methods i,
+ul.social-media i {
+    margin-right: 10px;
+    font-size: 1.2rem;
+}
+
+footer p {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+.payment-methods a:hover {
+    text-decoration: underline;
+    color: #421913;
+}
+
+.social-media a:hover {
+    text-decoration: none;
+    color: #421913;
+}
+
