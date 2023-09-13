@@ -1,1 +1,0 @@
-Regra de Negócio
