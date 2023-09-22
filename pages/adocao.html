@@ -12,11 +12,11 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
         crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="../css/_reset_patterns.css">
-    <link rel="stylesheet" href="../css/adocao.css">
+    
     <link rel="stylesheet" href="../css/home.css">
     <link rel="stylesheet" href="../css/header.css">
     <link rel="stylesheet" href="../css/footer.css">
+    <link rel="stylesheet" href="../css/adocao.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="https://kit.fontawesome.com/7e753c5662.js" crossorigin="anonymous"></script>
     <script src="../js/adocao.js" defer></script>
@@ -55,374 +55,336 @@
     </header>
     <!-- fim /header -->
     <main>
-        <h1 id="h1">Adoção, um Ato de Amor!</h1>
-        <br>
-        <br>
-        <section class="principal-e-aside"> <!--divisão do site em lado esquerdo e direito-->
-            
-            <section class="principal"><!--inicio section principal-->
+        
+        <section class="cards-ongs"><!--inicio seção cards ongs-->
+            <h1>Adoção, Um Ato de amor.</h1>
+            <p>O trabalho de uma ONG de animais abandonados é muito
+                 importante para garantir o bem-estar e o futuro dos companheiros 
+                 de quatro patas. No entanto, como se trata de uma instituição sem fins 
+                 lucrativos, geralmente, ela necessita de auxílio financeiro.Pensando nisso, em como  
+                o funcionamento de uma ONG pode mudar a vida de animais, o Pet Caramelo faz parcerias com 
+                várias entidades. Conheça um pouco sobre nossas parceiras e seus pet nos artigos abaixo.</p>
+            <h2>ONG parceiras do Pet Caramelo.</h2>
+            <p>Conheça os projetos desenvolvidos por nossas ONGs parceiras.</p>
 
-                <section id="quiz"><!--inicio primeira subseção: quiz-->
-
-                    <section class="container-slide"><!--inicio quiz-->
-                        <button id="botao-voltar"><img src="../img/adocao/imagem_quiz/seta_quiz.png"
-                                alt="seta"></i></button><!--botao-de-voltar-->
-
-                        <section class="paginas-slide"><!--inicio paginas-->
-
-                            <div class=" primeiro-slide slide on"><!--primeiro slide-->
-                                <span id="titulo-slide">Encontre Seu Pet metade!</span>
-                                <p id="paragrafo-slide">Responda o Quiz e descubra o pet que mais combina com você.
-                                </p>
-
-                            </div>
-
-                            <div class="slide proximos-slides"><!--segundo slide-->
-                                <h3>Que palavra define você:</h3>
-                                <form class="formulario">
-
-                                    <input type="radio" name="tipo_de_pessoa" value="cachorro" /> Brincalhão <br>
-                                    <input type="radio" name="tipo_de_pessoa" value="gato" /> Independente<br>
-                                    <input type="radio" name="tipo_de_pessoa" value="gato" /> Curioso<br>
-                                    <input type="radio" name="tipo_de_pessoa" value="cachorro" /> Alegre<br>
-
-                                </form>
-                            </div>
-
-                            <div class="slide proximos-slides"><!--terceiro slide-->
-                                <h3>Quanto tempo livre você tem por dia?:</h3>
-                                <form class="formulario">
-
-                                    <input type="radio" name="tempo_livre" value="cachorro" /> Bastante tempo
-                                    livre<br>
-                                    <input type="radio" name="tempo_livre" value="gato" /> Só alguns dias livres<br>
-                                    <input type="radio" name="tempo_livre" value="gato" /> Pouco tempo livre<br>
-                                    <input type="radio" name="tempo_livre" value="gato" /> Nunca tenho tempo<br>
-
-                                </form>
-                            </div>
-
-                            <div class="slide proximos-slides"><!--quarto slide-->
-                                <h3>Você quer que seu animal seja:</h3>
-                                <form class="formulario">
-                                    <input type="radio" name="personalidade_pet" value="cachorro" /> Sociável e
-                                    companheiro<br>
-                                    <input type="radio" name="personalidade_pet" value="cachorro" /> Dócil e
-                                    carinhoso<br>
-                                    <input type="radio" name="personalidade_pet" value="gato" /> Fácil de cuidar<br>
-                                    <input type="radio" name="personalidade_pet" value="gato" /> Prático e
-                                    tranquilo<br>
-                                </form>
-                            </div>
-
-                            <div class="slide proximos-slides"><!--quinto slide-->
-                                <h3>O que você espera do seu pet:</h3>
-                                <form class="formulario">
-                                    <input type="radio" name="cuidados" value="cachorro" /> Proteção e
-                                    companheirismo<br>
-                                    <input type="radio" name="cuidados" value="gato" /> Ter cuidados simples e
-                                    evitar
-                                    bagunça<br>
-                                    <input type="radio" name="cuidadost" value="gato" /> Uma experiência nova para a
-                                    vida<br>
-                                    <input type="radio" name="cuidados" value="cachorro" /> Deixar a casa mais
-                                    alegre<br>
-                                </form>
-                            </div>
-
-                            <div class="slide proximos-slides"><!--sexto slide-->
-                                <h3>Para ter um pet você seria capaz de:</h3>
-                                <form class="formulario">
-                                    <input type="radio" name="cuidados" value="cachorro" /> Passear ao ar livre
-                                    diariamente<br>
-                                    <input type="radio" name="cuidados" value="gato" /> colocar poteção nas
-                                    janelas<br>
-                                    <input type="radio" name="cuidadost" value="gato" /> Apenas alimentá-lo
-                                    diariamente<br>
-                                    <input type="radio" name="cuidados" value="cachorro" /> Lidar com o barulho sem
-                                    problemas<br>
-                                </form>
-                            </div>
-                            <div class="slide proximos-slides "><!--setimo slide-->
-                                <h3>Gatos</h3>
-                                <div class="slide-resultado">
-                                    <p class="paragrafo-resultado">Independentes, os gatos se adaptam bem à rotina
-                                        dos
-                                        donos que passam boa parte do
-                                        tempo
-                                        fora
-                                        de
-                                        casa. No geral, se viram bem quando estão sozinhos, mas são curiosos e
-                                        exigem
-                                        alguns
-                                        cuidados.
-                                        </p>
-                                    <img id="img-slide-gato" src="../img/adocao/imagem_quiz/gatinho-cinza.png"
-                                        alt="Gato deitado">
+            <div class="cards">
+                <div class="outer">
+                    <div class="card" style="--delay: -1;">
+                        <div class="header-card">
+                            <div class="profile">
+                                <div class="img">
+                                    <img src="../img/adocao/logo_ong/ampara_animal.png"
+                                        alt="logo Instituto Ampara Animal">
                                 </div>
-                            </div>
-
-                            <div class="slide proximos-slides"><!--oitavo slide-->
-                                <h3>Cães</h3>
-                                <div class="slide-resultado">
-                                    <p class="paragrafo-resultado">O animal de estimação que combina com sua rotina
+                                <div class="details">
+                                    <h5>Instituto Ampara Animal</h5>
+                                    <p>A AMPARA é uma OSCIP sem fins lucrativos. Somos protetores de animais abandonados
                                         e
-                                        personalidade precisa ser dócil,
-                                        inteligente e
-                                        carinhoso. Como você tem tempo livre para cuidar, passear e ensinar seu pet,
-                                        cachorros são as opções que mais se adaptam a sua vida, já que são animais sociáveis, extremamente dependentes, ativos e gostam de brincar. 
-                                        
-                                    </p>
-                                    <img id="img-slide-dog" src="../img/adocao/imagem_quiz/dog.png" alt="Cachorro">
+                                        vítimas de maus-tratos. Lutamos para que os mais de 30 milhões de animais de rua
+                                        tenham
+                                        uma vida com respeito e amor.</p><a id="ancora" target="_blank"
+                                        href="https://amparanimal.org.br/">Saiba Mais</a>
                                 </div>
                             </div>
 
-                        </section><!--fim paginas-->
-                        <button id="botao-avancar"><img src="../img/adocao/imagem_quiz/seta_quiz.png"
-                                alt="seta"></button><!--botao-de-avançar-->
+                        </div>
 
+                    </div>
 
-                    </section><!--fim quiz-->
-
-                </section><!--fim primeira sub seção: quiz-->
-
-                <section id="opcao-pet"><!--inicio segunda sub seção:adoção-->
-<br>
-<br>
-                    <h2>Hora de conhecer seu amigo!</h2>
-                    <p>Dê uma olhada nos nossos amiguinhos que estão aguardando um lar.
-                    </p>
-                    <section id="adocao-opcao-pet"><!--inicio opções gatos e caes-->
-                        <div class="sugestao-opcao-pet"><!--gatos-->
-
-                            <a class="ancora" href="https://amparanimal.org.br/quero-adotar-um-gato/"><img
-                                    class="img-pets" src="../img/adocao/gatos/peto_amparanimal.png"
-                                    alt="Gato de pelo escuro para adoção"></a>
-                            <a class="ancora" href="https://amparanimal.org.br/quero-adotar-um-gato/"><img
-                                    class="img-pets" src="../img/adocao/gatos/matheus_amparanimal.png"
-                                    alt="Gato siamês para adoção"></a>
-                            <a class="ancora"
-                                href="http://www.focinhosdeluz.com/fotos/galeria-de-fotos-bem-exemplificada"><img
-                                    class="img-pets" src="../img/adocao/gatos/filhotes_focinhodeluz.png"
-                                    alt="filhotes de gato para adoção"></a>
-                            <a class="ancora"
-                                href="http://www.focinhosdeluz.com/fotos/galeria-de-fotos-bem-exemplificada"><img
-                                    class="img-pets" src="../img/adocao/gatos/gato_focinhodeluz.png"
-                                    alt="Gato para adoção"></a>
+                    <div class="card" style="--delay: 0;">
+                        <div class="header-card">
+                            <div class="profile">
+                                <div class="img">
+                                    <img src="../img/adocao/logo_ong/cao_sem_dono.png" alt="logo ONG Cão Sem Dono">
+                                </div>
+                                <div class="details">
+                                    <h5>ONG Cão Sem Dono</h5>
+                                    <p>O Cão Sem Dono é uma ONG, que nasceu de um grande sonho do seu atual presidente:
+                                        tirar o maior número possível de
+                                        animais das ruas, dar tratamento adequado e integrá-los a famílias que lhes deem
+                                        amor,
+                                        carinho e uma vida digna.</p><a id="ancora" target="_blank"
+                                        href="https://www.caosemdono.com.br/">Saiba Mais</a>
+                                </div>
+                            </div>
 
                         </div>
 
-                        <div class="sugestao-opcao-pet"><!--cães-->
+                    </div>
 
-                            <a class="ancora" href="https://www.ongviralataedez.com/adote"><img class="img-pets"
-                                    src="../img/adocao/dog/dog_viralataedez.png"
-                                    alt="Cachorro de pelo escuro para adoção"></a>
-                            <a class="ancora" href="https://amparanimal.org.br/quero-adotar-um-cachorro/"><img
-                                    class="img-pets" src="../img/adocao/dog/jason_amparanimal.png"
-                                    alt="Cachorro de pelo claro para adoção"></a>
-                            <a class="ancora" href="https://www.caosemdono.com.br/caes-americanopolis"><img
-                                    class="img-pets" src="../img/adocao/dog/cadu_caosemdono.png"
-                                    alt="filhote de cachorro para adoção"></a>
-                            <a class="ancora"
-                                href="http://www.focinhosdeluz.com/fotos/galeria-de-fotos-bem-exemplificada"><img
-                                    class="img-pets" src="../img/adocao/dog/dog_focinhodeluz.png"
-                                    alt="filhote de cachorro para adoção"></a>
+                    <div class="card" style="--delay: 1;">
+                        <div class="header-card">
+                            <div class="profile">
+                                <div class="img">
+                                    <img src="../img/adocao/logo_ong/focinho_de_luz.png"
+                                        alt=" logo Associação Focinhos de Luz ">
+                                </div>
+                                <div class="details">
+                                    <h5> Associação Focinhos de Luz</h5>
+                                    <p>A Associação Focinhos de Luz é uma organização sem fins lucrativos que luta pela
+                                        reintrodução de animais abandonados à sociedade. Criada em 2010,a nossa casa de
+                                        passagem abriga em torno de 100 animais.</p><a id="ancora" target="_blank"
+                                        href="https://www.focinhosdeluz.com/">Saiba Mais</a>
+                                </div>
+                            </div>
+
                         </div>
-                    </section><!--fim opções gatos e caes-->
 
-                </section><!--fim segunda sub seção:adoção-->
+                    </div>
 
-
-                <section id="como-adotar"><!--Inicio terceira sub seção:como adotar-->
-
-                    <h2>Entenda como funciona</h2>
-
-                    <section class="container-como-adotar"><!--inicio seção cards-->
-
-
-                        <section class="secao-como-adotar"><!--inicio primeiro card-->
-                            <img src="../img/adocao/card/lupa.png"
-                                alt="Ração Golden Fórmula Mini Bits Para Cães Adultos de Porte Pequeno Sabor Carne e Arroz 15 kg"
-                                class="imagem-como-adotar">
-                            <strong class="titulo-como-adotar">Ache seu pet</strong>
-                            <br>
-                            <div class="div-como-adotar"></div>
-                            <p class="paragrafo-como-adotar">Dê uma olhada nos sites das ONGs parceiras, no
-                                espaço dedicado a adoção, para criar a conexão perfeita com cão e/ou gato que busca
-                                um
-                                novo lar. Confira a lista de ONGs.</p>
+                    <div class="card" style="--delay: 2;">
+                        <div class="header-card">
+                            <div class="profile">
+                                <div class="img">
+                                    <img src="../img/adocao/logo_ong/suipa_.png"
+                                        alt=" logo Sociedade União Internacional Protetora dos Animais">
+                                </div>
+                                <div class="details">
+                                    <h5>Sociedade União Internacional Protetora dos Animais</h5>
+                                    <p>Com 80 anos de existência, a serem comemorados em Abril de 2023, a SUIPA
+                                        permanece viva,
+                                        como uma entidade particular, não eutanásica, sem fins lucrativos, e de
+                                        utilidade
+                                        pública. </p><a id="ancora" target="_blank"
+                                        href="https://www.suipa.org.br/">Saiba Mais</a>
+                                </div>
                             </div>
-                        </section><!--fim primeiro card-->
 
-                        <section class="secao-como-adotar"><!--inicio segundo card-->
-                            <img src="../img/adocao/card/formulario.png"
-                                alt="Ração Golden Fórmula Mini Bits Para Cães Adultos de Porte Pequeno Sabor Carne e Arroz 15 kg"
-                                class="imagem-como-adotar">
+                        </div>
 
-                            <strong class="titulo-como-adotar">Formulário</strong>
-                            <br>
-                            <div class="div-como-adotar"></div>
-                            <p class="paragrafo-como-adotar">Depois que você escolher o seu pet, basta preencher o
-                                formulário que é disponibilizado no
-                                site da ONG e a mesma entrará em contato com você.</p>
+                    </div>
+
+                    <div class="card" style="--delay: 2;">
+                        <div class="header-card">
+                            <div class="profile">
+                                <div class="img">
+                                    <img src="../img/adocao/logo_ong/vira_lata.png" alt=" logo Vira-Lata é Dez ">
+                                </div>
+                                <div class="details">
+                                    <h5>ONG Vira-Lata é Dez</h5>
+                                    <p>Fundada em 2003, a ONG Vira-Lata é Dez busca transformar animais de rua em
+                                        animais de
+                                        estimação. Buscamos promover campanhas de castração e programas educativos que
+                                        visam a conscientização quanto a posse
+                                        responsável.</p><a id="ancora" target="_blank"
+                                        href="https://www.ongviralataedez.com/">Saiba Mais</a>
+                                </div>
                             </div>
-                        </section><!--fim segundo card-->
 
-                        <section class="secao-como-adotar"><!--inicio terceiro card-->
-                            <img src="../img/adocao/card/formulario_ok.png"
-                                alt="Ração Golden Fórmula Mini Bits Para Cães Adultos de Porte Pequeno Sabor Carne e Arroz 15 kg"
-                                class="imagem-como-adotar">
+                        </div>
 
-                            <strong class="titulo-como-adotar">Avaliação</strong>
-                            <br>
-                            <div class="div-como-adotar"></div>
-                            <p class="paragrafo-como-adotar">A ONG irá analisar o cadastro e perfil do adotante vs
-                                pet
-                                escolhido.Preenchendo os requisitos, você recebe a aprovação e a ONG entrará em
-                                contato
-                                pelo telefone
-                                cadastrado.</p>
-                            </div>
-                        </section><!--fim terceiro card-->
-
-                        <section class="secao-como-adotar"><!--inicio quarto card-->
-                            <img src="../img/adocao/card/casa.png"
-                                alt="Ração Golden Fórmula Mini Bits Para Cães Adultos de Porte Pequeno Sabor Carne e Arroz 15 kg"
-                                class="imagem-como-adotar">
-                            <strong class="titulo-como-adotar">Adoção</strong>
-                            <br>
-                            <div class="div-como-adotar"></div>
-                            <p class="paragrafo-como-adotar">Com tudo certo, você já pode ir busca seu novo amigo na
-                                ONG
-                                no dia e horário agendado.</p>
-                            </div>
-                        </section><!--fim quarto card-->
-
-                    </section><!--fim seção cards-->
-
-                </section><!--fim terceira sub seção:como adotar-->
-
-            </section><!--fim section principal-->
-
-            <aside id="produtos"> <!--inicio aside:propaganda da página produtos-->
-
-                <h3>Encontre os melhores produtos para seu pet</h3>
-                <section id="secao-produtos"><!--inicio seção produtos-->
-
-                    <div class="div-produtos">
-                        <a class="ancora" href="produtos.html"><img class="imagem-produtos"
-                                src="../img/adocao/produtos_fundo_branco/bifitos.png"
-                                alt="Snack Kelcat Bifitos para Gatos Adultos e Filhotes Sabor Carne 30g">
-                            <p class="paragrafo-produtos">Snack Kelcat Bifitos para Gatos Adultos e Filhotes Sabor
-                                Carne
-                                30g<br><span class="preco-produtos">R$5,52</span></p>
-                        </a>
                     </div>
 
-                    <div class="div-produtos">
-                        <a class="ancora" href="produtos.html"><img class="imagem-produtos"
-                                src="../img/adocao/produtos_fundo_branco/racao_cao_adulto_porte_grande.png" alt="">
-                            <p class="paragrafo-produtos">Ração Golden Special para Cães Adultos Frango e Carne 15
-                                kg<br><span class="preco-produtos">R$169,90</span></p>
-                        </a>
-                    </div>
-                    <div class="div-produtos">
-                        <a class="ancora" href="produtos.html"><img class="imagem-produtos"
-                                src="../img/adocao/produtos_fundo_branco/bolinha_interativa.png"
-                                alt="Brinquedo Interativo Pet Games Petball para Cães">
-                            <p class="paragrafo-produtos">Brinquedo Interativo Pet Games Petball para Cães<br><span
-                                    class="preco-produtos">R$37,99</span></p>
-                        </a>
-                    </div>
-                    <div class="div-produtos">
-                        <a class="ancora" href="produtos.html"><img class="imagem-produtos"
-                                src="../img/adocao/produtos_fundo_branco/racao_gato_adulto.png"
-                                alt="Ração GranPlus Choice para Gatos Adultos Sabor Frango e Carne 10,1kg">
-                            <p class="paragrafo-produtos">Ração GranPlus Choice para Gatos Adultos Sabor Frango e
-                                Carne
-                                10,1kg<br><span class="preco-produtos">R$147,99</span></p>
-                        </a>
-                    </div>
-                    <div class="div-produtos">
-                        <a class="ancora" href="produtos.html"><img class="imagem-produtos"
-                                src="../img/adocao/produtos_fundo_branco/petisco_cao_adulto.png" alt="">
-                            <p class=" paragrafo-produtos">Bifinho KelDog Mini para Cães Adultos Sabor Carne
-                                500g<br><span class="preco-produtos">R$25,41</span></p>
-                        </a>
-                    </div>
-
-                </section><!--fim seção produtos-->
-
-            </aside><!--fim aside:propaganda da página produtos-->
-
-
-
-        </section><!--fim divisão do site em lado esquerdo e direito-->
-
-        <section><!--inicio seção: Link ongs-->
-            <h2>Conheça as nossas ONGs parceiras</h2>
-            <div class="div-ongs">
-                <a class="ancora" href="https://amparanimal.org.br/"><img class="imagem-ongs"
-                        src="../img/adocao/logo_ong/ampara_animal.png" alt="ONG Ampara Animal"></a>
-                <a class="ancora" href="https://www.caosemdono.com.br/"><img class="imagem-ongs"
-                        src="../img/adocao/logo_ong/cao_sem_dono.png" alt=""></a>
-                <a class="ancora" href="https://www.focinhosdeluz.com/"><img class="imagem-ongs"
-                        src="../img/adocao/logo_ong/focinho_de_luz.png" alt="ONG Cão Sem Dono"></a>
-                <a class="ancora" href="https://www.suipa.org.br/"><img class="imagem-ongs"
-                        src="../img/adocao/logo_ong/suipa_.png" alt="ONG Suipa"></a>
-                <a class="ancora" href="https://www.ongviralataedez.com/"><img class="imagem-ongs"
-                        src="../img/adocao/logo_ong/vira_lata.png" alt="ONG Vira Lata"></a>
+                </div>
             </div>
-        </section><!--fim seção: Link ongs-->
-    </main>
-    <!-- footer -->
-    <footer>
-        <div class="container">
-          <div class="row">
+
+        </section><!--fim seção cards ongs-->
+
+</html>
+<section class="contanier-galeria"><!--inicio seção galeria-->
+    <div class="subtitulo-galeria">
+        <h2>Conheça nossos amigos.</h2>
+        <p>Saiba mais sobre os pets que estão disponíveis nas ONGs que o  PET CARAMELO apoia.</p>
+    </div>
+    <header class="header-galeria">
+        <div class="galeria">
+            <div class="single-galeria">
+                <img src="../img/adocao/dog/fiel.jpeg" alt="">
+                <div class="info">
+                    <h1>Fiel</h1>
+                    <p>Fiel é um adulto que acha que ainda é bebê, muito lindo e cheio de energia boa! </p>
+                    <a target="_blank" href="https://checkout.amparanimal.org.br/quero-apadrinhar-um-cao">Ver Mais</a>
+                </div>
+            </div>
+
+            <div class="single-galeria">
+                <img src="../img/adocao/gatos/van_gogh.jpeg" alt="">
+                <div class="info">
+                    <h1>Van Gogh</h1>
+                    <p>Extremamente dócil, além de conviver bem com outros gatos.</p>
+                    <a target="_blank" href="https://www.focinhosdeluz.com/especie-adocao/gatos">Ver Mais</a>
+                </div>
+            </div>
+
+            <div class="single-galeria">
+                <img src="../img/adocao/dog/barto.webp" alt="">
+                <div class="info">
+                    <h1>Barto</h1>
+                    <p>Macho de pequeno porte, super bincalhão.</p>
+                    <a target="_blank" href="https://www.caosemdono.com.br/adocoes-e-apadrinhamento">Ver Mais</a>
+                </div>
+            </div>
+
+            <div class="single-galeria">
+                <img src="../img/adocao/gatos/boris.jpg" alt="">
+                <div class="info">
+                    <h1>Boris</h1>
+                    <p>Tranquilo e observador,convive bem com outros pets.</p>
+                    <a target="_blank" href="https://www.suipa.org.br/index.asp?pg=form_adocao.asp">Ver Mais</a>
+                </div>
+            </div>
+
+            <div class="single-galeria">
+                <img src="../img/adocao/dog/bebeto.webp" alt="">
+                <div class="info">
+                    <h1>Bebeto</h1>
+                    <p>Alegre e carinho, uma exelente companhia para você.</p>
+                    <a target="_blank" href="https://www.caosemdono.com.br/adocoes-e-apadrinhamento">Ver Mais</a>
+                </div>
+            </div>
+        </div>
+        
+    </header>
+    
+</section><!--fim seção galeria-->
+
+<section id="container"><!--inicio seção quiz-->
+   
+    <section id="quiz"><!--inicio sub seção quiz-->
+        <div class="qa_box_caixa">
+            <div class="qa_header_cabecalho">
+                <span>Quiz<span>
+            </div>
+            <div class="qa-body_corpo"><!--inicio div quiz-->
+                <div class="qa_set_titulo active"><!--inicio pg de rosto quiz-->
+                    <img width="100%" src="../img/adocao/imagem_quiz/mulher_com_cachorro.png" alt="seta"></i>
+                </div><!-- fim pg de rosto quiz-->
+                                    
+                
+            </div><!--fim quiz-->
+
+            <div class="qa_footer_rodape">
+                <a href="adocao_quiz_start.html" class="btn1" id="skip_pular">Inicio</a>
+            </div>
+
+
+        </div><!--fim div quiz-->
+    </section><!--fim sub seção quiz-->
+    <div>
+        <h2>Encontre Seu Pet metade!</h2>
+        <p>Responda o Quiz e descubra o pet que mais combina com você.</p>
+    </div>
+</section><!--fim seção quiz-->
+
+<section id="como-adotar"><!--Inicio segunda sub seção:como adotar-->
+
+    <h2>Entenda como funciona</h2>
+
+    <section class="container-como-adotar"><!--inicio seção cards-->
+
+
+        <section class="secao-como-adotar"><!--inicio primeiro card-->
+            <img src="../img/adocao/card/lupa.png"
+                alt="Ração Golden Fórmula Mini Bits Para Cães Adultos de Porte Pequeno Sabor Carne e Arroz 15 kg"
+                class="imagem-como-adotar">
+            <strong class="titulo-como-adotar">Ache seu pet</strong>
+            <br>
+            <div class="div-como-adotar"></div>
+            <p class="paragrafo-como-adotar">Dê uma olhada nos sites das ONGs parceiras, no
+                espaço dedicado a adoção, para criar a conexão perfeita com cão e/ou gato que busca
+                um
+                novo lar. Confira a lista de ONGs.</p>
+            </div>
+        </section><!--fim primeiro card-->
+
+        <section class="secao-como-adotar"><!--inicio segundo card-->
+            <img src="../img/adocao/card/formulario.png"
+                alt="Ração Golden Fórmula Mini Bits Para Cães Adultos de Porte Pequeno Sabor Carne e Arroz 15 kg"
+                class="imagem-como-adotar">
+
+            <strong class="titulo-como-adotar">Formulário</strong>
+            <br>
+            <div class="div-como-adotar"></div>
+            <p class="paragrafo-como-adotar">Depois que você escolher o seu pet, basta preencher o
+                formulário que é disponibilizado no
+                site da ONG e a mesma entrará em contato com você.</p>
+            </div>
+        </section><!--fim segundo card-->
+
+        <section class="secao-como-adotar"><!--inicio terceiro card-->
+            <img src="../img/adocao/card/formulario_ok.png"
+                alt="Ração Golden Fórmula Mini Bits Para Cães Adultos de Porte Pequeno Sabor Carne e Arroz 15 kg"
+                class="imagem-como-adotar">
+
+            <strong class="titulo-como-adotar">Avaliação</strong>
+            <br>
+            <div class="div-como-adotar"></div>
+            <p class="paragrafo-como-adotar">A ONG irá analisar o cadastro e perfil do adotante vs
+                pet
+                escolhido.Preenchendo os requisitos, você recebe a aprovação e a ONG entrará em
+                contato
+                pelo telefone
+                cadastrado.</p>
+            </div>
+        </section><!--fim terceiro card-->
+
+        <section class="secao-como-adotar"><!--inicio quarto card-->
+            <img src="../img/adocao/card/casa.png"
+                alt="Ração Golden Fórmula Mini Bits Para Cães Adultos de Porte Pequeno Sabor Carne e Arroz 15 kg"
+                class="imagem-como-adotar">
+            <strong class="titulo-como-adotar">Adoção</strong>
+            <br>
+            <div class="div-como-adotar"></div>
+            <p class="paragrafo-como-adotar">Com tudo certo, você já pode ir busca seu novo amigo na
+                ONG
+                no dia e horário agendado.</p>
+            </div>
+        </section><!--fim quarto card-->
+
+    </section><!--fim seção cards-->
+
+</section><!--fim segunda sub seção:como adotar-->
+</main>
+<!-- footer -->
+<footer>
+
+    <div class="container">
+        <div class="row">
             <div class="col-md-6 col-lg-3">
-              <h4>Meios de Pagamento</h4>
-              <ul class="payment-methods">
-                <li>
-                  <a href="#"><i class="fab fa-cc-visa"></i> Visa</a>
-                </li>
-                <li>
-                  <a href="#"><i class="fab fa-cc-mastercard"></i> Mastercard</a>
-                </li>
-                <li>
-                  <a href="#"><i class="fab fa-cc-paypal"></i> PayPal</a>
-                </li>
-                <li>
-                  <a href="#"><i class="fas fa-barcode"></i> Boleto</a>
-                </li>
-              </ul>
+                <h4>Meios de Pagamento</h4>
+                <ul class="payment-methods">
+                    <li>
+                        <a href="#"><i class="fab fa-cc-visa"></i> Visa</a>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fab fa-cc-mastercard"></i> Mastercard</a>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fab fa-cc-paypal"></i> PayPal</a>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fas fa-barcode"></i> Boleto</a>
+                    </li>
+                </ul>
             </div>
             <div class="col-md-6 col-lg-3">
-              <h4>Redes Sociais</h4>
-              <ul class="social-media">
-                <li>
-                  <a href="#"><i class="fab fa-instagram"></i> Instagram</a>
-                </li>
-                <li>
-                  <a href="#"><i class="fab fa-facebook"></i> Facebook</a>
-                </li>
-                <li>
-                  <a href="#"><i class="fab fa-whatsapp"></i> WhatsApp</a>
-                </li>
-              </ul>
+                <h4>Redes Sociais</h4>
+                <ul class="social-media">
+                    <li>
+                        <a href="#"><i class="fab fa-instagram"></i> Instagram</a>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fab fa-facebook"></i> Facebook</a>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+                    </li>
+                </ul>
             </div>
             <div class="col-md-12 col-lg-6">
-              <h4>Contato</h4>
-              <p>
-                Endereço: Rua Dr. Miguel Paulo Capalbo, 135 - Pari - São Paulo -
-                SP CEP: 03035-040
-              </p>
-              <p>Email: contato@petshopcaramelo.com</p>
-              <p>Telefone: (11) 3456-7890</p>
+                <h4>Contato</h4>
+                <p>
+                    Endereço: Rua Dr. Miguel Paulo Capalbo, 135 - Pari - São Paulo -
+                    SP CEP: 03035-040
+                </p>
+                <p>Email: contato@petshopcaramelo.com</p>
+                <p>Telefone: (11) 3456-7890</p>
             </div>
-          </div>
         </div>
-      </footer>
-    <!-- fim /footer -->
+    </div>
+
+</footer>
+<!-- fim /footer -->
 
 </body>
 
