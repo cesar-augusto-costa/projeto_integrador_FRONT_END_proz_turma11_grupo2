@@ -24,7 +24,8 @@ p {
 }
 
 .depoimento {
-    background: orange;
+    background-image: url(../img/depoimentos/patinhas.jpeg);
+    background-size: 200px;
     border: 2px solid #e7e7e7;
     margin: 10px;
     padding: 10px;
@@ -33,12 +34,14 @@ p {
 }
 
 .post {
-    background: orange;
+    background-image: url(../img/depoimentos/patinhas.jpeg);
+    background-size: 200px;
     border: 2px solid #e7e7e7;
     margin: 10px;
     padding: 10px;
     padding-top: 20px;
     border-radius: 10px;
+    font-size: 18px;
 }
 
 .grid-depoimento {
@@ -54,11 +57,11 @@ p {
 }
 
 .img {
-    border-radius: 10px;
+    border-radius: 15px;
     height: 200px;
+    width: 200px;
     margin-bottom: 10px;
     object-fit: cover;
-    width: 200px;
     padding: 10px;
     transition: 200ms linear; 
 }
