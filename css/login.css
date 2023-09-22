@@ -124,6 +124,9 @@ body {
     flex-direction: column;
     align-items: center;
     border: 1px solid rgb(255, 98, 0);
+}
+
+.second-column.right {
     padding: 29px 0;
     -webkit-border-top-right-radius: 12px;
     -webkit-border-bottom-right-radius: 12px;
@@ -131,6 +134,16 @@ body {
     -moz-border-radius-bottomright: 12px;
     border-top-right-radius: 12px;
     border-bottom-right-radius: 12px;
+}
+
+.second-column.left {
+    padding: 42px 0;
+    -webkit-border-top-left-radius: 12px;
+    -webkit-border-bottom-left-radius: 12px;
+    -moz-border-radius-topleft: 12px;
+    -moz-border-radius-bottomleft: 12px;
+    border-top-left-radius: 12px;
+    border-bottom-left-radius: 12px;
 }
 
 .social-media {
@@ -243,11 +256,11 @@ input:-webkit-autofill{
     border-bottom-left-radius: 0px;
     border-top-right-radius: 15px;
     border-bottom-right-radius: 15px;
-    animation: slideIn 3s;
+    animation: slideIn 0.1s;
     z-index: 12;
 }
 .sign-up-js .content::before {
-    animation: slideOut 3s;
+    animation: slideOut 0.1s;
     z-index: 12;
 }
 .sign-up-js .first-content .first-column {
@@ -266,12 +279,12 @@ input:-webkit-autofill{
 .sign-in-js .first-content .second-column {
     z-index: -1;
     position: relative;
-    animation: deslocamentoEsq 3s;
+    animation: deslocamentoEsq 0.1s;
 }
 .sign-up-js .second-content .second-column {
     z-index: -1;
     position: relative;
-    animation: deslocamentoDir 3s;
+    animation: deslocamentoDir 0.1s;
 }
 
 /* ANIMAÇÃO CSS para o conteúdo
@@ -296,6 +309,7 @@ input:-webkit-autofill{
         z-index: -1;
     }
 }
+
 @keyframes deslocamentoDir {
     from {
         left: 0;
