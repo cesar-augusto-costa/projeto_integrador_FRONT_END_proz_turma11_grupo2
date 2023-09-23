@@ -5,7 +5,7 @@ main {
 }
 
 h1 {
-    font-size: 36px;
+    font-size: 36px; 
     font-weight: bold;
 }
 
@@ -21,6 +21,11 @@ a {
 
 p {
     color: #4b4848;
+    font-size: 18px;
+}
+
+.Titulo {
+    text-transform: none;
 }
 
 .depoimento {
