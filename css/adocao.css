@@ -1,17 +1,56 @@
 /*inicio formatação cards ongs*/
-
+.subtitulo{
+    background-image: url(../img/adocao/background/fundo.png);
+    background-size: 100%;
+    height: 40vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.secao-apresentacao{
+    display: flex;
+    background-color: #F8b74c;
+    height: 50vh;
+    margin-top: 5px;
+    
+    
+}
+.container-apresentacao{
+    text-align: justify;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 10px;
+    align-items: center;
+    justify-content: center;
+    
+    
+}
+.ong{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
 .cards-ongs{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: Arial, Helvetica, sans-serif;
+    width: 60%;
+    
+    
     
 }
 .cards{
-    background: orangered;
+   
     display: grid;
     place-items: center;
     min-height: 65vh;
+    border-radius: 2%;
+    
+    margin-right: 10%;
+
     
 }
 .outer{
@@ -21,8 +60,12 @@
     
 }
 
+
+
 .cards .card{
-    background: #fff;
+    background-image: url(../img/adocao/background/patinhas.jpeg);
+    background-size: 30%;
+    
     padding: 1.5rem;
     max-width:50rem;
     border-radius: 2rem;
@@ -31,16 +74,19 @@
     opacity: 0;
     animation: animate 15s infinite linear;
     animation-delay:calc(3s * var(--delay));
+    box-shadow: 0 0 5px 3px rgba(0,0,0,0.3);
     }
 
 .profile, .header-card{
     display: flex;
     align-items: center;
+    
 
 }
 
 .header-card{
     justify-content: space-between;
+    
 
 }
 
@@ -49,6 +95,8 @@
     display: flex;
     justify-content: space-between;
     text-align: justify;
+    color: #421a12;
+    
     }
 
 .profile .img{
@@ -274,8 +322,8 @@
 }
 
 .qa_header_cabecalho {
-    background-color: orangered;
-    color: #fff;
+    background-color: #F8b74c;
+    color: #421a12;
     display: flex;
     justify-content: space-between;
     padding: 15px 20px;
@@ -348,7 +396,7 @@ qa_set_titulo h4 {
 .btn1{
     display: inline-block;
     padding: 8px 20px;
-    background-color: orangered;
+    background-color: #F8b74c;
     color: #fff;
     border-radius: 15px;
     cursor:pointer;
@@ -356,7 +404,7 @@ qa_set_titulo h4 {
 }
 
 .btn1:hover{
-    background-color: orange;
+    background-color: #421a12;
 }
 /*fim formatação quiz*/
 
@@ -373,7 +421,9 @@ qa_set_titulo h4 {
     display: grid;
     align-items: center;
     justify-content: center;
-    background-color: #fff;
+    background-color: #F8b74c;
+    border-radius: 5%;
+    margin: 10px 0 10px 0;
 }
 
 .titulo-como-adotar {
@@ -397,8 +447,8 @@ qa_set_titulo h4 {
 }
 
 .paragrafo-como-adotar {
-    background-color: orange;
-    color: #fff;
+    background-color: #fff;
+    color: black;
     border-radius: 10px;
     padding: 10px 5px;
     font-size: 14px;
