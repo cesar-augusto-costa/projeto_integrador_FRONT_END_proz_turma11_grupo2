@@ -8,14 +8,14 @@
     justify-content: center;
     flex-direction: column;
 }
+/*inicio estilização titulo da pag*/
 .secao-apresentacao{
     display: flex;
     background-color: #F8b74c;
     height: 50vh;
     margin-top: 5px;
-    
-    
 }
+
 .container-apresentacao{
     text-align: justify;
     display: flex;
@@ -24,43 +24,37 @@
     padding: 10px;
     align-items: center;
     justify-content: center;
-    
-    
 }
-.ong{
+
+/*fim estilização titulo da pag*/
+/*inicio estilização cards ongs*/
+.container-ong{
     display: flex;
     align-items: center;
     justify-content: space-between;
-}
+    }
+
 .cards-ongs{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: Arial, Helvetica, sans-serif;
     width: 60%;
-    
-    
-    
-}
+    overflow: hidden;
+   }
 .cards{
-   
     display: grid;
     place-items: center;
     min-height: 65vh;
     border-radius: 2%;
-    
     margin-right: 10%;
-
-    
 }
-.outer{
+.container-exterior{
     display:flex;
     align-items: center;
     justify-content: center;
     
 }
-
-
 
 .cards .card{
     background-image: url(../img/adocao/background/patinhas.jpeg);
@@ -75,56 +69,43 @@
     animation: animate 15s infinite linear;
     animation-delay:calc(3s * var(--delay));
     box-shadow: 0 0 5px 3px rgba(0,0,0,0.3);
-    }
+}
 
-.profile, .header-card{
+.card-interno-conteudo, .card-interno{
     display: flex;
     align-items: center;
-    
-
 }
 
-.header-card{
+.card-interno{
     justify-content: space-between;
-    
-
 }
 
-.profile{
+.card-interno-conteudo{
     margin-bottom: 1rem;
     display: flex;
     justify-content: space-between;
     text-align: justify;
     color: #421a12;
-    
-    }
+}
 
-.profile .img{
+.card-interno-conteudo .img{
     height: 100px;
     width: 100px;
     padding: 5px;
-  
-   
-    
 }
 
-.profile .img img{
+.card-interno-conteudo .img img{
     width: 150%;
-    
- 
-    
 }
 
-.profile .details{
+.card-interno-conteudo .card-interno-conteudo-div{
     margin-left: 10px;
     width: 100%;
-   
-
 }
 
 
 
-.outer:hover .card{
+.container-exterior:hover .card{
     animation-play-state: paused;
 
 }
@@ -167,16 +148,14 @@
     }
 }
 /*fim formatação cards ongs*/
-
 /*inicio formatação galeria*/
+
 .contanier-galeria{
     display: flex;
-   
     justify-content: space-around;
     align-items: center;
     box-sizing: border-box;
     padding: 2%;
-    
 }
 
 
@@ -187,8 +166,6 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    
-    
 }
 
 .header-galeria div.galeria{
@@ -414,6 +391,8 @@ qa_set_titulo h4 {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
     gap: 10px;
+    align-items: center;
+    justify-content: center;
 
 }
 
@@ -424,6 +403,7 @@ qa_set_titulo h4 {
     background-color: #F8b74c;
     border-radius: 5%;
     margin: 10px 0 10px 0;
+    padding: 10px;
 }
 
 .titulo-como-adotar {
@@ -436,6 +416,10 @@ qa_set_titulo h4 {
     width: 80px;
     height: 80px;
     object-fit: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
 
 }
 
@@ -443,6 +427,7 @@ qa_set_titulo h4 {
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
     margin-top: 10px;
 }
 
@@ -450,11 +435,13 @@ qa_set_titulo h4 {
     background-color: #fff;
     color: black;
     border-radius: 10px;
-    padding: 10px 5px;
+    box-shadow: 0 0 5px 3px #EB7A21;
+    padding: 15px;
     font-size: 14px;
     line-height: 25px;
-    width: 150px;
+    width: 180px;
     height: 250px;
+    text-align: justify;
 
 }
 
