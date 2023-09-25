@@ -400,7 +400,8 @@ qa_set_titulo h4 {
     display: grid;
     align-items: center;
     justify-content: center;
-    background-color: #F8b74c;
+    background-image: url(../img/adocao/background/patinhas.jpeg);
+    background-size: 40%;
     border-radius: 5%;
     margin: 10px 0 10px 0;
     padding: 10px;
