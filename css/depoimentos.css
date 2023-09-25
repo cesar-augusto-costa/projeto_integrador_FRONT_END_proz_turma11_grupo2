@@ -1,27 +1,30 @@
 main {
     font-family: 'Lato', sans-serif;
-    padding: 20px;
-    margin: 0 auto;   
+    padding: 10px;
+    margin: 10px;   
 }
 
 h1 {
-    font-size: 36px; 
+    font-size: 3.6rem; 
     font-weight: bold;
+    color: #421a12;
 }
 
 h2 {
-    font-size: 18px;
+    font-size: 1.8rem;
     font-weight: bold;
+    color: #421a12;
 }
 
 a {
     text-decoration: none;
-    color: #4b4848;
+    color: #421a12;
 }
 
 p {
-    color: #4b4848;
-    font-size: 18px;
+    color: #421a12;
+    font-size: 1.8rem;
+    line-height: 3.5rem;
 }
 
 .Titulo {
@@ -36,6 +39,10 @@ p {
     padding: 10px;
     border-radius: 10px;
     text-decoration: none;
+    font-size: 1.8rem;
+    line-height: 2.7rem;
+    width: 90%;
+    max-width: 768px;
 }
 
 .post {
@@ -46,19 +53,23 @@ p {
     padding: 10px;
     padding-top: 20px;
     border-radius: 10px;
-    font-size: 18px;
+    font-size: 1.8rem;
+    line-height: 2.5rem;
+    width: 90%;
+    max-width: 768px;
 }
 
 .grid-depoimento {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 10px;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 5px;  
 }
 
 .grid-post {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    gap: 10px;
+    grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+    gap: 5px;
+    margin: 5px;
 }
 
 .img {
@@ -75,3 +86,62 @@ p {
     transform: scale(1.2);
 }
 
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-size: 1.6rem;
+}
+
+
+@media (max-width: 768px) {
+    html {
+        font-size: 50%;
+        text-align: center;
+    }
+
+    .grid-post {
+        text-align: center;
+        align-content: center;
+    }
+
+    .grid-depoimento {
+        text-align: center;
+        align-content: center;
+    }
+}
+
+@media (max-width: 375px) {
+    html {
+        font-size: 50%;
+        text-align: center;
+    }
+
+    .grid-post {
+        text-align: center;
+        align-content: center;
+    }
+
+    .grid-depoimento {
+        text-align: center;
+        align-content: center;
+    }
+}
+
+@media (max-width: 320px) {
+    html {
+        font-size: 50%;
+        text-align: center;
+    }
+
+    .grid-post {
+        text-align: center;
+        align-content: center;
+    }
+
+    .grid-depoimento {
+        text-align: center;
+        align-content: center;
+    }
+}
