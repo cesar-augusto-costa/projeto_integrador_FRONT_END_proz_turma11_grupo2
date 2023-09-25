@@ -1,3 +1,20 @@
+//apresentação. Expande a aba ao clicar em leia mais
+function leiaMais(){
+    let pontos = document.getElementById("pontos");
+    let maisTexto = document.getElementById("mais");
+    let btnLeiaMais = document.getElementById("btnLeiaMais");
+if(pontos.style.display === "none"){
+    pontos.style.display = "inline";
+    maisTexto.style.display = "none";
+    btnLeiaMais.innerHTML = "Leia Mais";
+}else{
+    pontos.style.display = "none";
+    maisTexto.style.display = "inline";
+    btnLeiaMais.innerHTML = "Leia Menos";
+    
+}
+}
+
 let currentSlide = 0;
 const slides = document.querySelectorAll('.slide');
 const resultadoTitulo = document.getElementById('resultado-titulo');

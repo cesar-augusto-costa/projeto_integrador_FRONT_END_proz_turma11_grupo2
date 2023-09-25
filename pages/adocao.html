@@ -57,20 +57,24 @@
     <main>
  <!--inicio titulo/apresentação-->
 
-        <section class="secao-apresentacao">
+        <section id="secao-apresentacao">
 
-            <div class="container-apresentacao">
+            <div id="container-apresentacao">
+                
                 <h1>Adote um pet.</h1>
                 <p>O trabalho de uma ONG de animais abandonados é muito
                     importante para garantir o bem-estar e o futuro dos companheiros
                     de quatro patas. No entanto, como se trata de uma instituição sem fins
-                    lucrativos, geralmente, ela necessita de auxílio financeiro.Pensando nisso, em como
-                    o funcionamento de uma ONG pode mudar a vida de animais, o Pet Caramelo faz parcerias com
-                    várias entidades. Conheça um pouco sobre nossas parceiras e seus pet nos artigos abaixo.</p>
+                    lucrativos, geralmente, ela necessita de auxílio financeiro<span id = "pontos">...</span><span id="mais"> Pensando nisso, em como
+                    o funcionamento de uma ONG pode mudar a vida de animais, o <strong>Pet Caramelo</strong> faz parcerias com
+                    várias entidades. Conheça um pouco sobre nossas parceiras e seus pet nos artigos abaixo.</span><button onclick="leiaMais()" class="btnLeiaMais">Leia Mais</button></p>
+                
+       
 
             </div>
-            <img style="border-end-start-radius: 50%; width: 50%;" src="../img/adocao/background/pet.jpg"
-                alt="cães e gatos om fundo branco">
+            <div id="img-apresentacao">
+            <img style="width: 100%" src="../img/adocao/background/pet.jpg"  alt="cães e gatos om fundo branco">
+            </div>
         </section>
 
 <!--fim titulo/apresentação-->
@@ -79,7 +83,7 @@
         <section class="container-ong">
             <div class="subtitulo">
                 <h2>ONG parceiras.</h2>
-                <p>Conheça os projetos desenvolvidos por nossas ONGs parceiras.</p>
+                <p>Conheça os projetos desenvolvidos por nossas<br>ONGs parceiras.</p>
             </div>
             <section class="cards-ongs">
                 <div class="cards">
@@ -94,13 +98,8 @@
                                     <div class="card-interno-conteudo-div">
                                         <h5>Instituto Ampara Animal</h5>
                                         <p>A AMPARA é uma OSCIP sem fins lucrativos. Somos protetores de animais
-                                            abandonados
-                                            e
-                                            vítimas de maus-tratos. Lutamos para que os mais de 30 milhões de animais de
-                                            rua
-                                            tenham
-                                            uma vida com respeito e amor.</p><a id="ancora" target="_blank"
-                                            href="https://amparanimal.org.br/">Saiba Mais</a>
+                                            abandonados e vítimas de maus-tratos.<a class="btnLeiaMais" target="_blank"
+                                            href="https://amparanimal.org.br/"> Saiba Mais</a></p>
                                     </div>
                                 </div>
 
@@ -115,14 +114,9 @@
                                     </div>
                                     <div class="card-interno-conteudo-div">
                                         <h5>ONG Cão Sem Dono</h5>
-                                        <p>O Cão Sem Dono é uma ONG, que nasceu de um grande sonho do seu atual
-                                            presidente:
-                                            tirar o maior número possível de
-                                            animais das ruas, dar tratamento adequado e integrá-los a famílias que lhes
-                                            deem
-                                            amor,
-                                            carinho e uma vida digna.</p><a id="ancora" target="_blank"
-                                            href="https://www.caosemdono.com.br/">Saiba Mais</a>
+                                        <p>O Cão Sem Dono é uma ONG, que nasceu de um grande sonho: tirar o maior número possível de
+                                            animais das ruas e integrá-los a famílias que lhes deem uma vida digna...<a class="btnLeiaMais" target="_blank"
+                                            href="https://www.caosemdono.com.br/"> Saiba Mais</a></p>
                                     </div>
                                 </div>
 
@@ -139,11 +133,8 @@
                                     <div class="card-interno-conteudo-div">
                                         <h5> Associação Focinhos de Luz</h5>
                                         <p>A Associação Focinhos de Luz é uma organização sem fins lucrativos que luta
-                                            pela
-                                            reintrodução de animais abandonados à sociedade. Criada em 2010,a nossa casa
-                                            de
-                                            passagem abriga em torno de 100 animais.</p><a id="ancora" target="_blank"
-                                            href="https://www.focinhosdeluz.com/">Saiba Mais</a>
+                                            pela reintrodução de animais abandonados à sociedade...<a class="btnLeiaMais" target="_blank"
+                                            href="https://www.focinhosdeluz.com/"> Saiba Mais</a></p>
                                     </div>
                                 </div>
 
@@ -160,12 +151,9 @@
                                     </div>
                                     <div class="card-interno-conteudo-div">
                                         <h5>Sociedade União Internacional Protetora dos Animais</h5>
-                                        <p>Com 80 anos de existência, a serem comemorados em Abril de 2023, a SUIPA
-                                            permanece viva,
-                                            como uma entidade particular, não eutanásica, sem fins lucrativos, e de
-                                            utilidade
-                                            pública. </p><a id="ancora" target="_blank"
-                                            href="https://www.suipa.org.br/">Saiba Mais</a>
+                                        <p>Com 80 anos de existência, a SUIPA é uma entidade particular, não eutanásica, sem fins lucrativos, e de
+                                            utilidade pública...<a class="btnLeiaMais" target="_blank"
+                                            href="https://www.suipa.org.br/"> Saiba Mais</a></p>
                                     </div>
                                 </div>
 
@@ -182,12 +170,8 @@
                                     <div class="card-interno-conteudo-div">
                                         <h5>ONG Vira-Lata é Dez</h5>
                                         <p>Fundada em 2003, a ONG Vira-Lata é Dez busca transformar animais de rua em
-                                            animais de
-                                            estimação. Buscamos promover campanhas de castração e programas educativos
-                                            que
-                                            visam a conscientização quanto a posse
-                                            responsável.</p><a id="ancora" target="_blank"
-                                            href="https://www.ongviralataedez.com/">Saiba Mais</a>
+                                            animais de estimação...<a class="btnLeiaMais" target="_blank"
+                                            href="https://www.ongviralataedez.com/"> Saiba Mais</a></p>
                                     </div>
                                 </div>
 
@@ -257,7 +241,7 @@
     </header>
     <div class="subtitulo">
         <h2>Nossos Amigos.</h2>
-        <p>Saiba mais sobre os pets que estão disponíveis nas ONGs que o PET CARAMELO apoia.</p>
+        <p>Saiba mais sobre os pets que estão disponíveis nas ONGs que o Pet Caramelo apoia.</p>
     </div>
 
 </section><!--fim seção galeria-->
@@ -265,12 +249,12 @@
 <section id="container"><!--inicio seção quiz-->
     <div class="subtitulo">
         <h2>Encontre Seu Pet metade!</h2>
-        <p>Responda o Quiz e descubra o pet que mais combina com você.</p>
+        <p>Responda o Quiz e descubra o pet que mais<br>combina com você.</p>
     </div>
     <section id="quiz"><!--inicio sub seção quiz-->
         <div class="qa_box_caixa">
             <div class="qa_header_cabecalho">
-                <span>Quiz<span>
+                <span><h5>Quiz</h5><span>
             </div>
             <div class="qa-body_corpo"><!--inicio div quiz-->
                 <div class="qa_set_titulo active"><!--inicio pg de rosto quiz-->
@@ -292,7 +276,7 @@
 
 <section id="como-adotar"><!--Inicio segunda sub seção:como adotar-->
 
-    <h2>Entenda como funciona</h2>
+    <h2>Entenda como funciona.</h2>
 
     <section class="container-como-adotar"><!--inicio seção cards-->
 
@@ -301,13 +285,13 @@
             <img src="../img/adocao/card/lupa.png"
                 alt="Ração Golden Fórmula Mini Bits Para Cães Adultos de Porte Pequeno Sabor Carne e Arroz 15 kg"
                 class="imagem-como-adotar">
-            <strong class="titulo-como-adotar">Ache seu pet</strong>
+            <h5 class="titulo-como-adotar">Ache seu pet</h5>
             <br>
             <div class="div-como-adotar"></div>
             <p class="paragrafo-como-adotar">Dê uma olhada nos sites das ONGs parceiras, no
                 espaço dedicado a adoção, para criar a conexão perfeita com cão e/ou gato que busca
                 um
-                novo lar. Confira a lista de ONGs.</p>
+                novo lar. Conheça as ONGs Parceiras Do Pet Caramelo.</p>
             </div>
         </section><!--fim primeiro card-->
 
@@ -316,7 +300,7 @@
                 alt="Ração Golden Fórmula Mini Bits Para Cães Adultos de Porte Pequeno Sabor Carne e Arroz 15 kg"
                 class="imagem-como-adotar">
 
-            <strong class="titulo-como-adotar">Formulário</strong>
+            <h5 class="titulo-como-adotar">Formulário</h5>
             <br>
             <div class="div-como-adotar"></div>
             <p class="paragrafo-como-adotar">Depois que você escolher o seu pet, basta preencher o
@@ -330,12 +314,12 @@
                 alt="Ração Golden Fórmula Mini Bits Para Cães Adultos de Porte Pequeno Sabor Carne e Arroz 15 kg"
                 class="imagem-como-adotar">
 
-            <strong class="titulo-como-adotar">Avaliação</strong>
+            <h5 class="titulo-como-adotar">Avaliação</h5>
             <br>
             <div class="div-como-adotar"></div>
             <p class="paragrafo-como-adotar">A ONG irá analisar o cadastro e perfil do adotante vs
                 pet
-                escolhido.Preenchendo os requisitos, você recebe a aprovação e a ONG entrará em
+                escolhido. Preenchendo os requisitos, você recebe a aprovação e a ONG entrará em
                 contato
                 pelo telefone
                 cadastrado.</p>
@@ -346,7 +330,7 @@
             <img src="../img/adocao/card/casa.png"
                 alt="Ração Golden Fórmula Mini Bits Para Cães Adultos de Porte Pequeno Sabor Carne e Arroz 15 kg"
                 class="imagem-como-adotar">
-            <strong class="titulo-como-adotar">Adoção</strong>
+            <h5 class="titulo-como-adotar">Adoção</h5>
             <br>
             <div class="div-como-adotar"></div>
             <p class="paragrafo-como-adotar">Com tudo certo, você já pode ir busca seu novo amigo na

@@ -1,4 +1,39 @@
 /*inicio formatação cards ongs*/
+main {
+    font-family: 'Lato', sans-serif;
+    padding: 10px;
+    margin: 10px;   
+}
+
+h1 {
+    font-size: 4rem; 
+    font-weight: bold;
+    color: #421a12;
+}
+
+h2 {
+    font-size:3rem;
+    font-weight: bold;
+    color: #421a12;
+}
+
+h5 {
+    font-size:2rem;
+    font-weight: bold;
+    color: #421a12;
+}
+
+a {
+    text-decoration: none;
+    color: #421a12;
+}
+
+p {
+    color: #421a12;
+    font-size: 1.8rem;
+    line-height: 3.5rem;
+    font-weight: 500;
+}
 .subtitulo{
     background-image: url(../img/adocao/background/fundo.png);
     background-size: 100%;
@@ -7,16 +42,33 @@
     align-items: center;
     justify-content: center;
     flex-direction: column;
-}
-/*inicio estilização titulo da pag*/
-.secao-apresentacao{
-    display: flex;
-    background-color: #F8b74c;
-    height: 50vh;
-    margin-top: 5px;
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #421a12;
+    margin-left: 2%;
+ 
 }
 
-.container-apresentacao{
+.btnLeiaMais{
+    font-size: 1.8rem;
+    font-weight: bold;
+    line-height: 28px;
+    color:#421a12;
+    text-decoration: none;
+    background-color:none;
+    
+}
+/*inicio estilização titulo da pag*/
+#secao-apresentacao{
+    display: flex;
+    border-bottom: solid;
+    border-bottom-color: #F8b74c;
+    height: 55vh;
+    align-items: center;
+    justify-content: center;
+}
+
+#container-apresentacao{
     text-align: justify;
     display: flex;
     align-items: center;
@@ -24,7 +76,19 @@
     padding: 10px;
     align-items: center;
     justify-content: center;
+    width: 100%;
+   
 }
+
+#img-apresentacao{
+    background-color: #fff;
+    border-end-start-radius: 50%;
+   
+}
+#mais{
+    display: none;
+}
+
 
 /*fim estilização titulo da pag*/
 /*inicio estilização cards ongs*/
@@ -32,14 +96,15 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    padding-top : 8rem;
+    margin-right: 2%;
     }
 
 .cards-ongs{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: Arial, Helvetica, sans-serif;
-    width: 60%;
+    width: 50%;
     overflow: hidden;
    }
 .cards{
@@ -47,7 +112,7 @@
     place-items: center;
     min-height: 65vh;
     border-radius: 2%;
-    margin-right: 10%;
+
 }
 .container-exterior{
     display:flex;
@@ -142,7 +207,6 @@
 
 @media (max-width:467px){
     .card{
-        font-size: 10px;
         padding: 25rem!important;
         margin: .25rem;
     }
@@ -374,14 +438,15 @@ qa_set_titulo h4 {
     display: inline-block;
     padding: 8px 20px;
     background-color: #F8b74c;
-    color: #fff;
+    color: #421a12;
+     font-weight: bold;
     border-radius: 15px;
     cursor:pointer;
     transition: all 0.3s ease-out;
 }
 
 .btn1:hover{
-    background-color: #421a12;
+    background-color: #EB7A21;
 }
 /*fim formatação quiz*/
 
@@ -433,16 +498,15 @@ qa_set_titulo h4 {
 }
 
 .paragrafo-como-adotar {
-    background-color: #fff;
-    color: black;
-    border-radius: 10px;
-    box-shadow: 0 0 5px 3px #EB7A21;
-    padding: 15px;
-    font-size: 14px;
-    line-height: 25px;
+    
     width: 180px;
     height: 250px;
-    text-align: justify;
+    text-align: center;
+    color: #421a12;
+    font-size: 1.8rem;
+    line-height: 2.4rem;
+    font-weight: 500;
+    
 
 }
 
