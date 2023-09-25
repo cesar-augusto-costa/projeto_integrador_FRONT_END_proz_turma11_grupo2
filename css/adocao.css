@@ -36,7 +36,7 @@ p {
 }
 .subtitulo{
     background-image: url(../img/adocao/background/fundo.png);
-    background-size: 100%;
+    background-size: 110%;
     height: 40vh;
     display: flex;
     align-items: center;
@@ -45,7 +45,7 @@ p {
     font-size: 1.8rem;
     font-weight: bold;
     color: #421a12;
-    margin-left: 2%;
+    
  
 }
 
@@ -66,6 +66,7 @@ p {
     height: 55vh;
     align-items: center;
     justify-content: center;
+    
 }
 
 #container-apresentacao{
@@ -92,12 +93,12 @@ p {
 
 /*fim estilização titulo da pag*/
 /*inicio estilização cards ongs*/
+
 .container-ong{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding-top : 8rem;
-    margin-right: 2%;
+    
     }
 
 .cards-ongs{
@@ -120,12 +121,14 @@ p {
     justify-content: center;
     
 }
-
+.card{
+    padding: 1.5rem;
+}
 .cards .card{
     background-image: url(../img/adocao/background/patinhas.jpeg);
     background-size: 30%;
     
-    padding: 1.5rem;
+    
     max-width:50rem;
     border-radius: 2rem;
     position: absolute;
@@ -511,6 +514,63 @@ qa_set_titulo h4 {
 }
 
 /*fim estilização seção como adotar*/
+/*inicio media screen*/
+@media screen and (max-width: 1280px) {
+    .subtitulo{
+        width: 50%;
+        background-size: 100%;
+    }
+    
+.container-ong{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 0%;
+}
+
+}
+
+@media screen and (max-width: 768px){
+    .subtitulo{
+        background-image:none;
+        height: 20%;
+     }
+
+     #secao-apresentacao{
+        flex-direction: column;
+        }
+        
+
+    .container-ong{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        
+        }
+
+        .contanier-galeria{
+            display: flex;
+            flex-direction: column-reverse;
+            justify-content: space-around;
+            align-items: center;
+            box-sizing: border-box;
+            padding: 2%;
+        }
+
+        #container{
+            display: flex;
+            flex-direction: column;
+            }
+            #quiz {
+                               
+                min-height: 60vh;
+                
+                   
+            }
+}
+
+
 
 @media screen and (max-width: 400px) {
     .qa_box_caixa {
