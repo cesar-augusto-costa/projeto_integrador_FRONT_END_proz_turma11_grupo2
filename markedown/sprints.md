@@ -1,4 +1,4 @@
-# Confira todas as Sprints
+# Instruções de Entrega das Atividades
 
 ## Sprint I - Layout 
 Espera-se que o aluno consiga executar as seguites atividades: 
