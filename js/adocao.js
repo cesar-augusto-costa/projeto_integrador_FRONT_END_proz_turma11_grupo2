@@ -1,3 +1,4 @@
+
 //apresentação. Expande a aba ao clicar em leia mais
 function leiaMais(){
     let pontos = document.getElementById("pontos");
@@ -14,13 +15,15 @@ if(pontos.style.display === "none"){
     
 }
 }
-
+/********************************/
+//quiz
+//variaveis:
 let currentSlide = 0;
 const slides = document.querySelectorAll('.slide');
 const resultadoTitulo = document.getElementById('resultado-titulo');
 const resultadoTexto = document.getElementById('resultado-texto');
 const resultadoImg = document.getElementById('resultado-imagem');
-
+//função para pecorrer o slides
 function proximaPergunta() {
     if (currentSlide < slides.length - 1) {
         slides[currentSlide].style.display = 'none';
@@ -30,11 +33,12 @@ function proximaPergunta() {
         calcularResultado();
     }
 }
-
+//função para contar quantas opções "cachorro" ou "gato" foram selecionadas e comparar
 function calcularResultado() {
-    // Calcule o resultado com base nas respostas aqui
-    // Exemplo simples: contar quantas opções "cachorro" ou "gato" foram selecionadas
+
+    //contar quantas opções "cachorro" ou "gato" foram selecionadas e comparar
     const respostas = document.querySelectorAll('input[name^="pergunta"]');
+    
     let opcao1Count = 0;
     let opcao2Count = 0;
 
@@ -46,12 +50,12 @@ function calcularResultado() {
             opcao2Count = opcao2Count + 1;
         }
     }
-console.log(opcao1Count);
-console.log(opcao2Count);
+
+
     // Exiba o resultado
     if (opcao1Count > opcao2Count) {
         resultadoTitulo.textContent = "Cães"
-        resultadoTexto.textContent = "ócil, inteligente e carinhoso. Como você tem tempo livre para cuidar, passear e ensinar seu pet, cachorros são as opções que mais se adaptam a sua vida, já que são animais sociáveis (com pessoas e outros tipos de animais), extremamente dependentes, ativos e gostam de brincar. A personalidade pode variar de uma raça para outra, mas no geral, ficam deprimidos quando passam muito tempo sozinhos. Vale lembrar que, antes de escolher seu amigo, cães necessitam de alimentação diária, passeios, horas de dedicação, banhos frequentes, vacinas e visitas ao veterinário.";
+        resultadoTexto.textContent = "Dócil, inteligente e carinhoso. Como você tem tempo livre para cuidar, passear e ensinar seu pet, cachorros são as opções que mais se adaptam a sua vida, já que são animais sociáveis (com pessoas e outros tipos de animais), extremamente dependentes, ativos e gostam de brincar. A personalidade pode variar de uma raça para outra, mas no geral, ficam deprimidos quando passam muito tempo sozinhos. Vale lembrar que, antes de escolher seu amigo, cães necessitam de alimentação diária, passeios, horas de dedicação, banhos frequentes, vacinas e visitas ao veterinário.";
         resultadoImg.src = "../img/adocao/imagem_quiz/dog.png"
     
     } else if (opcao1Count < opcao2Count) {
@@ -67,3 +71,8 @@ console.log(opcao2Count);
 
 // Inicie o quiz
 slides[currentSlide].style.display = 'block';
+
+
+// Seleciona todos os radiobuttons pelo nome do grupo
+const radioButtons = document.querySelectorAll('input[name^="pergunta"]');
+
