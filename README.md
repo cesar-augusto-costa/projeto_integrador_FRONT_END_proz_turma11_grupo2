@@ -37,6 +37,27 @@
 
 <img src="img/logos/petshop_caramelo.png" alt="Logo do PetShop Caramelo" width="200">
 
+## Padrão de Cores
+
+Utilizamos a psicologia das cores para criar uma atmosfera acolhedora e agradável.
+
+* [Coolors](https://coolors.co/f8b74c-421a12-eb7a21-fda462-f0b694)
+
+| Cor           | Código          | Significado |
+| :-----------: | :-------------: | :---        |
+| ![#F8B74C](https://via.placeholder.com/15/F8B74C/000000?text=+) | `#F8B74C`   | **Dourado Claro**: A cor do otimismo e energia, usada para destacar informações importantes.            |
+| ![#421A12](https://via.placeholder.com/15/421A12/000000?text=+) | `#421A12`   | **Marrom**: Representa estabilidade e confiança, utilizado para elementos fundamentais.           |
+| ![#EB7A21](https://via.placeholder.com/15/EB7A21/000000?text=+) | `#EB7A21`   | **Laranja**: Emana entusiasmo e criatividade, utilizado para chamar a atenção de forma vibrante.   |
+| ![#FDA462](https://via.placeholder.com/15/FDA462/000000?text=+) | `#FDA462`   | **Pêssego**: Simboliza a suavidade e amabilidade, criando uma atmosfera acolhedora e calorosa.     |
+| ![#F0B694](https://via.placeholder.com/15/F0B694/000000?text=+) | `#F0B694`   | **Rosa**: Associado à ternura e empatia, usado para elementos que exigem sensibilidade.           |
+| ![#DDDDDD](https://via.placeholder.com/15/DDDDDD/000000?text=+) | `#DDDDDD`   | **Cinza**: Representa neutralidade e equilíbrio, aplicado para informações secundárias.            |
+| ![#FFFFFF](https://via.placeholder.com/15/FFFFFF/000000?text=+) | `#FFFFFF`   | **Branco**: A cor da pureza e simplicidade, frequentemente usada como fundo para legibilidade.    |
+| ![#000000](https://via.placeholder.com/15/000000/000000?text=+) | `#000000`   | **Preto**: Evoca elegância e sofisticação, usado para texto e elementos de destaque.              |
+| ![#0072FF](https://via.placeholder.com/15/0072FF/000000?text=+) | `#0072FF`   | **Azul**: Transmite confiança e tranquilidade, presente em botões de ação para encorajar decisões importantes. |
+| ![#00C853](https://via.placeholder.com/15/00C853/000000?text=+) | `#00C853`   | **Verde**: Associado à natureza e harmonia, utilizado para realçar sucesso e progresso.           |
+| ![#FF3D00](https://via.placeholder.com/15/FF3D00/000000?text=+) | `#FF3D00`   | **Vermelho**: Chama a atenção e indica urgência, usado com moderação para situações críticas e erros. |
+| ![#FFC400](https://via.placeholder.com/15/FFC400/000000?text=+) | `#FFC400`   | **Amarelo**: Representa energia e positividade, aplicado para motivar e destacar informações.     |
+
 ---
 
 # Briefing
@@ -46,7 +67,7 @@ O objetivo do Pet Shop é incentivar a adoção responsável de animais que fora
 Dessa forma, esse projeto faz a ponte entre as ONGs e a adoção fazendo divulgação de produtos de Pet Shop e campanhas de adoção.
 
 ### Funcionalidades do negócio:
-* Sorteio mensal de kit adoção (Produtos para o Pet da pessoa que adotou nas ONGs parceiras.
+* Sorteio mensal de kit adoção (Produtos para o Pet da pessoa que adotou nas ONGs parceiras).
 * Desconto de 20% em ração para os que adotarem um Pet durante um ano.
 * Divulgação de Pets disponíveis para adoção no site.
 * Divulgação de Ração, petiscos e brinquedos para os Pets no site.
