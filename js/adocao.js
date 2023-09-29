@@ -16,26 +16,9 @@ if(pontos.style.display === "none"){
 }
 }
 /********************************/
-// Obtém os radio buttons e o botão
-const opcoes = document.querySelectorAll('input[name="opcao"]');
-const meuBotao = document.getElementById("meuBotao");
 
-// Adiciona um ouvinte de evento para o clique no botão
-meuBotao.addEventListener("click", function () {
-    // Verifica se pelo menos uma opção foi marcada
-    let algumaOpcaoMarcada = false;
-    for (const opcao of opcoes) {
-        if (opcao.checked) {
-            algumaOpcaoMarcada = true;
-            break;
-        }
-    }
 
-    // Se nenhuma opção estiver marcada, mostra um alerta
-    if (!algumaOpcaoMarcada) {
-        alert("Por favor, selecione uma opção antes de continuar.");
-    }
-});
+
 
 
 /********************************/
@@ -91,6 +74,8 @@ function calcularResultado() {
     slides[currentSlide].style.display = 'none';
     document.querySelector('.resultado').style.display = 'block';
 }
+
+
 
 // Inicie o quiz
 slides[currentSlide].style.display = 'block';
