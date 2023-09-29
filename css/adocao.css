@@ -40,8 +40,8 @@ p {
     font-size: 14px;
     font-weight: bold;
     color: #421a12;
-    text-decoration: none;
-    background-color: none;
+    border: none;
+    background-color: transparent;
 }
 /*********************************/
 /*seção:titulo da pag*/
@@ -131,12 +131,10 @@ p {
     width: 30%;
     padding: 5px;
 }
-.card-interno-conteudo .img img {
-    width: 150%;
-}
+
 .card-interno-conteudo .card-interno-conteudo-div {
     margin-left: 10px;
-    width: 100%;
+    width: 70%;
 }
 .container-exterior:hover .card {
     animation-play-state: paused;
@@ -375,7 +373,7 @@ p {
     text-align: center;
     color: #421a12;
     font-size: 14px;
-    line-height: 2.4rem;
+    line-height: 30px;
     font-weight: 500;
 }
 /*fim/seção:como adotar*/
