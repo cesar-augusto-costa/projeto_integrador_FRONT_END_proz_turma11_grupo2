@@ -4,65 +4,60 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/adocao_quiz.css">
-    <script src="../js/adocao.js" defer></script>
+   <script src="../js/adocao.js" defer></script> 
+  
     <title>Quiz de Personalidade</title>
 </head>
 <body> 
     <div class="slide-container">
-        <div class="slide slides">
+        <div class="slide" id="slide1">
             <h1>Pergunta 1</h1>
             <p class="paragrafo">Que palavra define você:</p>
-            <form id="meuFormulario">
             <div class="opcao"><input type="radio" id="radio1"  name="pergunta1" value="cachorro"><span>Brincalhão</span></div>
-            <div class="opcao"><input type="radio" id="radio1"  name="pergunta1" value="gato">Independente</div>
-            <div class="opcao"><input type="radio" id="radio1"  name="pergunta1" value="cachorro"><span>Alegre</span></div>
-            <div class="opcao"><input type="radio" id="radio1"  name="pergunta1" value="gato">Curioso</div>
-        </form>
-            <button  class="botao avancarBotao"  onclick="proximaPergunta()">Próxima</button>
+            <div class="opcao"><input type="radio" id="radio2"  name="pergunta1" value="gato">Independente</div>
+            <div class="opcao"><input type="radio" id="radio3"  name="pergunta1" value="cachorro"><span>Alegre</span></div>
+            <div class="opcao"><input type="radio" id="radio4"  name="pergunta1" value="gato">Curioso</div>
+            <button  class="botao avancarBotao" id="nextButton" onclick="proximaPergunta()">Próxima</button>
         </div>
        
-        <div class="slide slides">
+        <div class="slide" id="slide2">
             <h1>Pergunta 2</h1>
             <p class="paragrafo">Você quer que seu animal seja:</p>
-            <div class="opcao"><input type="radio" id="radio2"  name="pergunta2" value="cachorro"><span>Sociável e companheiro</span></div>
+            <div class="opcao"><input type="radio" id="radio1"  name="pergunta2" value="cachorro"><span>Sociável e companheiro</span></div>
             <div class="opcao"><input type="radio" id="radio2"  name="pergunta2" value="gato">Fácil de cuidar</div>
-            <div class="opcao"><input type="radio" id="radio2"  name="pergunta2" value="cachorro"><span>Dócil e carinhoso</span></div>
-            <div class="opcao"><input type="radio" id="radio2"  name="pergunta2" value="gato">Prático e tranquilo</div>
-            <!-- Adicione mais opções aqui -->
-            <button class="botao avancarBotao" onclick="proximaPergunta()">Próxima</button>
+            <div class="opcao"><input type="radio" id="radio3"  name="pergunta2" value="cachorro"><span>Dócil e carinhoso</span></div>
+            <div class="opcao"><input type="radio" id="radio4"  name="pergunta2" value="gato">Prático e tranquilo</div>
+            <button class="botao avancarBotao" id="nextButton" onclick="proximaPergunta()">Próxima</button>
         </div>
 
-        <div class="slide slides">
+        <div class="slide" id="slide3">
             <h1>Pergunta 3</h1>
             <p class="paragrafo">Quanto tempo livre você tem por dia?</p>
-            <div class="opcao"><input type="radio" id="radio3"  name="pergunta3" value="cachorro"><span>Bastante tempo livre</span></div>
-            <div class="opcao"><input type="radio" id="radio3"  name="pergunta3" value="gato">Só alguns dias livres</div>
+            <div class="opcao"><input type="radio" id="radio1"  name="pergunta3" value="cachorro"><span>Bastante tempo livre</span></div>
+            <div class="opcao"><input type="radio" id="radio2"  name="pergunta3" value="gato">Só alguns dias livres</div>
             <div class="opcao"><input type="radio" id="radio3"  name="pergunta3" value="gato"><span>Pouco tempo livre</span></div>
-            <div class="opcao"><input type="radio" id="radio3"  name="pergunta3" value="gato">Nunca tenho tempo</div>
-            <!-- Adicione mais opções aqui -->
-            <button class="botao avancarBotao" onclick="proximaPergunta()">Próxima</button>
+            <div class="opcao"><input type="radio" id="radio4"  name="pergunta3" value="gato">Nunca tenho tempo</div>
+            <button class="botao avancarBotao" id="nextButton" onclick="proximaPergunta()">Próxima</button>
         </div>
 
-        <div class="slide slides">
+        <div class="slide" id="slide4">
             <h1>Pergunta 4</h1>
             <p class="paragrafo">O que você espera do seu pet:</p>
-            <div class="opcao"><input type="radio" id="radio4"  name="pergunta4" value="cachorro"><span>Proteção e companheirismo</span></div>
-            <div class="opcao"><input type="radio" id="radio4"  name="pergunta4" value="gato">Ter cuidados simples e evitar bagunça</div>
-            <div class="opcao"><input type="radio" id="radio4"  name="pergunta4" value="gato"><span>Uma experiência nova para a vida</span></div>
+            <div class="opcao"><input type="radio" id="radio1"  name="pergunta4" value="cachorro"><span>Proteção e companheirismo</span></div>
+            <div class="opcao"><input type="radio" id="radio2"  name="pergunta4" value="gato">Ter cuidados simples e evitar bagunça</div>
+            <div class="opcao"><input type="radio" id="radio3"  name="pergunta4" value="gato"><span>Uma experiência nova para a vida</span></div>
             <div class="opcao"><input type="radio" id="radio4"  name="pergunta4" value="cachorro">Deixar a casa mais alegre</div>
-            <!-- Adicione mais opções aqui -->
-            <button class="botao avancarBotao" onclick="proximaPergunta()">Próxima</button>
+            <button class="botao avancarBotao" id="nextButton" onclick="proximaPergunta()">Próxima</button>
         </div>
 
-        <div class="slide slides">
+        <div class="slide" id="slide5">
             <h1>Pergunta 5</h1>
             <p class="paragrafo">Para ter um pet você seria capaz de:</p>
-            <div class="opcao"><input type="radio" id="radio5"  name="pergunta5" value="cachorro"><span>Passear ao ar livre diariamente</span></div>
-            <div class="opcao"><input type="radio" id="radio5"  name="pergunta5" value="gato">Colocar poteção nas janelas</div>
-            <div class="opcao"><input type="radio" id="radio5"  name="pergunta5" value="gato"><span>Apenas alimentá-lo diariamente</span></div>
-            <div class="opcao"><input type="radio" id="radio5"  name="pergunta5" value="cachorro">Lidar com o barulho sem problemas</div>
-            <!-- Adicione mais opções aqui -->
-            <button class="botao avancarBotao" onclick="proximaPergunta()">Resultado</button>
+            <div class="opcao"><input type="radio" id="radio1"  name="pergunta5" value="cachorro"><span>Passear ao ar livre diariamente</span></div>
+            <div class="opcao"><input type="radio" id="radio2"  name="pergunta5" value="gato">Colocar poteção nas janelas</div>
+            <div class="opcao"><input type="radio" id="radio3"  name="pergunta5" value="gato"><span>Apenas alimentá-lo diariamente</span></div>
+            <div class="opcao"><input type="radio" id="radio4"  name="pergunta5" value="cachorro">Lidar com o barulho sem problemas</div>
+            <button class="botao avancarBotao" id="nextButton" onclick="proximaPergunta()">Resultado</button>
         </div>
 
         <div class="resultado">

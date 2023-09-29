@@ -16,12 +16,6 @@ if(pontos.style.display === "none"){
 }
 }
 /********************************/
-
-
-
-
-
-/********************************/
 //quiz
 //variaveis:
 let currentSlide = 0;
@@ -29,16 +23,24 @@ const slides = document.querySelectorAll('.slide');
 const resultadoTitulo = document.getElementById('resultado-titulo');
 const resultadoTexto = document.getElementById('resultado-texto');
 const resultadoImg = document.getElementById('resultado-imagem');
-//função para pecorrer o slides
+// Função para pecorrer os slides
 function proximaPergunta() {
-    if (currentSlide < slides.length - 1) {
-        slides[currentSlide].style.display = 'none';
-        currentSlide++;
-        slides[currentSlide].style.display = 'block';
+    const respostasSlideAtual = slides[currentSlide].querySelectorAll('input[name^="pergunta"]:checked');
+
+    if (respostasSlideAtual.length > 0) {
+        if (currentSlide < slides.length - 1) {
+            slides[currentSlide].style.display = 'none';
+            currentSlide++;
+            slides[currentSlide].style.display = 'block';
+        } else {
+            calcularResultado();
+        }
     } else {
-        calcularResultado();
+        // Exiba uma mensagem de erro ou tome a ação apropriada aqui
+        alert('Por favor, selecione uma opção antes de prosseguir neste slide.');
     }
 }
+
 //função para contar quantas opções "cachorro" ou "gato" foram selecionadas e comparar
 function calcularResultado() {
 
