@@ -1,215 +1,252 @@
-    <!DOCTYPE html>                         
-    <html lang="pt-br">
+<!DOCTYPE html>
+<html lang="pt-br">
 
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Home</title>
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
-            integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
-            integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
-            crossorigin="anonymous"></script>
-        <link rel="stylesheet" href="../css/home.css">
-        <link rel="stylesheet" href="../css/header.css">
-        <link rel="stylesheet" href="../css/contato.css">
-        <link rel="stylesheet" href="../css/footer.css">
-        <script src="https://kit.fontawesome.com/7e753c5662.js" crossorigin="anonymous"></script>
-        <script src="../js/contato.js" defer></script>
-    </head>
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+    crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="../css/home.css">
+  <link rel="stylesheet" href="../css/header.css">
+  <link rel="stylesheet" href="../css/contato.css">
+  <link rel="stylesheet" href="../css/footer.css">
+  <script src="https://kit.fontawesome.com/7e753c5662.js" crossorigin="anonymous"></script>
+  <script src="../js/contato.js" defer></script>
+</head>
 
-    <body>
+<body>
 
-        <!-- header -->
-        <header class="head">
-            <div class="container">
-                <div class="row">
-                <div class="col-1 logo">
-                    <a href="../index.html"><img src="../img/logos/petshop_caramelo.png"></a>
-                </div>
-            <div class="col-6 links">
-                <nav>
-                <a href="adocao.html">Adoção</a>
-                <a href="produtos.html">Produtos</a>
-                <a href="depoimentos.html">Noticias</a>
-                <a href="contato.html" class="activated">Contato</a>
-                <a href="clubepetcaramelo.html">Clube Pet Caramelo</a>
-                </nav>
-            </div>
+  <!-- header -->
+  <header class="head">
+    <div class="container">
+      <div class="row">
+        <div class="col-1 logo">
+          <a href="../index.html"><img src="../img/logos/petshop_caramelo.png"></a>
+        </div>
+        <div class="col-6 links">
+          <nav>
+            <a href="adocao.html">Adoção</a>
+            <a href="produtos.html">Produtos</a>
+            <a href="depoimentos.html">Noticias</a>
+            <a href="contato.html" class="activated">Contato</a>
+            <a href="clubepetcaramelo.html">Clube Pet Caramelo</a>
+          </nav>
+        </div>
 
-            <div class="col-3" id="divBusca">
-                <i class="fa-solid fa-magnifying-glass"></i>
-                <input type="text" id="txtBusca" placeholder="Buscar..." />
-            </div>
+        <div class="col-3" id="divBusca">
+          <i class="fa-solid fa-magnifying-glass"></i>
+          <input type="text" id="txtBusca" placeholder="Buscar..." />
+        </div>
 
-            <div class="col-2 login">
-                <a href="login.html">
-                <span class="span-2 search"></span>
-                <i class="fa-solid fa-user"></i>Login</a>
-            </div>
-            </div>
-        </header>
-        <!-- fim /header -->
-        
-        <main class="main">
-            <section><!-- quiz + sugestão de pet + como adotar-->
-                <section class="container-slide"><!--quiz-->
-                    <button id="botao-voltar"><img src="../img/adocao/imagem_quiz/seta_quiz.png"
-                            alt="seta"></i></button><!--botao-de-voltar-->
-                    <section class="paginas-slide">
+        <div class="col-2 login">
+          <a href="login.html">
+            <span class="span-2 search"></span>
+            <i class="fa-solid fa-user"></i>Login</a>
+        </div>
+      </div>
+  </header>
+  <!-- fim /header -->
 
-                        <div class=" primeiro-slide slide on"><!--primeiro slide-->
-                            <span id="titulo-slide">Encontre Seu Pet metade!</span>
-                            <p id="paragrafo-slide">de uma olhadinha em nossos amiguinhos.</p>
+  <main class="main">
+    <section><!-- quiz + sugestão de pet + como adotar-->
+      <section class="container-slide"><!--quiz-->
+        <button id="botao-voltar"><img src="../img/adocao/imagem_quiz/seta_quiz.png"
+            alt="seta"></i></button><!--botao-de-voltar-->
+        <section class="paginas-slide">
 
-                        </div>
+          <div class=" primeiro-slide slide on"><!--primeiro slide-->
+            <span id="titulo-slide">Encontre Seu Pet metade!</span>
+            <p id="paragrafo-slide">de uma olhadinha em nossos amiguinhos.</p>
 
-                        <div class="segundo-slide slide on"><!--segundo slide-->
-                            <h4>cão bob </h4>
-                            <p>bob,tem 3 meses,está em processo de adestramento</p>
-                        
-                        </div>
+          </div>
 
-                        <div class="terceiro-slide slide on"><!--terceiro slide-->
-                            <h4>cachora</h4>
-                            <p>aproximadamente 8 meses,calma e de bom comportamento</p>
-                        </div>
+          <div class="segundo-slide slide on"><!--segundo slide-->
+            <h4>cão bob </h4>
+            <p>bob,tem 3 meses,está em processo de adestramento</p>
 
-                        <div class="quarto-slide slide on"><!--quarto slide-->
-                            <h4>coelha:</h4>
-                            <p>femêa,aproximadamente 1 ano</p>
-                        </div>
+          </div>
 
-                        <div class="quinto-slide slide on"><!--quinto slide-->
-                            <h4>poah</h4>
-                           <p>gato, de 3 anos,macho</p>
-                            </form>
-                        </div>
+          <div class="terceiro-slide slide on"><!--terceiro slide-->
+            <h4>cachora</h4>
+            <p>aproximadamente 8 meses,calma e de bom comportamento</p>
+          </div>
 
-                        <div class="sexto-slide slide on"><!--sexto slide-->
-                            <h4>gatinho</h4>
-                            <p>gatinho de apenas 4 meses,brincalhão</p>
-                        </div>
-                        <div class="setimo-slide slide on"><!--setimo slide-->
-                            <h4>REX</h4>
-                            <p>cão de guarda aposentado,13 anos,super protetor </p>
-                        </div>
-                    </section>
-                    <button id="botao-avancar"><img src="../img/adocao/imagem_quiz/seta_quiz.png"
-                            alt="seta"></button><!--botao-de-avançar-->
+          <div class="quarto-slide slide on"><!--quarto slide-->
+            <h4>coelha:</h4>
+            <p>femêa,aproximadamente 1 ano</p>
+          </div>
 
-                </section>
-        
+          <div class="quinto-slide slide on"><!--quinto slide-->
+            <h4>poah</h4>
+            <p>gato, de 3 anos,macho</p>
+            </form>
+          </div>
+
+          <div class="sexto-slide slide on"><!--sexto slide-->
+            <h4>gatinho</h4>
+            <p>gatinho de apenas 4 meses,brincalhão</p>
+          </div>
+          <div class="setimo-slide slide on"><!--setimo slide-->
+            <h4>REX</h4>
+            <p>cão de guarda aposentado,13 anos,super protetor </p>
+          </div>
         </section>
-                <a
-                    href="https://www.google.com/search?rlz=1C1SQJL_pt-BRBR1013BR1013&q=Disque+Den%C3%BAncia+maus-tratos+animais&uds=H4sIAAAAAAAA_-Py42JzySwuLE0VkklJzSvNS85MVMhNLC1WKClKLMkvVkjMy8xNzCw2YCpSgahTcEnNO7wLrk4XVR0AwH0RUVAAAAA&sa=X&ved=2ahUKEwjYgNOq68aAAxX1pJUCHXQgBRMQxKsJegQICRAB&ictx=0&biw=767&bih=744&dpr=1.25">
-                    <div id="whats">
-                        <h1>Disque Denúncia</h1>
-                    </div>
-                </a>
-                <div id="policia">
-                    <h2>Serviço de proteção ao Animal </h2>
-                    
-                     <a href="https://www.policiamilitar.sp.gov.br/unidades/ambiental/contato.html" target="_blank">policia ambiental
-                        <img src= "../img/contato/brazao.jfif" alt="policia ambiental"height="100" width="130" /> </a>
-                         
-                </div>
-            </section>
-            <div class="what">
-                    <h4>Nossa Central de ajudar</h4>      
-                   <a href="https://wa.me/5551997663963?text=pet+Caramelo"target="_blank"
-                    ><i class="fa-brands fa-whatsapp" style="color: #41ec5d; font-size: 44px;"></i> </a>
-                </div>  
-                    <!--espaço do mapa-->
-                 <section id=endereço>
-                <div>
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1829.1184117685518!2d-46.61497196113101!3d-23.523983135405956!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce58ea93e9eb0b%3A0x25fa2d7df191e57f!2sR.%20Dr.%20Miguel%20Paulo%20Capalbo%20-%20Pari%2C%20S%C3%A3o%20Paulo%20-%20SP%2C%2003035-040!5e0!3m2!1spt-BR!2sbr!4v1692745881276!5m2!1spt-BR!2sbr" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-                    <h4>Pet Caramelo S/A <br>- CNPJ 18.328.118/0013-42 <br>- Endereço: Rua Dr. Miguel Paulo Capalbo,
-                        135 - Pari <br> - São Paulo - SP <br>CEP: 03035-040</h4>
-                </div>      
-            </section>
-          <section class="formulario"> 
-             <h1> deixa sua duvida</h1>
-              <form id="for"class="form">>
-                  <label class="label-input" for="">
-                      <i class="far fa-user icon-modify"></i>
-                      <input type="text" required placeholder="Name">
-                  </label>
-                  <label class="label-input" for="">
-                      <i class="far fa-envelope icon-modify"></i>
-                      <input type="email" required placeholder="Email">
-                  </label>
-                  <label>Mensagem</label>
-                  <textarea placeholder="Digite sua mensagem"rows="5" cols="40" maxlength="500"></textarea>></textarea>
-                  <button class="btn btn-second">Enviar</button>
-              </form>
-            </section>
-            <p>Parceiros/Ongs</p>
-            <section>
-                <a href="https://amparanimal.org.br/">
-                  <img width="10%" src="../img/adocao/logo_ong/ampara_animal.png" alt="ONG Ampara Animal">
-                </a>
-                <a href="https://www.caosemdono.com.br/">
-                  <img width="8%" src="../img/adocao/logo_ong/cao_sem_dono.png" alt="">
-                </a>
-                <a href="https://www.focinhosdeluz.com/">
-                  <img width="5%" src="../img/adocao/logo_ong/focinho_de_luz.png" alt="ONG Cão Sem Dono">
-                </a>
-                <a href="https://www.suipa.org.br/">
-                  <img width="5%" src="../img/adocao/logo_ong/suipa_.png" alt="ONG Suipa">
-                </a>
-                <a href="https://www.ongviralataedez.com/">
-                  <img width="5%" src="../img/adocao/logo_ong/vira_lata.png" alt="ONG Vira Lata">
-                </a>
-              </section>
-        </main>
-        <footer>
-            <div class="container">
-              <div class="row">
-                <div class="col-md-6 col-lg-3">
-                  <h4>Meios de Pagamento</h4>
-                  <ul class="payment-methods">
-                    <li>
-                      <a href="#"><i class="fab fa-cc-visa"></i> Visa</a>
-                    </li>
-                    <li>
-                      <a href="#"><i class="fab fa-cc-mastercard"></i> Mastercard</a>
-                    </li>
-                    <li>
-                      <a href="#"><i class="fab fa-cc-paypal"></i> PayPal</a>
-                    </li>
-                    <li>
-                      <a href="#"><i class="fas fa-barcode"></i> Boleto</a>
-                    </li>
-                  </ul>
-                </div>
-                <div class="col-md-6 col-lg-3">
-                  <h4>Redes Sociais</h4>
-                  <ul class="social-media">
-                    <li>
-                      <a href="#"><i class="fab fa-instagram"></i> Instagram</a>
-                    </li>
-                    <li>
-                      <a href="#"><i class="fab fa-facebook"></i> Facebook</a>
-                    </li>
-                    <li>
-                      <a href="#"><i class="fab fa-whatsapp"></i> WhatsApp</a>
-                    </li>
-                  </ul>
-                </div>
-                <div class="col-md-12 col-lg-6">
-                  <h4>Contato</h4>
-                  <p>
-                    Endereço: Rua Dr. Miguel Paulo Capalbo, 135 - Pari - São Paulo -
-                    SP CEP: 03035-040
-                  </p>
-                  <p>Email: contato@petshopcaramelo.com</p>
-                  <p>Telefone: (11) 3456-7890</p>
-                </div>
-              </div>
-            </div>
-          </footer>
+        <button id="botao-avancar"><img src="../img/adocao/imagem_quiz/seta_quiz.png"
+            alt="seta"></button><!--botao-de-avançar-->
+
+      </section>
+
+    </section>
+    <a
+      href="https://www.google.com/search?rlz=1C1SQJL_pt-BRBR1013BR1013&q=Disque+Den%C3%BAncia+maus-tratos+animais&uds=H4sIAAAAAAAA_-Py42JzySwuLE0VkklJzSvNS85MVMhNLC1WKClKLMkvVkjMy8xNzCw2YCpSgahTcEnNO7wLrk4XVR0AwH0RUVAAAAA&sa=X&ved=2ahUKEwjYgNOq68aAAxX1pJUCHXQgBRMQxKsJegQICRAB&ictx=0&biw=767&bih=744&dpr=1.25">
+      <div id="whats">
+        <h1>Disque Denúncia</h1>
+      </div>
+    </a>
+    <div class="policia">
+      <h2>Serviço de proteção ao Animal </h2>
+
+      <a href="https://www.policiamilitar.sp.gov.br/unidades/ambiental/contato.html" target="_blank"> policia ambiental
+        <img src="../img/contato/brazao.jfif" alt="policia ambiental" height="100" width="130" /> </a>
+
+    </div>
+    </section>
+    <section style="display: flex;
+                    justify-content: space-evenly;
+                    list-style:none;
+                    justify-content: center;">
+      <h4 width="50" height="500" style="border:100"> Nossa Central de ajudar</h4>
+      <div class="whath">
+
+        <a href="https://wa.me/5551997663963?text=pet+Caramelo" target="_blank"><i class="fa-brands fa-whatsapp"
+            style="color: #41ec5d; font-size: 44px;"></i> </a>
+      </div>
+    </section>
+    <section style="display: flex;
+                          justify-content: space-evenly;
+                          list-style:none ;">
+
+      <!--espaço domapa -->
+
+      <!--id=endereço-->
+      <div style="display: flex;
+                justify-content: center;
+                flex-direction:column;align-items: center;">
+        <h3>Pet Caramelo S/A </h3>
+        <h4> - CNPJ 18.328.118/0013-42 <br>- Endereço: Rua Dr. Miguel Paulo Capalbo,
+          135 - Pari <br> - São Paulo - SP <br>CEP: 03035-040</h4>
+      </div>
+      <div>
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1829.1184117685518!2d-46.61497196113101!3d-23.523983135405956!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce58ea93e9eb0b%3A0x25fa2d7df191e57f!2sR.%20Dr.%20Miguel%20Paulo%20Capalbo%20-%20Pari%2C%20S%C3%A3o%20Paulo%20-%20SP%2C%2003035-040!5e0!3m2!1spt-BR!2sbr!4v1692745881276!5m2!1spt-BR!2sbr"
+          width="500" height="400" style="border:0;" allowfullscreen="" loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+      </div>
+    </section>
+
+    <section class="formulario">
+      <Style>
+        ul {
+          "list-style:nome;
+ display: flex;
+          justify-content: space-evenly;
+        }
+      </Style>
+      <h1> Deixe sua dúvida</h1>
+      <form id="for" class="form">>
+        <ul>
+          <li>
+            <label class="label-input" for="">Nome
+              <i class="far fa-user icon-modify"></i>
+              <input type="text" required placeholder="Name">
+            </label>
+          </li>
+          <li>
+            <label class="label-input" for="">Email
+              <i class="far fa-envelope icon-modify"></i>
+              <input type="email" required placeholder="Email">
+            </label>
+          </li>
+          <li>
+            <label>Mensagem</label> <br>
+            <textarea placeholder="Digite sua mensagem" rows="5" cols="40" maxlength="500"></textarea>></textarea>
+          </li>
+            <li><button class="btn btn-second">Enviar</button>
+          </li>
+        </ul>
+      </form>
+    </section>
+    <p>Parceiros/Ongs</p>
+    <section>
+      <a href="https://amparanimal.org.br/">
+        <img width="10%" src="../img/adocao/logo_ong/ampara_animal.png" alt="ONG Ampara Animal">
+      </a>
+      <a href="https://www.caosemdono.com.br/">
+        <img width="8%" src="../img/adocao/logo_ong/cao_sem_dono.png" alt="">
+      </a>
+      <a href="https://www.focinhosdeluz.com/">
+        <img width="5%" src="../img/adocao/logo_ong/focinho_de_luz.png" alt="ONG Cão Sem Dono">
+      </a>
+      <a href="https://www.suipa.org.br/">
+        <img width="5%" src="../img/adocao/logo_ong/suipa_.png" alt="ONG Suipa">
+      </a>
+      <a href="https://www.ongviralataedez.com/">
+        <img width="5%" src="../img/adocao/logo_ong/vira_lata.png" alt="ONG Vira Lata">
+      </a>
+    </section>
+  </main>
+  <footer>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6 col-lg-3">
+          <h4>Meios de Pagamento</h4>
+          <ul class="payment-methods">
+            <li>
+              <a href="#"><i class="fab fa-cc-visa"></i> Visa</a>
+            </li>
+            <li>
+              <a href="#"><i class="fab fa-cc-mastercard"></i> Mastercard</a>
+            </li>
+            <li>
+              <a href="#"><i class="fab fa-cc-paypal"></i> PayPal</a>
+            </li>
+            <li>
+              <a href="#"><i class="fas fa-barcode"></i> Boleto</a>
+            </li>
+          </ul>
+        </div>
+        <div class="col-md-6 col-lg-3">
+          <h4>Redes Sociais</h4>
+          <ul class="social-media">
+            <li>
+              <a href="#"><i class="fab fa-instagram"></i> Instagram</a>
+            </li>
+            <li>
+              <a href="#"><i class="fab fa-facebook"></i> Facebook</a>
+            </li>
+            <li>
+              <a href="#"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+            </li>
+          </ul>
+        </div>
+        <div class="col-md-12 col-lg-6">
+          <h4>Contato</h4>
+          <p>
+            Endereço: Rua Dr. Miguel Paulo Capalbo, 135 - Pari - São Paulo -
+            SP CEP: 03035-040
+          </p>
+          <p>Email: contato@petshopcaramelo.com</p>
+          <p>Telefone: (11) 3456-7890</p>
+        </div>
+      </div>
+    </div>
+  </footer>
 
 
-    </body>
+</body>
