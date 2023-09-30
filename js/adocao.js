@@ -16,29 +16,6 @@ if(pontos.style.display === "none"){
 }
 }
 /********************************/
-// Obtém os radio buttons e o botão
-const opcoes = document.querySelectorAll('input[name="opcao"]');
-const meuBotao = document.getElementById("meuBotao");
-
-// Adiciona um ouvinte de evento para o clique no botão
-meuBotao.addEventListener("click", function () {
-    // Verifica se pelo menos uma opção foi marcada
-    let algumaOpcaoMarcada = false;
-    for (const opcao of opcoes) {
-        if (opcao.checked) {
-            algumaOpcaoMarcada = true;
-            break;
-        }
-    }
-
-    // Se nenhuma opção estiver marcada, mostra um alerta
-    if (!algumaOpcaoMarcada) {
-        alert("Por favor, selecione uma opção antes de continuar.");
-    }
-});
-
-
-/********************************/
 //quiz
 //variaveis:
 let currentSlide = 0;
@@ -46,16 +23,24 @@ const slides = document.querySelectorAll('.slide');
 const resultadoTitulo = document.getElementById('resultado-titulo');
 const resultadoTexto = document.getElementById('resultado-texto');
 const resultadoImg = document.getElementById('resultado-imagem');
-//função para pecorrer o slides
+// Função para pecorrer os slides
 function proximaPergunta() {
-    if (currentSlide < slides.length - 1) {
-        slides[currentSlide].style.display = 'none';
-        currentSlide++;
-        slides[currentSlide].style.display = 'block';
+    const respostasSlideAtual = slides[currentSlide].querySelectorAll('input[name^="pergunta"]:checked');
+
+    if (respostasSlideAtual.length > 0) {
+        if (currentSlide < slides.length - 1) {
+            slides[currentSlide].style.display = 'none';
+            currentSlide++;
+            slides[currentSlide].style.display = 'block';
+        } else {
+            calcularResultado();
+        }
     } else {
-        calcularResultado();
+        // Exiba uma mensagem de erro ou tome a ação apropriada aqui
+        alert('Por favor, selecione uma opção antes de prosseguir neste slide.');
     }
 }
+
 //função para contar quantas opções "cachorro" ou "gato" foram selecionadas e comparar
 function calcularResultado() {
 
@@ -91,6 +76,8 @@ function calcularResultado() {
     slides[currentSlide].style.display = 'none';
     document.querySelector('.resultado').style.display = 'block';
 }
+
+
 
 // Inicie o quiz
 slides[currentSlide].style.display = 'block';

@@ -1,7 +1,53 @@
-.main{
+/*.main{
     display: flex;
     flex-direction: column;
     padding-top: 50px;
+}-->*/
+main {
+    font-family: 'Lato', sans-serif;
+    padding: 10px;
+    margin: 10px;   
+    display: flex;
+    flex-direction: column;
+    padding-top: 50px;
+}
+
+h1 {
+    font-size: 3.6rem; 
+    font-weight: bold;
+    color: #421a12;
+}
+
+h2 {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #421a12;
+}
+h3 {
+    font-size: 1.6rem;
+    font-weight: bold;
+    color: #421a12;
+}
+
+h4 {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #421a12;
+}
+
+a {
+    text-decoration: none;
+    color: #421a12;
+}
+
+p {
+    color: #421a12;
+    font-size: 1.8rem;
+    line-height: 3.5rem;
+}
+
+.Titulo {
+    text-transform: none;
 }
 /*formatação quiz*/
 .container-slide {
@@ -9,7 +55,7 @@
     display: flex;
     gap: 1rem;
     justify-content: center;
-    min-height: 50vh;
+    min-height: 100vh;
     width: 100%;
 }
 
@@ -129,3 +175,41 @@
 }
 
 /*fim formatação quiz*/
+#formulario {
+    /* flex: 2 0 auto; */
+    width: 30%; 
+    text-align: center;
+    contain: center;
+    border: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid rgb(255, 98, 0);
+    padding: 29px 0;
+    -webkit-border-top-right-radius: 12px;
+    -webkit-border-bottom-right-radius: 12px;
+    -moz-border-radius-topright: 12px;
+    -moz-border-radius-bottomright: 12px;
+    border-top-right-radius: 12px;
+    border-bottom-right-radius: 12px;
+}
+#endereço{
+    border: 1px solid rgb(255, 98, 0);
+    padding: 29px 0;
+    -webkit-border-top-right-radius: 12px;
+    -webkit-border-bottom-right-radius: 12px;
+    -moz-border-radius-topright: 12px;
+    -moz-border-radius-bottomright: 12px;
+    border-top-right-radius: 12px;
+    border-bottom-right-radius: 12px;
+}
+div.what {
+       
+      }
+#for{
+    align-items: self-end;
+}
+#policia.{ style="display: flex;
+    justify-content: space-evenly;
+    list-style:none;
+    justify-content: center;}
