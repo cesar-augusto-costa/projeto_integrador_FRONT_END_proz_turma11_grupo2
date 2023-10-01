@@ -38,7 +38,7 @@ body {
 .content::before {
     content: "";
     position: absolute;
-    background-color: rgb(255, 98, 0);
+    background-image: url(../img/adocao/background/patinhas.jpeg);
     width: 40%;
     height: 100%;
     border-top-left-radius: 15px;
@@ -53,10 +53,12 @@ body {
     text-transform: capitalize;
 }
 .title-primary {
-    color: #fff;
+    color: rgb(66, 26, 18);
+    font-weight: bold;
+    border-radius: 15px;
 }
 .title-second {
-    color: rgb(255, 98, 0);
+    color: rgb(66, 26, 18);
 }
 .description {
     font-size: 14px;
@@ -64,10 +66,12 @@ body {
     line-height: 30px;
 }
 .description-primary {
-    color: #fff;
+    font-weight: bold;
+    color: rgb(66, 26, 18);
 }
 .description-second {
-    color: #7f8c8d;
+        font-weight: bold;
+    color: rgb(66, 26, 18);
 }
 
 .btn {
@@ -86,19 +90,19 @@ body {
     border: 1px solid #fff;
 }
 .btn-primary:hover {
-    background-color: #fff;
-    color: rgb(255, 98, 0);
+    background-color: transparent;
+    color: rgb(235, 122, 33);
 }
 .btn-second {
     color: #fff;
-    background-color: rgb(255, 98, 0);
-    border: 1px solid rgb(255, 98, 0);
+    background-color: rgb(66, 26, 18);
+    border: 1px solid rgb(66, 26, 18);
     transition: background-color .5s;
 }
 .btn-second:hover {
     background-color: transparent;
-    border: 1px solid rgb(255, 98, 0);
-    color: rgb(255, 98, 0);
+    border: 1px solid rgb(66, 26, 18);
+    color: rgb(66, 26, 18);
 }
 
 /* first-content
@@ -123,7 +127,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    border: 1px solid rgb(255, 98, 0);
+    border: 1px solid rgb(248,183,76);
 }
 
 .second-column.right {
@@ -160,9 +164,9 @@ body {
 }
 
 .link-social-media:hover .item-social-media {
-    background-color: rgb(255, 98, 0);
+    background-color: rgb(66, 26, 18);
     color: #fff;
-    border-color: rgb(255, 98, 0);
+    border-color: rgb(66, 26, 18);
 }
 
 .list-social-media {
@@ -170,13 +174,13 @@ body {
     list-style-type: none;
 }
 .item-social-media {
-    border: 1px solid #bdc3c7;
+    border: 1px solid rgb(66, 26, 18);
     border-radius: 50%;
     width: 35px;
     height: 35px;
     line-height: 35px;
     text-align: center;
-    color: #95a5a6;
+    color: rgb(66, 26, 18);
 }
 
 .form {
@@ -188,21 +192,21 @@ body {
     height: 45px;
     width: 100%;
     border: none;
-    background-color: #ecf0f1;
+    background-color: rgb(248,183,76);
 }
 /* remove a formação do firefox */
 input:-webkit-autofill{
-    -webkit-box-shadow: 0 0 0px 1000px #ecf0f1 inset !important;
-    -webkit-text-fill-color: #000 !important;
+    -webkit-box-shadow: 0 0 0px 1000px rgb(248,183,76) !important;
+    -webkit-text-fill-color: rgb(235, 122, 33) !important;
 }
 .label-input {
-    background-color: #ecf0f1;
+    background-color: rgb(248,183,76);
     display: flex;
     align-items: center;
     margin: 8px;
 }
 .icon-modify {
-    color: #7f8c8d;
+    color: rgb(66, 26, 18);
     padding: 0 5px;
 }
 
@@ -227,7 +231,7 @@ input:-webkit-autofill{
 
 .password {
     text-align: center;
-    color: #34495e;
+    color: rgb(66, 26, 18);
     font-size: 14px;
     margin: 15px 0;
     padding-top: 15px;
@@ -235,6 +239,15 @@ input:-webkit-autofill{
 
 .password::first-letter {
     text-transform: capitalize;
+}
+
+::placeholder {
+    color: rgb(235, 122, 33);
+    opacity: 1; /* Firefox */
+}
+
+  ::-ms-input-placeholder { /* Edge 12 -18 */
+    color: rgb(235, 122, 33);
 }
 
 /* Eventos do JavaScript

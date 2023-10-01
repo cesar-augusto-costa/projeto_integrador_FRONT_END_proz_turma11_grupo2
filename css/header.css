@@ -1,5 +1,5 @@
 .head {
-    background-color: #facaa3;
+    background-color: rgb(240,182,148);
     text-align: center;
 }
 
@@ -11,7 +11,7 @@
     margin-left: 10px;
     text-decoration: none;
     font-weight: bold;
-    color: #421913;
+    color: rgb(66, 26, 18);
     font-size: 20px;
 }
 
@@ -33,13 +33,13 @@ a.activated {
     margin-left: 10px;
     text-decoration: none;
     font-weight: bold;
-    color: #421913;
+    color: rgb(66, 26, 18);
     font-size: 18px;
 }
 
 .span-1 {
     font-weight: bold;
-    color: #421913;
+    color: rgb(66, 26, 18);
 }
 
 .dog i {
@@ -48,7 +48,7 @@ a.activated {
 }
 
 .dog a {
-    color: #421913;
+    color: rgb(66, 26, 18);
 }
 
 #divBusca {
