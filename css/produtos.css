@@ -70,7 +70,7 @@ body {
 }
 
 .button-hover-background {
-    background-color: #4180ec;
+    background-color: rgb(235, 122, 33);
     color: #fff;
     border: none;
     padding: 8px 16px;
@@ -80,7 +80,7 @@ body {
 }
 
 .button-hover-background:hover {
-    background-color: #3a73d9;
+    background-color: rgb(235, 122, 33);
 }
 
 /* Section Formatting */
@@ -116,7 +116,7 @@ body {
 
 /* Purchase Button Formatting */
 .purchase-button {
-    background-color: #41ec5d;
+    background-color: rgb(235, 122, 33);
     color: #fff;
     border: none;
     padding: 10px 20px;
@@ -128,7 +128,7 @@ body {
 }
 
 .purchase-button:hover {
-    background-color: #3add5a;
+    background-color: rgb(235, 122, 33);
 }
 
 /* Footer */
@@ -139,7 +139,7 @@ footer {
 
 footer a {
     text-decoration: none;
-    color: #333;
+    color: rgb(66, 26, 18);
     margin-right: 10px;
 }
 
