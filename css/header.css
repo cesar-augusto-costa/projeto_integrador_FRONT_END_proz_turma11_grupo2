@@ -16,13 +16,13 @@
 }
 
 a.activated {
-    color: rgb(255, 98, 0);
+    color: rgb(235, 122, 33);
 }
 
 .links a:hover {
-    color: rgb(255, 98, 0);
-    border-top: 5px solid rgb(255, 98, 0);
-    border-bottom: 5px solid rgb(255, 98, 0);
+    color: rgb(235, 122, 33);
+    border-top: 5px solid rgb(235, 122, 33);
+    border-bottom: 5px solid rgb(235, 122, 33);
 }
 
 .login {
@@ -53,12 +53,17 @@ a.activated {
 
 #divBusca {
     background-color: white;
-    border: solid 1px;
+    border: solid 1px solid rgb(248,183,76) ;
     border-radius: 10px;
     width: 300px;
     padding: 5px;
-    height: 32px;
+    height: 42px;
     margin-top: 18px;
+}
+
+::placeholder {
+    color: rgb(235, 122, 33);
+    opacity: 1; /* Firefox */
 }
 
 #divBusca > i {
