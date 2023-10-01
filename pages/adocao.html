@@ -12,11 +12,12 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
         crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="../css/home.css">
+
     <link rel="stylesheet" href="../css/header.css">
     <link rel="stylesheet" href="../css/footer.css">
     <link rel="stylesheet" href="../css/adocao.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
     <script src="https://kit.fontawesome.com/7e753c5662.js" crossorigin="anonymous"></script>
     <script src="../js/adocao.js" defer></script>
 </head>
@@ -27,20 +28,24 @@
         <div class="container">
             <div class="row">
                 <div class="col-1 logo">
-                    <a href="../index.html"><img src="../img/logos/petshop_caramelo.png"></a>
+                    <a href="/"><img src="../img/logos/petshop_caramelo.png" /></a>
                 </div>
-                <div class="col-6 links">
+                <div class="col-6 align-middle links">
                     <nav>
-                        <a href="adocao.html" class="activated">Adoção</a>
+                        <a href="adocao.html">Adoção</a>
                         <a href="produtos.html">Produtos</a>
                         <a href="depoimentos.html">Noticias</a>
                         <a href="contato.html">Contato</a>
                         <a href="clubepetcaramelo.html">Clube Pet Caramelo</a>
                     </nav>
                 </div>
-                <div class="col-3" id="divBusca">
-                    <i class="fa-solid fa-magnifying-glass"></i>
-                    <input type="text" id="txtBusca" placeholder="Buscar..." />
+                <div class="col-3" id="busca">
+                    <form>
+                        <input type="text" id="txtBusca" class="txtBusca" placeholder="Buscar..." aria-label="Busca" />
+                        <button>
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                        </button>
+                    </form>
                 </div>
                 <div class="col-2 login">
                     <a href="login.html">
@@ -67,7 +72,7 @@
                         o funcionamento de uma ONG pode mudar a vida de animais, o <strong>Pet Caramelo</strong> faz
                         parcerias com
                         várias entidades. Conheça um pouco sobre nossas parceiras e seus pet nos artigos abaixo.</span>
-                        <button onclick="leiaMais()" class="btnLeiaMais"  id="btnLeiaMais">Leia Mais</button>
+                    <button onclick="leiaMais()" class="btnLeiaMais" id="btnLeiaMais">Leia Mais</button>
                 </p>
             </div>
             <div id="img-apresentacao">
@@ -79,7 +84,7 @@
         <!--seção: cards ongs-->
         <section class="container-ong">
             <div class="subtitulo">
-                <h2 >ONGs parceiras.</h2>
+                <h2>ONGs parceiras.</h2>
                 <p>Conheça os projetos desenvolvidos por nossas ONGs parceiras.</p>
             </div>
             <section class="cards-ongs">
@@ -106,7 +111,8 @@
                             <div class="card-interno">
                                 <div class="card-interno-conteudo">
                                     <div class="img">
-                                        <img width="100%" src="../img/adocao/logo_ong/cao_sem_dono.png" alt="logo ONG Cão Sem Dono">
+                                        <img width="100%" src="../img/adocao/logo_ong/cao_sem_dono.png"
+                                            alt="logo ONG Cão Sem Dono">
                                     </div>
                                     <div class="card-interno-conteudo-div">
                                         <h5>ONG Cão Sem Dono</h5>
@@ -123,7 +129,7 @@
                             <div class="card-interno">
                                 <div class="card-interno-conteudo">
                                     <div class="img">
-                                        <img width="100%"  src="../img/adocao/logo_ong/focinho_de_luz.png"
+                                        <img width="100%" src="../img/adocao/logo_ong/focinho_de_luz.png"
                                             alt=" logo Associação Focinhos de Luz ">
                                     </div>
                                     <div class="card-interno-conteudo-div">
@@ -140,7 +146,7 @@
                             <div class="card-interno">
                                 <div class="card-interno-conteudo">
                                     <div class="img">
-                                        <img width="100%"  src="../img/adocao/logo_ong/suipa_.png"
+                                        <img width="100%" src="../img/adocao/logo_ong/suipa_.png"
                                             alt=" logo Sociedade União Internacional Protetora dos Animais">
                                     </div>
                                     <div class="card-interno-conteudo-div">
@@ -157,7 +163,8 @@
                             <div class="card-interno">
                                 <div class="card-interno-conteudo">
                                     <div class="img">
-                                        <img width="100%"  src="../img/adocao/logo_ong/vira_lata.png" alt=" logo Vira-Lata é Dez ">
+                                        <img width="100%" src="../img/adocao/logo_ong/vira_lata.png"
+                                            alt=" logo Vira-Lata é Dez ">
                                     </div>
                                     <div class="card-interno-conteudo-div">
                                         <h5>ONG Vira-Lata é Dez</h5>
@@ -248,7 +255,7 @@
                         </div><!-- fim pg de rosto quiz-->
                     </div><!--fim quiz-->
                     <div class="rodape">
-                        <a target="_blank" href="adocao_quiz.html"  class="botao-inicio" id="skip_pular">Inicio</a>
+                        <a target="_blank" href="adocao_quiz.html" class="botao-inicio" id="skip_pular">Inicio</a>
                     </div>
                 </div><!--fim div quiz-->
             </section><!--fim sub seção quiz-->

@@ -1,328 +1,261 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta
-      name="keywords"
-      content="Pet Shop Caramelo, Pet Shop, Produtos para Pet, Cachorro, Gato"
-    />
-    <meta
-      property="og:title"
-      content="Pet Shop Caramelo - Adoção Responsável"
-    />
-    <meta property="og:type" content="website" />
-    <title>Home</title>
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9"
-      crossorigin="anonymous"
-    />
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
-      crossorigin="anonymous"
-    ></script>
-    <link rel="stylesheet" href="css/home.css" />
-    <link rel="stylesheet" href="css/header.css" />
-    <link rel="stylesheet" href="css/slider.css" />
-    <link rel="stylesheet" href="css/slider_promocao.css" />
-    <link rel="stylesheet" href="css/footer.css" />
-    <script
-      src="https://kit.fontawesome.com/7e753c5662.js"
-      crossorigin="anonymous"
-    ></script>
-    <script src="js/slider.js" defer></script>
-    <script src="js/slider_promocao_home.js" defer></script>
-  </head>
-  <body>
-    <header class="head">
-      <div class="container">
-        <div class="row">
-          <div class="col-1 logo">
-            <a href="#"><img src="../img/logos/petshop_caramelo.png" /></a>
-          </div>
-          <div class="col-6 align-middle links">
-            <nav>
-              <a href="pages/adocao.html">Adoção</a>
-              <a href="pages/produtos.html">Produtos</a>
-              <a href="pages/depoimentos.html">Noticias</a>
-              <a href="pages/contato.html">Contato</a>
-              <a href="pages/clubepetcaramelo.html">Clube Pet Caramelo</a>
-            </nav>
-          </div>
-          <div class="col-3" id="divBusca">
-            <i class="fa-solid fa-magnifying-glass"></i>
-            <input
-              type="text"
-              id="txtBusca"
-              class="txtBusca"
-              placeholder="Buscar..."
-              aria-label="Busca"
-            />
-          </div>
-          <div class="col-2 login">
-            <a href="pages/login.html">
-              <span class="span-2 search"></span>
-              <i class="fa-solid fa-user"></i>Login</a
-            >
-          </div>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="keywords" content="Pet Shop Caramelo, Pet Shop, Produtos para Pet, Cachorro, Gato" />
+  <meta property="og:title" content="Pet Shop Caramelo - Adoção Responsável" />
+  <meta property="og:type" content="website" />
+  <title>Home</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous" />
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+    crossorigin="anonymous"></script>
+
+  <link rel="stylesheet" href="css/home.css" />
+  <link rel="stylesheet" href="css/header.css" />
+  <link rel="stylesheet" href="css/slider.css" />
+  <link rel="stylesheet" href="css/slider_promocao.css" />
+  <link rel="stylesheet" href="css/footer.css" />
+
+  <script src="https://kit.fontawesome.com/7e753c5662.js" crossorigin="anonymous"></script>
+  <script src="js/slider.js" defer></script>
+  <script src="js/slider_promocao_home.js" defer></script>
+</head>
+
+<body>
+  <header class="head">
+    <div class="container">
+      <div class="row">
+        <div class="col-1 logo">
+          <a href="#"><img src="../img/logos/petshop_caramelo.png" /></a>
+        </div>
+        <div class="col-6 align-middle links">
+          <nav>
+            <a href="pages/adocao.html">Adoção</a>
+            <a href="pages/produtos.html">Produtos</a>
+            <a href="pages/depoimentos.html">Noticias</a>
+            <a href="pages/contato.html">Contato</a>
+            <a href="pages/clubepetcaramelo.html">Clube Pet Caramelo</a>
+          </nav>
+        </div>
+        <div class="col-3" id="busca">
+          <form>
+            <input type="text" id="txtBusca" class="txtBusca" placeholder="Buscar..." aria-label="Busca" />
+            <button>
+              <i class="fa-solid fa-magnifying-glass"></i>
+            </button>
+          </form>
+        </div>
+        <div class="col-2 login">
+          <a href="pages/login.html">
+            <span class="span-2 search"></span>
+            <i class="fa-solid fa-user"></i>Login</a>
         </div>
       </div>
-    </header>
-    <main>
-      <div class="content">
-        <section id="slider-imagens">
-          <div class="container-slide">
-            <button id="botao-voltar">
-              <img src="img/adocao/imagem_quiz/seta_quiz.png" alt="seta" />
-            </button>
-            <div class="paginas-slide">
-              <div class="slide on slide-01"></div>
-              <div class="slide slide-02"></div>
-              <div class="slide slide-03"></div>
-            </div>
-            <button id="botao-avancar">
-              <img src="img/adocao/imagem_quiz/seta_quiz.png" alt="seta" />
-            </button>
+    </div>
+  </header>
+  <main>
+    <div class="content">
+      <section id="slider-imagens">
+        <div class="container-slide">
+          <button id="botao-voltar">
+            <img src="img/adocao/imagem_quiz/seta_quiz.png" alt="seta" />
+          </button>
+          <div class="paginas-slide">
+            <div class="slide on slide-01"></div>
+            <div class="slide slide-02"></div>
+            <div class="slide slide-03"></div>
           </div>
-        </section>
-        <section id="promocoes">
-          <h3>Promoções</h3>
-          <div class="container-slide">
-            <button id="botao-voltar-promocao">
-              <img src="img/adocao/imagem_quiz/seta_quiz.png" alt="seta" />
-            </button>
-            <div class="paginas-slide">
-              <div class="slide-promocao on">
-                <img src="img/home/promocoes/promocao1.jpeg" alt="Promoção 1" />
-                <div class="promo-details">
-                  <p>Tapete Hig. P/ Pet</p>
-                  <p>R$ 92,46 no Pix (10% de desconto)</p>
-                </div>
-              </div>
-              <div class="slide-promocao">
-                <img src="img/home/promocoes/promocao2.jpg" alt="Promoção 2" />
-                <div class="promo-details">
-                  <p>Antipulgas Zoetis Simparic 5 mg para Cães 1,3 a 2,5 Kg</p>
-                  <p>R$ 81,38 no Pix (10% de desconto)</p>
-                </div>
-              </div>
-              <div class="slide-promocao">
-                <img src="img/home/promocoes/promocao3.jpg" alt="Promoção 3" />
-                <div class="promo-details">
-                  <p>Cama Luppet Quadrada Azul</p>
-                  <p>R$ 161,62 no Pix (10% de desconto)</p>
-                </div>
-              </div>
-              <div class="slide-promocao">
-                <img src="img/home/promocoes/promocao4.jpg" alt="Promoção 4" />
-                <div class="promo-details">
-                  <p>Areia Sanitária Kelco Pipicat Multicat - 12 Kg</p>
-                  <p>R$ 42,80 no Pix (11% de desconto)</p>
-                </div>
-              </div>
-            </div>
-            <button id="botao-avancar-promocao">
-              <img src="img/adocao/imagem_quiz/seta_quiz.png" alt="seta" />
-            </button>
-          </div>
-        </section>
-
-        <section id="produtos-recomendados">
-          <h3>Produtos recomendados</h3>
-          <div class="produtos">
-            <a class="ancora" href="/pages/produtos.html"
-              ><img
-                class="img-pets"
-                src="../img/produtos/cachorro/racao/racao_cao_adulto_porte_grande.png"
-                alt="Comida para pets"
-            /></a>
-            <a class="ancora" href="/pages/produtos.html"
-              ><img
-                class="img-pets"
-                src="../img/produtos/cachorro/petisco/petisco_cao_adulto.png"
-                alt="Petisco"
-            /></a>
-            <a class="ancora" href="/pages/produtos.html"
-              ><img
-                class="img-pets"
-                src="../img/produtos/cachorro/brinquedos/bolinha_interativa.png"
-                alt="Brinquedo"
-            /></a>
-          </div>
-        </section>
-        <h3>Produtos Bem Avaliados</h3>
-        <img width="20%" src="img/home/avaliacoes/promoca3.jpg" />
-        <div>
-          <p>ótima cama, meu cachorro adorou</p>
+          <button id="botao-avancar">
+            <img src="img/adocao/imagem_quiz/seta_quiz.png" alt="seta" />
+          </button>
         </div>
-        <div class="StarHolder">
-          <i class="fa-solid fa-star"></i>
-          <i class="fa-solid fa-star"></i>
-          <i class="fa-solid fa-star"></i>
-          <i class="fa-solid fa-star"></i>
-          <i class="fa-solid fa-star"></i>
+      </section>
+      <section id="promocoes">
+        <h3>Promoções</h3>
+        <div class="container-slide">
+          <button id="botao-voltar-promocao">
+            <img src="img/adocao/imagem_quiz/seta_quiz.png" alt="seta" />
+          </button>
+          <div class="paginas-slide">
+            <div class="slide-promocao on">
+              <img src="img/home/promocoes/promocao1.jpeg" alt="Promoção 1" />
+              <div class="promo-details">
+                <p>Tapete Hig. P/ Pet</p>
+                <p>R$ 92,46 no Pix (10% de desconto)</p>
+              </div>
+            </div>
+            <div class="slide-promocao">
+              <img src="img/home/promocoes/promocao2.jpg" alt="Promoção 2" />
+              <div class="promo-details">
+                <p>Antipulgas Zoetis Simparic 5 mg para Cães 1,3 a 2,5 Kg</p>
+                <p>R$ 81,38 no Pix (10% de desconto)</p>
+              </div>
+            </div>
+            <div class="slide-promocao">
+              <img src="img/home/promocoes/promocao3.jpg" alt="Promoção 3" />
+              <div class="promo-details">
+                <p>Cama Luppet Quadrada Azul</p>
+                <p>R$ 161,62 no Pix (10% de desconto)</p>
+              </div>
+            </div>
+            <div class="slide-promocao">
+              <img src="img/home/promocoes/promocao4.jpg" alt="Promoção 4" />
+              <div class="promo-details">
+                <p>Areia Sanitária Kelco Pipicat Multicat - 12 Kg</p>
+                <p>R$ 42,80 no Pix (11% de desconto)</p>
+              </div>
+            </div>
+          </div>
+          <button id="botao-avancar-promocao">
+            <img src="img/adocao/imagem_quiz/seta_quiz.png" alt="seta" />
+          </button>
         </div>
-        <section id="depoimentos">
-          <h3>Depoimento</h3>
-          <div class="content">
-            <img width="20%" src="img/home/depoimento/foto1.png" />
-            <div>
-              <p>
-                Foi a melhor escolha que eu fiz adotar ele, a relação de amor e
-                cumplicidade que eles proporcionam é um vínculo único!
-              </p>
-            </div>
-            <div class="StarHolder">
-              <i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star"></i>
-            </div>
-          </div>
-        </section>
+      </section>
 
-        <h3>Marcas trabalhadas</h3>
-        <section id="marcas-trabalhadas">
-          <div class="marcas">
-            <div class="marca">
-              <a class="ancora" href="/pages/produtos.html"
-                ><img
-                  class="img-pets"
-                  src="../img/home/marcas/keldog.png"
-                  alt="Comida para pets"
-              /></a>
-            </div>
-
-            <div class="marca">
-              <a class="ancora" href="/pages/produtos.html"
-                ><img
-                  class="img-pets"
-                  src="../img/home/marcas/premierpet.png"
-                  alt="Comida para pets"
-              /></a>
-            </div>
-
-            <div class="marca">
-              <a class="ancora" href="/pages/produtos.html"
-                ><img
-                  class="img-pets"
-                  src="../img/home/marcas/royalcanin.png"
-                  alt="Comida para pets"
-              /></a>
-            </div>
-          </div>
-
-          <div class="marcas">
-            <div class="marca">
-              <a class="ancora" href="/pages/produtos.html"
-                ><img
-                  class="img-pets"
-                  src="../img/home/marcas/turmadamonicapets.png"
-                  alt="Comida para pets"
-              /></a>
-            </div>
-
-            <div class="marca">
-              <a class="ancora" href="/pages/produtos.html"
-                ><img
-                  class="img-pets"
-                  src="../img/home/marcas/whiskas.png"
-                  alt="Comida para Gato"
-              /></a>
-            </div>
-
-            <div class="marca">
-              <a class="ancora" href="/pages/produtos.html"
-                ><img
-                  class="img-pets"
-                  src="../img/home/marcas/zee.dog.png"
-                  alt="Colerira para pet"
-              /></a>
-            </div>
-          </div>
-        </section>
-        <h3>Parceiros/Ongs</h3>
-        <section>
-          <a href="https://amparanimal.org.br/"
-            ><img
-              width="10%"
-              src="img/adocao/logo_ong/ampara_animal.png"
-              alt="ONG Ampara Animal"
-          /></a>
-          <a href="https://www.caosemdono.com.br/"
-            ><img width="8%" src="img/adocao/logo_ong/cao_sem_dono.png" alt=""
-          /></a>
-          <a href="https://www.focinhosdeluz.com/"
-            ><img
-              width="5%"
-              src="img/adocao/logo_ong/focinho_de_luz.png"
-              alt="ONG Cão Sem Dono"
-          /></a>
-          <a href="https://www.suipa.org.br/"
-            ><img
-              width="5%"
-              src="img/adocao/logo_ong/suipa_.png"
-              alt="ONG Suipa"
-          /></a>
-          <a href="https://www.ongviralataedez.com/"
-            ><img
-              width="5%"
-              src="img/adocao/logo_ong/vira_lata.png"
-              alt="ONG Vira Lata"
-          /></a>
-        </section>
+      <section id="produtos-recomendados">
+        <h3>Produtos recomendados</h3>
+        <div class="produtos">
+          <a class="ancora" href="/pages/produtos.html"><img class="img-pets"
+              src="../img/produtos/cachorro/racao/racao_cao_adulto_porte_grande.png" alt="Comida para pets" /></a>
+          <a class="ancora" href="/pages/produtos.html"><img class="img-pets"
+              src="../img/produtos/cachorro/petisco/petisco_cao_adulto.png" alt="Petisco" /></a>
+          <a class="ancora" href="/pages/produtos.html"><img class="img-pets"
+              src="../img/produtos/cachorro/brinquedos/bolinha_interativa.png" alt="Brinquedo" /></a>
+        </div>
+      </section>
+      <h3>Produtos Bem Avaliados</h3>
+      <img width="20%" src="img/home/avaliacoes/promoca3.jpg" />
+      <div>
+        <p>ótima cama, meu cachorro adorou</p>
       </div>
-    </main>
-    <footer>
-      <div class="container">
-        <div class="row">
-          <div class="col-md-6 col-lg-3">
-            <h4>Meios de Pagamento</h4>
-            <ul class="payment-methods">
-              <li>
-                <a href="#"><i class="fab fa-cc-visa"></i> Visa</a>
-              </li>
-              <li>
-                <a href="#"><i class="fab fa-cc-mastercard"></i> Mastercard</a>
-              </li>
-              <li>
-                <a href="#"><i class="fab fa-cc-paypal"></i> PayPal</a>
-              </li>
-              <li>
-                <a href="#"><i class="fas fa-barcode"></i> Boleto</a>
-              </li>
-            </ul>
-          </div>
-          <div class="col-md-6 col-lg-3">
-            <h4>Redes Sociais</h4>
-            <ul class="social-media">
-              <li>
-                <a href="#"><i class="fab fa-instagram"></i> Instagram</a>
-              </li>
-              <li>
-                <a href="#"><i class="fab fa-facebook"></i> Facebook</a>
-              </li>
-              <li>
-                <a href="#"><i class="fab fa-whatsapp"></i> WhatsApp</a>
-              </li>
-            </ul>
-          </div>
-          <div class="col-md-12 col-lg-6">
-            <h4>Contato</h4>
+      <div class="StarHolder">
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star"></i>
+      </div>
+      <section id="depoimentos">
+        <h3>Depoimento</h3>
+        <div class="content">
+          <img width="20%" src="img/home/depoimento/foto1.png" />
+          <div>
             <p>
-              Endereço: Rua Dr. Miguel Paulo Capalbo, 135 - Pari - São Paulo -
-              SP CEP: 03035-040
+              Foi a melhor escolha que eu fiz adotar ele, a relação de amor e
+              cumplicidade que eles proporcionam é um vínculo único!
             </p>
-            <p>Email: contato@petshopcaramelo.com</p>
-            <p>Telefone: (11) 3456-7890</p>
+          </div>
+          <div class="StarHolder">
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
           </div>
         </div>
+      </section>
+
+      <h3>Marcas trabalhadas</h3>
+      <section id="marcas-trabalhadas">
+        <div class="marcas">
+          <div class="marca">
+            <a class="ancora" href="/pages/produtos.html"><img class="img-pets" src="../img/home/marcas/keldog.png"
+                alt="Comida para pets" /></a>
+          </div>
+
+          <div class="marca">
+            <a class="ancora" href="/pages/produtos.html"><img class="img-pets" src="../img/home/marcas/premierpet.png"
+                alt="Comida para pets" /></a>
+          </div>
+
+          <div class="marca">
+            <a class="ancora" href="/pages/produtos.html"><img class="img-pets" src="../img/home/marcas/royalcanin.png"
+                alt="Comida para pets" /></a>
+          </div>
+        </div>
+
+        <div class="marcas">
+          <div class="marca">
+            <a class="ancora" href="/pages/produtos.html"><img class="img-pets"
+                src="../img/home/marcas/turmadamonicapets.png" alt="Comida para pets" /></a>
+          </div>
+
+          <div class="marca">
+            <a class="ancora" href="/pages/produtos.html"><img class="img-pets" src="../img/home/marcas/whiskas.png"
+                alt="Comida para Gato" /></a>
+          </div>
+
+          <div class="marca">
+            <a class="ancora" href="/pages/produtos.html"><img class="img-pets" src="../img/home/marcas/zee.dog.png"
+                alt="Colerira para pet" /></a>
+          </div>
+        </div>
+      </section>
+      <h3>Parceiros/Ongs</h3>
+      <section>
+        <a href="https://amparanimal.org.br/"><img width="10%" src="img/adocao/logo_ong/ampara_animal.png"
+            alt="ONG Ampara Animal" /></a>
+        <a href="https://www.caosemdono.com.br/"><img width="8%" src="img/adocao/logo_ong/cao_sem_dono.png"
+            alt="" /></a>
+        <a href="https://www.focinhosdeluz.com/"><img width="5%" src="img/adocao/logo_ong/focinho_de_luz.png"
+            alt="ONG Cão Sem Dono" /></a>
+        <a href="https://www.suipa.org.br/"><img width="5%" src="img/adocao/logo_ong/suipa_.png" alt="ONG Suipa" /></a>
+        <a href="https://www.ongviralataedez.com/"><img width="5%" src="img/adocao/logo_ong/vira_lata.png"
+            alt="ONG Vira Lata" /></a>
+      </section>
+    </div>
+  </main>
+  <footer>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6 col-lg-3">
+          <h4>Meios de Pagamento</h4>
+          <ul class="payment-methods">
+            <li>
+              <a href="#"><i class="fab fa-cc-visa"></i> Visa</a>
+            </li>
+            <li>
+              <a href="#"><i class="fab fa-cc-mastercard"></i> Mastercard</a>
+            </li>
+            <li>
+              <a href="#"><i class="fab fa-cc-paypal"></i> PayPal</a>
+            </li>
+            <li>
+              <a href="#"><i class="fas fa-barcode"></i> Boleto</a>
+            </li>
+          </ul>
+        </div>
+        <div class="col-md-6 col-lg-3">
+          <h4>Redes Sociais</h4>
+          <ul class="social-media">
+            <li>
+              <a href="#"><i class="fab fa-instagram"></i> Instagram</a>
+            </li>
+            <li>
+              <a href="#"><i class="fab fa-facebook"></i> Facebook</a>
+            </li>
+            <li>
+              <a href="#"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+            </li>
+          </ul>
+        </div>
+        <div class="col-md-12 col-lg-6">
+          <h4>Contato</h4>
+          <p>
+            Endereço: Rua Dr. Miguel Paulo Capalbo, 135 - Pari - São Paulo -
+            SP CEP: 03035-040
+          </p>
+          <p>Email: contato@petshopcaramelo.com</p>
+          <p>Telefone: (11) 3456-7890</p>
+        </div>
       </div>
-    </footer>
-  </body>
+    </div>
+  </footer>
+</body>
+
 </html>

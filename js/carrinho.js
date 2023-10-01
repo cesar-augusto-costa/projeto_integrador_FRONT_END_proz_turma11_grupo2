@@ -49,10 +49,11 @@ function addProductToCart(event) {
     const productImage = productInfos.getElementsByClassName("product-image")[0].src
     const productName = productInfos.getElementsByClassName("product-title")[0].innerText
     const productPrice = productInfos.getElementsByClassName("product-price")[0].innerText
+    const productId = productInfos.dataset.id;
 
     const productsCartNames = document.getElementsByClassName("cart-product-title")
     for (var i = 0; i < productsCartNames.length; i++) {
-        if (productsCartNames[i].innerText === productName) {
+        if (productsCartNames[i].dataset.id == productId) {
             productsCartNames[i].parentElement.parentElement.getElementsByClassName("product-qtd-input")[0].value++
             updateTotal()
             return
@@ -66,7 +67,7 @@ function addProductToCart(event) {
       `
         <td class="product-identification">
           <img src="${productImage}" alt="${productName}" class="cart-product-image">
-          <strong class="cart-product-title">${productName}</strong>
+          <strong class="cart-product-title" data-id="${productId}">${productName}</strong>
         </td>
         <td>
           <span class="cart-product-price">${productPrice}</span>

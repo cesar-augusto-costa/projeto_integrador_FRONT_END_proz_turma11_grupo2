@@ -17,8 +17,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
         crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="../css/_reset_patterns.css">
-    <link rel="stylesheet" href="../css/home.css">
+    
     <link rel="stylesheet" href="../css/header.css">
     <link rel="stylesheet" href="../css/footer.css">
 
@@ -35,29 +34,32 @@
     <header class="head">
         <div class="container">
             <div class="row">
-            <div class="col-1 logo">
-                <a href="../index.html"><img src="../img/logos/petshop_caramelo.png"></a>
+                <div class="col-1 logo">
+                    <a href="/"><img src="../img/logos/petshop_caramelo.png" /></a>
+                </div>
+                <div class="col-6 align-middle links">
+                    <nav>
+                        <a href="adocao.html">Adoção</a>
+                        <a href="produtos.html">Produtos</a>
+                        <a href="depoimentos.html">Noticias</a>
+                        <a href="contato.html">Contato</a>
+                        <a href="clubepetcaramelo.html">Clube Pet Caramelo</a>
+                    </nav>
+                </div>
+                <div class="col-3" id="busca">
+                    <form>
+                        <input type="text" id="txtBusca" class="txtBusca" placeholder="Buscar..." aria-label="Busca" />
+                        <button>
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                        </button>
+                    </form>
+                </div>
+                <div class="col-2 login">
+                    <a href="login.html">
+                        <span class="span-2 search"></span>
+                        <i class="fa-solid fa-user"></i>Login</a>
+                </div>
             </div>
-        <div class="col-6 links">
-            <nav>
-            <a href="adocao.html">Adoção</a>
-            <a href="produtos.html" class="activated">Produtos</a>
-            <a href="depoimentos.html">Noticias</a>
-            <a href="contato.html">Contato</a>
-            <a href="clubepetcaramelo.html">Clube Pet Caramelo</a>
-            </nav>
-        </div>
-
-        <div class="col-3" id="divBusca">
-            <i class="fa-solid fa-magnifying-glass"></i>
-            <input type="text" id="txtBusca" placeholder="Buscar..." />
-        </div>
-
-        <div class="col-2 login">
-            <a href="login.html">
-            <span class="span-2 search"></span>
-            <i class="fa-solid fa-user"></i>Login</a>
-        </div>
         </div>
     </header>
     <!-- fim /header -->
@@ -73,7 +75,7 @@
             <section class="products-container">
 
                 <!-- Ração Cão Adulto Porte Grande -->
-                <section class="movie-product">
+                <section class="movie-product" data-id="1">
                     <strong class="product-title">
                         <p>Ração 15 Kg</p>
                         <p>Para Cães Adultos</p>
@@ -92,7 +94,7 @@
                 </section>
 
                 <!-- Ração Cão Filhote Porte Pequeno -->
-                <section class="movie-product">
+                <section class="movie-product" data-id="2">
                     <strong class="product-title">
                         <p>Ração 15 Kg</p>
                         <p>Para Cães Filhotes</p>
@@ -111,7 +113,7 @@
                 </section>
 
                 <!-- Ração Cão Adulto Porte Pequeno -->
-                <section class="movie-product">
+                <section class="movie-product" data-id="3">
                     <strong class="product-title">
                         <p>Ração 15 Kg</p>
                         <p>Para Cães Adultos</p>
@@ -131,7 +133,7 @@
 
 
                 <!-- Ração Cão Filhote Porte Pequeno -->
-                <section class="movie-product">
+                <section class="movie-product" data-id="4">
                     <strong class="product-title">
                         <p>Ração 10,1 Kg</p>
                         <p>Para Cães Filhotes</p>
@@ -150,7 +152,7 @@
                 </section>
 
                 <!-- Biscoito Premier Cookie para Cães Filhotes Sabor Frutas Vermelhas e Aveia 250g -->
-                <section class="movie-product">
+                <section class="movie-product" data-id="5">
                     <strong class="product-title">
                         <p>Biscoito 250 g</p>
                         <p>Para Cães Filhotes</p>
@@ -169,7 +171,7 @@
                 </section>
 
                 <!-- Biscoito Premier Cookie para Cães Adultos de Raças Pequenas 250g -->
-                <section class="movie-product">
+                <section class="movie-product" data-id="6">
                     <strong class="product-title">
                         <p>Biscoito 250 g</p>
                         <p>Para Cães Adultos</p>
@@ -187,7 +189,7 @@
                 </section>
 
                 <!-- Bifinho KelDog Mini para Cães Adultos Sabor Carne - 500g -->
-                <section class="movie-product">
+                <section class="movie-product" data-id="7">
                     <strong class="product-title">
                         <p>Bifinho 500 g</p>
                         <p>Para Cães Adultos</p>
@@ -205,7 +207,7 @@
                 </section>
 
                 <!-- Brinquedo Líder Pet Bola Cravo para Cães - Cores Sortidas -->
-                <section class="movie-product">
+                <section class="movie-product" data-id="8">
                     <strong class="product-title">
                         <p>Brinquedo Bola Cravo</p>
                         <p>Para Cães</p>
@@ -223,7 +225,7 @@
                 </section>
 
                 <!-- Brinquedo Interativo Pet Games Petball para Cães -->
-                <section class="movie-product">
+                <section class="movie-product" data-id="9">
                     <strong class="product-title">
                         <p>Brinquedo Interativo Petball</p>
                         <p>Para Cães</p>
@@ -241,7 +243,7 @@
                 </section>
 
                 <!-- Brinquedo Napi Mordedor Galinha para Cães -->
-                <section class="movie-product">
+                <section class="movie-product" data-id="10">
                     <strong class="product-title">
                         <p>Brinquedo Mordedor Galinha</p>
                         <p>Para Cães</p>
@@ -259,7 +261,7 @@
                 </section>
 
                 <!-- Ração GranPlus Choice para Gatos Adultos Sabor Frango e Carne 10,1kg -->
-                <section class="movie-product">
+                <section class="movie-product" data-id="11">
                     <strong class="product-title">
                         <p>Ração 10,1 Kg</p>
                         <p>Para Gatos Adultos</p>
@@ -278,7 +280,7 @@
                 </section>
 
                 <!-- Ração Royal Canin para Gatos Filhotes com Até 12 Meses de Idade -->
-                <section class="movie-product">
+                <section class="movie-product" data-id="12">
                     <strong class="product-title">
                         <p>Ração 1,5 Kg</p>
                         <p>Para Gatos Filhotes</p>
@@ -297,7 +299,7 @@
                 </section>
 
                 <!-- Petisco Dreamies Sabor Carne Tentadora para Gatos Adultos -->
-                <section class="movie-product">
+                <section class="movie-product" data-id="13">
                     <strong class="product-title">
                         <p>Petisco</p>
                         <p>Para Gatos Adultos</p>
@@ -315,7 +317,7 @@
                 </section>
 
                 <!-- Snack Kelcat Bifitos para Gatos Adultos e Filhotes Sabor Carne - 30g -->
-                <section class="movie-product">
+                <section class="movie-product" data-id="14">
                     <strong class="product-title">
                         <p>Bifitos 30 g</p>
                         <p>Para Gatos</p>
@@ -333,7 +335,7 @@
                 </section>
 
                 <!-- Leite para Gatos Padaria Pet Hello Kitty 220 ml -->
-                <section class="movie-product">
+                <section class="movie-product" data-id="15">
                     <strong class="product-title">
                         <p>Leite 220 ml</p>
                         <p>Para Gatos</p>
@@ -351,7 +353,7 @@
                 </section>
 
                 <!-- Brinquedo Chalesco Ratinhos para Gatos -->
-                <section class="movie-product">
+                <section class="movie-product" data-id="16">
                     <strong class="product-title">
                         <p>Brinquedo Ratinhos</p>
                         <p>Para Gatos</p>
@@ -369,7 +371,7 @@
                 </section>
 
                 <!-- Brinquedo Chalesco Kit Bolas Catnip Colorido para Gatos -->
-                <section class="movie-product">
+                <section class="movie-product" data-id="17">
                     <strong class="product-title">
                         <p>Brinquedo Bolas Catnip</p>
                         <p>Para Gatos</p>

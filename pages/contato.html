@@ -24,31 +24,34 @@
   <!-- header -->
   <header class="head">
     <div class="container">
-      <div class="row">
-        <div class="col-1 logo">
-          <a href="../index.html"><img src="../img/logos/petshop_caramelo.png"></a>
+        <div class="row">
+            <div class="col-1 logo">
+                <a href="/"><img src="../img/logos/petshop_caramelo.png" /></a>
+            </div>
+            <div class="col-6 align-middle links">
+                <nav>
+                    <a href="adocao.html">Adoção</a>
+                    <a href="produtos.html">Produtos</a>
+                    <a href="depoimentos.html">Noticias</a>
+                    <a href="contato.html">Contato</a>
+                    <a href="clubepetcaramelo.html">Clube Pet Caramelo</a>
+                </nav>
+            </div>
+            <div class="col-3" id="busca">
+                <form>
+                    <input type="text" id="txtBusca" class="txtBusca" placeholder="Buscar..." aria-label="Busca" />
+                    <button>
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </button>
+                </form>
+            </div>
+            <div class="col-2 login">
+                <a href="login.html">
+                    <span class="span-2 search"></span>
+                    <i class="fa-solid fa-user"></i>Login</a>
+            </div>
         </div>
-        <div class="col-6 links">
-          <nav>
-            <a href="adocao.html">Adoção</a>
-            <a href="produtos.html">Produtos</a>
-            <a href="depoimentos.html">Noticias</a>
-            <a href="contato.html" class="activated">Contato</a>
-            <a href="clubepetcaramelo.html">Clube Pet Caramelo</a>
-          </nav>
-        </div>
-
-        <div class="col-3" id="divBusca">
-          <i class="fa-solid fa-magnifying-glass"></i>
-          <input type="text" id="txtBusca" placeholder="Buscar..." />
-        </div>
-
-        <div class="col-2 login">
-          <a href="login.html">
-            <span class="span-2 search"></span>
-            <i class="fa-solid fa-user"></i>Login</a>
-        </div>
-      </div>
+    </div>
   </header>
   <!-- fim /header -->
 
@@ -151,15 +154,8 @@
     </section>
 
     <section class="formulario">
-      <Style>
-        ul {
-          "list-style:nome;
- display: flex;
-          justify-content: space-evenly;
-        }
-      </Style>
       <h1> Deixe sua dúvida</h1>
-      <form id="for" class="form">>
+      <form id="for" class="form">
         <ul>
           <li>
             <label class="label-input" for="">Nome
@@ -175,7 +171,7 @@
           </li>
           <li>
             <label>Mensagem</label> <br>
-            <textarea placeholder="Digite sua mensagem" rows="5" cols="40" maxlength="500"></textarea>></textarea>
+            <textarea placeholder="Digite sua mensagem" rows="5" cols="40" maxlength="500"></textarea>
           </li>
             <li><button class="btn btn-second">Enviar</button>
           </li>

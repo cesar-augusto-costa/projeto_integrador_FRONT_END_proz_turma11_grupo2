@@ -1,7 +1,7 @@
 @import url(_reset_patterns.css);
 
-body {
-  background-color: white;
+html {
+	font-size: 62.5%;
 }
 
 .container.planos{

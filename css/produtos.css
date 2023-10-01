@@ -1,5 +1,5 @@
 /* font-family: 'Lato', sans-serif; */
-@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap');
+@import url('_reset_patterns.css');
 
 * {
     margin: 0;
@@ -7,16 +7,19 @@
     box-sizing: border-box;
 }
 
-body {
+p, .main-section {
+    font-size: 14px;
+}
+
+p {
     font-family: 'Lato', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    line-height: 1.6;
-    background-color: white;
-    text-align: center;
+    line-height: 1.0em;
 }
 
 /* Main Section */
 .main-section {
     padding: 20px;
+    text-align: center;
 }
 
 .section-title {
@@ -70,8 +73,8 @@ body {
 }
 
 .button-hover-background {
-    background-color: rgb(235, 122, 33);
-    color: #fff;
+    background-color: var(--button-color);
+    color: var(--text-color);
     border: none;
     padding: 8px 16px;
     font-size: 18px;
@@ -80,7 +83,7 @@ body {
 }
 
 .button-hover-background:hover {
-    background-color: rgb(235, 122, 33);
+    background-color: var(--button-color);
 }
 
 /* Section Formatting */
@@ -129,21 +132,4 @@ body {
 
 .purchase-button:hover {
     background-color: rgb(235, 122, 33);
-}
-
-/* Footer */
-footer {
-    padding: 20px 0;
-    text-align: center;
-}
-
-footer a {
-    text-decoration: none;
-    color: rgb(66, 26, 18);
-    margin-right: 10px;
-}
-
-.fa-brands, .fa-solid {
-    font-size: 20px;
-    margin-right: 5px;
 }

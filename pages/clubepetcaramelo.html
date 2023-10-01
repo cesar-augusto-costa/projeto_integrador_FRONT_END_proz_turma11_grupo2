@@ -37,10 +37,11 @@
       integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
       crossorigin="anonymous"
     ></script>
-    <link rel="stylesheet" href="../css/home.css" />
+
     <link rel="stylesheet" href="../css/header.css" />
     <link rel="stylesheet" href="../css/clube.css" />
     <link rel="stylesheet" href="../css/footer.css" />
+    
     <link
       rel="stylesheet"
       href="shttps://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
@@ -54,37 +55,35 @@
   <body>
     <header class="head">
       <div class="container">
-        <div class="row">
-        <div class="col-1 logo">
-          <a href="../index.html"
-            ><img src="../img/logos/petshop_caramelo.png"
-          /></a>
-        </div>
-        <div class="col-6 links">
-          <nav>
-            <a href="adocao.html">Adoção</a>
-            <a href="produtos.html">Produtos</a>
-            <a href="depoimentos.html">Noticias</a>
-            <a href="contato.html">Contato</a>
-            <a href="clubepetcaramelo.html" class="activated"
-              >Clube Pet Caramelo</a
-            >
-          </nav>
-        </div>
-
-        <div class="col-3" id="divBusca">
-          <i class="fa-solid fa-magnifying-glass"></i>
-          <input type="text" id="txtBusca" placeholder="Buscar..." />
-        </div>
-
-        <div class="col-2 login">
-          <a href="login.html">
-            <span class="span-2 search"></span>
-            <i class="fa-solid fa-user"></i>Login</a
-          >
-        </div>
+          <div class="row">
+              <div class="col-1 logo">
+                  <a href="/"><img src="../img/logos/petshop_caramelo.png" /></a>
+              </div>
+              <div class="col-6 align-middle links">
+                  <nav>
+                      <a href="adocao.html">Adoção</a>
+                      <a href="produtos.html">Produtos</a>
+                      <a href="depoimentos.html">Noticias</a>
+                      <a href="contato.html">Contato</a>
+                      <a href="clubepetcaramelo.html">Clube Pet Caramelo</a>
+                  </nav>
+              </div>
+              <div class="col-3" id="busca">
+                  <form>
+                      <input type="text" id="txtBusca" class="txtBusca" placeholder="Buscar..." aria-label="Busca" />
+                      <button>
+                          <i class="fa-solid fa-magnifying-glass"></i>
+                      </button>
+                  </form>
+              </div>
+              <div class="col-2 login">
+                  <a href="login.html">
+                      <span class="span-2 search"></span>
+                      <i class="fa-solid fa-user"></i>Login</a>
+              </div>
+          </div>
       </div>
-    </header>
+  </header>
     <main>
       <section class="container planos">
         <h1 class="h1-planos">Conheça nossos planos</h1>

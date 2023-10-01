@@ -1,6 +1,14 @@
+@import url('_colors.css');
+
 .head {
-    background-color: rgb(240,182,148);
+    background-color: var(--sandy-brown);
     text-align: center;
+    padding: 10px 0px;
+}
+
+.logo img {
+    height: auto;
+    width: 100%;
 }
 
 .links nav {
@@ -11,18 +19,18 @@
     margin-left: 10px;
     text-decoration: none;
     font-weight: bold;
-    color: rgb(66, 26, 18);
+    color: var(--link-color);
     font-size: 20px;
 }
 
 a.activated {
-    color: rgb(235, 122, 33);
+    color: var(--link-hover-color);
 }
 
 .links a:hover {
-    color: rgb(235, 122, 33);
-    border-top: 5px solid rgb(235, 122, 33);
-    border-bottom: 5px solid rgb(235, 122, 33);
+    color: var(--link-hover-color);
+    border-top: 5px solid var(--link-hover-color);
+    border-bottom: 5px solid var(--link-hover-color);
 }
 
 .login {
@@ -33,13 +41,13 @@ a.activated {
     margin-left: 10px;
     text-decoration: none;
     font-weight: bold;
-    color: rgb(66, 26, 18);
+    color: var(--link-color);
     font-size: 18px;
 }
 
 .span-1 {
     font-weight: bold;
-    color: rgb(66, 26, 18);
+    color: var(--link-color);
 }
 
 .dog i {
@@ -48,32 +56,49 @@ a.activated {
 }
 
 .dog a {
-    color: rgb(66, 26, 18);
+    color: var(--link-color);
 }
 
-#divBusca {
-    background-color: white;
-    border: solid 1px solid rgb(248,183,76) ;
-    border-radius: 10px;
+#busca {
     width: 300px;
-    padding: 5px;
     height: 42px;
+    padding: 5px;
     margin-top: 18px;
+    border-radius: 10px;
+    background-color: var(--fundo-geral);
 }
 
 ::placeholder {
-    color: rgb(235, 122, 33);
-    opacity: 1; /* Firefox */
+    color: var(--secondary-text-color);
+    opacity: 1;
+    /* Firefox */
 }
 
-#divBusca > i {
-    float: right;
-    margin: 8px 5px 5px 5px;
+#busca input {
+    float: left;
+    width: 85%;
+    background-color: transparent;
+    font-size: 18px;
+    height: 32px;
+}
+
+#busca input:focus,
+#busca input:focus-visible {
+    border: none;
+    outline: none;
+}
+
+#busca button {
+    float: left;
+    width: 15%;
+    font-size: 16px;
+    padding: 5px;
+    background-color: transparent;
+    border: none;
 }
 
 #txtBusca {
     float: left;
-    background-color: transparent;
     padding-left: 5px;
     font-size: 18px;
     border: none;
