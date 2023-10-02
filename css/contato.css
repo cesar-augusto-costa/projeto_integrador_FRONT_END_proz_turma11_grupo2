@@ -1,15 +1,9 @@
-/*.main{
-    display: flex;
-    flex-direction: column;
-    padding-top: 50px;
-}-->*/
 main {
     font-family: 'Lato', sans-serif;
     padding: 10px;
     margin: 10px;   
     display: flex;
     flex-direction: column;
-    padding-top: 50px;
 }
 
 h1 {
@@ -21,8 +15,9 @@ h1 {
 h2 {
     font-size: 1.8rem;
     font-weight: bold;
-    color: #421a12;
+    color: white;
 }
+
 h3 {
     font-size: 1.6rem;
     font-weight: bold;
@@ -41,7 +36,7 @@ a {
 }
 
 p {
-    color: #421a12;
+    color: white;
     font-size: 1.8rem;
     line-height: 3.5rem;
 }
@@ -49,6 +44,7 @@ p {
 .Titulo {
     text-transform: none;
 }
+
 /*formatação quiz*/
 .container-slide {
     align-items: center;
@@ -73,50 +69,56 @@ p {
     background-size: cover;
     color: white;
     height: 300px;
-
+    padding: 10px;
 }
+
 .segundo-slide {
     background-image: url(../img/contato/cão01.jpg);
     background-size: cover;
     color: white;
     height: 300px;
-
+    padding: 10px;
 }
 .terceiro-slide {
     background-image: url(../img/contato/cão02.jfif);
     background-size: cover;
     color: white;
     height: 300px;
-
+    padding: 10px;
 }
+
 .quarto-slide {
     background-image: url(../img/contato/coelho01.jpg);
     background-size: cover;
     color: white;
     height: 300px;
-
+    padding: 10px;
 }
+
 .quinto-slide {
     background-image: url(../img/contato/gato01.webp);
     background-size: cover;
     color: white;
     height: 300px;
-
+    padding: 10px;
 }
+
 .sexto-slide {
     background-image: url(../img/contato/gato02.jpg);
     background-size: cover;
     color: white;
     height: 300px;
-
+    padding: 10px;
 }
+
 .setimo-slide {
     background-image: url(../img/contato/img_7925.jpg);
     background-size: cover;
     color: white;
     height: 300px;
-
+    padding: 10px;
 }
+
 #titulo-slide {
     display: flex;
     font-size: 40px;
@@ -136,7 +138,6 @@ p {
     padding-top: 10px;
     text-align: justify;
     width: 300px;
-
 }
 
 .slide {
@@ -145,8 +146,7 @@ p {
     padding-bottom: 30px;
     position: absolute;
     transition: opacity .2s;
-    width: 100%;
-    
+    width: 100%;    
 }
 
 .on {
@@ -160,14 +160,12 @@ p {
     cursor: pointer;
     height: 20px;
     width: 20px;
-
 }
 
 #botao-voltar img,
 #botao-avancar img {
     height: 100%;
     width: 100%;
-
 }
 
 #botao-avancar {
@@ -193,6 +191,7 @@ p {
     border-top-right-radius: 12px;
     border-bottom-right-radius: 12px;
 }
+
 #endereço{
     border: 1px solid rgb(255, 98, 0);
     padding: 29px 0;
@@ -203,13 +202,17 @@ p {
     border-top-right-radius: 12px;
     border-bottom-right-radius: 12px;
 }
-div.what {
-       
-      }
+
 #for{
     align-items: self-end;
 }
-#policia.{ style="display: flex;
-    justify-content: space-evenly;
-    list-style:none;
-    justify-content: center;}
+
+
+li { 
+    list-style-type: none; 
+} 
+
+.mapa {
+    border: 2px solid #e7e7e7;
+    border-radius: 10px;    
+}
