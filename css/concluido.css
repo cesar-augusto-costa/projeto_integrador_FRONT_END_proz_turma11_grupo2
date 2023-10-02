@@ -1,0 +1,14 @@
+main {
+  display: flex;
+  justify-content: center;
+}
+
+.mensagem-principal {
+  text-align: center;
+  padding: 2rem;
+}
+
+.mensagem-principal img {
+  width: 400px;
+  border-radius: 25px;
+}
