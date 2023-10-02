@@ -1,3 +1,37 @@
+:root {
+    --hunyadi-yellow: rgb(248, 183, 76);
+    --black-bean: rgb(66, 26, 18);
+    --russet: rgb(136, 63, 19);
+    --cocoa-brown: rgb(205, 100, 19);
+    --sandy-brown: rgb(253, 164, 98);
+    --peach: rgb(240, 182, 148);
+
+    --text-color: var(--black-bean);
+    --secondary-text-color: var(--cocoa-brown);
+
+    --button-color: var(--sandy-brown);
+    --hover-button-color: var(--cocoa-brown);
+
+    --link-color: var(--black-bean);
+    --link-hover-color: var(--cocoa-brown);
+
+    --cor-white: #fff;
+    --fundo-geral: var(--cor-white); 
+
+    --cor-font-extra: #ff7f00;
+    --cor-principal: blueviolet;
+    --cor-principal-secundaria: #c6aeed;
+    --cor-h: #2e2c2c;
+    --cor-texto: #4b4848;
+    --color-red: #e63636;
+    --fundo-login: #dcf7e8;
+    --texto-botao: #004aad;
+    --texto-rosa: #ef0189;
+    --texto-menu: #585c5e;
+    --texto-artigo: #1b3c60;
+    --texto-cadastre: #545454;
+}
+
 /* font-family: 'Lato', sans-serif; */
 @import url('_reset_patterns.css');
 
