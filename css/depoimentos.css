@@ -1,11 +1,8 @@
-* {
-    text-align: center;
-}
-
 main {
     font-family: 'Lato', sans-serif;
     padding: 10px;
     margin: 10px;   
+    text-align: center;
 }
 
 h1 {
@@ -25,7 +22,7 @@ a {
     color: #421a12;
 }
 
-p {
+main p {
     color: #421a12;
     font-size: 1.8rem;
     line-height: 3.5rem;

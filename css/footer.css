@@ -1,45 +1,11 @@
-:root {
-    --hunyadi-yellow: rgb(248, 183, 76);
-    --black-bean: rgb(66, 26, 18);
-    --russet: rgb(136, 63, 19);
-    --cocoa-brown: rgb(205, 100, 19);
-    --sandy-brown: rgb(253, 164, 98);
-    --peach: rgb(240, 182, 148);
-
-    --text-color: var(--black-bean);
-    --secondary-text-color: var(--cocoa-brown);
-
-    --button-color: var(--sandy-brown);
-    --hover-button-color: var(--cocoa-brown);
-
-    --link-color: var(--black-bean);
-    --link-hover-color: var(--cocoa-brown);
-
-    --cor-white: #fff;
-    --fundo-geral: var(--cor-white); 
-
-    --cor-font-extra: #ff7f00;
-    --cor-principal: blueviolet;
-    --cor-principal-secundaria: #c6aeed;
-    --cor-h: #2e2c2c;
-    --cor-texto: #4b4848;
-    --color-red: #e63636;
-    --fundo-login: #dcf7e8;
-    --texto-botao: #004aad;
-    --texto-rosa: #ef0189;
-    --texto-menu: #585c5e;
-    --texto-artigo: #1b3c60;
-    --texto-cadastre: #545454;
-}
-
 footer {
     background-color: rgb(240,182,148);
-    padding: 1.5rem 0;
+    padding: 25px 0;
     text-align: left;
 }
 
 footer h4 {
-    font-size: 1.5rem;
+    font-size: 22px;
     margin-bottom: 18px;
     font-weight: bold;
 
@@ -69,11 +35,11 @@ ul.social-media a {
 ul.payment-methods i,
 ul.social-media i {
     margin-right: 10px;
-    font-size: 1.2rem;
+    font-size: 16px;
 }
 
 footer p {
-    font-size: 1.2rem;
+    font-size: 16px;
     margin-bottom: 10px;
 }
 
