@@ -1,0 +1,75 @@
+@import url(_reset_patterns.css);
+
+html {
+	font-size: 62.5%;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+}
+
+.pagamento-assinante {
+  display: flex;
+  background-color: #F0B694;
+  gap: 1rem;
+  flex-direction: column;
+  width: 600px;
+  padding: 3rem;
+}
+
+.pagamento-assinante label {
+  font-size: 2rem;
+  display: block;
+}
+
+.pagamento-assinante input {
+  width: 30%;
+  height: 3rem;
+  font-size: 2rem;
+  padding: .3rem;
+}
+
+.pagamento-assinante input::placeholder{
+  color: gray;
+}
+
+.pagamento-assinante input::-webkit-outer-spin-button,
+.pagamento-assinante input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+#flex {
+  display: flex;
+}
+
+#validade {
+  width: 32%;
+}
+
+#nome {
+  width: 60%;
+}
+#cartao {
+  width: 60%;
+}
+#cpf {
+  width: 60%;
+}
+#data {
+  width: 80%;
+}
+
+.comprarbutton {
+  display: flex;
+  align-self: start;
+  background: #F8B74C;
+  padding: 1rem 4rem;
+  font-size: 1.5rem;
+  color: #421A12;
+}
+
+.comprarbutton:hover{
+  background: #fc9d00;
+}
