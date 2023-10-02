@@ -111,6 +111,30 @@ p {
     width: 200px;
 }
 
+.table-head-item {
+    width: 30%;
+}
+
+.cart-product-image {
+    width: 100px;
+    margin-right: 10px; 
+    float: left; 
+}
+
+.cart-product-title {
+    overflow: hidden;
+}
+
+.cart-product-title p {
+    margin: 5px; 
+}
+
+.cart-product-price {
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+
 .cart-total-container {
     text-align: right;
     padding: 10px;
