@@ -5,6 +5,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Lato', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 p, .main-section {
@@ -133,6 +134,10 @@ p {
     display: flex;
     align-items: center;
     height: 100%;
+}
+
+.remove-product-button {
+    color: red;
 }
 
 .cart-total-container {

@@ -175,6 +175,12 @@ const produtos = [
     const movieProduct = document.createElement("section");
     movieProduct.classList.add("movie-product");
     movieProduct.id = `product-${index + 1}`;
+
+    if (productData.forPets.toLowerCase().includes("gatos")) {
+      movieProduct.classList.add("gatos");
+    } else if (productData.forPets.toLowerCase().includes("cães")) {
+      movieProduct.classList.add("caes");
+    }
   
     const productTitle = document.createElement("strong");
     productTitle.classList.add("product-title");
@@ -252,7 +258,39 @@ if (document.readyState == 'loading') {
 
 var totalAmount = "0,00"
 
+function filterProducts() {
+  const productFilter = document.getElementById("product-filter");
+  const selectedOption = productFilter.value;
+
+  // Obtenha todos os produtos
+  const allProducts = document.querySelectorAll(".movie-product");
+
+  // Oculte todos os produtos
+  allProducts.forEach(product => {
+      product.style.display = "none";
+  });
+
+  // Mostre os produtos com base na seleção do usuário
+  if (selectedOption === "all") {
+      // Mostrar todos os produtos
+      allProducts.forEach(product => {
+          product.style.display = "block";
+      });
+  } else {
+      // Mostrar apenas produtos correspondentes à seleção
+      const selectedProducts = document.querySelectorAll(`.${selectedOption}`);
+      selectedProducts.forEach(product => {
+          product.style.display = "block";
+      });
+  }
+}
+
 function ready() {
+    
+  // Seletor de produtos
+    const productFilter = document.getElementById("product-filter");
+    productFilter.addEventListener("change", filterProducts);
+
     // Botão remover produto
     const removeCartProductButtons = document.getElementsByClassName("remove-product-button")
     for (var i = 0; i < removeCartProductButtons.length; i++) {
