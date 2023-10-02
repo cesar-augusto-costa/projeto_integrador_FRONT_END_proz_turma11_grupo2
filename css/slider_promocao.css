@@ -1,3 +1,7 @@
+#promocoes .container-slide {
+  min-height: 50vh;
+}
+
 #botao-voltar-promocao,
 #botao-avancar-promocao {
   background-color: transparent;
@@ -24,4 +28,20 @@
   position: absolute;
   transition: opacity 0.2s;
   width: 100%;
+}
+
+.product img {
+  width: auto;
+  max-height: 300px;
+  padding: 10px;
+}
+
+.product {
+  display: inline-block;
+  max-width: 33%;
+  height: 440px;
+  margin: 5px 15px;
+  border: 1px solid var(--peach);
+  border-radius: 5px;
+  padding: 10px;
 }
