@@ -81,10 +81,10 @@ CREATE TABLE produto (
   descricao VARCHAR(50) NOT NULL,
   para_pets valid_para_pets_enum NOT NULL,
   tamanho_raca valid_tamanho_raca_prod_enum NOT NULL,
-  quantidade SMALLINT NOT NULL DEFAULT 0,
+  qtd_estoque SMALLINT NOT NULL DEFAULT 0,
   preco NUMERIC(6,2) NOT NULL,
   id_marca SMALLINT NOT NULL,
-  CHECK (quantidade >= 0), 
+  CHECK (qtd_estoque >= 0), 
   CONSTRAINT pk_produto
   PRIMARY KEY (id_produto),
   CONSTRAINT fk_marca_tb_produto
@@ -206,14 +206,15 @@ CREATE TABLE post_ong (
   FOREIGN KEY (id_ong) REFERENCES ong(id_ong)
 );
 
--- CRIAÇÃO DA TRIGGER - COMPRA
+-- TRIGGER - COMPRA
 
+-- Função Realizar Compra
 CREATE OR REPLACE FUNCTION realizar_compra()
 RETURNS TRIGGER AS $$
 BEGIN
   -- Atualiza a quantidade de produtos após uma compra
   UPDATE produto
-  SET quantidade = quantidade + NEW.quantidade_produto
+  SET qtd_estoque = qtd_estoque + NEW.quantidade_produto
   WHERE id_produto = NEW.id_produto;
 
   RETURN NEW;
@@ -221,19 +222,20 @@ END;
 $$ LANGUAGE plpgsql;
 
 -- Criação da Trigger para a tabela de compras
-CREATE TRIGGER realizar_compra_trigger
+CREATE OR REPLACE TRIGGER realizar_compra_trigger
 AFTER INSERT ON compra
 FOR EACH ROW
 EXECUTE FUNCTION realizar_compra();
 
--- CRIAÇÃO DA TRIGGER - VENDA
+-- TRIGGER - VENDA
 
+-- Função Realizar Venda
 CREATE OR REPLACE FUNCTION realizar_venda()
 RETURNS TRIGGER AS $$
 BEGIN
   -- Atualiza a quantidade de produtos após uma venda
   UPDATE produto
-  SET quantidade = quantidade - NEW.quantidade_produto
+  SET qtd_estoque = qtd_estoque - NEW.quantidade_produto
   WHERE id_produto = NEW.id_produto;
 
   RETURN NEW;
@@ -241,10 +243,36 @@ END;
 $$ LANGUAGE plpgsql;
 
 -- Criação da Trigger para a tabela de vendas
-CREATE TRIGGER realizar_venda_trigger
+CREATE OR REPLACE TRIGGER realizar_venda_trigger
 BEFORE INSERT ON venda
 FOR EACH ROW
 EXECUTE FUNCTION realizar_venda();
+
+-- TRIGGER - VENDA SEM PREJUIZO
+
+-- Criação da função para verificar o valor da venda
+CREATE OR REPLACE FUNCTION verificar_valor_venda()
+RETURNS TRIGGER AS $$
+BEGIN
+  -- Verifica se o valor unitário da venda é menor do que o valor unitário da compra correspondente
+  IF EXISTS (
+    SELECT 1
+    FROM compra
+    WHERE id_produto = NEW.id_produto
+      AND valor_unitario > NEW.valor_unitario
+  ) THEN
+    RAISE EXCEPTION 'Não é permitido vender o produto por um valor unitário menor do que o da compra.';
+  END IF;
+
+  RETURN NEW;
+END;
+$$ LANGUAGE plpgsql;
+
+-- Criação da Trigger para a tabela de vendas
+CREATE OR REPLACE TRIGGER verificar_valor_venda_trigger
+BEFORE INSERT ON venda
+FOR EACH ROW
+EXECUTE FUNCTION verificar_valor_venda();
 
 -- EXCLUIR TABELAS
 
@@ -316,22 +344,64 @@ VALUES
 INSERT INTO ong
 (CNPJ, nome, link_logo, id_representante)
 VALUES
-('98765432109876', 'ONG Animal', 'https://onganimal.org/logo.jpg', 1);
+('060787001000190', 'ONG Ampara Animal', NULL, 1),
+('060787002000190', 'ONG Cão Sem Dono', NULL, 2),
+('060787003000190', 'ONG Focinho de Luz', NULL, 3),
+('060787004000190', 'ONG Suipa', NULL, 4),
+('060787005000190', 'ONG Vira Lata', NULL, 5);
+
 
 INSERT INTO post_ong
 (titulo, foto, descricao, id_ong)
 VALUES
-('Evento de arrecadação', NULL, 'Participe do nosso evento de arrecadação de fundos!', 1);
+('Evento de arrecadação', NULL, 'Participe do nosso evento de arrecadação de fundos!', 1),
+('A importância do lar temporário', NULL, NULL, 1),
+('Conheça 10 alimentos tóxicos', NULL, NULL, 1),
+('Dia do Protetor Animal', NULL, NULL, 1),
+('Cães também ficam gripados?', NULL, NULL, 1);
 
 INSERT INTO pet
 (nome, tempo_vida, tipo_pet, raca, tamanho_raca, foto, disponivel, id_ong, id_cliente)
 VALUES
-('Fido', '10 anos', 'Cachorro', 'Vira-lata', 'Raças Pequenas', NULL, TRUE, 1, 1);
+('Fiel', '10 anos', 'Cachorro', 'Vira-lata', 'Raças Pequenas', NULL, FALSE, 1, 1),
+('Van Gogh', '10 anos', 'Cachorro', 'Vira-lata', 'Raças Pequenas', NULL, FALSE, 1, 1),
+('Barto', '10 anos', 'Cachorro', 'Vira-lata', 'Raças Pequenas', NULL, FALSE, 1, 1),
+('Boris', '10 anos', 'Cachorro', 'Vira-lata', 'Raças Pequenas', NULL, FALSE, 1, 1),
+('Bebeto', '10 anos', 'Cachorro', 'Vira-lata', 'Raças Pequenas', NULL, FALSE, 1, 1),
+('Fido', '10 anos', 'Cachorro', 'Vira-lata', 'Raças Pequenas', NULL, FALSE, 1, 1),
+('Bolinha', '12 anos', 'Cachorro', 'Poodle', 'Raças Pequenas', NULL, TRUE, 1, NULL),
+('Whiskers', '15 anos', 'Gato', 'Siamês', 'Raças Pequenas', NULL, TRUE, 2, 3),
+('Lucky', '8 anos', 'Cachorro', 'Labrador', 'Raças Grandes', NULL, TRUE, 3, 4),
+('Mia', '10 anos', 'Gato', 'Persa', 'Raças Grandes', NULL, TRUE, 4, 5),
+('Rocky', '9 anos', 'Cachorro', 'Bulldog', 'Raças Grandes', NULL, TRUE, 5, 6),
+('Fluffy', '14 anos', 'Gato', 'Maine Coon', 'Raças Grandes', NULL, TRUE, 6, 7),
+('Rex', '11 anos', 'Cachorro', 'Pastor Alemão', 'Raças Grandes', NULL, TRUE, 7, 8),
+('Sasha', '13 anos', 'Gato', 'Ragdoll', 'Raças Grandes', NULL, TRUE, 8, 9),
+('Max', '7 anos', 'Cachorro', 'Golden Retriever', 'Raças Grandes', NULL, TRUE, 9, 10),
+('Lucy', '12 anos', 'Cachorro', 'Beagle', 'Raças Pequenas', NULL, TRUE, 10, 11),
+('Oliver', '6 anos', 'Gato', 'British Shorthair', 'Raças Grandes', NULL, TRUE, 11, 12),
+('Charlie', '10 anos', 'Cachorro', 'Bulldog Francês', 'Raças Pequenas', NULL, TRUE, 12, 13),
+('Luna', '11 anos', 'Gato', 'Siamese', 'Raças Pequenas', NULL, TRUE, 13, 14),
+('Cooper', '9 anos', 'Cachorro', 'Boxer', 'Raças Grandes', NULL, TRUE, 14, 15),
+('Milo', '7 anos', 'Gato', 'Persian', 'Raças Grandes', NULL, TRUE, 15, 16),
+('Daisy', '8 anos', 'Cachorro', 'Dachshund', 'Raças Pequenas', NULL, TRUE, 16, 17),
+('Simba', '13 anos', 'Gato', 'Lion', 'Raças Grandes', NULL, TRUE, 17, 18),
+('Bailey', '10 anos', 'Cachorro', 'Chihuahua', 'Raças Pequenas', NULL, TRUE, 18, 19),
+('Zoe', '11 anos', 'Gato', 'Maine Coon', 'Raças Grandes', NULL, TRUE, 19, 20),
+('Teddy', '9 anos', 'Cachorro', 'Shih Tzu', 'Raças Pequenas', NULL, TRUE, 20, 21);
 
 INSERT INTO post_adocao
 (titulo, foto, descricao, id_cliente)
 VALUES
-('Adoção de um gatinho', NULL, 'Estamos procurando um lar para um gatinho adorável!', 1);
+('cão branco e marrom no colo da sua nova dona', NULL, 'Esse é o Téo, adotado por uma família e demonstrando sua alegria!', 1),
+('cão caramelo no colo da sua nova dona', NULL, 'Tonico, sem "Auu..lavras" para expressar a gratidão!', 1),
+('gato amarelo no colo da sua nova dona', NULL, 'Amarelinho também foi adotado! Depois de alguns meses na tentativa, finalmente encontramos uma dona.', 1),
+('um gato cinza e um gato amarelo no colo da sua nova dona', NULL, 'Quem disse que irmãos não podem ser diferentes? Manu e Cleo foram adotadas e vivem como uma família.', 1),
+('cão idoso caramelo com sua nova dona', NULL, 'Finalmente foi adotada aos 14 anos! Senhorinha, como foi carinhosamente chamada pela dona, demonstra gratidão em cada olhar.', 1),
+('gato amarelo no colo da sua nova dona', NULL, 'A tranquilidade de Cacau em sua nova casa. Adotada recentemente e curtindo a nova vida.', 1),
+('gato amarelo no colo da sua nova dona', NULL, 'Muito feliz na sua nova casa! Clarinha com poucas semanas de vida ganhou um novo lar.', 1),
+('2 cachorros amarelos e 1 cachorro preto', NULL, 'Quem disse que uma familia não pode ser adotada? Mel, Lara e Perola são um exemplo disso.', 1);
+
 
 INSERT INTO depoimento
 (foto, estrelas, descricao, id_cliente)
@@ -356,7 +426,7 @@ VALUES
 ('Chalesco');
 
 INSERT INTO produto
-(descricao, para_pets, tamanho_raca, quantidade, preco, id_marca)
+(descricao, para_pets, tamanho_raca, qtd_estoque, preco, id_marca)
 VALUES
 ('Ração 15 Kg', 'Para Cães Adultos', 'Raças Grandes', 0, 169.90, 1),
 ('Ração 15 Kg', 'Para Cães Filhotes', 'Raças Grandes', 0, 179.90, 1),
@@ -415,3 +485,5 @@ SELECT * FROM marca;
 SELECT * FROM produto;
 SELECT * FROM compra;
 SELECT * FROM venda;
+
+
