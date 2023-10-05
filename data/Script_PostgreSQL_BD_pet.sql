@@ -39,6 +39,8 @@ CREATE TABLE representante (
   PRIMARY KEY (id_representante),
   CONSTRAINT fk_login_tb_representante 
   FOREIGN KEY (id_login) REFERENCES login(id_login)
+  ON UPDATE CASCADE
+  ON DELETE CASCADE
 );
 
 CREATE TABLE telefone (
@@ -51,6 +53,8 @@ CREATE TABLE telefone (
   CONSTRAINT fk_representante_tb_telefone
   FOREIGN KEY (id_representante)
   REFERENCES representante(id_representante)
+  ON UPDATE CASCADE
+  ON DELETE CASCADE
 );
 
 CREATE TABLE fornecedor (
@@ -58,13 +62,15 @@ CREATE TABLE fornecedor (
   CNPJ CHAR(15) NOT NULL,
   nome VARCHAR(50) NOT NULL,
   id_representante INT NOT NULL,
+  CONSTRAINT unique_CNPJ_tb_fornecedor
+  UNIQUE (CNPJ),
   CONSTRAINT pk_fornecedor
   PRIMARY KEY (id_fornecedor),
   CONSTRAINT fk_representante_tb_fornecedor
   FOREIGN KEY (id_representante)
-  REFERENCES representante(id_representante),
-  CONSTRAINT unique_CNPJ_tb_fornecedor
-  UNIQUE (CNPJ)
+  REFERENCES representante(id_representante)
+  ON UPDATE CASCADE
+  ON DELETE CASCADE
 );
 
 CREATE TABLE marca (
@@ -89,6 +95,8 @@ CREATE TABLE produto (
   PRIMARY KEY (id_produto),
   CONSTRAINT fk_marca_tb_produto
   FOREIGN KEY (id_marca) REFERENCES marca(id_marca)
+  ON UPDATE CASCADE
+  ON DELETE CASCADE
 );
 
 CREATE TABLE compra (
@@ -102,9 +110,13 @@ CREATE TABLE compra (
   CONSTRAINT pk_compra
   PRIMARY KEY (id_fornecedor, id_produto, nota_fiscal),
   CONSTRAINT fk_fornecedor_tb_compra
-  FOREIGN key (id_fornecedor) REFERENCES fornecedor(id_fornecedor),
+  FOREIGN key (id_fornecedor) REFERENCES fornecedor(id_fornecedor)
+  ON UPDATE CASCADE
+  ON DELETE CASCADE,
   CONSTRAINT fk_produto_tb_compra
   FOREIGN KEY (id_produto) REFERENCES produto(id_produto)
+  ON UPDATE CASCADE
+  ON DELETE CASCADE
 );
 
 CREATE TABLE cliente (
@@ -112,12 +124,14 @@ CREATE TABLE cliente (
   CPF CHAR(11) NOT NULL,
   sexo valid_sexo_enum NOT NULL,
   id_representante INT NOT NULL,
+  CONSTRAINT unique_cpf_tb_cliente
+  UNIQUE (CPF),
   CONSTRAINT pk_cliente
   PRIMARY KEY (id_cliente),
   CONSTRAINT fk_representante_tb_cliente
-  FOREIGN KEY (id_representante) REFERENCES representante(id_representante),
-  CONSTRAINT unique_cpf_tb_cliente
-  UNIQUE (CPF)
+  FOREIGN KEY (id_representante) REFERENCES representante(id_representante)
+  ON UPDATE CASCADE
+  ON DELETE CASCADE
 );
 
 CREATE TABLE venda (
@@ -131,9 +145,13 @@ CREATE TABLE venda (
   CONSTRAINT pk_venda
   PRIMARY KEY (id_cliente, id_produto, nota_fiscal),
   CONSTRAINT fk_cliente_tb_venda
-  FOREIGN KEY (id_cliente) REFERENCES cliente(id_cliente),
+  FOREIGN KEY (id_cliente) REFERENCES cliente(id_cliente)
+  ON UPDATE CASCADE
+  ON DELETE CASCADE,
   CONSTRAINT fk_produto_tb_venda
   FOREIGN KEY (id_produto) REFERENCES produto(id_produto)
+  ON UPDATE CASCADE
+  ON DELETE CASCADE
 );
 
 CREATE TABLE depoimento (
@@ -147,6 +165,8 @@ CREATE TABLE depoimento (
   PRIMARY KEY (id_depoimento),
   CONSTRAINT fk_cliente_tb_depoimento
   FOREIGN KEY (id_cliente) REFERENCES cliente(id_cliente)
+  ON UPDATE CASCADE
+  ON DELETE CASCADE
 );
 
 CREATE TABLE post_adocao (
@@ -159,6 +179,8 @@ CREATE TABLE post_adocao (
   PRIMARY KEY (id_post_adocao),
   CONSTRAINT fk_cliente_tb_post_adocao
   FOREIGN KEY (id_cliente) REFERENCES cliente(id_cliente)
+  ON UPDATE CASCADE
+  ON DELETE CASCADE
 );
 
 CREATE TABLE ong (
@@ -167,12 +189,14 @@ CREATE TABLE ong (
   nome VARCHAR(100) NOT NULL,
   link_logo VARCHAR(255),
   id_representante INT NOT NULL,
+  CONSTRAINT unique_cnpj_tb_ong
+  UNIQUE (CNPJ),
   CONSTRAINT pk_ong
   PRIMARY KEY (id_ong),
   CONSTRAINT fk_representante_tb_ong
-  FOREIGN KEY (id_representante) REFERENCES representante(id_representante),
-  CONSTRAINT unique_cnpj_tb_ong
-  UNIQUE (CNPJ)
+  FOREIGN KEY (id_representante) REFERENCES representante(id_representante)
+  ON UPDATE CASCADE
+  ON DELETE CASCADE
 );
 
 CREATE TABLE pet (
@@ -189,9 +213,13 @@ CREATE TABLE pet (
   CONSTRAINT pk_pet
   PRIMARY KEY (id_pet),
   CONSTRAINT fk_ong_tb_pet
-  FOREIGN KEY (id_ong) REFERENCES ong(id_ong),
+  FOREIGN KEY (id_ong) REFERENCES ong(id_ong)
+  ON UPDATE CASCADE
+  ON DELETE CASCADE,
   CONSTRAINT fk_cliente_tb_pet
   FOREIGN KEY (id_cliente) REFERENCES cliente(id_cliente)
+  ON UPDATE CASCADE
+  ON DELETE CASCADE
 );
 
 CREATE TABLE post_ong (
@@ -204,6 +232,8 @@ CREATE TABLE post_ong (
   PRIMARY KEY (id_post_ong),
   CONSTRAINT fk_ong_tb_post_ong
   FOREIGN KEY (id_ong) REFERENCES ong(id_ong)
+  ON UPDATE CASCADE
+  ON DELETE CASCADE
 );
 
 -- TRIGGER - COMPRA
@@ -227,7 +257,7 @@ AFTER INSERT ON compra
 FOR EACH ROW
 EXECUTE FUNCTION realizar_compra();
 
--- TRIGGER - VENDA
+-- TRIGGER - VENDA 
 
 -- Função Realizar Venda
 CREATE OR REPLACE FUNCTION realizar_venda()
