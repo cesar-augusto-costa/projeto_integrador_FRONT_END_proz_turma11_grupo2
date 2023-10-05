@@ -99,21 +99,21 @@ CREATE TABLE produto (
   ON DELETE CASCADE
 );
 
-CREATE TABLE compra (
+CREATE TABLE venda (
   id_fornecedor SMALLINT NOT NULL,
   id_produto INT NOT NULL,
   nota_fiscal INT NOT NULL,
-  data_compra DATE NOT NULL,
+  data_venda DATE NOT NULL,
   quantidade_produto SMALLINT NOT NULL DEFAULT 1,
   valor_unitario NUMERIC(6,2) NOT NULL,
   CHECK (quantidade_produto > 0), 
-  CONSTRAINT pk_compra
+  CONSTRAINT pk_venda
   PRIMARY KEY (id_fornecedor, id_produto, nota_fiscal),
-  CONSTRAINT fk_fornecedor_tb_compra
+  CONSTRAINT fk_fornecedor_tb_venda
   FOREIGN key (id_fornecedor) REFERENCES fornecedor(id_fornecedor)
   ON UPDATE CASCADE
   ON DELETE CASCADE,
-  CONSTRAINT fk_produto_tb_compra
+  CONSTRAINT fk_produto_tb_venda
   FOREIGN KEY (id_produto) REFERENCES produto(id_produto)
   ON UPDATE CASCADE
   ON DELETE CASCADE
@@ -134,21 +134,21 @@ CREATE TABLE cliente (
   ON DELETE CASCADE
 );
 
-CREATE TABLE venda (
+CREATE TABLE compra (
   id_cliente INT NOT NULL,
   id_produto INT NOT NULL,
   nota_fiscal INT NOT NULL,
-  data_venda DATE,
+  data_compra DATE,
   quantidade_produto SMALLINT NOT NULL DEFAULT 1,
   valor_unitario NUMERIC(6,2),
   CHECK (quantidade_produto > 0),
-  CONSTRAINT pk_venda
+  CONSTRAINT pk_compra
   PRIMARY KEY (id_cliente, id_produto, nota_fiscal),
-  CONSTRAINT fk_cliente_tb_venda
+  CONSTRAINT fk_cliente_tb_compra
   FOREIGN KEY (id_cliente) REFERENCES cliente(id_cliente)
   ON UPDATE CASCADE
   ON DELETE CASCADE,
-  CONSTRAINT fk_produto_tb_venda
+  CONSTRAINT fk_produto_tb_compra
   FOREIGN KEY (id_produto) REFERENCES produto(id_produto)
   ON UPDATE CASCADE
   ON DELETE CASCADE
@@ -244,7 +244,7 @@ RETURNS TRIGGER AS $$
 BEGIN
   -- Atualiza a quantidade de produtos após uma compra
   UPDATE produto
-  SET qtd_estoque = qtd_estoque + NEW.quantidade_produto
+  SET qtd_estoque = qtd_estoque - NEW.quantidade_produto
   WHERE id_produto = NEW.id_produto;
 
   RETURN NEW;
@@ -265,7 +265,7 @@ RETURNS TRIGGER AS $$
 BEGIN
   -- Atualiza a quantidade de produtos após uma venda
   UPDATE produto
-  SET qtd_estoque = qtd_estoque - NEW.quantidade_produto
+  SET qtd_estoque = qtd_estoque + NEW.quantidade_produto
   WHERE id_produto = NEW.id_produto;
 
   RETURN NEW;
@@ -278,31 +278,31 @@ BEFORE INSERT ON venda
 FOR EACH ROW
 EXECUTE FUNCTION realizar_venda();
 
--- TRIGGER - VENDA SEM PREJUIZO
+-- TRIGGER - COMPRA DO CLIENTE SEM PREJUIZO PARA O PETSHOP
 
--- Criação da função para verificar o valor da venda
-CREATE OR REPLACE FUNCTION verificar_valor_venda()
+-- Criação da função para verificar o valor da compra
+CREATE OR REPLACE FUNCTION verificar_valor_compra()
 RETURNS TRIGGER AS $$
 BEGIN
-  -- Verifica se o valor unitário da venda é menor do que o valor unitário da compra correspondente
+  -- Verifica se o valor unitário da compra é menor do que o valor unitário da venda correspondente
   IF EXISTS (
     SELECT 1
-    FROM compra
+    FROM venda
     WHERE id_produto = NEW.id_produto
       AND valor_unitario > NEW.valor_unitario
   ) THEN
-    RAISE EXCEPTION 'Não é permitido vender o produto por um valor unitário menor do que o da compra.';
+    RAISE EXCEPTION 'Não é permitido comprar o produto por um valor unitário menor do que o da venda.';
   END IF;
 
   RETURN NEW;
 END;
 $$ LANGUAGE plpgsql;
 
--- Criação da Trigger para a tabela de vendas
-CREATE OR REPLACE TRIGGER verificar_valor_venda_trigger
-BEFORE INSERT ON venda
+-- Criação da Trigger para a tabela de compras
+CREATE OR REPLACE TRIGGER verificar_valor_compra_trigger
+BEFORE INSERT ON compra
 FOR EACH ROW
-EXECUTE FUNCTION verificar_valor_venda();
+EXECUTE FUNCTION verificar_valor_compra();
 
 -- EXCLUIR TABELAS
 
@@ -477,13 +477,13 @@ VALUES
 ('Brinquedo Bolas Catnip', 'Para Gatos', 'Todas as Raças', 0, 29.99, 13),
 ('Brinquedo Bolas Catnip', 'Para Gatos', 'Todas as Raças', 0, 29.99, 13);
 
-INSERT INTO compra
-(id_fornecedor, id_produto, nota_fiscal, data_compra, quantidade_produto, valor_unitario)
+INSERT INTO venda
+(id_fornecedor, id_produto, nota_fiscal, data_venda, quantidade_produto, valor_unitario)
 VALUES
 (1, 1, 1002, '2023-09-28', 5, 10.50);
 
-INSERT INTO venda
-(id_cliente, id_produto, nota_fiscal, data_venda, quantidade_produto, valor_unitario)
+INSERT INTO compra
+(id_cliente, id_produto, nota_fiscal, data_compra, quantidade_produto, valor_unitario)
 VALUES
 (1, 1, 2001, '2023-09-29', 3, 15.75),
 (1, 1, 2002, '2023-09-29', 3, 15.75);
@@ -516,4 +516,140 @@ SELECT * FROM produto;
 SELECT * FROM compra;
 SELECT * FROM venda;
 
+-- CONSULTAS SIMPLES
 
+-- Listar todos os clientes do sexo feminino (gênero 'F'):
+SELECT nome_completo
+FROM cliente
+WHERE sexo = 'F';
+
+-- Listar todos os produtos com um preço superior a R$ 50,00:
+SELECT descricao, preco
+FROM produto
+WHERE preco > 50.00;
+
+-- Listar todos os produtos para cães adultos com estoque maior que 10 unidades:
+SELECT descricao, para_pets, qtd_estoque
+FROM produto
+WHERE para_pets = 'Para Cães Adultos' AND qtd_estoque > 10;
+
+-- Listar todos os representantes que não estão localizados no Brasil:
+SELECT nome_completo, pais
+FROM representante
+WHERE pais <> 'Brasil';
+
+-- Listar todas as marcas de produtos que têm a palavra 'Pet' em seu nome:
+SELECT marca
+FROM marca
+WHERE marca LIKE '%Pet%';
+
+-- Listar todos os representantes que têm um CEP definido:
+SELECT nome_completo
+FROM representante
+WHERE CEP IS NOT NULL;
+
+-- Listar todos os produtos disponíveis para gatos:
+SELECT descricao, para_pets
+FROM produto
+WHERE para_pets LIKE 'Para Gatos%';
+
+-- Listar todos os representantes que estão localizados em São Paulo (estado 'SP'):
+SELECT nome_completo, cidade, estado
+FROM representante
+WHERE estado = 'SP';
+
+-- Listar todos os depoimentos com 5 estrelas:
+SELECT estrelas, descricao
+FROM depoimento
+WHERE estrelas = 5.0;
+
+-- Listar todas as compras feitas em setembro de 2023:
+SELECT nota_fiscal, data_compra
+FROM compra
+WHERE EXTRACT(YEAR FROM data_compra) = 2023 AND EXTRACT(MONTH FROM data_compra) = 9;
+
+-- Listar todos os pets disponíveis para adoção:
+SELECT nome, tipo_pet, disponivel
+FROM pet
+WHERE disponivel = TRUE;
+
+-- Listar todos os produtos com estoque zerado:
+SELECT descricao, qtd_estoque
+FROM produto
+WHERE qtd_estoque = 0;
+
+-- Listar todos os produtos com uma descrição que contenha a palavra 'Ração':
+SELECT descricao
+FROM produto
+WHERE descricao LIKE '%Ração%';
+
+-- Listar os produtos em estoque com quantidade maior que zero:
+SELECT descricao, qtd_estoque
+FROM produto
+WHERE qtd_estoque > 0;
+
+-- Listar os produtos em estoque com quantidade maior que zero dando um apelido para a tabela:
+SELECT p.descricao, p.qtd_estoque
+FROM produto p
+WHERE p.qtd_estoque > 0;
+
+-- CONSULTAS ORDENADAS
+
+-- Listar todas as marcas de produtos em ordem alfabética:
+SELECT marca
+FROM marca
+ORDER BY marca;
+
+-- Mostrar o valor total da nota:
+SELECT nota_fiscal, SUM(quantidade_produto * valor_unitario) AS total_da_nota
+FROM compra
+WHERE nota_fiscal = 1000
+GROUP BY nota_fiscal;
+
+-- CONSULTAS COM SUBCONSULTAS
+
+-- Listar todos os clientes que não têm um pet associado a eles:
+SELECT nome_completo
+FROM cliente
+WHERE id_cliente NOT IN (SELECT DISTINCT id_cliente FROM pet);
+
+-- Listar todas as compras feitas por um fornecedor específico (por CNPJ):
+SELECT nota_fiscal, data_compra
+FROM compra
+WHERE id_fornecedor = (SELECT id_fornecedor FROM fornecedor WHERE CNPJ = '060787124000190');
+
+-- CONSULTAS COM JOIN
+
+-- Listar todos os clientes que adotaram pelo menos um pet:
+SELECT DISTINCT c.nome_completo
+FROM cliente c
+JOIN pet p ON c.id_cliente = p.id_cliente;
+
+-- Listar todos os representantes e seus respectivos telefones:
+SELECT r.nome_completo, t.telefone
+FROM representante r
+JOIN telefone t ON r.id_representante = t.id_representante;
+
+-- Listar todos os produtos de uma marca específica:
+SELECT p.descricao, p.para_pets, p.preco
+FROM produto p
+JOIN marca m ON p.id_marca = m.id_marca
+WHERE m.marca = 'Golden Mega';
+
+-- Listar todos os depoimentos de um cliente:
+SELECT d.estrelas, d.descricao
+FROM depoimento d
+JOIN cliente c ON d.id_cliente = c.id_cliente
+WHERE c.CPF = '12345678901';
+
+-- Listar todas as compras feitas por um fornecedor específico:
+SELECT c.nota_fiscal, c.data_compra, p.descricao, c.quantidade_produto, c.valor_unitario
+FROM compra c
+JOIN produto p ON c.id_produto = p.id_produto
+WHERE c.id_fornecedor = 1;
+
+-- Listar todas as vendas feitas para um cliente específico:
+SELECT v.nota_fiscal, v.data_venda, p.descricao, v.quantidade_produto, v.valor_unitario
+FROM venda v
+JOIN produto p ON v.id_produto = p.id_produto
+WHERE v.id_cliente = 1;
