@@ -533,6 +533,39 @@ VALUES
   (1, 1, 2001, '2023-09-29', 3, 30.75),
   (1, 1, 2002, '2023-09-29', 3, 15.75);
 
+insert into cliente (CPF, sexo, id_representante) values ('37360160412', 'F', 1);
+insert into cliente (CPF, sexo, id_representante) values ('53261349314', 'F', 2);
+insert into cliente (CPF, sexo, id_representante) values ('42731752714', 'M', 3);
+insert into cliente (CPF, sexo, id_representante) values ('41880780114', 'M', 4);
+insert into cliente (CPF, sexo, id_representante) values ('47107593911', 'F', 5);
+insert into cliente (CPF, sexo, id_representante) values ('75768755412', 'F', 6);
+insert into cliente (CPF, sexo, id_representante) values ('88193147710', 'F', 7);
+insert into cliente (CPF, sexo, id_representante) values ('28836645316', 'F', 8);
+insert into cliente (CPF, sexo, id_representante) values ('52691295017', 'F', 9);
+insert into cliente (CPF, sexo, id_representante) values ('72913102012', 'M', 10);
+insert into cliente (CPF, sexo, id_representante) values ('70146562610', 'F', 11);
+insert into cliente (CPF, sexo, id_representante) values ('80454985719', 'F', 12);
+insert into cliente (CPF, sexo, id_representante) values ('68909750517', 'F', 13);
+insert into cliente (CPF, sexo, id_representante) values ('49050195911', 'M', 14);
+insert into cliente (CPF, sexo, id_representante) values ('08940480518', 'F', 15);
+insert into cliente (CPF, sexo, id_representante) values ('17487524810', 'M', 16);
+insert into cliente (CPF, sexo, id_representante) values ('14553508216', 'M', 17);
+insert into cliente (CPF, sexo, id_representante) values ('81822183615', 'M', 18);
+insert into cliente (CPF, sexo, id_representante) values ('69301728613', 'F', 19);
+insert into cliente (CPF, sexo, id_representante) values ('63680910110', 'M', 20);
+
+insert into representante (nome_completo, CEP, tipo_logradouro, logradouro, num, complemento, bairro, cidade, estado, pais, id_login) values ('Paulo Ricardo da Silva', '02030-110', 'Rua', 'Santa Luzia', '343', 'Casa', 'Iguatemi', 'São Paulo', 'SP', 'Brasil', 1);
+insert into representante (nome_completo, CEP, tipo_logradouro, logradouro, num, complemento, bairro, cidade, estado, pais, id_login) values ('José de Freitas', '09020-230', 'Rua', 'Castro Alves', '125', 'Casa', 'Osasco', 'São Paulo', 'SP', 'Brasil', 2);
+insert into representante (nome_completo, CEP, tipo_logradouro, logradouro, num, complemento, bairro, cidade, estado, pais, id_login) values ('Beatriz de Souza', '01456-660', 'Alameda', 'Santos Dumont', '306', 'Casa', 'Santana', 'São Paulo', 'SP', 'Brasil', 3);
+insert into representante (nome_completo, CEP, tipo_logradouro, logradouro, num, complemento, bairro, cidade, estado, pais, id_login) values ('Viviane de Oliveira', '78925-220', 'Rua', 'Das Flores', '36', 'Casa', 'Itaquera', 'São Paulo', 'SP', 'Brasil', 4);
+insert into representante (nome_completo, CEP, tipo_logradouro, logradouro, num, complemento, bairro, cidade, estado, pais, id_login) values ('Rogerio Assunção', '65412-888', 'Avenida', 'Narciso Silva', '85', 'Apto 1', 'Moema', 'São Paulo', 'SP', 'Brasil', 5);
+insert into representante (nome_completo, CEP, tipo_logradouro, logradouro, num, complemento, bairro, cidade, estado, pais, id_login) values ('Osvaldo Nascimento', '84567-842', 'Rua', 'Alaide Cerdá Breá', '208', 'Casa', 'Santo Amaro', 'São Paulo', 'SP', 'Brasil', 6);
+insert into representante (nome_completo, CEP, tipo_logradouro, logradouro, num, complemento, bairro, cidade, estado, pais, id_login) values ('Paloma Vieira', '75892-666', 'Alameda', 'Rio das Pedras', '25', 'Apto 225', 'Pinheiros', 'São Paulo', 'SP', 'Brasil', 7);
+insert into representante (nome_completo, CEP, tipo_logradouro, logradouro, num, complemento, bairro, cidade, estado, pais, id_login) values ('Bruno Olegario', '65321-145', 'Rua', 'Barão de Itapetininga', '869', 'Casa', 'Brás', 'São Paulo', 'SP', 'Brasil', 8);
+insert into representante (nome_completo, CEP, tipo_logradouro, logradouro, num, complemento, bairro, cidade, estado, pais, id_login) values ('Leticia da Silva', '23541-689', 'Rua', 'Cambuci', '22', 'Casa', 'Perdizes', 'São Paulo', 'SP', 'Brasil', 9);
+insert into representante (nome_completo, CEP, tipo_logradouro, logradouro, num, complemento, bairro, cidade, estado, pais, id_login) values ('Carlos Nascimento', '42589-222', 'Rua', 'Gasometro', '98', 'Casa', 'Itaquaquecetuba', 'São Paulo', 'SP', 'Brasil', 10);
+
+
 -- CONSULTAS
 
 -- Mostrar todas as tabelas
