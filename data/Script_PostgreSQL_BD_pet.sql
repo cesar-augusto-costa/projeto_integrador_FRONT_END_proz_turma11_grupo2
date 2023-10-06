@@ -564,7 +564,7 @@ SELECT * FROM venda;
 -- CONSULTAS SIMPLES
 
 -- Listar todos os clientes do sexo feminino (gênero 'F'):
-SELECT nome_completo
+SELECT *
 FROM cliente
 WHERE sexo = 'F';
 
@@ -573,10 +573,10 @@ SELECT descricao, preco
 FROM produto
 WHERE preco > 50.00;
 
--- Listar todos os produtos para cães adultos com estoque maior que 10 unidades:
+-- Listar todos os produtos para cães adultos com estoque maior que 4 unidades:
 SELECT descricao, para_pets, qtd_estoque
 FROM produto
-WHERE para_pets = 'Para Cães Adultos' AND qtd_estoque > 10;
+WHERE para_pets = 'Para Cães Adultos' AND qtd_estoque > 4;
 
 -- Listar todos os representantes que não estão localizados no Brasil:
 SELECT nome_completo, pais
@@ -594,9 +594,13 @@ FROM representante
 WHERE CEP IS NOT NULL;
 
 -- Listar todos os produtos disponíveis para gatos:
-SELECT descricao, para_pets
+SELECT *
 FROM produto
-WHERE para_pets LIKE 'Para Gatos%';
+WHERE para_pets::VARCHAR LIKE 'Para Gatos%';
+
+SELECT *
+FROM produto
+WHERE para_pets = 'Para Gatos';
 
 -- Listar todos os representantes que estão localizados em São Paulo (estado 'SP'):
 SELECT nome_completo, cidade, estado
