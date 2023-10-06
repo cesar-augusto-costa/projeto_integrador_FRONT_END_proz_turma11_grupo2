@@ -308,7 +308,7 @@ ROW
 EXECUTE FUNCTION realizar_venda
 ();
 
--- TRIGGER - COMPRA DO CLIENTE SEM PREJUIZO PARA O PETSHOP
+-- TRIGGER - COMPRA DO CLIENTE SEM PREJUIZO PARA O PETSHOP consultando um produto qualquer vendido pelo fornecedor
 
 -- Criação da função para verificar o valor da compra
 CREATE OR REPLACE FUNCTION verificar_valor_compra
@@ -340,6 +340,33 @@ EACH
 ROW
 EXECUTE FUNCTION verificar_valor_compra
 ();
+
+-- TRIGGER - COMPRA DO CLIENTE SEM PREJUIZO PARA O PETSHOP consultando o maior preço do produto vendido pelo fornecedor
+
+-- Criação da função para verificar maior valor da venda
+CREATE OR REPLACE FUNCTION verificar_maior_valor_venda()
+RETURNS TRIGGER AS $$
+BEGIN
+  -- Verifica o valor unitário da última venda ordenada pelo valor unitário
+  SELECT INTO NEW.valor_unitario_venda_max
+  MAX(valor_unitario)
+  FROM venda
+  WHERE id_produto = NEW.id_produto;
+
+  -- Verifica se o valor unitário da compra é menor do que o valor da última venda
+  IF NEW.valor_unitario < NEW.valor_unitario_venda_max THEN
+    RAISE EXCEPTION 'Não é permitido comprar o produto por um valor unitário menor do que o da última venda.';
+  END IF;
+
+  RETURN NEW;
+END;
+$$ LANGUAGE plpgsql;
+
+-- Criação da Trigger para a tabela de compras
+CREATE OR REPLACE TRIGGER verificar_maior_valor_venda_trigger
+BEFORE INSERT ON compra
+FOR EACH ROW
+EXECUTE FUNCTION verificar_maior_valor_venda();
 
 -- EXCLUIR TABELAS
 
@@ -719,3 +746,219 @@ SELECT v.nota_fiscal, v.data_venda, p.descricao, v.quantidade_produto, v.valor_u
 FROM venda v
   JOIN produto p ON v.id_produto = p.id_produto
 WHERE v.id_cliente = 1;
+
+-- CONSULTAS COM GROUP BY E HAVING
+
+-- Listar todas as marcas de produtos e a quantidade de produtos de cada marca:
+SELECT m.marca, COUNT(p.id_produto) AS quantidade_de_produtos
+FROM marca m
+JOIN produto p ON m.id_marca = p.id_marca
+GROUP BY m.marca
+ORDER BY quantidade_de_produtos DESC;
+
+-- Listar todas as marcas de produtos que têm pelo menos 3 produtos:
+SELECT m.marca, COUNT(p.id_produto) AS quantidade_de_produtos
+FROM marca m
+JOIN produto p ON m.id_marca = p.id_marca
+GROUP BY m.marca
+HAVING COUNT(p.id_produto) >= 3
+ORDER BY quantidade_de_produtos DESC;
+
+-- Listar todos os clientes que adotaram pelo menos 2 pets:
+SELECT c.nome_completo, COUNT(p.id_pet) AS quantidade_de_pets_adotados
+FROM cliente c
+JOIN pet p ON c.id_cliente = p.id_cliente
+GROUP BY c.nome_completo
+HAVING COUNT(p.id_pet) >= 2
+ORDER BY quantidade_de_pets_adotados DESC;
+
+-- Listar todas as compras feitas em que o valor total da nota seja superior a R$ 100,00:
+SELECT nota_fiscal, SUM(quantidade_produto * valor_unitario) AS total_da_nota
+FROM compra
+GROUP BY nota_fiscal
+HAVING SUM(quantidade_produto * valor_unitario) > 100.00
+ORDER BY total_da_nota;
+
+-- CONSULTAS COM JOINS E SUBCONSULTAS
+
+-- Listar todos os produtos comprados por um cliente específico (por CPF):
+SELECT p.descricao, c.CPF
+FROM compra co
+JOIN cliente c ON co.id_cliente = c.id_cliente
+JOIN produto p ON co.id_produto = p.id_produto
+WHERE c.CPF = '12345678901';
+
+-- Listar todos os depoimentos de clientes que adotaram pelo menos um pet:
+SELECT d.estrelas, d.descricao
+FROM depoimento d
+JOIN cliente c ON d.id_cliente = c.id_cliente
+WHERE c.id_cliente IN (SELECT DISTINCT id_cliente
+FROM pet);
+
+-- Listar todos os pets adotados por um cliente específico (por CPF):
+SELECT p.nome, c.CPF
+FROM pet p
+JOIN cliente c ON p.id_cliente = c.id_cliente
+WHERE c.CPF = '12345678901';
+
+-- Listar todos os produtos comprados por clientes que adotaram pets do tipo 'Cachorro':
+SELECT DISTINCT p.descricao
+FROM compra co
+JOIN cliente c ON co.id_cliente = c.id_cliente
+JOIN pet p ON c.id_cliente = p.id_cliente
+WHERE p.tipo_pet = 'Cachorro';
+
+-- CONSULTAS COM MAIS DE UMA TABELA RELACIONADA
+
+-- Listar todos os representantes e seus telefones de contato, juntamente com os nomes das marcas de produtos que eles representam:
+SELECT r.nome_completo, t.telefone, m.marca
+FROM representante r
+JOIN telefone t ON r.id_representante = t.id_representante
+JOIN fornecedor f ON r.id_representante = f.id_representante
+JOIN marca m ON f.id_fornecedor = m.id_fornecedor;
+
+-- Listar todos os pets disponíveis para adoção juntamente com os nomes dos clientes que os adotaram:
+SELECT p.nome, c.nome_completo AS nome_do_adotante
+FROM pet p
+LEFT JOIN cliente c ON p.id_cliente = c.id_cliente
+WHERE p.disponivel = TRUE;
+
+-- Listar todos os depoimentos de clientes que adotaram pets, juntamente com os nomes dos pets adotados:
+SELECT d.descricao, p.nome AS nome_do_pet
+FROM depoimento d
+JOIN cliente c ON d.id_cliente = c.id_cliente
+JOIN pet p ON c.id_cliente = p.id_cliente;
+
+-- Listar todos os produtos comprados por clientes que adotaram pets, juntamente com os nomes dos pets adotados:
+SELECT p.descricao, co.nota_fiscal, co.id_cliente, c.CPF, pet.nome AS nome_do_pet
+FROM compra co
+JOIN cliente c ON co.id_cliente = c.id_cliente
+JOIN pet ON c.id_cliente = pet.id_cliente
+JOIN produto p ON co.id_produto = p.id_produto;
+
+-- CONSULTAS COM OPERAÇÕES DE DATA
+
+-- Listar todas as compras feitas em setembro de 2023:
+SELECT nota_fiscal, data_compra
+FROM compra
+WHERE EXTRACT(YEAR FROM data_compra) = 2023 AND EXTRACT(MONTH FROM data_compra) = 9;
+
+-- Listar todos os pets disponíveis para adoção que foram cadastrados no ano de 2023:
+SELECT nome, data_cadastro
+FROM pet
+WHERE EXTRACT
+
+-- CONSULTAS AVANÇADAS
+
+-- Seleciona o ID do pedido e o nome do cliente
+SELECT orders.order_id, customers.customer_name
+FROM orders
+INNER JOIN customers ON orders.customer_id = customers.customer_id
+WHERE orders.order_date BETWEEN '2023-01-01' AND '2023-12-31';
+
+-- Seleciona o nome e preço do produto com o preço máximo
+SELECT product_name, price
+FROM products
+WHERE price = (SELECT MAX(price) FROM products);
+
+-- Seleciona o departamento e o salário médio, filtrando departamentos com salário médio > $50.000
+SELECT department, AVG(salary) as avg_salary
+FROM employees
+GROUP BY department
+HAVING AVG(salary) > 50000;
+
+-- Seleciona o ID do funcionário, o nome do funcionário e o nome do departamento (se disponível)
+SELECT employees.employee_id, employees.employee_name, departments.department_name
+FROM employees
+LEFT JOIN departments ON employees.department_id = departments.department_id;
+
+-- Seleciona o nome e preço do produto, classificando por preço em ordem decrescente
+SELECT product_name, price
+FROM products
+ORDER BY price DESC;
+
+-- Seleciona o nome do cliente e o número de telefone (se não for nulo)
+SELECT customer_name, phone_number
+FROM customers
+WHERE phone_number IS NULL;
+
+-- Seleciona o nome completo (primeiro nome + sobrenome) e o e-mail em maiúsculas
+SELECT CONCAT(first_name, ' ', last_name) as full_name, UPPER(email) as upper_email
+FROM users;
+
+-- Seleciona o ID do pedido, a quantidade e um rótulo com base na quantidade
+SELECT order_id, quantity,
+       CASE
+           WHEN quantity > 10 THEN 'Muitos'
+           WHEN quantity > 5 THEN 'Alguns'
+           ELSE 'Poucos'
+       END as quantity_label
+FROM order_details;
+
+-- TRINAMENTO
+
+-- Consultas Simples:
+
+-- Listar todos os clientes do sexo feminino (gênero 'F').
+-- Listar todos os produtos com um preço superior a R$ 50,00.
+-- Listar todos os produtos para cães adultos com estoque maior que 10 unidades.
+-- Listar todos os representantes que não estão localizados no Brasil.
+-- Listar todas as marcas de produtos que têm a palavra 'Pet' em seu nome.
+-- Listar todos os representantes que têm um CEP definido.
+-- Listar todos os produtos disponíveis para gatos.
+-- Listar todos os representantes que estão localizados em São Paulo (estado 'SP').
+-- Listar todos os depoimentos com 5 estrelas.
+-- Listar todas as compras feitas em setembro de 2023.
+-- Listar todos os pets disponíveis para adoção.
+-- Listar todos os produtos com estoque zerado.
+-- Listar todos os produtos com uma descrição que contenha a palavra 'Ração'.
+-- Listar os produtos em estoque com quantidade maior que zero.
+-- Listar os produtos em estoque com quantidade maior que zero dando um apelido para a tabela.
+-- Consultas Ordenadas:
+
+-- Listar todas as marcas de produtos em ordem alfabética.
+-- Mostrar o valor total da nota.
+-- Consultas com Subconsultas:
+
+-- Listar todos os clientes que não têm um pet associado a eles.
+-- Listar todas as compras feitas por um fornecedor específico (por CNPJ).
+-- Consultas com JOIN:
+
+-- Listar todos os clientes que adotaram pelo menos um pet.
+-- Listar todos os representantes e seus respectivos telefones.
+-- Listar todos os produtos de uma marca específica.
+-- Listar todos os depoimentos de um cliente.
+-- Listar todas as compras feitas por um fornecedor específico.
+-- Listar todas as vendas feitas para um cliente específico.
+-- Consultas com GROUP BY e HAVING:
+
+-- Listar todas as marcas de produtos e a quantidade de produtos de cada marca.
+-- Listar todas as marcas de produtos que têm pelo menos 3 produtos.
+-- Listar todos os clientes que adotaram pelo menos 2 pets.
+-- Listar todas as compras feitas em que o valor total da nota seja superior a R$ 100,00.
+-- Consultas com Joins e Subconsultas:
+
+-- Listar todos os produtos comprados por um cliente específico (por CPF).
+-- Listar todos os depoimentos de clientes que adotaram pelo menos um pet.
+-- Listar todos os pets adotados por um cliente específico (por CPF).
+-- Listar todos os produtos comprados por clientes que adotaram pets do tipo 'Cachorro'.
+-- Consultas com Mais de Uma Tabela Relacionada:
+
+-- Listar todos os representantes e seus telefones de contato, juntamente com os nomes das marcas de produtos que eles representam.
+-- Listar todos os pets disponíveis para adoção juntamente com os nomes dos clientes que os adotaram.
+-- Listar todos os depoimentos de clientes que adotaram pets, juntamente com os nomes dos pets adotados.
+-- Listar todos os produtos comprados por clientes que adotaram pets, juntamente com os nomes dos pets adotados.
+-- Consultas com Operações de Data:
+
+-- Listar todas as compras feitas em setembro de 2023.
+-- Listar todos os pets disponíveis para adoção que foram cadastrados no ano de 2023.
+-- Consultas Avançadas:
+
+-- Selecionar o ID do pedido e o nome do cliente.
+-- Selecionar o nome e preço do produto com o preço máximo.
+-- Selecionar o departamento e o salário médio, filtrando departamentos com salário médio > $50.000.
+-- Selecionar o ID do funcionário, o nome do funcionário e o nome do departamento (se disponível).
+-- Selecionar o nome e preço do produto, classificando por preço em ordem decrescente.
+-- Selecionar o nome do cliente e o número de telefone (se não for nulo).
+-- Selecionar o nome completo (primeiro nome + sobrenome) e o e-mail em maiúsculas.
+-- Selecionar o ID do pedido, a quantidade e um rótulo com base na quantidade.
