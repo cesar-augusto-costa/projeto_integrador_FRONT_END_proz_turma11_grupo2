@@ -308,7 +308,7 @@ ROW
 EXECUTE FUNCTION realizar_venda
 ();
 
--- TRIGGER - COMPRA DO CLIENTE SEM PREJUIZO PARA O PETSHOP consultando um produto qualquer vendido pelo fornecedor
+-- TRIGGER - COMPRA DO CLIENTE SEM PREJUIZO PARA O PETSHOP
 
 -- Criação da função para verificar o valor da compra
 CREATE OR REPLACE FUNCTION verificar_valor_compra
@@ -340,33 +340,6 @@ EACH
 ROW
 EXECUTE FUNCTION verificar_valor_compra
 ();
-
--- TRIGGER - COMPRA DO CLIENTE SEM PREJUIZO PARA O PETSHOP consultando o maior preço do produto vendido pelo fornecedor
-
--- Criação da função para verificar maior valor da venda
-CREATE OR REPLACE FUNCTION verificar_maior_valor_venda()
-RETURNS TRIGGER AS $$
-BEGIN
-  -- Verifica o valor unitário da última venda ordenada pelo valor unitário
-  SELECT INTO NEW.valor_unitario_venda_max
-  MAX(valor_unitario)
-  FROM venda
-  WHERE id_produto = NEW.id_produto;
-
-  -- Verifica se o valor unitário da compra é menor do que o valor da última venda
-  IF NEW.valor_unitario < NEW.valor_unitario_venda_max THEN
-    RAISE EXCEPTION 'Não é permitido comprar o produto por um valor unitário menor do que o da última venda.';
-  END IF;
-
-  RETURN NEW;
-END;
-$$ LANGUAGE plpgsql;
-
--- Criação da Trigger para a tabela de compras
-CREATE OR REPLACE TRIGGER verificar_maior_valor_venda_trigger
-BEFORE INSERT ON compra
-FOR EACH ROW
-EXECUTE FUNCTION verificar_maior_valor_venda();
 
 -- EXCLUIR TABELAS
 
@@ -444,7 +417,6 @@ VALUES
   ('060787004000190', 'ONG Suipa', NULL, 4),
   ('060787005000190', 'ONG Vira Lata', NULL, 5);
 
-
 INSERT INTO post_ong
   (titulo, foto, descricao, id_ong)
 VALUES
@@ -512,8 +484,6 @@ VALUES
   ('..\img/produtos/gato/racao/racao_gato_filhote.png', 4.0, 'Bom custo-benefício.', 4),
   ('..\img/produtos/cachorro/brinquedos/bolinha_interativa.png', 4.5, 'Atendimento excelente.', 5);
 
-
-
 INSERT INTO marca
   (marca)
 VALUES
@@ -550,7 +520,6 @@ VALUES
   ('Bifitos 30 g', 'Para Gatos', 'Todas as Raças', 0, 5.52, 11),
   ('Leite 220 ml', 'Para Gatos', 'Todas as Raças', 0, 12.99, 12),
   ('Brinquedo Ratinhos', 'Para Gatos', 'Todas as Raças', 0, 16.99, 13),
-  ('Brinquedo Bolas Catnip', 'Para Gatos', 'Todas as Raças', 0, 29.99, 13),
   ('Brinquedo Bolas Catnip', 'Para Gatos', 'Todas as Raças', 0, 29.99, 13);
 
 INSERT INTO venda
@@ -561,7 +530,7 @@ VALUES
 INSERT INTO compra
   (id_cliente, id_produto, nota_fiscal, data_compra, quantidade_produto, valor_unitario)
 VALUES
-  (1, 1, 2001, '2023-09-29', 3, 15.75),
+  (1, 1, 2001, '2023-09-29', 3, 30.75),
   (1, 1, 2002, '2023-09-29', 3, 15.75);
 
 -- CONSULTAS
@@ -577,34 +546,20 @@ FROM pg_catalog.pg_tables
 WHERE schemaname = 'public';
 
 -- Selecionar cada tabela
-SELECT *
-FROM login;
-SELECT *
-FROM representante;
-SELECT *
-FROM telefone;
-SELECT *
-FROM fornecedor;
-SELECT *
-FROM cliente;
-SELECT *
-FROM ong;
-SELECT *
-FROM post_ong;
-SELECT *
-FROM pet;
-SELECT *
-FROM post_adocao;
-SELECT *
-FROM depoimento;
-SELECT *
-FROM marca;
-SELECT *
-FROM produto;
-SELECT *
-FROM compra;
-SELECT *
-FROM venda;
+SELECT * FROM login;
+SELECT * FROM representante;
+SELECT * FROM telefone;
+SELECT * FROM fornecedor;
+SELECT * FROM cliente;
+SELECT * FROM ong;
+SELECT * FROM post_ong;
+SELECT * FROM pet;
+SELECT * FROM post_adocao;
+SELECT * FROM depoimento;
+SELECT * FROM marca;
+SELECT * FROM produto;
+SELECT * FROM compra;
+SELECT * FROM venda;
 
 -- CONSULTAS SIMPLES
 
