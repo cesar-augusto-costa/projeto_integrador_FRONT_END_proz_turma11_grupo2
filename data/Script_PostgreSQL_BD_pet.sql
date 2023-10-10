@@ -311,20 +311,23 @@ EXECUTE FUNCTION realizar_venda
 -- TRIGGER - COMPRA DO CLIENTE SEM PREJUIZO PARA O PETSHOP
 
 -- Criação da função para verificar o valor da compra
-CREATE OR REPLACE FUNCTION verificar_valor_compra
-()
+CREATE OR REPLACE FUNCTION verificar_valor_compra()
 RETURNS TRIGGER AS $$
 BEGIN
   -- Verifica se o valor unitário da compra é menor do que o valor unitário da venda correspondente
   IF EXISTS (
     SELECT 1
-  FROM venda
-  WHERE id_produto = NEW.id_produto
-    AND valor_unitario > NEW.valor_unitario
+    FROM venda
+    WHERE id_produto = NEW.id_produto
+      AND valor_unitario > NEW.valor_unitario
   ) THEN
-    RAISE EXCEPTION 'Não é permitido comprar o produto por um valor unitário menor do que o da venda.';
-END
-IF;
+    RAISE EXCEPTION 'Não é permitido comprar o produto por um valor unitário menor do que a da venda de R$ %.',
+      (SELECT valor_unitario
+       FROM venda
+       WHERE id_produto = NEW.id_produto
+         AND valor_unitario > NEW.valor_unitario
+       LIMIT 1);
+  END IF;
 
   RETURN NEW;
 END;
@@ -340,6 +343,35 @@ EACH
 ROW
 EXECUTE FUNCTION verificar_valor_compra
 ();
+
+-- TRIGGER - ATUALIZAR O VALOR DO PRODUTO EM 30%
+
+-- Criação da função para atualizar o valor do produto
+CREATE OR REPLACE FUNCTION atualizar_valor_produto()
+RETURNS TRIGGER AS $$
+DECLARE
+  novo_valor NUMERIC(6, 2);
+BEGIN
+  -- Calcula o novo valor do produto
+  novo_valor := NEW.valor_unitario * 1.3; -- Aumento de 30%
+
+  -- Verifica se o novo valor é maior que o valor atual na tabela produto
+  IF novo_valor > (SELECT preco FROM produto WHERE id_produto = NEW.id_produto) THEN
+    -- Atualiza o valor do produto
+    UPDATE produto
+    SET preco = novo_valor
+    WHERE id_produto = NEW.id_produto;
+  END IF;
+
+  RETURN NEW;
+END;
+$$ LANGUAGE plpgsql;
+
+-- Criação da Trigger para a tabela de compras
+CREATE OR REPLACE TRIGGER atualizar_valor_produto_trigger
+AFTER INSERT ON venda
+FOR EACH ROW
+EXECUTE FUNCTION atualizar_valor_produto();
 
 -- EXCLUIR TABELAS
 
