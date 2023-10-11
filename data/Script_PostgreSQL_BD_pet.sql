@@ -1,23 +1,30 @@
 -- EXCLUIR TABELAS
 
-DROP TABLE telefone;
-DROP TABLE depoimento;
-DROP TABLE post_adocao;
-DROP TABLE post_ong;
+DROP TABLE IF EXISTS telefone;
+DROP TABLE IF EXISTS depoimento;
+DROP TABLE IF EXISTS post_adocao;
+DROP TABLE IF EXISTS post_ong;
 
-DROP TABLE compra;
-DROP TABLE venda;
-DROP TABLE produto;
-DROP TABLE marca;
+DROP TABLE IF EXISTS compra;
+DROP TABLE IF EXISTS venda;
+DROP TABLE IF EXISTS produto;
+DROP TABLE IF EXISTS marca;
 
-DROP TABLE fornecedor;
+DROP TABLE IF EXISTS fornecedor;
 
-DROP TABLE pet;
-DROP TABLE cliente;
-DROP TABLE ong;
+DROP TABLE IF EXISTS pet;
+DROP TABLE IF EXISTS cliente;
+DROP TABLE IF EXISTS ong;
 
-DROP TABLE representante;
-DROP TABLE login;
+DROP TABLE IF EXISTS representante;
+DROP TABLE IF EXISTS login;
+
+-- EXCLUIR ENUM
+
+DROP TYPE IF EXISTS valid_sexo_enum;
+DROP TYPE IF EXISTS valid_para_pets_enum;
+DROP TYPE IF EXISTS valid_tamanho_raca_prod_enum;
+DROP TYPE IF EXISTS valid_tamanho_raca_pet_enum;
 
 -- CRIAÇÃO DE ENUM
 
@@ -423,6 +430,15 @@ VALUES
 --Admin
   ('Admin', 'admin@email.com', 'bJ6+lfau~''X'),
 --clientes
+  ('jose', 'jose@github.io', 'iG1/z%_268O<&2'),
+  ('bea', 'bea@github.io', 'iG1/z%_268O<&2'),
+  ('viviane', 'viviane@github.io', 'iG1/z%_268O<&2'),
+  ('rogerio', 'rogerio@github.io', 'iG1/z%_268O<&2'),
+  ('osvaldo', 'osvaldo@github.io', 'iG1/z%_268O<&2'),
+  ('paloma', 'paloma@github.io', 'iG1/z%_268O<&2'),
+  ('bruno', 'bruno@github.io', 'iG1/z%_268O<&2'),
+  ('leticia', 'leticia@github.io', 'iG1/z%_268O<&2'),
+  ('carlos', 'carlos@github.io', 'iG1/z%_268O<&2'),
   ('Tuck Genthner', 'tgenthner1@github.io', 'iG1/z%_268O<&2'),
   ('Craggy Jovovic', 'cjovovic2@reverbnation.com', 'kS4*$PUy4'),
   ('Waly Wheowall', 'wwheowall3@biglobe.ne.jp', 'qP0#rCN6'),
@@ -628,16 +644,57 @@ VALUES
 INSERT INTO venda
   (id_fornecedor, id_produto, nota_fiscal, data_venda, quantidade_produto, valor_unitario)
 VALUES
-  (1, 13, 1, '2023-10-01', 9, 144.42),
-  (1, 12, 1, '2023-10-01', 2, 20.72),
-  (1, 16, 1, '2023-10-01', 5, 100.26),
-  (1, 15, 1, '2023-10-01', 6, 67.58),
-  (2, 14, 2, '2023-10-01', 9, 111.13),
-  (2, 8, 2, '2023-10-01', 2, 4.19),
-  (2, 12, 2, '2023-10-01', 9, 96.09),
-  (3, 4, 3, '2023-10-01', 1, 197.16),
-  (3, 15, 3, '2023-10-01', 8, 24.75),
-  (3, 6, 3, '2023-10-01', 1, 129.02);
+  (1, 1, 1, '2023-10-01', 20, 101.72),
+  (1, 2, 1, '2023-10-01', 18, 107.72),
+  (1, 3, 1, '2023-10-01', 16, 101.72),
+  (1, 4, 1, '2023-10-01', 14, 82.72),
+  (1, 5, 1, '2023-10-01', 12, 9.72),
+  (1, 6, 1, '2023-10-01', 10, 10.72),
+  (1, 7, 1, '2023-10-01', 8, 15.72),
+  (1, 8, 1, '2023-10-01', 6, 7.72),
+  (1, 9, 1, '2023-10-01', 8, 22.72),
+  (1, 10, 1, '2023-10-01', 10, 11.72),
+  (1, 11, 1, '2023-10-01', 12, 88.72),
+  (1, 12, 1, '2023-10-01', 14, 67.72),
+  (1, 13, 1, '2023-10-01', 16, 11.42),
+  (1, 14, 1, '2023-10-01', 18, 3.42),
+  (1, 15, 1, '2023-10-01', 20, 7.58),
+  (1, 16, 1, '2023-10-01', 22, 10.26),
+  (1, 17, 1, '2023-10-01', 5, 17.26),
+  (2, 1, 2, '2023-10-01', 20, 101.72),
+  (2, 2, 2, '2023-10-01', 18, 107.72),
+  (2, 3, 2, '2023-10-01', 16, 101.72),
+  (2, 4, 2, '2023-10-01', 14, 82.72),
+  (2, 5, 2, '2023-10-01', 12, 9.72),
+  (2, 6, 2, '2023-10-01', 10, 10.72),
+  (2, 7, 2, '2023-10-01', 8, 15.72),
+  (2, 8, 2, '2023-10-01', 6, 7.72),
+  (2, 9, 2, '2023-10-01', 8, 22.72),
+  (2, 10, 2, '2023-10-01', 10, 11.72),
+  (2, 11, 2, '2023-10-01', 12, 88.72),
+  (2, 12, 2, '2023-10-01', 14, 67.72),
+  (2, 13, 2, '2023-10-01', 16, 11.42),
+  (2, 14, 2, '2023-10-01', 18, 3.42),
+  (2, 15, 2, '2023-10-01', 20, 7.58),
+  (2, 16, 2, '2023-10-01', 22, 10.26),
+  (2, 17, 2, '2023-10-01', 5, 17.26),
+  (3, 1, 3, '2023-10-01', 20, 101.72),
+  (3, 2, 3, '2023-10-01', 18, 107.72),
+  (3, 3, 3, '2023-10-01', 16, 101.72),
+  (3, 4, 3, '2023-10-01', 14, 82.72),
+  (3, 5, 3, '2023-10-01', 12, 9.72),
+  (3, 6, 3, '2023-10-01', 10, 10.72),
+  (3, 7, 3, '2023-10-01', 8, 15.72),
+  (3, 8, 3, '2023-10-01', 6, 7.72),
+  (3, 9, 3, '2023-10-01', 8, 22.72),
+  (3, 10, 3, '2023-10-01', 10, 11.72),
+  (3, 11, 3, '2023-10-01', 12, 88.72),
+  (3, 12, 3, '2023-10-01', 14, 67.72),
+  (3, 13, 3, '2023-10-01', 16, 11.42),
+  (3, 14, 3, '2023-10-01', 18, 3.42),
+  (3, 15, 3, '2023-10-01', 20, 7.58),
+  (3, 16, 3, '2023-10-01', 22, 10.26),
+  (3, 17, 3, '2023-10-01', 5, 17.26);
 
 INSERT INTO compra
   (id_cliente, id_produto, nota_fiscal, data_compra, quantidade_produto, valor_unitario)
@@ -681,27 +738,107 @@ SELECT * FROM produto;
 SELECT * FROM compra;
 SELECT * FROM venda;
 
--- CONSULTAS SIMPLES
-
 -- Listar todos os clientes do sexo feminino (gênero 'F'):
 SELECT *
 FROM cliente
 WHERE sexo = 'F';
 
+-- Listar todos os clientes do sexo masculino (gênero 'M'):
+SELECT *
+FROM cliente
+WHERE sexo = 'M';
+
+-- Listar todos os clientes do sexo feminino (gênero 'F'), mostrando os dados nome_completo, cidade e UF em maiusculo:
+SELECT
+id_cliente as "ID",
+cpf as "CPF",
+sexo as "Sexo",
+UPPER(nome_completo) as "Nome Completo",
+UPPER(cidade) as "Cidade",
+estado as "UF"
+from cliente
+inner join representante
+ON cliente.id_representante = representante.id_representante
+WHERE sexo = 'F'
+
+-- Listar todos os clientes do sexo masculino (gênero 'M'), mostrando o nome_completo, cidade e UF:
+SELECT
+id_cliente as "ID",
+cpf as "CPF",
+sexo as "Sexo",
+nome_completo as "Nome Completo",
+cidade as "Cidade",
+estado as "UF"
+from cliente
+inner join representante
+ON cliente.id_representante = representante.id_representante
+WHERE sexo = 'M'
+
+-- Listar todos os clientes do sexo masculino (gênero 'M'), mostrando o nome_completo e email:
+SELECT
+id_cliente, cpf, sexo, representante.id_representante, nome_completo, login.id_login, email
+FROM cliente
+INNER JOIN representante
+ON cliente.id_representante = representante.id_representante
+INNER join login
+on representante.id_login = login.id_login
+WHERE sexo = 'M'
+
+-- Listar todos os clientes do sexo feminino (gênero 'F'), mostrando o nome_completo e e-mail:
+SELECT
+id_cliente, cpf, sexo, representante.id_representante, nome_completo, login.id_login, email
+FROM cliente
+INNER JOIN representante
+ON cliente.id_representante = representante.id_representante
+INNER join login
+on representante.id_login = login.id_login
+where sexo = 'F'
+
+-- Mostrar todos os login que não se cadastraram no site
+SELECT login.*
+FROM login
+LEFT JOIN representante
+ON login.id_login = representante.id_login
+WHERE representante.id_login IS NULL;
+
+-- Mostrar todos os representantes com os seus logins mesmo os logins que não tem cadastro.
+SELECT *
+from representante
+RIGHT JOIN login
+on representante.id_login = login.id_login
+
+-- Mostrar todos os login com os seus representantes mesmo os logins que não tem cadastro.
+SELECT *
+from login
+LEFT join representante
+ON login.id_login = representante.id_login
+
 -- Listar todos os produtos com um preço superior a R$ 50,00:
-SELECT descricao, preco
+SELECT *
 FROM produto
 WHERE preco > 50.00;
 
--- Listar todos os produtos para cães adultos com estoque maior que 4 unidades:
-SELECT descricao, para_pets, qtd_estoque
+-- Listar todos os produtos com um preço inferior a R$ 50,00:
+SELECT *
 FROM produto
-WHERE para_pets = 'Para Cães Adultos' AND qtd_estoque > 4;
+WHERE preco < 50.00;
 
--- Listar todos os representantes que não estão localizados no Brasil:
-SELECT nome_completo, pais
+-- Listar todos os produtos mostrando o nome completo, qtd, preço e o nome da marca:
+SELECT concat(descricao,' ',para_pets,' ',tamanho_raca) as "Produto",
+qtd_estoque as "QTD", marca as "Marca"
+FROM produto
+inner join marca
+on produto.id_marca = marca.id_marca
+
+-- Listar todos os produtos para cães adultos com estoque zerado:
+SELECT *
+FROM produto
+WHERE para_pets = 'Para Cães Adultos' AND qtd_estoque = 0;
+
+-- Listar todos os representantes que não estão localizados em Campinas:
+SELECT nome_completo, cidade, estado
 FROM representante
-WHERE pais <> 'Brasil';
+WHERE cidade <> 'Campinas';
 
 -- Listar todas as marcas de produtos que têm a palavra 'Pet' em seu nome:
 SELECT marca
@@ -727,15 +864,73 @@ SELECT nome_completo, cidade, estado
 FROM representante
 WHERE estado = 'SP';
 
+-- Listar todos os depoimentos e criar uma coluna status_estrelas qualitativo para estrela:
+SELECT id_depoimento, estrelas,
+	CASE	
+    	WHEN estrelas = 5 THEN 'Excelente'
+        when estrelas > 4 THEN 'Ótimo'
+        when estrelas > 3 THEN 'Bom'
+        when estrelas > 2 THEN 'Regular'
+        when estrelas > 1 THEN 'Ruim'
+        ELSE 'Péssimo'
+    END as status_estrelas
+FROM depoimento
+
 -- Listar todos os depoimentos com 5 estrelas:
-SELECT estrelas, descricao
+SELECT *
 FROM depoimento
 WHERE estrelas = 5.0;
 
--- Listar todas as compras feitas em setembro de 2023:
+-- Listar todos os depoimentos mostrando as estrelas, descricao, nome do cliente, sexo e email:
+SELECT estrelas, descricao, nome_completo, sexo, email
+FROM depoimento
+inner join cliente
+ON depoimento.id_cliente = cliente.id_cliente
+inner join representante
+ON cliente.id_representante = representante.id_representante
+inner join login
+on representante.id_login = login.id_login
+
+-- Listar todos os depoimentos mostrando as estrelas, descricao, nome do cliente, sexo e email(udando apelido nas tabelas):
+SELECT D.estrelas, D.descricao, R.nome_completo, C.sexo, L.email
+FROM depoimento D
+inner join cliente c
+ON D.id_cliente = C.id_cliente
+inner join representante R
+ON C.id_representante = R.id_representante
+inner join login L
+on R.id_login = L.id_login
+
+-- Listar todos os depoimentos mostrando as estrelas, descricao, nome do cliente, sexo e email somente das mulheres:
+SELECT D.estrelas, D.descricao, R.nome_completo, C.sexo, L.email
+FROM depoimento D
+inner join cliente c
+ON D.id_cliente = C.id_cliente
+inner join representante R
+ON C.id_representante = R.id_representante
+inner join login L
+on R.id_login = L.id_login
+WHERE sexo = 'F'
+
+-- Listar todos os depoimentos mostrando as estrelas, descricao, nome do cliente, sexo e email somente dos homens:
+SELECT D.estrelas, D.descricao, R.nome_completo, C.sexo, L.email
+FROM depoimento D
+inner join cliente c
+ON D.id_cliente = C.id_cliente
+inner join representante R
+ON C.id_representante = R.id_representante
+inner join login L
+on R.id_login = L.id_login
+WHERE sexo = 'M'
+
+-- Mostrar a média de estrelas com 1 casa decimal
+SELECT round(AVG(estrelas::NUMERIC),1) AS "Média de estrelas"
+FROM depoimento
+
+-- Listar todas as compras feitas em outubro de 2023:
 SELECT nota_fiscal, data_compra
 FROM compra
-WHERE EXTRACT(YEAR FROM data_compra) = 2023 AND EXTRACT(MONTH FROM data_compra) = 9;
+WHERE EXTRACT(YEAR FROM data_compra) = 2023 AND EXTRACT(MONTH FROM data_compra) = 10;
 
 -- Listar todos os pets disponíveis para adoção:
 SELECT nome, tipo_pet, disponivel
@@ -747,107 +942,131 @@ SELECT descricao, qtd_estoque
 FROM produto
 WHERE qtd_estoque = 0;
 
--- Listar todos os produtos com uma descrição que contenha a palavra 'Ração':
-SELECT descricao
-FROM produto
-WHERE descricao LIKE '%Ração%';
-
 -- Listar os produtos em estoque com quantidade maior que zero:
 SELECT descricao, qtd_estoque
 FROM produto
 WHERE qtd_estoque > 0;
+
+-- Listar todos os produtos com uma descrição que comece com a palavra 'Ração':
+SELECT *
+FROM produto
+WHERE descricao LIKE 'Ração%';
+
+-- Listar todos os produtos com uma descrição que contenha a palavra 'Bola':
+SELECT *
+FROM produto
+WHERE descricao like '%Bola%'
 
 -- Listar os produtos em estoque com quantidade maior que zero dando um apelido para a tabela:
 SELECT p.descricao, p.qtd_estoque
 FROM produto p
 WHERE p.qtd_estoque > 0;
 
--- CONSULTAS ORDENADAS
-
 -- Listar todas as marcas de produtos em ordem alfabética:
 SELECT marca
 FROM marca
 ORDER BY marca;
 
--- Mostrar o valor total da nota:
-SELECT nota_fiscal, SUM(quantidade_produto * valor_unitario) AS total_da_nota
+-- Mostrar o subtotal de cada nota da compra:
+SELECT nota_fiscal, quantidade_produto, valor_unitario, quantidade_produto * valor_unitario as "SubTotal"
+from compra
+
+-- Mostrar o valor total de cada nota da compra:
+SELECT nota_fiscal, SUM(quantidade_produto * valor_unitario) AS total_da_Compra
 FROM compra
-WHERE nota_fiscal = 1000
 GROUP BY nota_fiscal;
 
--- CONSULTAS COM SUBCONSULTAS
+-- Mostrar o subtotal de cada nota da venda:
+SELECT nota_fiscal, quantidade_produto, valor_unitario, quantidade_produto * valor_unitario as "SubTotal"
+from venda
 
--- Listar todos os clientes que não têm um pet associado a eles:
-SELECT nome_completo
+-- Mostrar o valor total de cada nota da venda:
+SELECT nota_fiscal, SUM(quantidade_produto * valor_unitario) AS Total_da_Venda
+FROM venda
+GROUP BY nota_fiscal;
+
+-- Listar todos os clientes que não têm pelo menos um pet adotado:
+SELECT cpf, sexo, nome_completo
 FROM cliente
+inner join representante
+on cliente.id_representante = representante.id_representante
 WHERE id_cliente NOT IN (SELECT DISTINCT id_cliente
 FROM pet);
 
--- Listar todas as compras feitas por um fornecedor específico (por CNPJ):
-SELECT nota_fiscal, data_compra
-FROM compra
+-- Listar todas as vendas feitas por um fornecedor específico (por CNPJ):
+SELECT *
+FROM venda
 WHERE id_fornecedor = (SELECT id_fornecedor
 FROM fornecedor
 WHERE CNPJ = '060787124000190');
 
--- CONSULTAS COM JOIN
+-- Listar somente os nomes dos clientes que adotaram pelo menos um pet:
+SELECT DISTINCT nome_completo
+from cliente
+INNER JOIN representante
+on cliente.id_representante = representante.id_representante
+INNER join pet
+on cliente.id_cliente = pet.id_cliente
 
--- Listar todos os clientes que adotaram pelo menos um pet:
-SELECT DISTINCT c.nome_completo
-FROM cliente c
-  JOIN pet p ON c.id_cliente = p.id_cliente;
-
--- Listar todos os representantes e seus respectivos telefones:
+-- Listar todos os representantes em ordem de nome e seus respectivos telefones:
 SELECT r.nome_completo, t.telefone
 FROM representante r
-  JOIN telefone t ON r.id_representante = t.id_representante;
+JOIN telefone t
+ON r.id_representante = t.id_representante
+order by nome_completo;
 
--- Listar todos os produtos de uma marca específica:
+-- Listar todos os produtos da marca Golden Mega:
 SELECT p.descricao, p.para_pets, p.preco
 FROM produto p
-  JOIN marca m ON p.id_marca = m.id_marca
+JOIN marca m
+ON p.id_marca = m.id_marca
 WHERE m.marca = 'Golden Mega';
 
--- Listar todos os depoimentos de um cliente:
-SELECT d.estrelas, d.descricao
+-- Listar todos os depoimentos de um cliente pelo CPF:53261349314:
+SELECT *
 FROM depoimento d
-  JOIN cliente c ON d.id_cliente = c.id_cliente
-WHERE c.CPF = '12345678901';
+JOIN cliente c
+ON d.id_cliente = c.id_cliente
+WHERE c.cpf = '53261349314';
 
--- Listar todas as compras feitas por um fornecedor específico:
-SELECT c.nota_fiscal, c.data_compra, p.descricao, c.quantidade_produto, c.valor_unitario
-FROM compra c
-  JOIN produto p ON c.id_produto = p.id_produto
-WHERE c.id_fornecedor = 1;
+-- Listar todas as vendas feitas pelo fornecedor 1:
+SELECT V.nota_fiscal, V.data_venda, p.descricao, V.quantidade_produto, V.valor_unitario
+FROM venda V
+JOIN produto p
+ON V.id_produto = p.id_produto
+WHERE V.id_fornecedor = 1;
 
--- Listar todas as vendas feitas para um cliente específico:
-SELECT v.nota_fiscal, v.data_venda, p.descricao, v.quantidade_produto, v.valor_unitario
-FROM venda v
-  JOIN produto p ON v.id_produto = p.id_produto
-WHERE v.id_cliente = 1;
-
--- CONSULTAS COM GROUP BY E HAVING
+-- Listar todas as compras feitas por um cliente específico:
+SELECT C.nota_fiscal, C.data_compra, p.descricao, C.quantidade_produto, C.valor_unitario
+FROM compra C
+JOIN produto p
+ON C.id_produto = p.id_produto
+WHERE C.id_cliente = 2;
 
 -- Listar todas as marcas de produtos e a quantidade de produtos de cada marca:
 SELECT m.marca, COUNT(p.id_produto) AS quantidade_de_produtos
 FROM marca m
-JOIN produto p ON m.id_marca = p.id_marca
+JOIN produto p
+ON m.id_marca = p.id_marca
 GROUP BY m.marca
 ORDER BY quantidade_de_produtos DESC;
 
--- Listar todas as marcas de produtos que têm pelo menos 3 produtos:
-SELECT m.marca, COUNT(p.id_produto) AS quantidade_de_produtos
+-- Listar todas as marcas de produtos que têm pelo menos 2 produtos:
+SELECT m.marca, COUNT(*) AS quantidade_de_produtos
 FROM marca m
 JOIN produto p ON m.id_marca = p.id_marca
 GROUP BY m.marca
-HAVING COUNT(p.id_produto) >= 3
+HAVING COUNT(*) >= 2
 ORDER BY quantidade_de_produtos DESC;
 
 -- Listar todos os clientes que adotaram pelo menos 2 pets:
-SELECT c.nome_completo, COUNT(p.id_pet) AS quantidade_de_pets_adotados
+SELECT R.nome_completo, COUNT(p.id_pet) AS quantidade_de_pets_adotados
 FROM cliente c
+join representante R
+on C.id_representante = R.id_representante
 JOIN pet p ON c.id_cliente = p.id_cliente
-GROUP BY c.nome_completo
+where C.id_cliente <> 1
+GROUP BY R.nome_completo
 HAVING COUNT(p.id_pet) >= 2
 ORDER BY quantidade_de_pets_adotados DESC;
 
@@ -858,14 +1077,12 @@ GROUP BY nota_fiscal
 HAVING SUM(quantidade_produto * valor_unitario) > 100.00
 ORDER BY total_da_nota;
 
--- CONSULTAS COM JOINS E SUBCONSULTAS
-
--- Listar todos os produtos comprados por um cliente específico (por CPF):
-SELECT p.descricao, c.CPF
-FROM compra co
-JOIN cliente c ON co.id_cliente = c.id_cliente
-JOIN produto p ON co.id_produto = p.id_produto
-WHERE c.CPF = '12345678901';
+-- Listar todas as vendar feitas em que o valor total da nota seja superior a R$ 100,00:
+SELECT nota_fiscal, SUM(quantidade_produto * valor_unitario) AS total_da_nota
+FROM venda
+GROUP BY nota_fiscal
+HAVING SUM(quantidade_produto * valor_unitario) > 100.00
+ORDER BY total_da_nota;
 
 -- Listar todos os depoimentos de clientes que adotaram pelo menos um pet:
 SELECT d.estrelas, d.descricao
@@ -874,33 +1091,14 @@ JOIN cliente c ON d.id_cliente = c.id_cliente
 WHERE c.id_cliente IN (SELECT DISTINCT id_cliente
 FROM pet);
 
--- Listar todos os pets adotados por um cliente específico (por CPF):
-SELECT p.nome, c.CPF
-FROM pet p
-JOIN cliente c ON p.id_cliente = c.id_cliente
-WHERE c.CPF = '12345678901';
-
 -- Listar todos os produtos comprados por clientes que adotaram pets do tipo 'Cachorro':
-SELECT DISTINCT p.descricao
+SELECT prod.*
 FROM compra co
+join produto prod
+on co.id_produto = prod.id_produto
 JOIN cliente c ON co.id_cliente = c.id_cliente
 JOIN pet p ON c.id_cliente = p.id_cliente
 WHERE p.tipo_pet = 'Cachorro';
-
--- CONSULTAS COM MAIS DE UMA TABELA RELACIONADA
-
--- Listar todos os representantes e seus telefones de contato, juntamente com os nomes das marcas de produtos que eles representam:
-SELECT r.nome_completo, t.telefone, m.marca
-FROM representante r
-JOIN telefone t ON r.id_representante = t.id_representante
-JOIN fornecedor f ON r.id_representante = f.id_representante
-JOIN marca m ON f.id_fornecedor = m.id_fornecedor;
-
--- Listar todos os pets disponíveis para adoção juntamente com os nomes dos clientes que os adotaram:
-SELECT p.nome, c.nome_completo AS nome_do_adotante
-FROM pet p
-LEFT JOIN cliente c ON p.id_cliente = c.id_cliente
-WHERE p.disponivel = TRUE;
 
 -- Listar todos os depoimentos de clientes que adotaram pets, juntamente com os nomes dos pets adotados:
 SELECT d.descricao, p.nome AS nome_do_pet
@@ -915,129 +1113,12 @@ JOIN cliente c ON co.id_cliente = c.id_cliente
 JOIN pet ON c.id_cliente = pet.id_cliente
 JOIN produto p ON co.id_produto = p.id_produto;
 
--- CONSULTAS COM OPERAÇÕES DE DATA
-
--- Listar todas as compras feitas em setembro de 2023:
-SELECT nota_fiscal, data_compra
-FROM compra
-WHERE EXTRACT(YEAR FROM data_compra) = 2023 AND EXTRACT(MONTH FROM data_compra) = 9;
-
--- Listar todos os pets disponíveis para adoção que foram cadastrados no ano de 2023:
-SELECT nome, data_cadastro
-FROM pet
-WHERE EXTRACT
-
--- CONSULTAS AVANÇADAS
-
--- Seleciona o ID do pedido e o nome do cliente
-SELECT orders.order_id, customers.customer_name
-FROM orders
-INNER JOIN customers ON orders.customer_id = customers.customer_id
-WHERE orders.order_date BETWEEN '2023-01-01' AND '2023-12-31';
-
 -- Seleciona o nome e preço do produto com o preço máximo
-SELECT product_name, price
-FROM products
-WHERE price = (SELECT MAX(price) FROM products);
+SELECT *
+FROM produto
+WHERE preco = (SELECT MAX(preco) FROM produto);
 
--- Seleciona o departamento e o salário médio, filtrando departamentos com salário médio > $50.000
-SELECT department, AVG(salary) as avg_salary
-FROM employees
-GROUP BY department
-HAVING AVG(salary) > 50000;
-
--- Seleciona o ID do funcionário, o nome do funcionário e o nome do departamento (se disponível)
-SELECT employees.employee_id, employees.employee_name, departments.department_name
-FROM employees
-LEFT JOIN departments ON employees.department_id = departments.department_id;
-
--- Seleciona o nome e preço do produto, classificando por preço em ordem decrescente
-SELECT product_name, price
-FROM products
-ORDER BY price DESC;
-
--- Seleciona o nome do cliente e o número de telefone (se não for nulo)
-SELECT customer_name, phone_number
-FROM customers
-WHERE phone_number IS NULL;
-
--- Seleciona o nome completo (primeiro nome + sobrenome) e o e-mail em maiúsculas
-SELECT CONCAT(first_name, ' ', last_name) as full_name, UPPER(email) as upper_email
-FROM users;
-
--- Seleciona o ID do pedido, a quantidade e um rótulo com base na quantidade
-SELECT order_id, quantity,
-       CASE
-           WHEN quantity > 10 THEN 'Muitos'
-           WHEN quantity > 5 THEN 'Alguns'
-           ELSE 'Poucos'
-       END as quantity_label
-FROM order_details;
-
--- TRINAMENTO
-
--- Consultas Simples:
-
--- Listar todos os clientes do sexo feminino (gênero 'F').
--- Listar todos os produtos com um preço superior a R$ 50,00.
--- Listar todos os produtos para cães adultos com estoque maior que 10 unidades.
--- Listar todos os representantes que não estão localizados no Brasil.
--- Listar todas as marcas de produtos que têm a palavra 'Pet' em seu nome.
--- Listar todos os representantes que têm um CEP definido.
--- Listar todos os produtos disponíveis para gatos.
--- Listar todos os representantes que estão localizados em São Paulo (estado 'SP').
--- Listar todos os depoimentos com 5 estrelas.
--- Listar todas as compras feitas em setembro de 2023.
--- Listar todos os pets disponíveis para adoção.
--- Listar todos os produtos com estoque zerado.
--- Listar todos os produtos com uma descrição que contenha a palavra 'Ração'.
--- Listar os produtos em estoque com quantidade maior que zero.
--- Listar os produtos em estoque com quantidade maior que zero dando um apelido para a tabela.
--- Consultas Ordenadas:
-
--- Listar todas as marcas de produtos em ordem alfabética.
--- Mostrar o valor total da nota.
--- Consultas com Subconsultas:
-
--- Listar todos os clientes que não têm um pet associado a eles.
--- Listar todas as compras feitas por um fornecedor específico (por CNPJ).
--- Consultas com JOIN:
-
--- Listar todos os clientes que adotaram pelo menos um pet.
--- Listar todos os representantes e seus respectivos telefones.
--- Listar todos os produtos de uma marca específica.
--- Listar todos os depoimentos de um cliente.
--- Listar todas as compras feitas por um fornecedor específico.
--- Listar todas as vendas feitas para um cliente específico.
--- Consultas com GROUP BY e HAVING:
-
--- Listar todas as marcas de produtos e a quantidade de produtos de cada marca.
--- Listar todas as marcas de produtos que têm pelo menos 3 produtos.
--- Listar todos os clientes que adotaram pelo menos 2 pets.
--- Listar todas as compras feitas em que o valor total da nota seja superior a R$ 100,00.
--- Consultas com Joins e Subconsultas:
-
--- Listar todos os produtos comprados por um cliente específico (por CPF).
--- Listar todos os depoimentos de clientes que adotaram pelo menos um pet.
--- Listar todos os pets adotados por um cliente específico (por CPF).
--- Listar todos os produtos comprados por clientes que adotaram pets do tipo 'Cachorro'.
--- Consultas com Mais de Uma Tabela Relacionada:
-
--- Listar todos os representantes e seus telefones de contato, juntamente com os nomes das marcas de produtos que eles representam.
--- Listar todos os pets disponíveis para adoção juntamente com os nomes dos clientes que os adotaram.
--- Listar todos os depoimentos de clientes que adotaram pets, juntamente com os nomes dos pets adotados.
--- Listar todos os produtos comprados por clientes que adotaram pets, juntamente com os nomes dos pets adotados.
--- Consultas com Operações de Data:
-
--- Listar todas as compras feitas em setembro de 2023.
--- Listar todos os pets disponíveis para adoção que foram cadastrados no ano de 2023.
--- Consultas Avançadas:
-
--- Selecionar o ID do pedido e o nome do cliente.
--- Selecionar o nome e preço do produto com o preço máximo.
--- Selecionar o departamento e o salário médio, filtrando departamentos com salário médio > $50.000.
--- Selecionar o ID do funcionário, o nome do funcionário e o nome do departamento (se disponível).
--- Selecionar o nome e preço do produto, classificando por preço em ordem decrescente.
--- Selecionar o nome do cliente e o número de telefone (se não for nulo).
--- Selecionar o nome completo (primeiro nome + sobrenome) e o e-mail em maiúsculas.
--- Selecionar o ID do pedido, a quantidade e um rótulo com base na quantidade.
+-- Selecione os produtos, classificando por preço em ordem decrescente
+SELECT *
+FROM produto
+ORDER BY preco DESC;
