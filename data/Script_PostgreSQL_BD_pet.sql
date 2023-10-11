@@ -1,3 +1,24 @@
+-- EXCLUIR TABELAS
+
+DROP TABLE telefone;
+DROP TABLE depoimento;
+DROP TABLE post_adocao;
+DROP TABLE post_ong;
+
+DROP TABLE compra;
+DROP TABLE venda;
+DROP TABLE produto;
+DROP TABLE marca;
+
+DROP TABLE fornecedor;
+
+DROP TABLE pet;
+DROP TABLE cliente;
+DROP TABLE ong;
+
+DROP TABLE representante;
+DROP TABLE login;
+
 -- CRIAÇÃO DE ENUM
 
 CREATE TYPE valid_sexo_enum AS ENUM
@@ -40,7 +61,7 @@ CREATE TABLE representante
   cidade VARCHAR(50) NOT NULL,
   estado CHAR(2) NOT NULL,
   pais VARCHAR(50) NOT NULL,
-  id_login BIGINT NOT NULL,
+  id_login BIGINT,
   CONSTRAINT pk_representante
   PRIMARY KEY (id_representante),
   CONSTRAINT fk_login_tb_representante 
@@ -54,7 +75,7 @@ CREATE TABLE telefone
   id_telefone SERIAL,
   tipo_telefone VARCHAR(50),
   telefone VARCHAR(14) NOT NULL,
-  id_representante INT NOT NULL,
+  id_representante INT,
   CONSTRAINT pk_telefone
   PRIMARY KEY (id_telefone),
   CONSTRAINT fk_representante_tb_telefone
@@ -69,7 +90,7 @@ CREATE TABLE fornecedor
   id_fornecedor SMALLSERIAL,
   CNPJ CHAR(15) NOT NULL,
   nome VARCHAR(50) NOT NULL,
-  id_representante INT NOT NULL,
+  id_representante INT,
   CONSTRAINT unique_CNPJ_tb_fornecedor
   UNIQUE (CNPJ),
   CONSTRAINT pk_fornecedor
@@ -99,7 +120,7 @@ CREATE TABLE produto
   tamanho_raca valid_tamanho_raca_prod_enum NOT NULL,
   qtd_estoque SMALLINT NOT NULL DEFAULT 0,
   preco NUMERIC(6,2) NOT NULL,
-  id_marca SMALLINT NOT NULL,
+  id_marca SMALLINT,
   CHECK (qtd_estoque >= 0),
   CONSTRAINT pk_produto
   PRIMARY KEY (id_produto),
@@ -111,9 +132,9 @@ CREATE TABLE produto
 
 CREATE TABLE venda
 (
-  id_fornecedor SMALLINT NOT NULL,
-  id_produto INT NOT NULL,
-  nota_fiscal INT NOT NULL,
+  id_fornecedor SMALLINT,
+  id_produto INT,
+  nota_fiscal INT,
   data_venda DATE NOT NULL,
   quantidade_produto SMALLINT NOT NULL DEFAULT 1,
   valor_unitario NUMERIC(6,2) NOT NULL,
@@ -135,7 +156,7 @@ CREATE TABLE cliente
   id_cliente SERIAL,
   CPF CHAR(11) NOT NULL,
   sexo valid_sexo_enum NOT NULL,
-  id_representante INT NOT NULL,
+  id_representante INT,
   CONSTRAINT unique_cpf_tb_cliente
   UNIQUE (CPF),
   CONSTRAINT pk_cliente
@@ -148,10 +169,10 @@ CREATE TABLE cliente
 
 CREATE TABLE compra
 (
-  id_cliente INT NOT NULL,
-  id_produto INT NOT NULL,
-  nota_fiscal INT NOT NULL,
-  data_compra DATE,
+  id_cliente INT,
+  id_produto INT,
+  nota_fiscal INT,
+  data_compra DATE NOT NULL,
   quantidade_produto SMALLINT NOT NULL DEFAULT 1,
   valor_unitario NUMERIC(6,2),
   CHECK (quantidade_produto > 0),
@@ -173,8 +194,14 @@ CREATE TABLE depoimento
   foto BYTEA,
   estrelas REAL NOT NULL,
   descricao VARCHAR(255) NOT NULL,
-  id_cliente INT NOT NULL,
-  CHECK (estrelas >= 0.00 AND estrelas <= 5.00 AND ((estrelas::numeric % 1 = 0.00) OR (estrelas::numeric % 1 = 0.50))),
+  id_cliente INT,
+  CHECK (
+    estrelas >= 0.00 AND estrelas <= 5.00 AND (
+        (estrelas::numeric % 1 = 0.00)
+        OR
+        (estrelas::numeric % 1 = 0.50)
+      )
+    ),
   CONSTRAINT pk_depoimento
   PRIMARY KEY (id_depoimento),
   CONSTRAINT fk_cliente_tb_depoimento
@@ -189,7 +216,7 @@ CREATE TABLE post_adocao
   titulo VARCHAR(100) NOT NULL,
   foto BYTEA,
   descricao VARCHAR(255) NOT NULL,
-  id_cliente INT NOT NULL,
+  id_cliente INT,
   CONSTRAINT pk_post_adocao
   PRIMARY KEY (id_post_adocao),
   CONSTRAINT fk_cliente_tb_post_adocao
@@ -242,10 +269,10 @@ CREATE TABLE pet
 CREATE TABLE post_ong
 (
   id_post_ong SMALLSERIAL,
-  titulo VARCHAR(50),
+  titulo VARCHAR(50) NOT NULL,
   foto BYTEA,
   descricao TEXT,
-  id_ong SMALLINT NOT NULL,
+  id_ong SMALLINT,
   CONSTRAINT pk_post_ong
   PRIMARY KEY (id_post_ong),
   CONSTRAINT fk_ong_tb_post_ong
@@ -310,23 +337,28 @@ EXECUTE FUNCTION realizar_venda
 
 -- TRIGGER - COMPRA DO CLIENTE SEM PREJUIZO PARA O PETSHOP
 
--- Criação da função para verificar o valor da compra
+-- Criação da função para verificar se o valor da compra do cliente é menor do que a venda do fornecedor
 CREATE OR REPLACE FUNCTION verificar_valor_compra()
 RETURNS TRIGGER AS $$
+DECLARE
+  valor_unitario_venda_maior NUMERIC;
+  valor_unitario_venda_maior_str TEXT;
 BEGIN
-  -- Verifica se o valor unitário da compra é menor do que o valor unitário da venda correspondente
-  IF EXISTS (
-    SELECT 1
-    FROM venda
-    WHERE id_produto = NEW.id_produto
-      AND valor_unitario > NEW.valor_unitario
-  ) THEN
-    RAISE EXCEPTION 'Não é permitido comprar o produto por um valor unitário menor do que a da venda de R$ %.',
-      (SELECT valor_unitario
-       FROM venda
-       WHERE id_produto = NEW.id_produto
-         AND valor_unitario > NEW.valor_unitario
-       LIMIT 1);
+  -- Encontre a venda com o maior valor unitário para o produto
+  SELECT valor_unitario
+  INTO valor_unitario_venda_maior
+  FROM venda
+  WHERE id_produto = NEW.id_produto
+  ORDER BY valor_unitario DESC
+  LIMIT 1;
+
+  -- Transforme o valor_unitario_venda_maior em uma string com vírgula
+  valor_unitario_venda_maior_str := REPLACE(valor_unitario_venda_maior::TEXT, '.', ',');
+
+  -- Verifique se o valor unitário da compra é menor do que o valor unitário da venda correspondente
+  IF NEW.valor_unitario < valor_unitario_venda_maior THEN
+    RAISE EXCEPTION 'Não é permitido comprar o produto por um valor unitário menor do que o da venda de R$ %.',
+      valor_unitario_venda_maior_str;
   END IF;
 
   RETURN NEW;
@@ -373,60 +405,69 @@ AFTER INSERT ON venda
 FOR EACH ROW
 EXECUTE FUNCTION atualizar_valor_produto();
 
--- EXCLUIR TABELAS
-
-DROP TABLE telefone;
-DROP TABLE depoimento;
-DROP TABLE post_adocao;
-DROP TABLE post_ong;
-
-DROP TABLE compra;
-DROP TABLE venda;
-DROP TABLE produto;
-DROP TABLE marca;
-
-DROP TABLE fornecedor;
-
-DROP TABLE pet;
-DROP TABLE cliente;
-DROP TABLE ong;
-
-DROP TABLE representante;
-DROP TABLE login;
-
 -- INSERIR DADOS
 
-insert into login (nome_usuario, email, senha) values ('Imogene Beevors', 'ibeevors0@prnewswire.com', 'bJ6+lfau~''X');
-insert into login (nome_usuario, email, senha) values ('Tuck Genthner', 'tgenthner1@github.io', 'iG1/z%_268O<&2');
-insert into login (nome_usuario, email, senha) values ('Craggy Jovovic', 'cjovovic2@reverbnation.com', 'kS4*$PUy4');
-insert into login (nome_usuario, email, senha) values ('Waly Wheowall', 'wwheowall3@biglobe.ne.jp', 'qP0#rCN6');
-insert into login (nome_usuario, email, senha) values ('Demetri Paulat', 'dpaulat4@a8.net', 'cL8)qHXAXxF\(JK');
-insert into login (nome_usuario, email, senha) values ('Cymbre Neillans', 'cneillans5@ovh.net', 'rV0$fWOF');
-insert into login (nome_usuario, email, senha) values ('Garvy McPolin', 'gmcpolin6@google.co.jp', 'zI2%RZX,t');
-insert into login (nome_usuario, email, senha) values ('Chryste De Simoni', 'cde7@fotki.com', 'jY9{kXyP');
-insert into login (nome_usuario, email, senha) values ('Phyllys Temby', 'ptemby8@google.com.au', 'uZ6=O&gracS');
-insert into login (nome_usuario, email, senha) values ('Dory Escolme', 'descolme9@xing.com', 'fV5?B=PHvz|Gc2{');
-insert into login (nome_usuario, email, senha) values ('Agnese Jakuszewski', 'ajakuszewskia@newyorker.com', 'dY8"JJ`g|U7u5tAC');
-insert into login (nome_usuario, email, senha) values ('Lannie Loxston', 'lloxstonb@state.tx.us', 'sP6(XM7Ae');
-insert into login (nome_usuario, email, senha) values ('Mal Le febre', 'mlec@ucoz.ru', 'fI6,1aJv2>N{cI');
-insert into login (nome_usuario, email, senha) values ('Jackie Moffett', 'jmoffettd@mayoclinic.com', 'wK9+,x''!,!ar>');
-insert into login (nome_usuario, email, senha) values ('Saunderson Zannetti', 'szannettie@diigo.com', 'kH7''&U__!4`fWZ');
-insert into login (nome_usuario, email, senha) values ('Wilie Etteridge', 'wetteridgef@bigcartel.com', 'gE6{nXYp)v#=.Lp');
-insert into login (nome_usuario, email, senha) values ('Karla Fenkel', 'kfenkelg@issuu.com', 'tV4?a(JNRoLsXo');
-insert into login (nome_usuario, email, senha) values ('Jerrilee Kippling', 'jkipplingh@redcross.org', 'tO7)Q"5RM(C`?');
-insert into login (nome_usuario, email, senha) values ('Irvine Oneil', 'ioneili@digg.com', 'eL7<#0dIf2e#s1');
-insert into login (nome_usuario, email, senha) values ('Isaiah Claypool', 'iclaypoolj@usgs.gov', 'fU2{3~k/Yz9FX');
+INSERT INTO login
+  (nome_usuario, email, senha)
+VALUES
+--fornecedores
+  ('Petz', 'petz@prnewswire.com', 'fJ6+lfau~''X'),
+  ('Cobasi', 'cobasi@prnewswire.com', 'dJ6+lfau~''X'),
+  ('Petlove', 'petlove@prnewswire.com', 'bJ6+lfau~''X'),
+--ongs
+  ('Ampara Animal', 'ampara@prnewswire.com', 'aJ6+lfau~''X'),
+  ('Cão Sem Dono', 'caosemdono@prnewswire.com', 'gJ6+lfau~''X'),
+  ('Focinho de Luz', 'ibeevors0@prnewswire.com', 'zJ6+lfau~''X'),
+  ('Suipa', 'suipa@prnewswire.com', 'wJ6+lfau~''X'),
+  ('Vira Lata', 'virlata@prnewswire.com', 'uJ6+lfau~''X'),
+--Admin
+  ('Admin', 'admin@email.com', 'bJ6+lfau~''X'),
+--clientes
+  ('Tuck Genthner', 'tgenthner1@github.io', 'iG1/z%_268O<&2'),
+  ('Craggy Jovovic', 'cjovovic2@reverbnation.com', 'kS4*$PUy4'),
+  ('Waly Wheowall', 'wwheowall3@biglobe.ne.jp', 'qP0#rCN6'),
+  ('Demetri Paulat', 'dpaulat4@a8.net', 'cL8)qHXAXxF\(JK'),
+  ('Cymbre Neillans', 'cneillans5@ovh.net', 'rV0$fWOF'),
+  ('Garvy McPolin', 'gmcpolin6@google.co.jp', 'zI2%RZX,t'),
+  ('Chryste De Simoni', 'cde7@fotki.com', 'jY9{kXyP'),
+  ('Phyllys Temby', 'ptemby8@google.com.au', 'uZ6=O&gracS'),
+  ('Dory Escolme', 'descolme9@xing.com', 'fV5?B=PHvz|Gc2{'),
+  ('Agnese Jakuszewski', 'ajakuszewskia@newyorker.com', 'dY8"JJ`g|U7u5tAC'),
+  ('Lannie Loxston', 'lloxstonb@state.tx.us', 'sP6(XM7Ae'),
+  ('Mal Le febre', 'mlec@ucoz.ru', 'fI6,1aJv2>N{cI'),
+  ('Jackie Moffett', 'jmoffettd@mayoclinic.com', 'wK9+,x''!,!ar>'),
+  ('Saunderson Zannetti', 'szannettie@diigo.com', 'kH7''&U__!4`fWZ'),
+  ('Wilie Etteridge', 'wetteridgef@bigcartel.com', 'gE6{nXYp)v#=.Lp'),
+  ('Karla Fenkel', 'kfenkelg@issuu.com', 'tV4?a(JNRoLsXo'),
+  ('Jerrilee Kippling', 'jkipplingh@redcross.org', 'tO7)Q"5RM(C`?'),
+  ('Irvine Oneil', 'ioneili@digg.com', 'eL7<#0dIf2e#s1'),
+  ('Isaiah Claypool', 'iclaypoolj@usgs.gov', 'fU2{3~k/Yz9FX');
 
-insert into representante (nome_completo, CEP, tipo_logradouro, logradouro, num, complemento, bairro, cidade, estado, pais, id_login) values ('Paulo Ricardo da Silva', '02030110', 'Rua', 'Santa Luzia', '343', 'Casa', 'Iguatemi', 'São Paulo', 'SP', 'Brasil', 1);
-insert into representante (nome_completo, CEP, tipo_logradouro, logradouro, num, complemento, bairro, cidade, estado, pais, id_login) values ('José de Freitas', '09020230', 'Rua', 'Castro Alves', '125', 'Casa', 'Osasco', 'São Paulo', 'SP', 'Brasil', 2);
-insert into representante (nome_completo, CEP, tipo_logradouro, logradouro, num, complemento, bairro, cidade, estado, pais, id_login) values ('Beatriz de Souza', '01456660', 'Alameda', 'Santos Dumont', '306', 'Casa', 'Santana', 'São Paulo', 'SP', 'Brasil', 3);
-insert into representante (nome_completo, CEP, tipo_logradouro, logradouro, num, complemento, bairro, cidade, estado, pais, id_login) values ('Viviane de Oliveira', '78925220', 'Rua', 'Das Flores', '36', 'Casa', 'Itaquera', 'São Paulo', 'SP', 'Brasil', 4);
-insert into representante (nome_completo, CEP, tipo_logradouro, logradouro, num, complemento, bairro, cidade, estado, pais, id_login) values ('Rogerio Assunção', '65412888', 'Avenida', 'Narciso Silva', '85', 'Apto 1', 'Moema', 'São Paulo', 'SP', 'Brasil', 5);
-insert into representante (nome_completo, CEP, tipo_logradouro, logradouro, num, complemento, bairro, cidade, estado, pais, id_login) values ('Osvaldo Nascimento', '84567842', 'Rua', 'Alaide Cerdá Breá', '208', 'Casa', 'Santo Amaro', 'São Paulo', 'SP', 'Brasil', 6);
-insert into representante (nome_completo, CEP, tipo_logradouro, logradouro, num, complemento, bairro, cidade, estado, pais, id_login) values ('Paloma Vieira', '75892666', 'Alameda', 'Rio das Pedras', '25', 'Apto 225', 'Pinheiros', 'São Paulo', 'SP', 'Brasil', 7);
-insert into representante (nome_completo, CEP, tipo_logradouro, logradouro, num, complemento, bairro, cidade, estado, pais, id_login) values ('Bruno Olegario', '65321145', 'Rua', 'Barão de Itapetininga', '869', 'Casa', 'Brás', 'São Paulo', 'SP', 'Brasil', 8);
-insert into representante (nome_completo, CEP, tipo_logradouro, logradouro, num, complemento, bairro, cidade, estado, pais, id_login) values ('Leticia da Silva', '23541689', 'Rua', 'Cambuci', '22', 'Casa', 'Perdizes', 'São Paulo', 'SP', 'Brasil', 9);
-insert into representante (nome_completo, CEP, tipo_logradouro, logradouro, num, complemento, bairro, cidade, estado, pais, id_login) values ('Carlos Nascimento', '42589222', 'Rua', 'Gasometro', '98', 'Casa', 'Itaquaquecetuba', 'São Paulo', 'SP', 'Brasil', 10);
+INSERT INTO representante
+  (nome_completo, CEP, tipo_logradouro, logradouro, num, complemento, bairro, cidade, estado, pais, id_login)
+VALUES
+--fornecedores
+  ('Paulo Petz', '02030110', 'Rua', 'Santa Luzia', '343', 'Casa', 'Iguatemi', 'São Paulo', 'SP', 'Brasil', 1),
+  ('José Cobasi', '09020230', 'Rua', 'Castro Alves', '125', 'Casa', 'Osasco', 'São Paulo', 'SP', 'Brasil', 2),
+  ('Beatriz Love', '01456660', 'Alameda', 'Santos Dumont', '306', 'Casa', 'Santana', 'São Paulo', 'SP', 'Brasil', 3),
+--ongs
+  ('Ampara Assunção', '65412888', 'Avenida', 'Narciso Silva', '85', 'Apto 1', 'Moema', 'São Paulo', 'SP', 'Brasil', 4),
+  ('Ricardo Sem Dono', '84567842', 'Rua', 'Alaide Cerdá Breá', '208', 'Casa', 'Santo Amaro', 'São Paulo', 'SP', 'Brasil', 5),
+  ('Paloma Luz', '75892666', 'Alameda', 'Rio das Pedras', '25', 'Apto 225', 'Pinheiros', 'São Paulo', 'SP', 'Brasil', 6),
+  ('Bruno Suipa', '65321145', 'Rua', 'Barão de Itapetininga', '869', 'Casa', 'Brás', 'São Paulo', 'SP', 'Brasil', 7),
+  ('Leticia Vira Vida', '23541689', 'Rua', 'Cambuci', '22', 'Casa', 'Perdizes', 'São Paulo', 'SP', 'Brasil', 8),
+--admin
+  ('Admin', '02030110', 'Rua', 'Santa Luzia', '343', 'Casa', 'Iguatemi', 'São Paulo', 'SP', 'Brasil', 9),
+--clientes
+  ('José de Freitas', '09020230', 'Rua', 'Castro Alves', '125', 'Casa', 'Osasco', 'São Paulo', 'SP', 'Brasil', 10),
+  ('Beatriz de Souza', '01456660', 'Alameda', 'Santos Dumont', '306', 'Casa', 'Santana', 'São Paulo', 'SP', 'Brasil', 11),
+  ('Viviane de Oliveira', '78925220', 'Rua', 'Das Flores', '36', 'Casa', 'Itaquera', 'São Paulo', 'SP', 'Brasil', 12),
+  ('Rogerio Assunção', '65412888', 'Avenida', 'Narciso Silva', '85', 'Apto 1', 'Moema', 'São Paulo', 'SP', 'Brasil', 13),
+  ('Osvaldo Nascimento', '84567842', 'Rua', 'Alaide Cerdá Breá', '208', 'Casa', 'Santo Amaro', 'São Paulo', 'SP', 'Brasil', 14),
+  ('Paloma Vieira', '75892666', 'Alameda', 'Rio das Pedras', '25', 'Apto 225', 'Pinheiros', 'São Paulo', 'SP', 'Brasil', 15),
+  ('Bruno Olegario', '65321145', 'Rua', 'Barão de Itapetininga', '869', 'Casa', 'Brás', 'São Paulo', 'SP', 'Brasil', 16),
+  ('Leticia da Silva', '23541689', 'Rua', 'Cambuci', '22', 'Casa', 'Perdizes', 'São Paulo', 'SP', 'Brasil', 17),
+  ('Carlos Nascimento', '42589222', 'Rua', 'Gasometro', '98', 'Casa', 'Itaquaquecetuba', 'São Paulo', 'SP', 'Brasil', 18);
 
 INSERT INTO telefone
   (tipo_telefone, telefone, id_representante)
@@ -441,42 +482,46 @@ VALUES
   ('Celular', '55019988776644', 8),
   ('Celular', '55019988776666', 9),
   ('Celular', '55019988776644', 10),
-  ('Celular', '55019988776633', 1),
-  ('Celular', '55019988776622', 2),
-  ('Celular', '55019988776611', 3),
-  ('Celular', '55019988776600', 4),
-  ('Celular', '55019988776601', 5),
-  ('Celular', '55019988776602', 6),
-  ('Celular', '55019988776603', 7),
-  ('Celular', '55019988776604', 8),
-  ('Celular', '55019988776605', 9);
-
+  ('Fixo', '55019988776633', 1),
+  ('Fixo', '55019988776622', 2),
+  ('Fixo', '55019988776611', 3),
+  ('Fixo', '55019988776600', 4),
+  ('Fixo', '55019988776601', 5),
+  ('Recado - Esposa', '55019988776602', 6),
+  ('Recado - Esposo', '55019988776603', 7),
+  ('Recado - Mãe', '55019988776604', 8),
+  ('Recado - Pai', '55019988776605', 9),
+  (NULL, '55019988776605', 10);
+  
 INSERT INTO fornecedor
   (CNPJ, nome, id_representante)
 VALUES
   ('060787124000190', 'Petz', 1),
   ('986574236581258', 'Cobasi', 2),
   ('125478965823658', 'Petlove', 3);
-
-insert into cliente (CPF, sexo, id_representante) values ('37360160412', 'F', 1);
-insert into cliente (CPF, sexo, id_representante) values ('53261349314', 'F', 2);
-insert into cliente (CPF, sexo, id_representante) values ('42731752714', 'M', 3);
-insert into cliente (CPF, sexo, id_representante) values ('41880780114', 'M', 4);
-insert into cliente (CPF, sexo, id_representante) values ('47107593911', 'F', 5);
-insert into cliente (CPF, sexo, id_representante) values ('75768755412', 'F', 6);
-insert into cliente (CPF, sexo, id_representante) values ('88193147710', 'F', 7);
-insert into cliente (CPF, sexo, id_representante) values ('28836645316', 'F', 8);
-insert into cliente (CPF, sexo, id_representante) values ('52691295017', 'F', 9);
-insert into cliente (CPF, sexo, id_representante) values ('72913102012', 'M', 10);
-
+  
 INSERT INTO ong
   (CNPJ, nome, link_logo, id_representante)
 VALUES
-  ('060787001000190', 'ONG Ampara Animal', NULL, 1),
-  ('060787002000190', 'ONG Cão Sem Dono', NULL, 2),
-  ('060787003000190', 'ONG Focinho de Luz', NULL, 3),
-  ('060787004000190', 'ONG Suipa', NULL, 4),
-  ('060787005000190', 'ONG Vira Lata', NULL, 5);
+  ('060787001000190', 'ONG Ampara Animal', NULL, 4),
+  ('060787002000190', 'ONG Cão Sem Dono', NULL, 5),
+  ('060787003000190', 'ONG Focinho de Luz', NULL, 6),
+  ('060787004000190', 'ONG Suipa', NULL, 7),
+  ('060787005000190', 'ONG Vira Lata', NULL, 8);
+
+INSERT INTO cliente
+  (CPF, sexo, id_representante)
+VALUES
+  ('37360160412', 'M', 9),
+  ('53261349314', 'M', 10),
+  ('42731752714', 'F', 11),
+  ('41880780114', 'F', 12),
+  ('47107593911', 'M', 13),
+  ('75768755412', 'M', 14),
+  ('88193147710', 'F', 15),
+  ('28836645316', 'M', 16),
+  ('52691295017', 'F', 17),
+  ('72913102012', 'M', 18);
 
 INSERT INTO post_ong
   (titulo, foto, descricao, id_ong)
@@ -490,60 +535,57 @@ VALUES
 INSERT INTO pet
   (nome, tempo_vida, tipo_pet, raca, tamanho_raca, foto, disponivel, id_ong, id_cliente)
 VALUES
-  ('Fiel', '10 anos', 'Cachorro', 'Vira-lata', 'Raças Pequenas', NULL, FALSE, 1, 1),
-  ('Van Gogh', '10 anos', 'Cachorro', 'Vira-lata', 'Raças Pequenas', NULL, FALSE, 1, 1),
-  ('Barto', '10 anos', 'Cachorro', 'Vira-lata', 'Raças Pequenas', NULL, FALSE, 1, 1),
-  ('Boris', '10 anos', 'Cachorro', 'Vira-lata', 'Raças Pequenas', NULL, FALSE, 1, 1),
-  ('Bebeto', '10 anos', 'Cachorro', 'Vira-lata', 'Raças Pequenas', NULL, FALSE, 1, 1),
-  ('Fido', '10 anos', 'Cachorro', 'Vira-lata', 'Raças Pequenas', NULL, FALSE, 1, 1),
-  ('Bolinha', '12 anos', 'Cachorro', 'Poodle', 'Raças Pequenas', NULL, TRUE, 1, 2),
-  ('Whiskers', '15 anos', 'Gato', 'Siamês', 'Raças Pequenas', NULL, TRUE, 2, 3),
-  ('Lucky', '8 anos', 'Cachorro', 'Labrador', 'Raças Grandes', NULL, TRUE, 3, 4),
-  ('Mia', '10 anos', 'Gato', 'Persa', 'Raças Grandes', NULL, TRUE, 4, 5),
-  ('Rocky', '9 anos', 'Cachorro', 'Bulldog', 'Raças Grandes', NULL, TRUE, 5, 6),
-  ('Fluffy', '14 anos', 'Gato', 'Maine Coon', 'Raças Grandes', NULL, TRUE, 1, 7),
-  ('Rex', '11 anos', 'Cachorro', 'Pastor Alemão', 'Raças Grandes', NULL, TRUE, 2, 8),
-  ('Sasha', '13 anos', 'Gato', 'Ragdoll', 'Raças Grandes', NULL, TRUE, 3, 9),
-  ('Max', '7 anos', 'Cachorro', 'Golden Retriever', 'Raças Grandes', NULL, TRUE, 4, 10),
-  ('Lucy', '12 anos', 'Cachorro', 'Beagle', 'Raças Pequenas', NULL, TRUE, 5, 10),
-  ('Oliver', '6 anos', 'Gato', 'British Shorthair', 'Raças Grandes', NULL, TRUE, 1, 9),
-  ('Charlie', '10 anos', 'Cachorro', 'Bulldog Francês', 'Raças Pequenas', NULL, TRUE, 2, 8),
-  ('Luna', '11 anos', 'Gato', 'Siamese', 'Raças Pequenas', NULL, TRUE, 3, 7),
-  ('Cooper', '9 anos', 'Cachorro', 'Boxer', 'Raças Grandes', NULL, TRUE, 4, 6),
-  ('Milo', '7 anos', 'Gato', 'Persian', 'Raças Grandes', NULL, TRUE, 5, 5),
-  ('Daisy', '8 anos', 'Cachorro', 'Dachshund', 'Raças Pequenas', NULL, TRUE, 1, 4),
-  ('Simba', '13 anos', 'Gato', 'Lion', 'Raças Grandes', NULL, TRUE, 2, 3),
-  ('Bailey', '10 anos', 'Cachorro', 'Chihuahua', 'Raças Pequenas', NULL, TRUE, 3, 2),
-  ('Zoe', '11 anos', 'Gato', 'Maine Coon', 'Raças Grandes', NULL, TRUE, 4, 1),
-  ('Teddy', '9 anos', 'Cachorro', 'Shih Tzu', 'Raças Pequenas', NULL, TRUE, 5, 5);
+  ('Fiel', '10 anos', 'Cachorro', 'Vira-lata', 'Raças Pequenas', NULL, TRUE, 1, 1),
+  ('Van Gogh', '10 anos', 'Cachorro', 'Vira-lata', 'Raças Pequenas', NULL, TRUE, 1, 1),
+  ('Barto', '10 anos', 'Cachorro', 'Vira-lata', 'Raças Pequenas', NULL, TRUE, 1, 1),
+  ('Boris', '10 anos', 'Cachorro', 'Vira-lata', 'Raças Pequenas', NULL, TRUE, 1, 1),
+  ('Bebeto', '10 anos', 'Cachorro', 'Vira-lata', 'Raças Pequenas', NULL, TRUE, 1, 1),
+  ('Fido', '10 anos', 'Cachorro', 'Vira-lata', 'Raças Pequenas', NULL, TRUE, 1, 1),
+  ('Bolinha', '12 anos', 'Cachorro', 'Poodle', 'Raças Pequenas', NULL, TRUE, 1, 1),
+  ('Whiskers', '15 anos', 'Gato', 'Siamês', 'Raças Pequenas', NULL, TRUE, 2, 1),
+  ('Lucky', '8 anos', 'Cachorro', 'Labrador', 'Raças Grandes', NULL, TRUE, 3, 1),
+  ('Mia', '10 anos', 'Gato', 'Persa', 'Raças Grandes', NULL, TRUE, 4, 1),
+  ('Rocky', '9 anos', 'Cachorro', 'Bulldog', 'Raças Grandes', NULL, FALSE, 5, 2),
+  ('Fluffy', '14 anos', 'Gato', 'Maine Coon', 'Raças Grandes', NULL, FALSE, 1, 3),
+  ('Rex', '11 anos', 'Cachorro', 'Pastor Alemão', 'Raças Grandes', NULL, FALSE, 2, 4),
+  ('Sasha', '13 anos', 'Gato', 'Ragdoll', 'Raças Grandes', NULL, FALSE, 3, 5),
+  ('Max', '7 anos', 'Cachorro', 'Golden Retriever', 'Raças Grandes', NULL, FALSE, 4, 6),
+  ('Lucy', '12 anos', 'Cachorro', 'Beagle', 'Raças Pequenas', NULL, FALSE, 5, 7),
+  ('Oliver', '6 anos', 'Gato', 'British Shorthair', 'Raças Grandes', NULL, FALSE, 1, 8),
+  ('Charlie', '10 anos', 'Cachorro', 'Bulldog Francês', 'Raças Pequenas', NULL, FALSE, 2, 9),
+  ('Luna', '11 anos', 'Gato', 'Siamese', 'Raças Pequenas', NULL, FALSE, 3, 2),
+  ('Cooper', '9 anos', 'Cachorro', 'Boxer', 'Raças Grandes', NULL, FALSE, 4, 3),
+  ('Milo', '7 anos', 'Gato', 'Persian', 'Raças Grandes', NULL, FALSE, 5, 4),
+  ('Daisy', '8 anos', 'Cachorro', 'Dachshund', 'Raças Pequenas', NULL, FALSE, 1, 5),
+  ('Simba', '13 anos', 'Gato', 'Lion', 'Raças Grandes', NULL, FALSE, 2, 6),
+  ('Bailey', '10 anos', 'Cachorro', 'Chihuahua', 'Raças Pequenas', NULL, FALSE, 3, 7),
+  ('Zoe', '11 anos', 'Gato', 'Maine Coon', 'Raças Grandes', NULL, FALSE, 4, 8),
+  ('Teddy', '9 anos', 'Cachorro', 'Shih Tzu', 'Raças Pequenas', NULL, FALSE, 5, 9);
 
 INSERT INTO post_adocao
   (titulo, foto, descricao, id_cliente)
 VALUES
-  ('cão branco e marrom no colo da sua nova dona', NULL, 'Esse é o Téo, adotado por uma família e demonstrando sua alegria!', 1),
-  ('cão caramelo no colo da sua nova dona', NULL, 'Tonico, sem "Auu..lavras" para expressar a gratidão!', 1),
-  ('gato amarelo no colo da sua nova dona', NULL, 'Amarelinho também foi adotado! Depois de alguns meses na tentativa, finalmente encontramos uma dona.', 1),
-  ('um gato cinza e um gato amarelo no colo da sua nova dona', NULL, 'Quem disse que irmãos não podem ser diferentes? Manu e Cleo foram adotadas e vivem como uma família.', 1),
-  ('cão idoso caramelo com sua nova dona', NULL, 'Finalmente foi adotada aos 14 anos! Senhorinha, como foi carinhosamente chamada pela dona, demonstra gratidão em cada olhar.', 1),
-  ('gato amarelo no colo da sua nova dona', NULL, 'A tranquilidade de Cacau em sua nova casa. Adotada recentemente e curtindo a nova vida.', 1),
-  ('gato amarelo no colo da sua nova dona', NULL, 'Muito feliz na sua nova casa! Clarinha com poucas semanas de vida ganhou um novo lar.', 1),
-  ('2 cachorros amarelos e 1 cachorro preto', NULL, 'Quem disse que uma familia não pode ser adotada? Mel, Lara e Perola são um exemplo disso.', 1);
-
+  ('cão branco e marrom no colo da sua nova dona', NULL, 'Esse é o Téo, adotado por uma família e demonstrando sua alegria!', 2),
+  ('cão caramelo no colo da sua nova dona', NULL, 'Tonico, sem "Auu..lavras" para expressar a gratidão!', 3),
+  ('gato amarelo no colo da sua nova dona', NULL, 'Amarelinho também foi adotado! Depois de alguns meses na tentativa, finalmente encontramos uma dona.', 4),
+  ('um gato cinza e um gato amarelo no colo da sua nova dona', NULL, 'Quem disse que irmãos não podem ser diferentes? Manu e Cleo foram adotadas e vivem como uma família.', 5),
+  ('cão idoso caramelo com sua nova dona', NULL, 'Finalmente foi adotada aos 14 anos! Senhorinha, como foi carinhosamente chamada pela dona, demonstra gratidão em cada olhar.', 6),
+  ('gato amarelo no colo da sua nova dona', NULL, 'A tranquilidade de Cacau em sua nova casa. Adotada recentemente e curtindo a nova vida.', 7),
+  ('gato amarelo no colo da sua nova dona', NULL, 'Muito feliz na sua nova casa! Clarinha com poucas semanas de vida ganhou um novo lar.', 8),
+  ('2 cachorros amarelos e 1 cachorro preto', NULL, 'Quem disse que uma familia não pode ser adotada? Mel, Lara e Perola são um exemplo disso.', 9);
 
 INSERT INTO depoimento
   (foto, estrelas, descricao, id_cliente)
 VALUES
-  (NULL, 4.5, 'Ótimo produto!', 1),
-  (NULL, 4.5, 'Ótimo produto!', 1),
-  (NULL, 5.0, 'Excelente serviço!', 2),
-  (NULL, 4.0, 'Satisfeito!', 3),
-  (NULL, 4.0, 'Bom atendimento.', 4),
-  (NULL, 5.0, 'Recomendo a todos!', 5),
-  (NULL, 4.0, 'Produto de qualidade.', 1),
-  (NULL, 5.0, 'Entrega rápida.', 2),
-  (NULL, 3.5, 'Poderia melhorar.', 3),
-  (NULL, 4.0, 'Bom custo-benefício.', 4),
-  (NULL, 4.5, 'Atendimento excelente.', 5);
+  (NULL, 4.5, 'Ótimo produto!', 2),
+  (NULL, 4.5, 'Ótimo produto!', 3),
+  (NULL, 5.0, 'Excelente serviço!', 4),
+  (NULL, 4.0, 'Satisfeito!', 5),
+  (NULL, 4.0, 'Bom atendimento.', 6),
+  (NULL, 5.0, 'Recomendo a todos!', 7),
+  (NULL, 4.0, 'Produto de qualidade.', 8),
+  (NULL, 5.0, 'Entrega rápida.', 9),
+  (NULL, 3.5, 'Poderia melhorar.', 10);
   
 INSERT INTO marca
   (marca)
@@ -583,28 +625,33 @@ VALUES
   ('Brinquedo Ratinhos', 'Para Gatos', 'Todas as Raças', 0, 16.99, 13),
   ('Brinquedo Bolas Catnip', 'Para Gatos', 'Todas as Raças', 0, 29.99, 13);
   
-insert into venda (id_fornecedor, id_produto, nota_fiscal, data_venda, quantidade_produto, valor_unitario) values (1, 13, 1, '2023-10-15', 9, 144.42);
-insert into venda (id_fornecedor, id_produto, nota_fiscal, data_venda, quantidade_produto, valor_unitario) values (1, 12, 2, '2023-10-17', 2, 20.72);
-insert into venda (id_fornecedor, id_produto, nota_fiscal, data_venda, quantidade_produto, valor_unitario) values (1, 8, 3, '2023-10-10', 2, 4.19);
-insert into venda (id_fornecedor, id_produto, nota_fiscal, data_venda, quantidade_produto, valor_unitario) values (1, 4, 2, '2023-10-15', 1, 197.16);
-insert into venda (id_fornecedor, id_produto, nota_fiscal, data_venda, quantidade_produto, valor_unitario) values (1, 16, 4, '2023-10-14', 5, 100.26);
-insert into venda (id_fornecedor, id_produto, nota_fiscal, data_venda, quantidade_produto, valor_unitario) values (1, 15, 4, '2023-10-11', 6, 67.58);
-insert into venda (id_fornecedor, id_produto, nota_fiscal, data_venda, quantidade_produto, valor_unitario) values (1, 12, 3, '2023-10-13', 9, 96.09);
-insert into venda (id_fornecedor, id_produto, nota_fiscal, data_venda, quantidade_produto, valor_unitario) values (1, 14, 1, '2023-10-09', 9, 111.13);
-insert into venda (id_fornecedor, id_produto, nota_fiscal, data_venda, quantidade_produto, valor_unitario) values (1, 15, 2, '2023-10-11', 8, 24.75);
-insert into venda (id_fornecedor, id_produto, nota_fiscal, data_venda, quantidade_produto, valor_unitario) values (1, 6, 2, '2023-10-06', 1, 129.02);
+INSERT INTO venda
+  (id_fornecedor, id_produto, nota_fiscal, data_venda, quantidade_produto, valor_unitario)
+VALUES
+  (1, 13, 1, '2023-10-01', 9, 144.42),
+  (1, 12, 1, '2023-10-01', 2, 20.72),
+  (1, 16, 1, '2023-10-01', 5, 100.26),
+  (1, 15, 1, '2023-10-01', 6, 67.58),
+  (2, 14, 2, '2023-10-01', 9, 111.13),
+  (2, 8, 2, '2023-10-01', 2, 4.19),
+  (2, 12, 2, '2023-10-01', 9, 96.09),
+  (3, 4, 3, '2023-10-01', 1, 197.16),
+  (3, 15, 3, '2023-10-01', 8, 24.75),
+  (3, 6, 3, '2023-10-01', 1, 129.02);
 
-
-insert into compra (id_cliente, id_produto, nota_fiscal, data_compra, quantidade_produto, valor_unitario) values (1, 15, 2, '2023-10-09', 1, 110.07);
-insert into compra (id_cliente, id_produto, nota_fiscal, data_compra, quantidade_produto, valor_unitario) values (1, 13, 3, '2023-10-14', 2, 199.99);
-insert into compra (id_cliente, id_produto, nota_fiscal, data_compra, quantidade_produto, valor_unitario) values (1, 13, 4, '2023-10-13', 1, 299.99);
-insert into compra (id_cliente, id_produto, nota_fiscal, data_compra, quantidade_produto, valor_unitario) values (1, 12, 4, '2023-10-11', 1, 101.9);
-insert into compra (id_cliente, id_produto, nota_fiscal, data_compra, quantidade_produto, valor_unitario) values (1, 6, 1, '2023-10-17', 1, 150.00);
-insert into compra (id_cliente, id_produto, nota_fiscal, data_compra, quantidade_produto, valor_unitario) values (1, 8, 4, '2023-10-06', 2, 59.99);
-insert into compra (id_cliente, id_produto, nota_fiscal, data_compra, quantidade_produto, valor_unitario) values (1, 4, 2, '2023-10-17', 1, 299.99);
-insert into compra (id_cliente, id_produto, nota_fiscal, data_compra, quantidade_produto, valor_unitario) values (1, 16, 1, '2023-10-08', 1, 399.99);
-insert into compra (id_cliente, id_produto, nota_fiscal, data_compra, quantidade_produto, valor_unitario) values (1, 16, 2, '2023-10-17', 1, 166.55);
-insert into compra (id_cliente, id_produto, nota_fiscal, data_compra, quantidade_produto, valor_unitario) values (1, 15, 4, '2023-10-08', 1, 159.99);
+INSERT INTO compra
+  (id_cliente, id_produto, nota_fiscal, data_compra, quantidade_produto, valor_unitario)
+VALUES
+  (2, 15, 1, '2023-10-09', 1, 110.07),
+  (3, 13, 2, '2023-10-14', 2, 199.99),
+  (4, 13, 3, '2023-10-13', 1, 299.99),
+  (5, 12, 4, '2023-10-11', 1, 101.9),
+  (6, 6, 5, '2023-10-17', 1, 150.00),
+  (7, 8, 6, '2023-10-06', 2, 59.99),
+  (8, 4, 7, '2023-10-17', 1, 299.99),
+  (9, 16, 8, '2023-10-08', 1, 399.99),
+  (10, 16, 9, '2023-10-17', 1, 166.55),
+  (10, 15, 9, '2023-10-08', 1, 159.99);
 
 -- CONSULTAS
 
