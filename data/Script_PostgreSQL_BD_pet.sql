@@ -181,7 +181,7 @@ CREATE TABLE compra
   nota_fiscal INT,
   data_compra DATE NOT NULL,
   quantidade_produto SMALLINT NOT NULL DEFAULT 1,
-  valor_unitario NUMERIC(6,2),
+  valor_unitario NUMERIC(6,2) NOT NULL,
   CHECK (quantidade_produto > 0),
   CONSTRAINT pk_compra
   PRIMARY KEY (id_cliente, id_produto, nota_fiscal),
@@ -238,7 +238,7 @@ CREATE TABLE ong
   CNPJ CHAR(15) NOT NULL,
   nome VARCHAR(100) NOT NULL,
   link_logo VARCHAR(255),
-  id_representante INT NOT NULL,
+  id_representante INT,
   CONSTRAINT unique_cnpj_tb_ong
   UNIQUE (CNPJ),
   CONSTRAINT pk_ong
