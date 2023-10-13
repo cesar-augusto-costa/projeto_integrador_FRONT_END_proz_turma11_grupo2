@@ -41,7 +41,7 @@
 
 Utilizamos a psicologia das cores para criar uma atmosfera acolhedora e agradável.
 
-* [Coolors](https://coolors.co/f8b74c-421a12-eb7a21-fda462-f0b694)
+* [Paleta de Cores da Logo - Coolors](https://coolors.co/f8b74c-421a12-eb7a21-fda462-f0b694)
 
 | Cor           | Código          | Significado |
 | :-----------: | :-------------: | :---        |
@@ -86,9 +86,19 @@ Dessa forma, esse projeto faz a ponte entre as ONGs e a adoção fazendo divulga
 * Adotar Cachorro
 * Adotar Gato
 
+### [SITE](https://cesar-augusto-costa.github.io/projeto_integrador_FRONT_END_proz_turma11_grupo2/)
+
 <br>
 
-### [SITE](https://cesar-augusto-costa.github.io/projeto_integrador_FRONT_END_proz_turma11_grupo2/) (projeto em construção)
+## Banco de Dados
+
+* [DER Só Relacionamento](https://raw.githubusercontent.com/cesar-augusto-costa/projeto_integrador_FRONT_END_proz_turma11_grupo2/main/data/1-DER_SoRelacionamento.png)
+* [DER Só Relacionamento Com Entidade Associativa](https://raw.githubusercontent.com/cesar-augusto-costa/projeto_integrador_FRONT_END_proz_turma11_grupo2/main/data/2-DER_SoRelacionamentoEntidadeAssociativa.png)
+* [DER Antes Da Normalização](https://raw.githubusercontent.com/cesar-augusto-costa/projeto_integrador_FRONT_END_proz_turma11_grupo2/main/data/3-DER_AntesDaNormalizacao.png)
+* [DER Parcialmente Normalizado](https://raw.githubusercontent.com/cesar-augusto-costa/projeto_integrador_FRONT_END_proz_turma11_grupo2/main/data/4-DER_Modelo_Conceitual.png)
+* [DER Modelo Conceitual Normalizado](https://raw.githubusercontent.com/cesar-augusto-costa/projeto_integrador_FRONT_END_proz_turma11_grupo2/main/data/5-DER_3FN_Completo.png)
+* [DER Modelo Lógico](https://raw.githubusercontent.com/cesar-augusto-costa/projeto_integrador_FRONT_END_proz_turma11_grupo2/main/data/6-Modelo_Logico.png)
+* [Scrips SQL](./data/Script_PostgreSQL_BD_pet.sql)
 
 <br>
 
