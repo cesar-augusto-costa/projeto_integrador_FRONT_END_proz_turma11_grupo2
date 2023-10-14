@@ -98,7 +98,7 @@ Dessa forma, esse projeto faz a ponte entre as ONGs e a adoção fazendo divulga
 * [DER Parcialmente Normalizado](https://raw.githubusercontent.com/cesar-augusto-costa/projeto_integrador_FRONT_END_proz_turma11_grupo2/main/data/4-DER_Modelo_Conceitual.png)
 * [DER Modelo Conceitual Normalizado](https://raw.githubusercontent.com/cesar-augusto-costa/projeto_integrador_FRONT_END_proz_turma11_grupo2/main/data/5-DER_3FN_Completo.png)
 * [DER Modelo Lógico](https://raw.githubusercontent.com/cesar-augusto-costa/projeto_integrador_FRONT_END_proz_turma11_grupo2/main/data/6-Modelo_Logico.png)
-* [Scrips SQL](./data/Script_PostgreSQL_BD_pet.sql)
+* [Script SQL - PostgreSQL](./data/Script_PostgreSQL_BD_pet.sql)
 
 <br>
 
