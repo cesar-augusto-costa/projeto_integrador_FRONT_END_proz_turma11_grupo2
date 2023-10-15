@@ -95,6 +95,22 @@ body {
     font-size: 1.6rem;
 }
 
+@media (max-width: 1024px) {
+    html {
+        font-size: 50%;
+        text-align: center;
+    }
+
+    .grid-post {
+        text-align: center;
+        align-content: center;
+    }
+
+    .grid-depoimento {
+        text-align: center;
+        align-content: center;
+    }
+}
 
 @media (max-width: 768px) {
     html {
