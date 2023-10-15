@@ -864,7 +864,7 @@ SELECT nome_completo, cidade, estado
 FROM representante
 WHERE estado = 'SP';
 
--- Listar todos os depoimentos e criar uma coluna status_estrelas qualitativo para estrela:
+-- Listar todos os depoimentos e criar uma coluna status_estrelas qualitativa para estrela:
 SELECT id_depoimento, estrelas,
 	CASE	
     	WHEN estrelas = 5 THEN 'Excelente'
@@ -928,9 +928,22 @@ SELECT round(AVG(estrelas::NUMERIC),1) AS "Média de estrelas"
 FROM depoimento
 
 -- Listar todas as compras feitas em outubro de 2023:
-SELECT nota_fiscal, data_compra
+SELECT *
 FROM compra
 WHERE EXTRACT(YEAR FROM data_compra) = 2023 AND EXTRACT(MONTH FROM data_compra) = 10;
+
+-- Listar todas as vendas feitas em outubro de 2023
+SELECT *
+FROM venda
+WHERE EXTRACT(YEAR FROM data_venda) = 2023 AND EXTRACT(MONTH FROM data_venda) = 10;
+
+-- Mostrar as vendas dos últimos 7 dias
+SELECT * from venda
+where data_venda >= current_date - INTERVAL '7 days';
+
+-- Mostrar as compras dos últimos 7 dias
+SELECT * from compra
+where data_compra >= current_date - INTERVAL '7 days';
 
 -- Listar todos os pets disponíveis para adoção:
 SELECT nome, tipo_pet, disponivel
@@ -950,12 +963,12 @@ WHERE qtd_estoque > 0;
 -- Listar todos os produtos com uma descrição que comece com a palavra 'Ração':
 SELECT *
 FROM produto
-WHERE descricao LIKE 'Ração%';
+WHERE descricao ILIKE 'Ração%';
 
 -- Listar todos os produtos com uma descrição que contenha a palavra 'Bola':
 SELECT *
 FROM produto
-WHERE descricao like '%Bola%'
+WHERE descricao LIKE '%Bola%'
 
 -- Listar os produtos em estoque com quantidade maior que zero dando um apelido para a tabela:
 SELECT p.descricao, p.qtd_estoque
@@ -966,6 +979,38 @@ WHERE p.qtd_estoque > 0;
 SELECT marca
 FROM marca
 ORDER BY marca;
+
+-- Mostrar o nome do produto mais vendido pelo fornecedor
+SELECT * FROM venda
+inner join produto
+on venda.id_produto = produto.id_produto
+ORDER by quantidade_produto desc
+LIMIT 1
+
+-- Mostrar o nome do produto mais comprado pelo cliente
+SELECT * FROM compra
+inner join produto
+on compra.id_produto = produto.id_produto
+ORDER by quantidade_produto desc
+LIMIT 1
+
+-- Mostrar o nome do cliente que comprou mais produtos
+SELECT nome_completo, * from compra
+inner join cliente
+on cliente.id_cliente = compra.id_cliente
+INNER join representante
+on representante.id_representante = cliente.id_representante
+ORDER by quantidade_produto desc
+LIMIT 1
+
+-- Mostrar o nome do fornecedor que vendeu mais produtos
+SELECT nome_completo, * from venda
+INNER JOIN fornecedor
+on venda.id_fornecedor = fornecedor.id_fornecedor
+inner join representante
+on representante.id_representante = fornecedor.id_representante
+order by quantidade_produto desc
+LIMIT 1
 
 -- Mostrar o subtotal de cada nota da compra:
 SELECT nota_fiscal, quantidade_produto, valor_unitario, quantidade_produto * valor_unitario as "SubTotal"
