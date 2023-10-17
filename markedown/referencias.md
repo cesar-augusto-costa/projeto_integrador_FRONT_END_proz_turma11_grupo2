@@ -54,6 +54,13 @@
 * [Roadmap CSS](https://pingback.com/gabcodes/css-roadmap-guia-para-estudo-de-css)
 * [Tela de Login HTML + CSS + Javascript](https://programandosolucoes.dev.br/2021/05/11/login-html-css-javascript/)
 * [Bibliotecas JavaScript para autenticação de usuários](https://www.mundojs.com.br/2019/02/22/bibliotecas-javascript-para-autenticacao-de-usuarios/)
+* https://youtu.be/WZ0I8lbVJO0?si=LgrL4WRT2VXRhAS2
+* https://www.youtube.com/watch?v=tOKzSYVlaBA&list=LL&index=2
+* https://www.youtube.com/watch?v=ZRYhFoW_k2k&list=LL&index=3&t=8s
+* https://www.youtube.com/watch?v=WHHYz8rZmDU&list=LL&index=4
+* https://www.youtube.com/watch?v=7b6HW8-67WE&list=LL&index=6
+* https://www.youtube.com/watch?v=6XAO61PUSUA&list=LL&index=12
+* https://www.freecodecamp.org/
 
 ## SQL
 * [Curso de Modelagem de Dados - Bóson Treinamentos](https://www.youtube.com/watch?v=Q_KTYFgvu1s&list=PLucm8g_ezqNoNHU8tjVeHmRGBFnjDIlxD)
