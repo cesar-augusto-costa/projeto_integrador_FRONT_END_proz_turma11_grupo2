@@ -8,6 +8,10 @@
 * ChatGPT
 * Canva
 
+## Documentação
+* [freeCodeCamp](https://www.freecodecamp.org/)
+* [w3schools](https://www.w3schools.com/)
+
 ## Sobre o negócio
 * Psicologia das Cores
 * Style Guide
@@ -37,6 +41,12 @@
 * [Petz](https://www.petz.com.br/)
 * [VisualHunt](https://visualhunt.com/)
 
+## Imagens e Icones
+* [iconfinder](https://www.iconfinder.com/)
+* [icon-icons](https://icon-icons.com/)
+* [pixabay](https://pixabay.com/pt/)
+* [imagecompressor](https://imagecompressor.com/)
+
 ## Wireframe 
 * [Wireframe - HTML e CSS Pro](https://www.youtube.com/watch?v=DRmTXb_Wymo&list=PL4I-14pHZsLG6PcW2jQG98V4K8tJRUkWZ)
 
@@ -44,6 +54,7 @@
 * [Design Gráfico com Canva - Wagner Cardoso](https://www.youtube.com/watch?v=RqdQmW_bk7I&list=PLOPt_yd2VLWG49SxF2VrpLMKE82RojQiC)
 
 ## Criação do Site (HTML, CSS e JS)
+* [Curso de HTML e CSS3 - Bóson Treinamentos](https://www.youtube.com/playlist?list=PLucm8g_ezqNqenmYtyuCiOeUflgRAGMTr)
 * [Meta tags - DevMedia](https://www.devmedia.com.br/html-meta-tags-entendendo-o-uso-de-meta-tags/30328)
 * [HTML Semantico - DevMedia](https://www.devmedia.com.br/html-semantico-conheca-os-elementos-semanticos-da-html5/38065)
 * [HTML5 e CSS3 na Prática - HTML e CSS Pro](https://www.youtube.com/watch?v=IZklJY9ZU0o&list=PL4I-14pHZsLGjFcG-80FlIC7XhgA6lNe5)
@@ -54,15 +65,13 @@
 * [Roadmap CSS](https://pingback.com/gabcodes/css-roadmap-guia-para-estudo-de-css)
 * [Tela de Login HTML + CSS + Javascript](https://programandosolucoes.dev.br/2021/05/11/login-html-css-javascript/)
 * [Bibliotecas JavaScript para autenticação de usuários](https://www.mundojs.com.br/2019/02/22/bibliotecas-javascript-para-autenticacao-de-usuarios/)
-* https://youtu.be/WZ0I8lbVJO0?si=LgrL4WRT2VXRhAS2
-* https://www.youtube.com/watch?v=tOKzSYVlaBA&list=LL&index=2
-* https://www.youtube.com/watch?v=ZRYhFoW_k2k&list=LL&index=3&t=8s
-* https://www.youtube.com/watch?v=WHHYz8rZmDU&list=LL&index=4
-* https://www.youtube.com/watch?v=7b6HW8-67WE&list=LL&index=6
-* https://www.youtube.com/watch?v=6XAO61PUSUA&list=LL&index=12
-* https://www.freecodecamp.org/
-* https://www.w3schools.com/
+* [Front End - Web - DEV envolvente](https://www.youtube.com/playlist?list=PLI6D4TUJut5eId4-jMDsjsfpueJt4_XDg)
+* [Como fazer GALERIA DE FOTOS RESPONSIVA com caixa de pesquisa HTML CSS E JAVASCRIPT -2022 - FRONT-END-CLUB](https://www.youtube.com/watch?v=ZRYhFoW_k2k&list=LL&index=3&t=8s)
+* [Criando um Quiz com JavaScript - Will Dev](https://www.youtube.com/watch?v=7b6HW8-67WE&list=LL&index=6)
+* [Create Quiz Web App using HTML CSS and JavaScript | Quiz App JavaScript - Invention Tricks](https://www.youtube.com/watch?v=WHHYz8rZmDU&list=LL&index=4)
+* [Testimonial Vertical Slider using HTML & CSS only | CSS Animation](https://www.youtube.com/watch?v=tOKzSYVlaBA&list=LL&index=2)
 
 ## SQL
 * [Curso de Modelagem de Dados - Bóson Treinamentos](https://www.youtube.com/watch?v=Q_KTYFgvu1s&list=PLucm8g_ezqNoNHU8tjVeHmRGBFnjDIlxD)
 * [Curso de PostgreSQL - Bancos de Dados - Bóson Treinamentos](https://www.youtube.com/watch?v=Z_SPrzlT4Fc&list=PLucm8g_ezqNoAkYKXN_zWupyH6hQCAwxY)
+
