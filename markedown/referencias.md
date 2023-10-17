@@ -75,11 +75,14 @@
 * [Curso de Modelagem de Dados - Bóson Treinamentos](https://www.youtube.com/watch?v=Q_KTYFgvu1s&list=PLucm8g_ezqNoNHU8tjVeHmRGBFnjDIlxD)
 * [Curso de PostgreSQL - Bancos de Dados - Bóson Treinamentos](https://www.youtube.com/watch?v=Z_SPrzlT4Fc&list=PLucm8g_ezqNoAkYKXN_zWupyH6hQCAwxY)
 
-## Ferramentas para fazer o DER
-* MySQL Workbench
-* DB Designer
-* Lucidchart
+## MER
 * draw.io
-* brmodeloweb
+
+## DER Conceitual
 * brmodelo.jar
 * brmodelo.exe
+
+## DER Lógico
+* MySQL Workbench
+* Lucidchart
+* DB Designer
