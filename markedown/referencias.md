@@ -61,6 +61,7 @@
 * https://www.youtube.com/watch?v=7b6HW8-67WE&list=LL&index=6
 * https://www.youtube.com/watch?v=6XAO61PUSUA&list=LL&index=12
 * https://www.freecodecamp.org/
+* https://www.w3schools.com/
 
 ## SQL
 * [Curso de Modelagem de Dados - Bóson Treinamentos](https://www.youtube.com/watch?v=Q_KTYFgvu1s&list=PLucm8g_ezqNoNHU8tjVeHmRGBFnjDIlxD)
