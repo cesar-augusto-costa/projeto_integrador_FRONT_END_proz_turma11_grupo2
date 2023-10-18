@@ -1,5 +1,5 @@
-#promocoes .container-slide {
-  min-height: 50vh;
+#promocoes > div {
+  min-height: 450px;
 }
 
 #botao-voltar-promocao,
@@ -39,7 +39,7 @@
 .product {
   display: inline-block;
   max-width: 33%;
-  height: 440px;
+  height: 400px;
   margin: 5px 15px;
   border: 1px solid var(--peach);
   border-radius: 5px;

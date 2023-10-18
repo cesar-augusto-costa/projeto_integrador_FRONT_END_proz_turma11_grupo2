@@ -49,7 +49,14 @@ header {
 }
 
 #slider-imagens {
-    margin-top: 100px;
+    margin-top: 0;
+}
+
+#slider-imagens > div {
+    position: relative;
+    margin: 0;
+    padding: 0;
+    min-height: 500px;
 }
 
 .slide {
@@ -68,14 +75,6 @@ header {
 
 .slide.slide-03 {
     background-image: url('../img/home/foto3.jpg');
-}
-
-#slider-imagens {
-    margin-top: 70px;
-}
-
-#promocoes {
-    margin-top: 50px;
 }
 
 #produtos-recomendados .produtos a img {
@@ -170,4 +169,8 @@ header {
     border: 1px solid var(--peach);
     border-radius: 5px;
     padding: 10px;
+}
+
+#produtos-recomendados {
+    padding: 0;
 }
