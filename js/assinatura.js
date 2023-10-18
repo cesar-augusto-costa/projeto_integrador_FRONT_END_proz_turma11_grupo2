@@ -7,6 +7,20 @@ class ValidarFormulario {
     this.formulario.addEventListener('submit', (e) => {
       this.handleSubmit(e);
     });
+    const validade = this.formulario.querySelector('#validade');
+    validade.addEventListener('input', ({ target }) => {
+      if (target.value.length > 4) {
+        target.value = target.value.slice(0, 4);
+      }
+      console.log(target.value);
+    });
+    const seguranca = this.formulario.querySelector('#seguranca');
+    seguranca.addEventListener('input', ({ target }) => {
+      if (target.value.length > 3) {
+        target.value = target.value.slice(0, 3);
+      }
+      console.log(target.value);
+    });
   }
   handleSubmit(e) {
     e.preventDefault();
@@ -14,12 +28,12 @@ class ValidarFormulario {
     if (camposvalidos) {
       window.alert('Cadastro efetuado');
       this.formulario.submit();
-      window.location.replace('http://127.0.0.1:5500/pages/concluido.html');
+      window.location.href = 'concluido.html';
     }
     console.log('Formulário não enviado');
   }
   camposValidos() {
-    let valid = true;
+    let valido = true;
     for (let errorMsg of this.formulario.querySelectorAll('.mensagem-erro')) {
       errorMsg.remove();
     }
@@ -27,30 +41,30 @@ class ValidarFormulario {
       if (!campo.value) {
         const label = campo.previousElementSibling.innerText;
         this.criaErro(campo, `${label} não pode está vazio`);
-        valid = false;
+        valido = false;
       }
       if (campo.classList.contains('cpf')) {
-        if (!this.validaCpf(campo)) valid = false;
+        if (!this.validaCpf(campo)) valido = false;
       }
       if (campo.classList.contains('cartao')) {
         if (!this.validaNumero(campo)) return false;
       }
     }
-    return valid;
+    return valido;
   }
 
   validaNumero(campo) {
     const cartao = campo.value;
-    let valid = true;
+    let valido = true;
     if (cartao.length < 13 || cartao.length > 16) {
-      this.criaErro(campo, 'Informe os digitos do cartão');
-      valid = false;
+      this.criaErro(campo, 'Informe os dígitos do cartão');
+      valido = false;
     }
     if (!cartao.match(/^[0-9]+/g)) {
-      this.criaErro(campo, 'Número precisa conter apenas digitos');
-      valid = false;
+      this.criaErro(campo, 'Número precisa conter apenas dígitos');
+      valido = false;
     }
-    return valid;
+    return valido;
   }
 
   validaCpf(campo) {

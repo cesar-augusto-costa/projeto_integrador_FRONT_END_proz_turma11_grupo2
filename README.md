@@ -37,6 +37,9 @@
 
 <img src="img/logos/petshop_caramelo.png" alt="Logo do PetShop Caramelo" width="200">
 
+## Tipografia
+* [Lato](https://fonts.google.com/specimen/Lato?query=Lato)
+
 ## Padrão de Cores
 
 Utilizamos a psicologia das cores para criar uma atmosfera acolhedora e agradável.

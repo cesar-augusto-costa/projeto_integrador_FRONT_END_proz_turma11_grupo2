@@ -11,7 +11,7 @@ main {
 
 .pagamento-assinante {
   display: flex;
-  background-color: #F0B694;
+  background-color: white;
   gap: 1rem;
   flex-direction: column;
   width: 800px;
@@ -28,6 +28,7 @@ main {
   height: 3rem;
   font-size: 2rem;
   padding: .3rem;
+  background: #dbdbdb;
 }
 
 .pagamento-assinante input::placeholder{
@@ -76,4 +77,31 @@ main {
 
 .mensagem-erro {
   color: red;
+}
+
+.select-planos {
+  width: 20%;
+  height: 2rem;
+  border: 1px solid black;
+}
+
+@media (max-width: 324px) {
+  .pagamento-assinante {
+    width: 324px;
+  }
+  #flex {
+    display: flex;
+    flex-direction: column;
+  }
+  #nome,
+  #cartao {
+    width: 80%;
+  }
+
+  #data {
+    width: 55%;
+  }
+  .select-planos {
+    width: 55%;
+  }
 }

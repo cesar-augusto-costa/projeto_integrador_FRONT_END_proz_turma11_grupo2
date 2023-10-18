@@ -1,13 +1,14 @@
 main {
-    font-family: 'Lato', sans-serif;
-    padding: 10px;
-    margin: 10px;   
     display: flex;
+    justify-content: space-between;
     flex-direction: column;
+    border: 150px solid transparent;
+
+
 }
 
 h1 {
-    font-size: 3.6rem; 
+    font-size: 3.6rem;
     font-weight: bold;
     color: #421a12;
 }
@@ -36,225 +37,83 @@ a {
 }
 
 main p {
-    color: white;
-    font-size: 1.8rem;
-    line-height: 3.5rem;
+    color: #421a12;
+    font-size: 14px;
+    line-height: 25px;
+    font-weight: 500;
 }
 
 .Titulo {
     text-transform: none;
 }
 
-/*formatação quiz*/
-.container-slide {
-    align-items: center;
-    display: flex;
-    gap: 1rem;
-    justify-content: center;
-    min-height: 100vh;
-    width: 100%;
-}
-
-.paginas-slide {
-    align-items: center;
-    display: flex;
-    justify-content: center;
-    position: relative;
-    width: 700px;
-
-}
-
-.primeiro-slide {
-    background-image: url(../img/adocao/h1/fundo_h_um.jpg);
-    background-size: cover;
-    color: white;
-    height: 300px;
-    padding: 10px;
-}
-
-.segundo-slide {
-    background-image: url(../img/contato/cão01.jpg);
-    background-size: cover;
-    color: white;
-    height: 300px;
-    padding: 10px;
-}
-.terceiro-slide {
-    background-image: url(../img/contato/cão02.jfif);
-    background-size: cover;
-    color: white;
-    height: 300px;
-    padding: 10px;
-}
-
-.quarto-slide {
-    background-image: url(../img/contato/coelho01.jpg);
-    background-size: cover;
-    color: white;
-    height: 300px;
-    padding: 10px;
-}
-
-.quinto-slide {
-    background-image: url(../img/contato/gato01.webp);
-    background-size: cover;
-    color: white;
-    height: 300px;
-    padding: 10px;
-}
-
-.sexto-slide {
-    background-image: url(../img/contato/gato02.jpg);
-    background-size: cover;
-    color: white;
-    height: 300px;
-    padding: 10px;
-}
-
-.setimo-slide {
-    background-image: url(../img/contato/img_7925.jpg);
-    background-size: cover;
-    color: white;
-    height: 300px;
-    padding: 10px;
-}
-
-#titulo-slide {
-    display: flex;
-    font-size: 40px;
-    font-family: 'Lato', sans-serif;
-    font-weight: bold;
-    justify-content:left;
-    padding-left: 10px;
-    padding-top: 20px;
-}
-
-#paragrafo-slide {
-    display: flex;
-    font-size: 20px;
-    font-family: 'Lato', sans-serif;
-    justify-content: left;
-    padding-left: 10px;
-    padding-top: 10px;
-    text-align: justify;
-    width: 300px;
-}
-
-.slide {
-    border-radius: 10px;
-    opacity: 0;
-    padding-bottom: 30px;
-    position: absolute;
-    transition: opacity .2s;
-    width: 100%;    
-}
-
-.on {
-    opacity: 1;
-}
-
-#botao-voltar,
-#botao-avancar {
-    background-color: transparent;
-    border: none;
-    cursor: pointer;
-    height: 20px;
-    width: 20px;
-}
-
-#botao-voltar img,
-#botao-avancar img {
-    height: 100%;
-    width: 100%;
-}
-
-#botao-avancar {
-    transform: rotate(180deg);
-}
-
-/*fim formatação quiz*/
-#formulario {
-    /* flex: 2 0 auto; */
-    width: 30%; 
-    text-align: center;
-    contain: center;
-    border: center;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    border: 1px solid rgb(255, 98, 0);
-    padding: 29px 0;
-    -webkit-border-top-right-radius: 12px;
-    -webkit-border-bottom-right-radius: 12px;
-    -moz-border-radius-topright: 12px;
-    -moz-border-radius-bottomright: 12px;
-    border-top-right-radius: 12px;
-    border-bottom-right-radius: 12px;
-}
-
-#endereço{
-    border: 1px solid rgb(255, 98, 0);
-    padding: 29px 0;
-    -webkit-border-top-right-radius: 12px;
-    -webkit-border-bottom-right-radius: 12px;
-    -moz-border-radius-topright: 12px;
-    -moz-border-radius-bottomright: 12px;
-    border-top-right-radius: 12px;
-    border-bottom-right-radius: 12px;
-}
-
-#for{
+#for {
     align-items: self-end;
 }
 
-
-li { 
-    list-style-type: none; 
-} 
-
-.mapa {display: flex;
-    justify-content: center;
-    flex-direction: column; align-items: center;
-    border: 2px solid #e7e7e7;
-    border-radius: 10px;    
+li {
+    list-style-type: none;
 }
-/*Formatação formulario*/
-#container-duvida{
+
+.duvida:hover {
     display: flex;
-    justify-content: space-around;
-    align-items: center;
+    justify-content: center;
     flex-direction: column;
-    margin-top: 30px;
-    margin-bottom: 30px;
+    align-items: center;
+    border-radius: 10px;
+    border: 2px solid grey;
+    transform: scalex(0.5);
+    background: #fda462;
 }
-.formulario{
+
+#formulario_mapa {
+    display: flex;
+    justify-content: space-evenly;
+    list-style: none;
+    margin: 50 px;
+}
+
+#formu {
+    display: flex;
+    justify-content: flex-start;
+
+}
+
+/*Formatação formulario*/
+#formulario {
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-around;
     flex-direction: column;
     padding: 10px 45px;
     background-image: url(../img/adocao/background/patinhas.jpeg);
     background-size: 30%;
-    width: 90%;
+    width: 50%;
     box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
-   
+    border-radius: 10px;
+    border: 2px solid grey;
 }
-section h2{
+
+section h2 {
     color: #421a12;
     font-size: 2.5rem;
     margin: 2rem;
 }
-section form{
+
+section form {
     display: flex;
     flex-direction: column;
     width: 100%;
 }
-form label{
+
+form label {
     color: #421a12;
-    font-size: 17px;
+    font-size: 27px;
     margin-bottom: 4px;
+    height: 50px;
 }
-form input{
+
+form input {
     padding: 15px;
     outline: none;
     border: 0;
@@ -262,10 +121,12 @@ form input{
     font-size: 15px;
     transition: all 0.5s;
 }
-form input:focus{
+
+form input:focus {
     border-radius: 16px;
 }
-form textarea{
+
+form textarea {
     padding: 10px;
     outline: none;
     border: 0;
@@ -273,10 +134,12 @@ form textarea{
     margin-bottom: 30px;
     transition: all 0.5s;
 }
-form textarea:focus{
+
+form textarea:focus {
     border-radius: 16px;
 }
-form button{
+
+form button {
     padding: 15px;
     cursor: pointer;
     font-size: 16px;
@@ -286,8 +149,32 @@ form button{
     transition: all 1s;
     margin-bottom: 20px;
 }
-form button:hover{
+
+form button:hover {
     background: #f5f5f5;
     color: #101026;
     border-radius: 16px;
+}
+
+#mapa {
+    display: flex;
+    margin-top: auto;
+    margin-left: 20px;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 10px;
+    border: 2px solid grey;
+}
+
+#container-denuncia {
+
+    margin: 20px;
+    margin-left: 0px;
+    margin-right: 0px;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 10px;
+    border: 2px solid grey;
 }
