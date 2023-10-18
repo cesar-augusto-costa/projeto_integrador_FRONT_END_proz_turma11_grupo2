@@ -7,6 +7,20 @@ class ValidarFormulario {
     this.formulario.addEventListener('submit', (e) => {
       this.handleSubmit(e);
     });
+    const validade = this.formulario.querySelector('#validade');
+    validade.addEventListener('input', ({ target }) => {
+      if (target.value.length > 4) {
+        target.value = target.value.slice(0, 4);
+      }
+      console.log(target.value);
+    });
+    const seguranca = this.formulario.querySelector('#seguranca');
+    seguranca.addEventListener('input', ({ target }) => {
+      if (target.value.length > 3) {
+        target.value = target.value.slice(0, 3);
+      }
+      console.log(target.value);
+    });
   }
   handleSubmit(e) {
     e.preventDefault();
@@ -43,11 +57,11 @@ class ValidarFormulario {
     const cartao = campo.value;
     let valido = true;
     if (cartao.length < 13 || cartao.length > 16) {
-      this.criaErro(campo, 'Informe os digitos do cartão');
+      this.criaErro(campo, 'Informe os dígitos do cartão');
       valido = false;
     }
     if (!cartao.match(/^[0-9]+/g)) {
-      this.criaErro(campo, 'Número precisa conter apenas digitos');
+      this.criaErro(campo, 'Número precisa conter apenas dígitos');
       valido = false;
     }
     return valido;

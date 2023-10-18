@@ -12,3 +12,9 @@ main {
   width: 400px;
   border-radius: 25px;
 }
+
+@media (max-width: 324px) {
+  .mensagem-principal img {
+    width: 250px;
+  }
+}

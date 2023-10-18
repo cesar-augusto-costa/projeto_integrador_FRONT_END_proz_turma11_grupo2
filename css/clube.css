@@ -119,3 +119,35 @@ html {
 .button:focus {
   background-color: orangered;
 }
+
+
+@media (max-width: 324px) {
+  .planos-container {
+    width: 324px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+  }
+  .planos {
+    text-align: center;
+  }
+  .planos-preco {
+    font-size: 3rem;
+  }
+  .button {
+    width: 170px;
+    margin-top: 0rem;
+    text-decoration: none;
+  }
+
+  .div-button {
+    display: grid;
+    justify-content: center;
+  }
+
+  .footer-x {
+    display: none;
+  }
+
+
+}
