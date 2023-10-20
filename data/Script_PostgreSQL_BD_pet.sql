@@ -1163,7 +1163,25 @@ SELECT *
 FROM produto
 WHERE preco = (SELECT MAX(preco) FROM produto);
 
--- Selecione os produtos, classificando por preço em ordem decrescente
+-- Selecione os produtos, classificando por preço em ordem do mais caro para o mais barato
 SELECT *
 FROM produto
 ORDER BY preco DESC;
+
+-- Selecione os produtos, classificando por preço em ordem do mais barato para o mais caro
+SELECT *
+FROM produto
+ORDER BY preco;
+
+-- Selecione o produto, mais caro
+SELECT *
+FROM produto
+ORDER BY preco DESC
+LIMIT 1
+
+-- Selecione o segundo produto mais caro
+SELECT *
+FROM produto
+ORDER BY preco DESC
+LIMIT 1
+OFFSET 2
