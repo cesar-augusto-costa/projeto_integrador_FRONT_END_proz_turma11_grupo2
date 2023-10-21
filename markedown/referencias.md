@@ -122,3 +122,9 @@
 * MySQL Workbench
 * Lucidchart
 * DB Designer
+
+## Projetos da Turma
+* [Fisco Tech](https://github.com/Eduardo377/fiscotech/tree/main)
+* [PetHero](https://github.com/Giuliano-Sampaio/projeto_pethero)
+* [Kanino](https://github.com/ArielVe/KANINO_PROZ)
+* [Acessuratio](https://github.com/DavidSheltonSF/proz-proj-integrador)
