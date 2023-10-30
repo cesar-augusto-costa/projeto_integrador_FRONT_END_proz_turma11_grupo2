@@ -73,6 +73,7 @@
 ## Criação do Site (HTML e CSS)
 * [Curso de HTML5 Completo e GRÁTIS - Guanabara - Curso em Video](https://www.youtube.com/playlist?list=PLHz_AreHm4dlAnJ_jJtV29RFxnPHDuk9o)
 * [Curso de HTML e CSS3 - Bóson Treinamentos](https://www.youtube.com/playlist?list=PLucm8g_ezqNqenmYtyuCiOeUflgRAGMTr)
+* [HTML5 - CSS3 - Referência em Vídeo da Hcode](https://www.youtube.com/playlist?list=PL-u8JWLN6xau0QpzuOTeTI954SsIGEsVA)
 * [HTML e CSS - Otávio Miranda](https://www.youtube.com/playlist?list=PLbIBj8vQhvm3HiYKbZB-_WYvAKhHfwJl1)
 * [Curso HTML e CSS - Front Beginners](https://www.youtube.com/playlist?list=PLuElAIt7y8x0Mp5ng9Ov3ciGh_fEarUkW)
 * [Meta tags - DevMedia](https://www.devmedia.com.br/html-meta-tags-entendendo-o-uso-de-meta-tags/30328)
